@@ -1,0 +1,270 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RPG IA · Academia Arcana de Elyndor</title>
+  <meta name="description" content="Um RPG em pixel art, grátis no navegador, onde tu aprende Inteligência Artificial enfrentando monstros que fazem perguntas: prompts, alucinação, ética, dados e automações.">
+  <meta name="theme-color" content="#0d0920">
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Compartilhamento (LinkedIn, WhatsApp, X...). Troque SEU-USUARIO pelo teu usuário do GitHub depois de publicar. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RPG IA · Aprenda Inteligência Artificial jogando">
+  <meta property="og:description" content="Um RPG em pixel art, grátis no navegador: cada monstro é uma pergunta sobre IA.">
+  <meta property="og:image" content="https://SEU-USUARIO.github.io/rpg-ia/img/compartilhamento.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Nunito:wght@500;700;800;900&display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <canvas id="estrelas" aria-hidden="true"></canvas>
+
+  <!-- ===================== TOPO DO SITE ===================== -->
+  <nav class="barra" id="barra" aria-label="Navegação">
+    <div class="largura barra-dentro">
+      <a class="marca" href="#topo"><img class="pixel" src="img/logo.png" alt=""><b>RPG <span>IA</span></b></a>
+      <div class="links" id="links">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#classes">Classes</a>
+        <a href="#historia">História</a>
+        <a href="#bestiario">Monstros</a>
+        <a href="#desafio">Desafio</a>
+      </div>
+      <a class="botao pequeno" href="https://magiaia.duckdns.org" target="_blank" rel="noopener">Jogar grátis</a>
+    </div>
+  </nav>
+
+  <header class="abertura" id="topo">
+    <div class="largura abertura-grade">
+      <div class="chamada">
+        <span class="selo">RPG em pixel art · grátis</span>
+        <h1>Aprenda <em>Inteligência Artificial</em> enfrentando monstros</h1>
+        <p class="sub-chamada">Um RPG no navegador onde cada monstro é uma pergunta sobre IA. Prompts, alucinação, ética, dados e automações, em <b>situações reais de trabalho</b>.</p>
+        <div class="acoes">
+          <a class="botao grande" href="https://magiaia.duckdns.org" target="_blank" rel="noopener">⚔️ Jogar agora</a>
+          <a class="botao grande secundario" href="#desafio">🔮 Testar agora</a>
+        </div>
+        <ul class="garantias">
+          <li>Grátis</li><li>Sem instalar</li><li>Sem criar conta</li><li>1.014 perguntas</li>
+        </ul>
+      </div>
+
+      <div class="vitrine" aria-hidden="true">
+        <div class="janela">
+          <div class="janela-topo"><i></i><i></i><i></i><span>magiaia.duckdns.org</span></div>
+          <img src="img/prints/02-batalha-prompt.jpg" alt="">
+        </div>
+        <img class="pixel flutua monstro-vitrine" src="img/sprites/monstro-slime-alucinado.png" alt="">
+        <img class="pixel flutua heroi-vitrine" src="img/sprites/heroi-mago-baixo-0.png" alt="">
+        <span class="balao-vitrine">✨ Feitiço em cheio!</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== POR QUE ===================== -->
+    <section class="secao" id="porque">
+      <div class="largura dupla">
+        <div class="aparece">
+          <span class="selo">O intuito</span>
+          <h2>Aprender IA não precisa ser <em>mais um curso</em> que a gente larga na aula 3</h2>
+          <p>O <b>RPG IA</b> nasceu de uma pergunta simples: <b>e se aprender Inteligência Artificial fosse tão divertido quanto jogar um RPG?</b></p>
+          <p>Em vez de apostila, tu entras na Academia Arcana de Elyndor, aprendes com o mestre Zetsu e sais pelo Reino
+            enfrentando monstros que perguntam sobre prompts, fundamentos, código, segurança e IA no trabalho.
+            <b>Cada acerto é um golpe; cada erro, uma lição.</b></p>
+          <p>E o que tu enfrentas não é decoreba: são <b>situações reais de trabalho</b>, como um link que a IA inventou,
+            uma mensagem que não deveria ser escrita por ela, ou a temperatura certa para extrair dados.</p>
+        </div>
+        <figure class="moldura aparece">
+          <img src="img/prints/03-batalha-quando-nao-usar-ia.jpg" alt="Batalha no jogo: o Slime da Dúvida apresenta uma situação de trabalho sobre quando não usar IA" loading="lazy">
+          <figcaption>Uma situação de trabalho no meio da batalha: quando <b>não</b> usar IA.</figcaption>
+        </figure>
+      </div>
+      <div class="largura numeros aparece">
+        <div class="numero"><b data-conta="1014">0</b><span>perguntas, do básico ao avançado</span></div>
+        <div class="numero"><b data-conta="15">0</b><span>subclasses com trilha própria</span></div>
+        <div class="numero"><b data-conta="26">0</b><span>livros na biblioteca</span></div>
+        <div class="numero"><b data-conta="42">0</b><span>monstros e chefões</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== COMO FUNCIONA ===================== -->
+    <section class="secao" id="como-funciona">
+      <div class="largura">
+        <div class="cabeca aparece">
+          <span class="selo ciano">Como funciona</span>
+          <h2>Cada monstro é uma <em>pergunta</em></h2>
+        </div>
+        <ol class="passos">
+          <li class="moldura aparece"><span class="n">1</span><img class="pixel" src="img/sprites/heroi-mago-baixo-0.png" alt="" style="width:64px;height:102px">
+            <h3>Escolhe tua vocação</h3><p>Mago, guerreiro ou arqueiro. No nível 4, uma das 5 subclasses, cada uma com a <b>própria trilha</b> de conteúdo.</p></li>
+          <li class="moldura aparece"><span class="n">2</span><img class="pixel" src="img/sprites/monstro-slime-alucinado.png" alt="" style="width:96px;height:76px">
+            <h3>Enfrenta os monstros</h3><p>Acertou? <b>Feitiço em cheio</b>. Sequências de acertos dão bônus, e os chefões lutam em fases.</p></li>
+          <li class="moldura aparece"><span class="n">3</span><img class="pixel" src="img/sprites/zetsu-baixo-0.png" alt="" style="width:64px;height:102px">
+            <h3>Errou? Vira lição</h3><p>O jogo abre o <b>capítulo do livro</b> que explica, e a pergunta volta depois (10 min, 6 h, 2 dias) até ficar.</p></li>
+          <li class="moldura aparece"><span class="n">4</span><img class="pixel" src="img/sprites/monstro-rei-slime-dos-campos.png" alt="" style="width:92px;height:84px">
+            <h3>Sobe de grau</h3><p>Provas de <b>10 questões</b>, das fáceis às difíceis, para avançar na tua classe. A dificuldade cresce contigo.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== GALERIA ===================== -->
+    <section class="secao" id="galeria">
+      <div class="largura">
+        <div class="cabeca aparece">
+          <span class="selo">Dentro do jogo</span>
+          <h2>Um reino inteiro em <em>pixel art</em></h2>
+          <p class="sub">Tudo o que aparece na tela, dos heróis aos dragões, é desenhado por código, pixel a pixel.</p>
+        </div>
+        <div class="galeria" id="lista-galeria"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CLASSES ===================== -->
+    <section class="secao" id="classes">
+      <div class="largura">
+        <div class="cabeca aparece">
+          <span class="selo ciano">3 classes · 15 subclasses</span>
+          <h2>Escolhe tua <em>vocação</em></h2>
+        </div>
+        <div class="abas aparece" role="tablist" id="abas-classes"></div>
+        <div class="moldura painel-classe aparece" id="painel-classe" role="tabpanel"></div>
+      </div>
+    </section>
+
+    <!-- ===================== HISTÓRIA ===================== -->
+    <section class="secao" id="historia">
+      <div class="largura estreita">
+        <div class="cabeca aparece">
+          <span class="selo vermelho">A história</span>
+          <h2>Neste reino, <em>conhecimento é poder</em></h2>
+        </div>
+        <div class="pergaminho aparece">
+          <div class="quadro-historia">
+            <img class="pixel" id="historia-retrato" src="img/sprites/zetsu-baixo-0.png" alt="Zetsu, o mestre da Academia" style="width:80px;height:128px">
+            <div>
+              <p class="quem">Zetsu</p>
+              <p id="historia-texto" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="controle-historia">
+            <span class="pontos" id="historia-pontos"></span>
+            <button class="botao" id="historia-proximo" type="button">Continuar ▸</button>
+          </div>
+        </div>
+        <p class="nota aparece">Uma história sobre aprender IA… em que o vilão é justamente <b>uma mente que respondia tudo, para todos</b>, até o povo parar de pensar.</p>
+      </div>
+    </section>
+
+    <!-- ===================== BESTIÁRIO ===================== -->
+    <section class="secao" id="bestiario">
+      <div class="largura">
+        <div class="cabeca aparece">
+          <span class="selo">Bestiário do Reino</span>
+          <h2>Os monstros <em>não querem sangue</em>. Querem respostas.</h2>
+        </div>
+        <div class="bestiario" id="lista-monstros"></div>
+        <h3 class="titulo-chefes aparece">Os chefões</h3>
+        <div class="chefes" id="lista-chefes"></div>
+      </div>
+    </section>
+
+    <!-- ===================== O QUE TU APRENDE ===================== -->
+    <section class="secao" id="aprende">
+      <div class="largura">
+        <div class="cabeca aparece">
+          <span class="selo ciano">A biblioteca</span>
+          <h2>O que tu vai <em>aprender</em></h2>
+          <p class="sub">26 livros dentro do jogo. Cada pergunta leva ao capítulo que explica.</p>
+        </div>
+        <div class="estante aparece" id="lista-livros"></div>
+      </div>
+    </section>
+
+    <!-- ===================== DESAFIO ===================== -->
+    <section class="secao" id="desafio">
+      <div class="largura estreita">
+        <div class="cabeca aparece">
+          <span class="selo vermelho">Um monstro apareceu!</span>
+          <h2>Testa teu saber <em>agora</em></h2>
+        </div>
+        <div class="arena moldura aparece">
+          <div class="palco">
+            <div class="lado-monstro">
+              <small id="desafio-perigo">Encontro no Reino</small>
+              <b id="desafio-nome">Slime Alucinado</b>
+              <div class="vida"><i id="desafio-vida"></i></div>
+              <img class="pixel quica" id="desafio-sprite" src="img/sprites/monstro-slime-alucinado.png" alt="">
+            </div>
+            <img class="pixel heroi-arena" src="img/sprites/heroi-mago-baixo-0.png" alt="">
+          </div>
+          <div class="fala"><span class="rotulo" id="desafio-rotulo">Slime Alucinado</span><p id="desafio-pergunta"></p></div>
+          <div class="respostas" id="desafio-respostas"></div>
+          <div class="resultado" id="desafio-resultado" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="secao" id="duvidas">
+      <div class="largura estreita">
+        <div class="cabeca aparece">
+          <span class="selo">Dúvidas</span>
+          <h2>Perguntas <em>frequentes</em></h2>
+        </div>
+        <div class="faq aparece">
+          <details><summary>É grátis mesmo?</summary><p>Sim. O jogo é gratuito e roda direto no navegador. Se ele te ajudar, dá para apoiar o projeto com um Pix (aqui embaixo).</p></details>
+          <details><summary>Preciso instalar alguma coisa ou criar conta?</summary><p>Não. É só abrir o link e criar teu herói. O progresso fica guardado e ligado a este navegador.</p></details>
+          <details><summary>Preciso saber programar?</summary><p>Não. O jogo começa do zero, com um teste de aptidão que ajusta o começo da tua trilha. Quem já sabe mais encontra perguntas difíceis pela frente.</p></details>
+          <details><summary>O que exatamente eu aprendo?</summary><p>Como um LLM funciona, como escrever bons prompts, alucinação, ética e segurança, LGPD, dados, automações com Python e ferramentas sem código, e como usar IA no trabalho do dia a dia.</p></details>
+          <details><summary>Funciona no celular?</summary><p>Foi pensado para o computador, com teclado e mouse, mas também abre no navegador do celular.</p></details>
+          <details><summary>Quem fez?</summary><p>O RPG IA foi criado por <b>Erickson</b>, construído junto com IA, num ciclo de ideias, testes e muito café. Toda a arte é desenhada por código.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHAMADA FINAL ===================== -->
+    <section class="secao final" id="jogar">
+      <div class="palco-final">
+        <canvas id="cena" class="pixel" aria-hidden="true"></canvas>
+        <div class="convite aparece">
+          <h2>A Academia está de <em>portas abertas</em></h2>
+          <p class="sub">Grátis, no navegador, sem instalar nada.</p>
+          <a class="botao grande" href="https://magiaia.duckdns.org" target="_blank" rel="noopener">⚔️ Começar a jornada</a>
+          <p class="link-jogo">magiaia.duckdns.org</p>
+        </div>
+      </div>
+      <div class="largura estreita centro aparece">
+
+        <div class="moldura apoie">
+          <h3>💎 Apoie o projeto</h3>
+          <p>Se o jogo te ajudou a aprender (ou só te divertiu), qualquer valor via Pix ajuda a manter o Reino no ar e a construir o multijogador.</p>
+          <div class="pix"><code id="chave-pix">20edc8ac-671c-4a72-afe8-bf99b077d744</code><button class="botao" type="button" id="copiar-pix">📋 Copiar chave Pix</button></div>
+          <small id="pix-copiado" hidden>✓ Chave copiada! Cola no app do teu banco, em Pix › Pagar com chave.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="largura">
+      <p><img class="pixel" src="img/logo.png" alt=""> <b>RPG <span>IA</span></b> · Academia Arcana de Elyndor</p>
+      <p>Criado por Erickson · Pixel art desenhada por código · <a href="https://magiaia.duckdns.org/privacidade" target="_blank" rel="noopener">Privacidade do jogo</a></p>
+    </div>
+  </footer>
+
+  <!-- visualizador de imagens da galeria -->
+  <dialog id="visor">
+    <img id="visor-img" alt="">
+    <p id="visor-legenda"></p>
+    <button class="botao" type="button" id="visor-fechar">Fechar ✕</button>
+  </dialog>
+
+  <script src="js/cena.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
