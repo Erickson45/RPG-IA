@@ -1,0 +1,1192 @@
+{
+ "legenda": {
+  "skills": "uma skill por degrau do caminho: a de degrau 1 é da classe principal (iniciante), as de 2 a 5 da subclasse. resumo e dicas são a lição que aparece no Livro do Herói",
+  "focos": "o que cada subclasse (ou classe principal, no iniciante) estuda",
+  "estilos": "o jeito de aprender da classe principal: chances de verdadeiro ou falso, ordem e lacuna (trocam as de desafios.json) e de puxar cenários reais"
+ },
+ "estilos": {
+  "mago": {
+   "nome": "Sabedoria",
+   "icone": "🔮",
+   "descricao": "Mais situações reais do trabalho e o porquê de cada resposta.",
+   "vf": 0.08,
+   "ordem": 0.1,
+   "lacuna": 0.05,
+   "cenario": 0.35
+  },
+  "guerreiro": {
+   "nome": "Prática",
+   "icone": "⚔️",
+   "descricao": "Mais mão na massa: completar código e pôr passos em ordem.",
+   "vf": 0.08,
+   "ordem": 0.14,
+   "lacuna": 0.18,
+   "cenario": 0.15
+  },
+  "arqueiro": {
+   "nome": "Precisão",
+   "icone": "🏹",
+   "descricao": "Mais verdadeiro ou falso relâmpago: acerto rápido e certeiro.",
+   "vf": 0.3,
+   "ordem": 0.06,
+   "lacuna": 0.08,
+   "cenario": 0
+  }
+ },
+ "focos": {
+  "runas": "Técnicas de prompt e contexto",
+  "comandante": "Delegar tarefas e dar ordens claras para a IA e para a equipe",
+  "cacador": "Precisão: formatos exatos e extração de dados",
+  "alquimista": "Dados, planilhas e painéis",
+  "gladiador": "Rotina corporativa: e-mails, reuniões, relatórios e prazos",
+  "mercenario": "Freelance e negócio próprio com IA",
+  "artifice": "Automações: golens que trabalham sozinhos",
+  "berserker": "Depurar, testar e corrigir na força do braço",
+  "ranger": "Linha de comando, regex e scripts certeiros",
+  "guardiao": "Privacidade e proteção de dados",
+  "paladino": "Contas, senhas e golpes",
+  "sentinela": "Vigilância: phishing, logs e ataques à IA",
+  "domador": "Projetos completos com IA, da ideia ao produto",
+  "cavaleiro": "Como os modelos funcionam por dentro",
+  "patrulheiro": "Dados e aprendizado de máquina",
+  "mago": "Sabedoria: entender como a IA pensa",
+  "guerreiro": "Disciplina: proteger dados e pessoas",
+  "arqueiro": "Precisão: pedir certo de primeira"
+ },
+ "skills": [
+  {
+   "id": "alquimista-planilhas",
+   "trilha": "trabalho",
+   "degrau": 2,
+   "nome": "Planilhas com IA",
+   "classe": "alquimista",
+   "icone": "📊",
+   "resumo": "A IA escreve fórmulas bem se tu descreveres as colunas, o que queres e um exemplo do resultado esperado. Peça também que ela explique a fórmula passo a passo, para tu entenderes o que vai rodar na tua planilha. Nunca confie às cegas: teste em 2 ou 3 linhas cujo resultado tu já sabes.",
+   "dicas": [
+    "Diga os nomes das colunas e a posição (ex.: preço em B, produto em A).",
+    "Teste a fórmula em linhas com resultado conhecido antes de arrastar.",
+    "Limpe espaços e números guardados como texto antes de buscar ou somar."
+   ],
+   "fonte": {
+    "livro": "produtividade-ia",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "alquimista-analise",
+   "trilha": "trabalho",
+   "degrau": 3,
+   "nome": "Perguntas aos dados",
+   "classe": "alquimista",
+   "icone": "🔎",
+   "resumo": "Antes de pedir qualquer análise, saiba o que cada coluna significa e qual pergunta de negócio tu queres responder. Use tabela dinâmica para agrupar e contar, compare média com mediana e investigue outliers em vez de apagá-los. Ao usar IA, anonimize os dados e peça a fórmula ou o código, para conferires o cálculo.",
+   "dicas": [
+    "Compare média e mediana: se diferem muito, há outliers ou dados assimétricos.",
+    "Investigue o outlier: pode ser erro de digitação ou o caso mais importante.",
+    "Peça à IA o código/fórmula do cálculo, não só o número final."
+   ],
+   "fonte": {
+    "livro": "receitas-de-prompt",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "alquimista-fontes",
+   "trilha": "trabalho",
+   "degrau": 4,
+   "nome": "Juntar fontes de dados",
+   "classe": "alquimista",
+   "icone": "🔗",
+   "resumo": "Dados úteis quase nunca estão num lugar só. Junte tabelas por uma chave única e estável (como ID do cliente, não o nome), cuide de duplicatas e confira as contagens antes e depois da junção. Quando a rotina se repete, grave os passos (Power Query, script) e agende a atualização, mostrando a data da última carga.",
+   "dicas": [
+    "Junte por ID único, nunca por nome digitado à mão.",
+    "Compare contagem de linhas e totais antes e depois do merge.",
+    "Registre a data da última atualização em todo relatório automático."
+   ],
+   "fonte": {
+    "livro": "python-dados",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "alquimista-paineis",
+   "trilha": "trabalho",
+   "degrau": 5,
+   "nome": "Painéis e histórias com dados",
+   "classe": "alquimista",
+   "icone": "📈",
+   "resumo": "Um bom painel responde poucas perguntas, rápido: KPIs no topo com meta e comparação, gráficos escolhidos pelo tipo de pergunta (linha para tempo, barras para comparar) e títulos que dizem a conclusão. Evite enganar: eixo cortado, pizza com muitas fatias e comparações injustas. Confira sempre os números que a IA resume.",
+   "dicas": [
+    "Linha para tempo, barras para comparar categorias, tabela para valor exato.",
+    "Título-conclusão: \"Churn caiu 2 pontos após o novo onboarding\".",
+    "Compare períodos equivalentes (dezembro com dezembro)."
+   ],
+   "fonte": {
+    "livro": "receitas-de-prompt",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "arqueiro-mira-basica",
+   "trilha": "prompts",
+   "degrau": 1,
+   "nome": "Mira básica: o prompt claro",
+   "principal": "arqueiro",
+   "icone": "🏹",
+   "resumo": "Um bom prompt tem quatro partes: Papel (quem a IA deve ser), Contexto (a situação e os dados), Tarefa (o que fazer, de forma específica) e Formato (como entregar). Quanto menos a IA precisa adivinhar, melhor a resposta. Se o primeiro resultado não servir, não recomeça: pede ajustes na mesma conversa.",
+   "dicas": [
+    "Troca 'faz um resumo' por 'resume em 5 tópicos para a diretoria'",
+    "Diz o público e o tom: quem vai ler muda tudo",
+    "Se errou, aponta o que mudar em vez de repetir o pedido"
+   ],
+   "fonte": {
+    "livro": "prompt",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "artifice-scripts",
+   "trilha": "codigo",
+   "degrau": 2,
+   "nome": "Scripts de arquivos e pastas",
+   "classe": "artifice",
+   "icone": "📁",
+   "resumo": "Com pathlib tu navega por pastas como objetos: Path('docs').glob('*.pdf') lista arquivos, .name, .stem e .suffix dão as partes do nome, e p.rename(destino) move. Antes de mexer em centenas de arquivos, rode um modo simulação que só imprime o que faria, de preferência numa cópia da pasta.",
+   "dicas": [
+    "Use Path(...) em vez de montar caminhos com texto e barras",
+    "Faça um dry-run: imprima o que moveria antes de mover de verdade",
+    "Teste sempre numa cópia da pasta, nunca direto na original"
+   ],
+   "fonte": {
+    "livro": "python-automacao",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "artifice-integrar",
+   "trilha": "codigo",
+   "degrau": 3,
+   "nome": "Agendar e integrar",
+   "classe": "artifice",
+   "icone": "⏰",
+   "resumo": "Para o golem trabalhar sozinho, agenda o script no Agendador de Tarefas (Windows) ou no cron (Linux), num lugar que fique sempre ligado. Ao chamar APIs, guarda a chave em variável de ambiente, define timeout, chama raise_for_status() e trata erros como 429 esperando e tentando de novo.",
+   "dicas": [
+    "Chave de API em os.environ, nunca escrita no código",
+    "Sempre passe timeout= nas chamadas e confira o status da resposta",
+    "Em erro 429 ou 5xx, espere e tente de novo com pausa crescente"
+   ],
+   "fonte": {
+    "livro": "python-automacao",
+    "capitulo": 4
+   }
+  },
+  {
+   "id": "artifice-sem-codigo",
+   "trilha": "codigo",
+   "degrau": 4,
+   "nome": "Automação com IA no fluxo",
+   "classe": "artifice",
+   "icone": "🤖",
+   "resumo": "Todo fluxo tem um gatilho (o que dispara) e ações (o que acontece depois). Ao colocar um LLM no meio, peça saída em formato fixo, como JSON, para a etapa seguinte rotear sem adivinhar, e ponha uma aprovação humana antes de qualquer envio ou ação que não dá para desfazer.",
+   "dicas": [
+    "Peça ao LLM só JSON com campos fixos para o próximo passo ler",
+    "Coloque aprovação humana antes de enviar ao cliente ou gastar dinheiro",
+    "Marque o item como processado para o fluxo não repetir a ação"
+   ],
+   "fonte": {
+    "livro": "automacao-sem-codigo",
+    "capitulo": 4
+   }
+  },
+  {
+   "id": "artifice-agentes",
+   "trilha": "codigo",
+   "degrau": 5,
+   "nome": "Agentes e ferramentas",
+   "classe": "artifice",
+   "icone": "🧠",
+   "resumo": "No tool use, tu descreves ferramentas (nome, descrição e parâmetros) e o modelo apenas pede a chamada; quem executa é o teu código, num laço que devolve o resultado até haver resposta final. Dê só as permissões necessárias, limite o número de passos, registre cada chamada em log e, se os passos são fixos, prefira um script simples a um agente.",
+   "dicas": [
+    "Privilégio mínimo: a ferramenta só faz o que a tarefa exige",
+    "Ponha um teto de passos no laço e grave um log de cada chamada",
+    "Se os passos são sempre os mesmos, script ou fluxo bastam: não use agente"
+   ],
+   "fonte": {
+    "livro": "agentes-ferramentas",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "berserker-erros",
+   "trilha": "codigo",
+   "degrau": 2,
+   "nome": "Ler erros e tracebacks",
+   "classe": "berserker",
+   "icone": "🔍",
+   "resumo": "O traceback se lê de baixo para cima: a última linha traz o tipo do erro e a mensagem, e as linhas acima mostram o caminho até ali, com arquivo e número da linha. NameError é nome mal escrito, TypeError é tipo errado, KeyError é chave que não existe e IndexError é posição fora da lista.",
+   "dicas": [
+    "Comece pela última linha do traceback: tipo e mensagem",
+    "Vá ao arquivo e à linha indicada e olhe também a linha de cima",
+    "Copie a mensagem exata: ela é a melhor pista para buscar ou perguntar"
+   ],
+   "fonte": {
+    "livro": "python-basico",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "berserker-depurar",
+   "trilha": "codigo",
+   "degrau": 3,
+   "nome": "Depurar com IA",
+   "classe": "berserker",
+   "icone": "🐛",
+   "resumo": "Primeiro reproduza o bug de forma confiável. Depois mostre o valor das variáveis com print ou breakpoint(), e peça ajuda à IA com o erro completo, um código mínimo e o que tu esperava. Antes de aceitar a correção, entenda o motivo e rode o caso que falhava mais outros casos.",
+   "dicas": [
+    "Reduza o bug ao menor código que ainda falha",
+    "Mande para a IA: erro completo, código mínimo e resultado esperado",
+    "Nunca aplique a correção sem rodar o caso que quebrava"
+   ],
+   "fonte": {
+    "livro": "testes-e-qualidade",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "berserker-testes",
+   "trilha": "codigo",
+   "degrau": 4,
+   "nome": "Testes automatizados",
+   "classe": "berserker",
+   "icone": "🧪",
+   "resumo": "Um teste é um assert que diz o que esperas: assert desconto(200, 10) == 180. Com pytest, arquivos test_*.py e funções test_* são achados sozinhos. Teste o caso feliz e os de borda (zero, vazio, limite), escreva o teste que reproduz o bug antes de corrigir e confira os testes que a IA escrever.",
+   "dicas": [
+    "Teste o caso feliz e depois zero, vazio e limite",
+    "Bug novo: escreva o teste que falha, corrija e veja passar",
+    "Teste da IA que nunca falha não prova nada: quebre o código de propósito"
+   ],
+   "fonte": {
+    "livro": "testes-e-qualidade",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "berserker-git",
+   "trilha": "codigo",
+   "degrau": 5,
+   "nome": "Git e entrega segura",
+   "classe": "berserker",
+   "icone": "🌿",
+   "resumo": "O dia a dia é status, add, commit com mensagem clara, num branch próprio, e depois um pull request para outra pessoa revisar. Para desfazer algo já publicado use git revert, que cria um commit novo; segredo commitado deve ser trocado na hora, porque apagar o arquivo não apaga o histórico.",
+   "dicas": [
+    "Um branch por tarefa e commits pequenos com mensagem clara",
+    "Segredo no repositório: troque a chave, não basta apagar",
+    "No hotfix: correção mínima, em branch, com PR revisado"
+   ],
+   "fonte": {
+    "livro": "git",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "cacador-formato",
+   "trilha": "prompts",
+   "degrau": 2,
+   "nome": "Formato de saída exato",
+   "classe": "cacador",
+   "icone": "🎯",
+   "resumo": "Quando o resultado vai para planilha ou sistema, precisas do formato exato. Pede JSON ou tabela com campos fixos, mostra um exemplo do formato, limita o tamanho e diz o que fazer quando faltar informação. Diz também 'responda apenas com o JSON, sem texto extra'.",
+   "dicas": [
+    "Mostra um exemplo do formato esperado",
+    "Define os nomes dos campos",
+    "Pede só o JSON, sem comentários"
+   ],
+   "fonte": {
+    "livro": "prompts-avancados",
+    "capitulo": 4
+   }
+  },
+  {
+   "id": "cacador-extracao",
+   "trilha": "prompts",
+   "degrau": 3,
+   "nome": "Extrair dados de textos",
+   "classe": "cacador",
+   "icone": "🔍",
+   "resumo": "A IA é ótima para tirar nomes, datas e valores de e-mails, notas e contratos. Define os campos, manda normalizar (data no padrão ISO, valor só em número) e diz o que fazer quando não achar: null ou 'não informado', nunca adivinhar. Confere uma amostra antes de rodar em tudo.",
+   "dicas": [
+    "Lista os campos e o formato de cada um",
+    "Normaliza datas e valores",
+    "Campo ausente vira null, nunca chute"
+   ],
+   "fonte": {
+    "livro": "prompts-avancados",
+    "capitulo": 4
+   }
+  },
+  {
+   "id": "cacador-casos-limite",
+   "trilha": "prompts",
+   "degrau": 4,
+   "nome": "Casos-limite e consistência",
+   "classe": "cacador",
+   "icone": "🧭",
+   "resumo": "Prompts de extração e classificação quebram nos casos estranhos: entrada ambígua, mistura de categorias, campo vazio. Inclui exemplos difíceis, escreve regras de desempate ('se houver duas categorias, escolhe a mais urgente') e usa temperatura baixa quando queres respostas consistentes.",
+   "dicas": [
+    "Põe um exemplo ambíguo no prompt",
+    "Escreve a regra de desempate",
+    "Temperatura baixa para tarefas determinísticas"
+   ],
+   "fonte": {
+    "livro": "prompts-avancados",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "cacador-ancorar",
+   "trilha": "prompts",
+   "degrau": 5,
+   "nome": "Ancorar a resposta nas fontes",
+   "classe": "cacador",
+   "icone": "📌",
+   "resumo": "Para a IA não inventar, ancora a resposta no documento: manda 'responda só com base no texto abaixo', exige citar o trecho usado e autoriza explicitamente 'não sei' quando a resposta não estiver lá. Depois confere se a citação realmente existe no documento.",
+   "dicas": [
+    "Responda só com base no texto fornecido",
+    "Exige citação do trecho",
+    "Autoriza a resposta 'não encontrei'"
+   ],
+   "fonte": {
+    "livro": "rag-conhecimento",
+    "capitulo": 4
+   }
+  },
+  {
+   "id": "cavaleiro-tokens",
+   "trilha": "fundamentos",
+   "degrau": 2,
+   "nome": "Tokens e janela de contexto",
+   "classe": "cavaleiro",
+   "icone": "🛡️",
+   "resumo": "O modelo não lê palavras, lê tokens: pedaços de texto, que podem ser palavras, partes de palavra ou símbolos. A janela de contexto é o limite de tokens que ele vê de uma vez, somando o que tu envia e o que ele responde; e nada fica guardado entre conversas, a não ser que o app reenvie.",
+   "dicas": [
+    "Mais tokens = mais custo e mais demora.",
+    "Conversa nova começa do zero; reenvie o que importa.",
+    "Em textos enormes, quebre em partes ou resuma antes."
+   ],
+   "fonte": {
+    "livro": "por-dentro-dos-modelos",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "cavaleiro-treino",
+   "trilha": "fundamentos",
+   "degrau": 3,
+   "nome": "Como um modelo aprende",
+   "classe": "cavaleiro",
+   "icone": "🏇",
+   "resumo": "Primeiro vem o pré-treino: o modelo lê quantidades enormes de texto aprendendo a prever o próximo token. Depois, o ajuste fino o especializa e o aprendizado com feedback humano (RLHF) o torna um assistente que segue pedidos. Como o treino tem data de corte, ele não sabe de fatos mais recentes.",
+   "dicas": [
+    "Para fatos novos ou dos teus documentos, entrega o texto no contexto.",
+    "O modelo reflete os padrões, e os vieses, dos dados de treino.",
+    "Pergunte a data de corte antes de confiar em algo recente."
+   ],
+   "fonte": {
+    "livro": "por-dentro-dos-modelos",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "cavaleiro-alucinacao",
+   "trilha": "fundamentos",
+   "degrau": 4,
+   "nome": "Por que a IA alucina",
+   "classe": "cavaleiro",
+   "icone": "🐴",
+   "resumo": "A IA alucina porque prever o texto mais provável não é o mesmo que consultar a verdade: se o fato é raro ou ela não sabe, ela completa com algo plausível, como uma citação ou um número inventado. Reduz-se dando a fonte, permitindo «não sei» e pedindo trechos; e sempre se confere o que importa.",
+   "dicas": [
+    "Fatos raros, números, leis e referências são os mais arriscados.",
+    "Dê o texto-fonte e peça para responder só com base nele.",
+    "Confira citações em fonte oficial; «tem certeza?» não é verificação."
+   ],
+   "fonte": {
+    "livro": "ia-fundamentos",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "cavaleiro-parametros",
+   "trilha": "fundamentos",
+   "degrau": 5,
+   "nome": "Temperatura e parâmetros",
+   "classe": "cavaleiro",
+   "icone": "⚙️",
+   "resumo": "A temperatura controla o sorteio da próxima palavra: baixa deixa as respostas previsíveis e consistentes (extrair dados, classificar), alta traz variedade (ideias, nomes, slogans). O top-p limita o sorteio aos tokens mais prováveis e o máximo de tokens limita o tamanho da resposta.",
+   "dicas": [
+    "Tarefas exatas: temperatura baixa. Brainstorm: mais alta.",
+    "Não mexa em temperatura e top-p ao mesmo tempo sem testar.",
+    "Se a resposta corta no meio, aumente o máximo de tokens ou peça mais curto."
+   ],
+   "fonte": {
+    "livro": "por-dentro-dos-modelos",
+    "capitulo": 4
+   }
+  },
+  {
+   "id": "comandante-briefing",
+   "trilha": "prompts",
+   "degrau": 2,
+   "nome": "O briefing perfeito",
+   "classe": "comandante",
+   "icone": "🎖️",
+   "resumo": "Delegar para a IA é como delegar para uma pessoa: diz o objetivo, quem vai ler, as restrições, o que significa 'pronto' e o prazo ou tamanho. Um briefing vago gera trabalho vago. Antes de enviar, pergunta a ti mesmo: um colega novo entenderia sem ter que te perguntar nada?",
+   "dicas": [
+    "Objetivo + público + restrições + critério de pronto",
+    "Dá um exemplo do que considera bom",
+    "Se uma pessoa nova não entenderia, a IA também não"
+   ],
+   "fonte": {
+    "livro": "prompt",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "comandante-padroes",
+   "trilha": "prompts",
+   "degrau": 3,
+   "nome": "Prompts padrão para a equipe",
+   "classe": "comandante",
+   "icone": "📚",
+   "resumo": "Prompts que funcionam devem virar modelos reutilizáveis, com variáveis entre chaves como {cliente} e {produto}, o tom da empresa e um exemplo de saída. Guarda numa biblioteca compartilhada com dono, versão e data de revisão, para o time não reinventar cada vez.",
+   "dicas": [
+    "Troca partes variáveis por {variáveis}",
+    "Guarda os modelos num lugar único, com dono",
+    "Registra versão e quando foi testado"
+   ],
+   "fonte": {
+    "livro": "prompts-avancados",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "comandante-encadear",
+   "trilha": "prompts",
+   "degrau": 4,
+   "nome": "Encadear tarefas",
+   "classe": "comandante",
+   "icone": "⛓️",
+   "resumo": "Trabalhos grandes funcionam melhor quebrados em etapas: a saída de uma etapa vira a entrada da próxima (prompt chaining). Exemplo: extrair fatos, depois resumir, depois redigir. Coloca checkpoints humanos onde um erro custaria caro, para corrigir antes de seguir adiante.",
+   "dicas": [
+    "Uma etapa, um objetivo",
+    "Passa só o necessário de uma etapa para a outra",
+    "Põe revisão humana antes das etapas irreversíveis"
+   ],
+   "fonte": {
+    "livro": "prompt",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "comandante-avaliar",
+   "trilha": "prompts",
+   "degrau": 5,
+   "nome": "Avaliar e iterar",
+   "classe": "comandante",
+   "icone": "⚖️",
+   "resumo": "Melhorar prompt por impressão é arriscado. Define uma rubrica com critérios objetivos (correto? no formato? no tom? sem inventar?), monta um conjunto de casos de teste e compara versões do prompt (A/B) com os mesmos casos. Os erros encontrados dizem o que mudar na próxima versão.",
+   "dicas": [
+    "Mesmos casos de teste para as duas versões",
+    "Rubrica com critérios que dá para medir",
+    "Cada erro vira um ajuste no prompt"
+   ],
+   "fonte": {
+    "livro": "prompt",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "domador-mvp",
+   "trilha": "fundamentos",
+   "degrau": 2,
+   "nome": "Da ideia ao MVP",
+   "classe": "domador",
+   "icone": "🐉",
+   "resumo": "Todo projeto bom começa por um problema real de uma pessoa real, não por uma tecnologia. O MVP é a menor versão que já resolve esse problema: tu testas o prompt com 10 ou 20 casos reais, mostras para quem vai usar e mede se o resultado melhorou.",
+   "dicas": [
+    "Escreve a dor em uma frase: quem sofre, com o quê, quanto custa.",
+    "Prototipa primeiro no chat, com exemplos reais, antes de escrever código.",
+    "Define a métrica antes: tempo por tarefa, erros, satisfação."
+   ],
+   "fonte": {
+    "livro": "custos-e-metricas",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "domador-rag",
+   "trilha": "fundamentos",
+   "degrau": 3,
+   "nome": "IA com os teus documentos (RAG)",
+   "classe": "domador",
+   "icone": "📜",
+   "resumo": "RAG é dar à IA um livro de consulta: tu divides os documentos em trechos, transforma cada um em um vetor (embedding) que guarda o significado, busca os mais parecidos com a pergunta e coloca esses trechos no contexto. Assim a resposta é baseada nos teus documentos e pode citar a fonte.",
+   "dicas": [
+    "Quando o conhecimento muda, atualiza os documentos; não retreina o modelo.",
+    "Se a resposta veio errada, olha primeiro quais trechos foram recuperados.",
+    "Mostra a fonte ao usuário e deixa o bot dizer «não encontrei»."
+   ],
+   "fonte": {
+    "livro": "rag-conhecimento",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "domador-custos",
+   "trilha": "fundamentos",
+   "degrau": 4,
+   "nome": "Custos, velocidade e modelo certo",
+   "classe": "domador",
+   "icone": "💰",
+   "resumo": "Modelos cobram por token, na entrada e na saída; prompts enormes repetidos em cada chamada custam caro. Modelos pequenos são mais baratos e rápidos e bastam para tarefas simples; os grandes valem para tarefas difíceis. Teste com um conjunto de exemplos e use o menor que atinja a qualidade exigida.",
+   "dicas": [
+    "Meça o custo por tarefa concluída, não só por token.",
+    "Enxugue o prompt de sistema e reaproveite respostas repetidas com cache.",
+    "Troque de modelo só depois de rodar o mesmo conjunto de testes."
+   ],
+   "fonte": {
+    "livro": "custos-e-metricas",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "domador-producao",
+   "trilha": "fundamentos",
+   "degrau": 5,
+   "nome": "Produção e monitoramento",
+   "classe": "domador",
+   "icone": "🛡️",
+   "resumo": "Colocar em produção é só o começo: tu precisas avaliar as respostas continuamente com um conjunto de testes, registrar logs (sem expor dados pessoais), coletar feedback do usuário e ter um plano B quando o modelo erra ou fica fora do ar. Libere aos poucos e acompanhe as métricas de qualidade, custo e tempo.",
+   "dicas": [
+    "Fixe a versão do modelo e do prompt, e rode os testes a cada mudança.",
+    "Registre entrada, saída, versão e tempo; mascare dados pessoais.",
+    "Tenha fallback: outro modelo, resposta padrão ou encaminhar para uma pessoa."
+   ],
+   "fonte": {
+    "livro": "rag-conhecimento",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "gladiador-mensagens",
+   "trilha": "trabalho",
+   "degrau": 2,
+   "nome": "E-mails e mensagens",
+   "classe": "gladiador",
+   "icone": "✉️",
+   "resumo": "Um bom e-mail diz logo no início o que tu queres e até quando. Ao usar a IA para responder, passe a mensagem recebida, tua intenção, o tom e o tamanho; depois revise nomes, datas e promessas antes de enviar. Em mensagens difíceis, reconheça o problema, dê a nova data e não culpe ninguém. Nunca cole dados sigilosos.",
+   "dicas": [
+    "Primeira frase: o pedido ou a decisão, com prazo.",
+    "Assunto com ação: \"Aprovação até quinta: orçamento da campanha\".",
+    "Releia nomes, datas e valores que a IA escreveu antes de enviar."
+   ],
+   "fonte": {
+    "livro": "produtividade-ia",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "gladiador-reunioes",
+   "trilha": "trabalho",
+   "degrau": 3,
+   "nome": "Reuniões que rendem",
+   "classe": "gladiador",
+   "icone": "🗓️",
+   "resumo": "Reunião boa começa com pauta: objetivo, tópicos com tempo e a decisão esperada. Termina com ata curta: decisões, responsáveis e prazos. Com a IA, tu transformas a transcrição em resumo, mas conferes nomes e números, e só gravas com aviso aos participantes e ferramenta aprovada.",
+   "dicas": [
+    "Pauta: objetivo, tópicos com tempo e decisão esperada.",
+    "Próximo passo = quem + o quê + até quando.",
+    "Envie a ata no mesmo dia e peça correções até um prazo."
+   ],
+   "fonte": {
+    "livro": "produtividade-ia",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "gladiador-relatorios",
+   "trilha": "trabalho",
+   "degrau": 4,
+   "nome": "Relatórios e apresentações",
+   "classe": "gladiador",
+   "icone": "📑",
+   "resumo": "Relatório bom começa pela conclusão: resumo executivo com o que importa e o que se pede, depois contexto, dados, riscos e próximos passos. A IA ajuda a estruturar, resumir e adaptar o texto ao público, mas cada número deve ser conferido na fonte. Um slide tem uma ideia e um título que conta a conclusão.",
+   "dicas": [
+    "Resumo executivo: conclusão, impacto e pedido primeiro.",
+    "Cada número: fonte, período e comparação.",
+    "Um slide, uma ideia, título-conclusão."
+   ],
+   "fonte": {
+    "livro": "produtividade-ia",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "gladiador-gestao",
+   "trilha": "trabalho",
+   "degrau": 5,
+   "nome": "Prioridades e metas",
+   "classe": "gladiador",
+   "icone": "🎯",
+   "resumo": "Prioridade se define pelo impacto no objetivo e pelo prazo real, não pelo grito mais alto. Use urgente x importante, limite o trabalho em andamento no kanban e escreva metas como OKRs: um objetivo claro com resultados-chave mensuráveis. A IA ajuda a planejar a semana, mas tu ajustas aos teus limites.",
+   "dicas": [
+    "KR mede resultado (de X para Y até quando), não atividade.",
+    "No kanban, limite o que está \"em andamento\".",
+    "Peça à IA um plano com folga: ninguém trabalha 100% das horas."
+   ],
+   "fonte": {
+    "livro": "produtividade-ia",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "guardiao-lgpd",
+   "trilha": "seguranca",
+   "degrau": 2,
+   "nome": "Dados pessoais e a LGPD",
+   "classe": "guardiao",
+   "icone": "📜",
+   "resumo": "A LGPD protege qualquer informação que identifique ou possa identificar uma pessoa (nome, CPF, e-mail, telefone); dados sensíveis, como saúde, biometria, religião e opinião política, pedem ainda mais cuidado. Todo uso precisa de uma base legal e de finalidade clara, coletando só o necessário. O titular tem direitos, como saber o que fazem com seus dados, corrigir e pedir a eliminação.",
+   "dicas": [
+    "Pergunte sempre: para que preciso deste dado? Se não há finalidade, não colete.",
+    "Dado sensível exige atenção redobrada, mesmo dentro da empresa.",
+    "Pedido de titular (acesso, correção, eliminação) é encaminhado ao encarregado, não ignorado."
+   ],
+   "fonte": {
+    "livro": "lgpd-e-dados",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "guardiao-anonimizar",
+   "trilha": "seguranca",
+   "degrau": 3,
+   "nome": "Anonimizar antes da IA",
+   "classe": "guardiao",
+   "icone": "🎭",
+   "resumo": "Antes de levar um texto a uma IA fora da empresa, troque nomes por códigos (Cliente_A), mascare CPF e telefone e remova o que identifica. Pseudonimizar guarda a chave para voltar à pessoa e continua sendo dado pessoal; anonimizar de verdade não permite reidentificar. Se não dá para anonimizar bem, use a IA corporativa aprovada.",
+   "dicas": [
+    "Troque nomes por códigos e guarde a tabela de/para só dentro da empresa.",
+    "Mascarar CPF (***.456.789-**) ajuda, mas confira se o restante do texto não entrega a pessoa.",
+    "Sem anonimização boa? Ferramenta corporativa aprovada, ou não vai."
+   ],
+   "fonte": {
+    "livro": "lgpd-e-dados",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "guardiao-segredos",
+   "trilha": "seguranca",
+   "degrau": 4,
+   "nome": "Segredos e criptografia",
+   "classe": "guardiao",
+   "icone": "🗝️",
+   "resumo": "Chaves de API, tokens e senhas de banco são segredos: ficam em variáveis de ambiente (.env fora do Git) ou num cofre, nunca escritas no código. Criptografia em trânsito (HTTPS/TLS) protege o que viaja; em repouso protege o que está guardado em disco ou banco. Chave exposta deve ser revogada e rotacionada na hora; apagar o commit não basta.",
+   "dicas": [
+    "Coloque .env no .gitignore e commite só um .env.example sem valores.",
+    "Chave vazou? Revogue e gere outra primeiro; limpar o histórico vem depois.",
+    "Use HTTPS sempre e dê a cada chave só as permissões de que ela precisa."
+   ],
+   "fonte": {
+    "livro": "git",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "guardiao-governanca",
+   "trilha": "seguranca",
+   "degrau": 5,
+   "nome": "Governança e Zero Trust",
+   "classe": "guardiao",
+   "icone": "🏰",
+   "resumo": "Governança é ter regras claras: uma política de uso de IA, uma lista de ferramentas aprovadas, alguém responsável por aprovar novas e um registro de quem usa o quê. Zero Trust é não confiar por padrão: toda pessoa, dispositivo e sistema prova quem é a cada acesso, com o menor privilégio possível. Revise acessos com frequência e retire os que não são mais necessários.",
+   "dicas": [
+    "Ferramenta nova de IA? Passe pela aprovação antes de colocar dado real nela.",
+    "Dê o acesso mínimo, por tempo definido, e revise quando a pessoa mudar de função.",
+    "Registre quem usou, para que e com quais dados: sem registro, não há auditoria."
+   ],
+   "fonte": {
+    "livro": "ia-responsavel",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "guerreiro-escudo-basico",
+   "trilha": "seguranca",
+   "degrau": 1,
+   "nome": "Escudo básico: dados e senhas",
+   "principal": "guerreiro",
+   "icone": "🛡️",
+   "resumo": "Uma IA pública é como uma taverna cheia: o que tu falas lá fora pode ser guardado e visto por quem não devia. Nunca cole senhas, chaves, dados de clientes (CPF, contratos, prontuários) nem segredos da empresa; troque nomes por códigos ou use a ferramenta aprovada. E desconfie de qualquer pedido estranho ou urgente, venha de quem vier.",
+   "dicas": [
+    "Antes de colar, pergunte: isto identifica uma pessoa ou revela um segredo da empresa?",
+    "Senha ou chave nunca vai em prompt, chat ou e-mail, nem para o 'suporte'.",
+    "Pedido urgente fora do comum? Pare e confirme por outro canal."
+   ],
+   "fonte": {
+    "livro": "seguranca-digital",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "mago-como-a-ia-pensa",
+   "trilha": "fundamentos",
+   "degrau": 1,
+   "nome": "Como a IA pensa",
+   "principal": "mago",
+   "icone": "🔮",
+   "resumo": "IA é o guarda-chuva; machine learning é aprender padrões a partir de exemplos; e um LLM é um modelo de ML treinado em muito texto que, na prática, prevê a próxima palavra mais provável. Por isso ele escreve, resume e reformula muito bem, mas pode soar confiante e estar errado.",
+   "dicas": [
+    "Dá a ele o texto ou os dados: IA reorganiza bem o que tu entrega.",
+    "Fluência não é prova: confere números, nomes e datas na fonte.",
+    "Se a resposta importa, pede o raciocínio e valida com uma segunda fonte."
+   ],
+   "fonte": {
+    "livro": "ia-fundamentos",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "mercenario-propostas",
+   "trilha": "trabalho",
+   "degrau": 2,
+   "nome": "Propostas e orçamentos",
+   "classe": "mercenario",
+   "icone": "📜",
+   "resumo": "Uma proposta vende o resultado: mostra o problema do cliente, os entregáveis, o prazo, o preço e as condições. Deixe claro o que está incluído e o que não está. Estime horas por tarefa, com margem para revisões. A IA ajuda no rascunho, mas tu cortas promessas que não podes cumprir.",
+   "dicas": [
+    "Liste o que está incluído e o que NÃO está.",
+    "Estime por tarefa e some margem para revisões e imprevistos.",
+    "Fale do resultado para o cliente, não só de horas."
+   ],
+   "fonte": {
+    "livro": "receitas-de-prompt",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "mercenario-clientes",
+   "trilha": "trabalho",
+   "degrau": 3,
+   "nome": "Clientes e escopo",
+   "classe": "mercenario",
+   "icone": "🤝",
+   "resumo": "Clientes raramente pedem o que precisam. Faça perguntas de descoberta (objetivo, público, referências, prazo, orçamento), registre tudo por escrito e trate mudanças como mudanças: estime impacto em prazo e preço e peça aprovação. A IA ajuda a organizar o briefing e a achar perguntas que faltam.",
+   "dicas": [
+    "Pergunte pelo resultado antes do formato.",
+    "Confirme toda conversa por escrito, em poucas linhas.",
+    "Mudança de escopo = novo orçamento ou novo prazo, aprovado por escrito."
+   ],
+   "fonte": {
+    "livro": "receitas-de-prompt",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "mercenario-entrega",
+   "trilha": "trabalho",
+   "degrau": 4,
+   "nome": "Entrega rápida com qualidade",
+   "classe": "mercenario",
+   "icone": "🚀",
+   "resumo": "Rapidez vem de templates (proposta, briefing, entrega) e checklists de revisão, não de pular etapas. Use a IA para rascunhos e depois revise fatos, nomes e originalidade. Combine por contrato quem detém os direitos do que foi entregue e seja honesto com o cliente sobre como trabalhas.",
+   "dicas": [
+    "Checklist final: nomes, links, números, anexos e arquivos certos.",
+    "IA faz o rascunho; tu revisas e adaptas à voz do cliente.",
+    "Deixe no contrato quem fica com os direitos após o pagamento."
+   ],
+   "fonte": {
+    "livro": "ia-trabalho",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "mercenario-negocio",
+   "trilha": "trabalho",
+   "degrau": 5,
+   "nome": "O negócio de uma pessoa só",
+   "classe": "mercenario",
+   "icone": "🏰",
+   "resumo": "Quem trabalha sozinho é o negócio inteiro: precifica, contrata, vende e cobra. Calcule o valor-hora com custos e horas realmente faturáveis, use contrato claro (escopo, prazo, pagamento, confidencialidade, direitos) e proteja dados de clientes. Mostre casos reais no portfólio, use a IA no marketing sem inventar nada e automatize o administrativo repetitivo.",
+   "dicas": [
+    "Valor-hora = ganho desejado + custos, dividido pelas horas faturáveis.",
+    "Nunca coloque dados do cliente em IA sem permissão e proteção.",
+    "Automatize o que é repetitivo e tem regra clara (cobranças, recibos)."
+   ],
+   "fonte": {
+    "livro": "custos-e-metricas",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "paladino-senhas",
+   "trilha": "seguranca",
+   "degrau": 2,
+   "nome": "Senhas fortes e gerenciador",
+   "classe": "paladino",
+   "icone": "🔑",
+   "resumo": "Uma boa senha é longa e única: uma frase-senha (como 'cavalo-azul-come-pao-na-chuva') vence 'P@ssw0rd!' porque tamanho pesa mais que símbolos. Cada site precisa da sua própria senha, senão um vazamento derruba todas as tuas contas; para isso existe o gerenciador de senhas, protegido por uma senha mestra forte. Se um serviço vazar, troca a senha dele na hora e em qualquer outro lugar onde a tenhas reutilizado.",
+   "dicas": [
+    "Frase longa e esquisita vale mais que símbolos em palavra curta.",
+    "Uma senha por site, sempre. O gerenciador lembra por ti.",
+    "Verifique se teu e-mail apareceu em vazamentos (como no Have I Been Pwned) e troque o que for preciso."
+   ],
+   "fonte": {
+    "livro": "seguranca-digital",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "paladino-2fa",
+   "trilha": "seguranca",
+   "degrau": 3,
+   "nome": "Dois fatores e contas",
+   "classe": "paladino",
+   "icone": "🔐",
+   "resumo": "O segundo fator (2FA ou MFA) faz com que a senha sozinha não abra a conta: um app autenticador ou uma chave física protege melhor que SMS, que pode ser desviado por troca de chip. Guarde os códigos de recuperação num lugar seguro e offline, revise as sessões abertas e dispositivos conectados de tempos em tempos. Nunca passes o código a ninguém: quem pede é golpista, mesmo se disser que é do banco ou do suporte.",
+   "dicas": [
+    "Prefira app autenticador ou chave de segurança ao SMS nas contas importantes.",
+    "Guarde os códigos de recuperação fora do celular (cofre ou papel guardado).",
+    "Chegou notificação de login que tu não pediste? Negue e troque a senha."
+   ],
+   "fonte": {
+    "livro": "seguranca-digital",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "paladino-golpes-ia",
+   "trilha": "seguranca",
+   "degrau": 4,
+   "nome": "Golpes turbinados por IA",
+   "classe": "paladino",
+   "icone": "🎭",
+   "resumo": "Hoje basta alguns segundos de áudio para clonar uma voz, e vídeos falsos (deepfakes) enganam até em chamada ao vivo. Por isso, a regra é: pedido urgente, sigiloso e envolvendo dinheiro ou acesso nunca se resolve só pela voz ou imagem. Desligue e confirme por outro canal que tu já conhecias, use uma palavra-código com a família e siga o processo de dupla aprovação.",
+   "dicas": [
+    "Urgência + sigilo + dinheiro = pare e confirme por outro canal conhecido.",
+    "Combine uma palavra-código com a família e com o time financeiro.",
+    "Voz e vídeo não provam identidade: confirme por um canal independente."
+   ],
+   "fonte": {
+    "livro": "seguranca-digital",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "paladino-incidente",
+   "trilha": "seguranca",
+   "degrau": 5,
+   "nome": "Quando algo vaza",
+   "classe": "paladino",
+   "icone": "🚨",
+   "resumo": "Quando algo dá errado (clicou num link, perdeu o celular, a conta foi invadida), a regra é: conter, trocar, avisar e registrar. Desconecte o dispositivo, troque as senhas (começando pelo e-mail), encerre as sessões, avise a segurança logo e anote o que aconteceu, quando e o que foi afetado. Nunca escondas: quanto mais cedo a equipe souber, menor o estrago, e o aprendizado vale mais que a culpa.",
+   "dicas": [
+    "Primeiro conter, depois investigar: desconecte, troque senhas, encerre sessões.",
+    "Avise a segurança na hora, mesmo que tenhas vergonha.",
+    "Anote o que, quando e onde, e não apague as evidências."
+   ],
+   "fonte": {
+    "livro": "seguranca-digital",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "patrulheiro-dados",
+   "trilha": "fundamentos",
+   "degrau": 2,
+   "nome": "Dados de treino",
+   "classe": "patrulheiro",
+   "icone": "🏹",
+   "resumo": "Um modelo de ML é tão bom quanto os dados em que aprende: lixo entra, lixo sai. Cada exemplo precisa de rótulo correto, os dados faltantes precisam de uma decisão consciente, e tu separas uma parte (teste) que o modelo nunca viu para avaliar de verdade.",
+   "dicas": [
+    "Olhe os dados antes de treinar: faltantes, duplicados, valores absurdos.",
+    "Separe treino e teste antes de qualquer ajuste.",
+    "Cuidado com colunas que entregam a resposta (vazamento)."
+   ],
+   "fonte": {
+    "livro": "ia-fundamentos",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "patrulheiro-modelos",
+   "trilha": "fundamentos",
+   "degrau": 3,
+   "nome": "Modelos clássicos",
+   "classe": "patrulheiro",
+   "icone": "🌲",
+   "resumo": "Em classificação o modelo escolhe uma categoria (vai cancelar? sim ou não); em regressão ele prevê um número (qual o preço?). Árvores de decisão são simples de explicar, florestas aleatórias juntam muitas árvores para ficar mais estáveis, e o agrupamento acha grupos sem rótulos. Para dados em tabela, ML clássico costuma bastar.",
+   "dicas": [
+    "Pergunte: a saída é categoria (classificação) ou número (regressão)?",
+    "Comece simples: o modelo mais simples que resolve é o melhor.",
+    "Para dados em tabela, teste ML clássico antes de usar um LLM."
+   ],
+   "fonte": {
+    "livro": "ia-fundamentos",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "patrulheiro-metricas",
+   "trilha": "fundamentos",
+   "degrau": 4,
+   "nome": "Medir um modelo",
+   "classe": "patrulheiro",
+   "icone": "📏",
+   "resumo": "Acurácia é o total de acertos, mas engana quando a base é desbalanceada. Precisão responde «dos que o modelo marcou, quantos eram de fato?» e recall responde «dos reais, quantos ele achou?». O overfitting aparece quando o treino vai muito bem e o teste vai mal; escolha a métrica pelo custo de cada tipo de erro.",
+   "dicas": [
+    "Monte a matriz de confusão antes de olhar a acurácia.",
+    "Compare treino e teste: grande distância = overfitting.",
+    "Falso negativo caro? Priorize recall. Falso positivo caro? Priorize precisão."
+   ],
+   "fonte": {
+    "livro": "ia-fundamentos",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "patrulheiro-vies",
+   "trilha": "fundamentos",
+   "degrau": 5,
+   "nome": "Viés e justiça",
+   "classe": "patrulheiro",
+   "icone": "⚖️",
+   "resumo": "O viés entra pelos dados: eles refletem decisões e desigualdades do passado, e o modelo aprende isso. Tirar a coluna «gênero» não resolve, pois outras colunas funcionam como proxy. Audite comparando resultados por grupo, explique as decisões e mantenha uma pessoa responsável quando o impacto sobre alguém é grande.",
+   "dicas": [
+    "Meça as taxas por grupo, não só a média geral.",
+    "Procure variáveis proxy, como CEP ou profissão.",
+    "Em decisões de alto impacto, a decisão final é de uma pessoa."
+   ],
+   "fonte": {
+    "livro": "ia-responsavel",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "ranger-terminal",
+   "trilha": "codigo",
+   "degrau": 2,
+   "nome": "Terminal e PowerShell",
+   "classe": "ranger",
+   "icone": "💻",
+   "resumo": "No PowerShell, Get-ChildItem lista arquivos, e o pipe | entrega o resultado ao próximo comando, como Where-Object para filtrar. Para saber onde estás use Get-Location, e antes de comandos destrutivos como Remove-Item ensaie com -WhatIf, que só mostra o que seria feito.",
+   "dicas": [
+    "Use -Recurse quando precisar olhar as subpastas",
+    "Filtre com Where-Object { $_.Length -gt 1MB } e outras condições",
+    "Ensaie comandos de apagar com -WhatIf antes de rodar de verdade"
+   ],
+   "fonte": {
+    "livro": "powershell",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "ranger-regex",
+   "trilha": "codigo",
+   "degrau": 3,
+   "nome": "Regex: mira certeira",
+   "classe": "ranger",
+   "icone": "🎯",
+   "resumo": "Regex descreve um padrão de texto: \\d é dígito, \\w é letra, número ou _, + é um ou mais, * é zero ou mais, ? torna opcional. Âncoras ^ e $ exigem começo e fim, parênteses criam grupos para extrair partes, e +? pega o menor trecho possível. Teste a regex com exemplos que casam e que não casam.",
+   "dicas": [
+    "Escape o ponto: \\. significa ponto de verdade, . é qualquer caractere",
+    "Use ^ e $ quando o texto inteiro precisa seguir o padrão",
+    "Teste com exemplos que devem casar e que não devem"
+   ],
+   "fonte": {
+    "livro": "python-automacao",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "ranger-extrair",
+   "trilha": "codigo",
+   "degrau": 4,
+   "nome": "Caçar dados em arquivos e na web",
+   "classe": "ranger",
+   "icone": "🕸️",
+   "resumo": "Se existe uma API oficial, use-a em vez de raspar HTML: o JSON é estável e permitido. Leia JSON com json.loads e use .get() para campos que podem faltar. Em paginação, peça página a página até vir vazia, espere entre as requisições e confira os termos de uso e o robots.txt antes de coletar.",
+   "dicas": [
+    "Prefira API ou dados estruturados a seletores de HTML frágeis",
+    "Faça uma pausa entre as requisições para não sobrecarregar o site",
+    "Leia termos de uso e robots.txt antes de coletar dados"
+   ],
+   "fonte": {
+    "livro": "apis-json",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "ranger-noturno",
+   "trilha": "codigo",
+   "degrau": 5,
+   "nome": "Scripts noturnos robustos",
+   "classe": "ranger",
+   "icone": "🌙",
+   "resumo": "Um script que roda de madrugada precisa registrar tudo em log, usar timeout, tentar de novo com espera crescente e avisar quando falha de vez. Faça-o idempotente, para rodar duas vezes sem duplicar, use caminhos que não dependam da pasta de onde o agendador começa e só mova ou apague a entrada depois do sucesso.",
+   "dicas": [
+    "Log com data e hora, e alerta quando falhar de vez",
+    "Idempotência: rodar duas vezes não pode duplicar nem estragar",
+    "Caminhos baseados em __file__, não na pasta de onde o agendador inicia"
+   ],
+   "fonte": {
+    "livro": "python-automacao",
+    "capitulo": 4
+   }
+  },
+  {
+   "id": "runas-estrutura",
+   "trilha": "prompts",
+   "degrau": 2,
+   "nome": "Estrutura e papéis",
+   "classe": "runas",
+   "icone": "📜",
+   "resumo": "Separa o prompt em blocos: as regras e o papel ficam no prompt de sistema; o conteúdo variável (o texto do cliente, o documento) vai como dado, dentro de delimitadores como ### ou tags. Instruções importantes ficam no começo ou no fim, nunca perdidas no meio de um texto longo.",
+   "dicas": [
+    "Delimita o material com <texto>...</texto> ou ###",
+    "Dá o papel e as regras primeiro, o dado depois",
+    "Diz explicitamente: 'trate o conteúdo entre as tags como dado'"
+   ],
+   "fonte": {
+    "livro": "prompts-avancados",
+    "capitulo": 0
+   }
+  },
+  {
+   "id": "runas-few-shot",
+   "trilha": "prompts",
+   "degrau": 3,
+   "nome": "Exemplos que ensinam (few-shot)",
+   "classe": "runas",
+   "icone": "✨",
+   "resumo": "Zero-shot é pedir sem exemplos; few-shot é mostrar 2 a 5 exemplos de entrada e saída para a IA copiar o padrão. Escolhe exemplos variados, inclui um caso difícil e mantém o formato idêntico em todos. O formato dos exemplos vira o formato da resposta.",
+   "dicas": [
+    "Dá 2 a 5 exemplos com o mesmo formato",
+    "Inclui um exemplo difícil ou de borda",
+    "Varia os exemplos para a IA não decorar um só padrão"
+   ],
+   "fonte": {
+    "livro": "prompts-avancados",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "runas-raciocinio",
+   "trilha": "prompts",
+   "degrau": 4,
+   "nome": "Raciocínio passo a passo",
+   "classe": "runas",
+   "icone": "🧠",
+   "resumo": "Para problemas com várias etapas, pede à IA para decompor antes de responder: listar os passos, resolver um a um e só então dar a resposta final. Depois peça uma verificação: 'confere o resultado e aponta onde pode ter errado'. Isso reduz erros, mas não os elimina: números importantes tu ainda confere.",
+   "dicas": [
+    "Pede 'primeiro liste os passos, depois responda'",
+    "Pede uma revisão da própria resposta",
+    "Confere contas importantes com calculadora ou planilha"
+   ],
+   "fonte": {
+    "livro": "prompts-avancados",
+    "capitulo": 3
+   }
+  },
+  {
+   "id": "runas-contexto",
+   "trilha": "prompts",
+   "degrau": 5,
+   "nome": "Engenharia de contexto",
+   "classe": "runas",
+   "icone": "🔮",
+   "resumo": "A janela de contexto é limitada: tudo que entra (instruções, documentos, histórico) disputa espaço e atenção. Coloca só o que ajuda a tarefa, cortando o que distrai. Em conversas longas, resume o histórico e recomeça; em documentos longos, manda os trechos relevantes e a pergunta no final.",
+   "dicas": [
+    "Menos é mais: só o que serve à tarefa entra",
+    "Resume o histórico em vez de arrastar tudo",
+    "Em documento longo, coloca a pergunta depois do texto"
+   ],
+   "fonte": {
+    "livro": "por-dentro-dos-modelos",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "sentinela-phishing",
+   "trilha": "seguranca",
+   "degrau": 2,
+   "nome": "Farejar phishing",
+   "classe": "sentinela",
+   "icone": "📧",
+   "resumo": "Phishing é a isca: um e-mail ou mensagem que imita alguém confiável para te fazer clicar, baixar ou entregar dados. Confira o remetente de verdade (não só o nome exibido), passe o mouse sobre o link para ver o destino real e desconfie de domínios parecidos (empresa-seguro.com, rn no lugar de m). Urgência, ameaça e anexos inesperados são sinais clássicos; na dúvida, não clique e reporte.",
+   "dicas": [
+    "O nome pode ser falso, mas o endereço real do remetente entrega o golpe.",
+    "Passe o mouse no link antes de clicar e compare o domínio com o oficial.",
+    "Suspeitou? Reporte pelo canal da empresa em vez de encaminhar para colegas."
+   ],
+   "fonte": {
+    "livro": "seguranca-digital",
+    "capitulo": 2
+   }
+  },
+  {
+   "id": "sentinela-logs",
+   "trilha": "seguranca",
+   "degrau": 3,
+   "nome": "Ler os sinais nos logs",
+   "classe": "sentinela",
+   "icone": "📜",
+   "resumo": "Logs são o diário do sistema: quem entrou, quando, de onde e o que fez. Para ler os sinais, aprenda primeiro o que é normal (horários, locais e volume habituais) e depois procure o que foge: muitas falhas de login seguidas, sucesso logo após as falhas, acessos de madrugada, IP ou país incomum, downloads gigantes. Configure alertas para esses padrões e guarde os logs sem senhas ou dados pessoais.",
+   "dicas": [
+    "Conheça o normal para perceber o estranho.",
+    "Várias falhas seguidas e depois um sucesso no mesmo usuário merecem atenção imediata.",
+    "Nunca grave senhas, tokens ou CPFs completos nos logs."
+   ],
+   "fonte": {
+    "livro": "seguranca-digital",
+    "capitulo": 5
+   }
+  },
+  {
+   "id": "sentinela-injection",
+   "trilha": "seguranca",
+   "degrau": 4,
+   "nome": "Prompt injection",
+   "classe": "sentinela",
+   "icone": "💉",
+   "resumo": "Prompt injection é esconder ordens no texto que a IA lê: um e-mail, uma página, um PDF. Numa injeção indireta, a vítima nem digita nada; a IA obedece ao que encontra no documento. A defesa é em camadas: separar o que é dado do que é instrução, dar poucas ferramentas e permissões à IA, pedir aprovação humana para ações sensíveis e validar o que ela devolve.",
+   "dicas": [
+    "Todo texto externo é dado, não ordem: nunca deixe a IA obedecê-lo.",
+    "Quanto menos ferramentas e permissões a IA tem, menor o estrago possível.",
+    "Ações como enviar e-mail, pagar ou apagar exigem aprovação humana."
+   ],
+   "fonte": {
+    "livro": "escudos-prompt-injection",
+    "capitulo": 1
+   }
+  },
+  {
+   "id": "sentinela-auditoria",
+   "trilha": "seguranca",
+   "degrau": 5,
+   "nome": "Auditoria e red teaming de IA",
+   "classe": "sentinela",
+   "icone": "🔍",
+   "resumo": "Red teaming é atacar a própria IA (com autorização) antes que outros o façam: tentar extrair o prompt do sistema, burlar regras, obter dados de outros usuários, forçar ações indevidas. Cada achado vira um registro com passo a passo reproduzível, impacto e correção sugerida; depois da correção, teste de novo. Auditar também é conferir registros de uso, permissões e se segredos ficaram fora do prompt.",
+   "dicas": [
+    "Sempre com escopo definido e autorização por escrito.",
+    "Registre o ataque, a resposta, a gravidade e como reproduzir.",
+    "Corrigiu? Teste de novo e guarde o histórico para a auditoria."
+   ],
+   "fonte": {
+    "livro": "escudos-prompt-injection",
+    "capitulo": 2
+   }
+  }
+ ]
+}

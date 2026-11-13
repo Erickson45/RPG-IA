@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RPG IA · Academia Arcana de Elyndor</title>
+  <meta name="description" content="RPG IA: aprenda Inteligência Artificial de verdade numa aventura em pixel art, na Academia Arcana de Elyndor.">
+  <link rel="icon" id="favicon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Jersey+10&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="ceu" id="ceu" aria-hidden="true"></div>
+
+  <header class="topo">
+    <button class="logo" id="btn-logo" type="button">
+      <img class="pixel" id="logo-brasao" alt="" width="36" height="36">
+      <span class="nome-jogo"><b>RPG <strong>IA</strong></b><small>Academia Arcana de Elyndor</small></span>
+    </button>
+    <!-- HUD de RPG no mapa: retrato, vida, mana e XP (a barra de habilidades fica embaixo da tela) -->
+    <div class="hud-rpg" id="hud-rpg" hidden>
+      <div class="hud-retrato" id="hud-retrato"></div>
+      <div class="hud-barras">
+        <div class="hud-nome"><strong id="hud-nome"></strong><span id="hud-nivel"></span></div>
+        <div class="hud-titulo" id="hud-titulo"></div>
+        <div class="hud-barra vida" title="Vida"><i></i><span></span></div>
+        <div class="hud-barra mana" title="Mana: recarrega sozinha com o tempo"><i></i><b></b><span></span></div>
+        <div class="hud-barra xp" title="Experiência"><i></i><span></span></div>
+      </div>
+    </div>
+    <div class="status" id="status" hidden>
+      <div class="heroi" id="heroi">
+        <span class="brasao" id="heroi-brasao">🌱</span>
+        <span><strong id="heroi-nome"></strong><small id="heroi-classe"></small></span>
+      </div>
+      <span class="vidas-topo" id="vidas-topo" aria-label="Vida"></span>
+      <span class="nivel" id="nivel">Nv. 1</span>
+      <div class="barra-xp" aria-label="Experiência">
+        <div class="barra-xp-preenchida" id="barra-xp"></div>
+      </div>
+      <span class="xp" id="xp">0 XP</span>
+      <span class="moedas" id="moedas" title="Moedas de ouro"><img class="icone-rpg" data-icone="moeda" alt=""><b>0</b></span>
+      <button class="botao botao-fantasma botao-mochila" id="btn-curriculo" type="button" title="Currículo do Herói (C)"><img class="icone-rpg" data-icone="curriculo" alt="Currículo"><kbd>C</kbd></button>
+      <button class="botao botao-fantasma botao-mochila" id="btn-arvore" type="button" title="Árvore de habilidades (K)"><img class="icone-rpg" data-icone="arvore" alt="Árvore"><kbd>K</kbd></button>
+      <button class="botao botao-fantasma botao-mochila" id="btn-missoes" type="button" title="Missões (J)"><img class="icone-rpg" data-icone="pergaminho" alt="Missões"><kbd>J</kbd></button>
+      <button class="botao botao-fantasma botao-mochila" id="btn-mochila" type="button" title="Mochila (I)"><img class="icone-rpg" data-icone="mochila" alt="Mochila"><kbd>I</kbd></button>
+    </div>
+  </header>
+
+  <dialog id="menu-pausa" class="menu-pausa" aria-label="Menu"></dialog>
+  <nav class="barra-habilidades" id="barra-habilidades" aria-label="Habilidades" hidden></nav>
+
+  <main id="tela"></main>
+
+  <dialog id="modal-missao" class="modal modal-missao"></dialog>
+
+  <div class="efeitos" id="efeitos" aria-hidden="true"></div>
+
+  <script src="{{ url_for('static', filename='js/pixel.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/icones.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/som.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/batalha_fx.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/avatar.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/heroi.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/retrato.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/arena.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/cenas.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/cenarios.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/carregamento.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/titulo.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bestiario.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/itens_arte.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/icones_arte.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/arvores_arte.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mundo.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/reino.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/cenario_hd.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/umbra.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/academia_mapa.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/interiores.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/prologo.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/cenas_historia.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/labirinto.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/introducao.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/quests.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lobby.js') }}"></script>
+<script src="{{ url_for('static', filename='js/salao.js') }}"></script>
+<script src="{{ url_for('static', filename='js/duelo.js') }}"></script>
+<script src="{{ url_for('static', filename='js/salao_eventos.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fenda.js') }}"></script>
+<script src="{{ url_for('static', filename='js/forja.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/prova.js') }}"></script>
+</body>
+</html>

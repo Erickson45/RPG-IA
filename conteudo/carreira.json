@@ -1,0 +1,336 @@
+{
+  "guias": [
+    {
+      "id": "carreira-comecar",
+      "titulo": "Por onde começar",
+      "icone": "🧭",
+      "cor": "#2a9d8f",
+      "movel": "cavalete",
+      "resumo": "O mapa do primeiro mês usando IA no trabalho: o que fazer em cada semana.",
+      "capitulos": [
+        {
+          "titulo": "A mentalidade certa",
+          "texto": "Pensa na IA como um **assistente muito rápido e muito confiante**, que às vezes erra. Ela não substitui teu julgamento: ela acelera o trabalho que tu já sabe avaliar.\n\nTrês regras para levar para a vida:\n\n- **Tu é o responsável** pelo que sai com o teu nome\n- **Dado sensível não entra** em ferramenta que a empresa não aprovou\n- **Começa pequeno**: uma tarefa chata de cada vez\n\nQuem tira mais proveito da IA não é quem sabe mais de tecnologia. É quem conhece bem o próprio trabalho e sabe explicar o que quer."
+        },
+        {
+          "titulo": "Semana 1: conhecer",
+          "texto": "Objetivo: perder o medo e entender o que a IA faz bem.\n\n- Descubra **quais ferramentas a empresa permite** (pergunte ao time de TI ou segurança)\n- Use todo dia por 15 minutos em coisas sem risco: reescrever um e-mail, resumir um texto público, explicar um termo técnico\n- Anote o que funcionou e o que saiu ruim\n\nNo fim da semana tu deve ter uma ideia clara de onde a IA te ajuda e onde ela inventa.",
+          "linguagem": "prompt",
+          "codigo": "Explique o que é [termo da tua área] para alguém que está começando.\nUse um exemplo do dia a dia e no máximo 5 linhas."
+        },
+        {
+          "titulo": "Semana 2: escolher 3 tarefas",
+          "texto": "Liste tudo que tu faz numa semana e marque as tarefas que são:\n\n- **repetitivas** (toda semana igual)\n- **de texto** (escrever, resumir, revisar, organizar)\n- **fáceis de conferir** (tu bate o olho e sabe se está certo)\n\nEscolha **3**. Exemplos comuns: ata de reunião, resposta padrão de atendimento, relatório semanal, documentação de processo, planilha com fórmula complicada.\n\nFuja, por enquanto, de tarefas em que um erro custa caro e é difícil de perceber."
+        },
+        {
+          "titulo": "Semana 3: criar teus prompts",
+          "texto": "Para cada uma das 3 tarefas, escreva um prompt completo com o **P-C-T-F** (Papel, Contexto, Tarefa, Formato) e teste até ele entregar algo bom de primeira.\n\nGuarde os prompts que funcionam num documento só: tua **biblioteca de prompts**. Com o tempo ela vira teu maior atalho, e dá para compartilhar com o time.",
+          "linguagem": "prompt",
+          "codigo": "Papel: Você é um analista experiente em [área].\nContexto: [o que está acontecendo, para quem é, restrições].\nTarefa: [o que fazer, com detalhes e limites].\nFormato: [tabela, tópicos, e-mail, tamanho máximo]."
+        },
+        {
+          "titulo": "Semana 4: medir e mostrar",
+          "texto": "Anote quanto tempo cada tarefa levava **antes** e quanto leva **agora**, e quantas correções tu precisou fazer.\n\nCom esses números tu consegue:\n\n- mostrar o ganho para a liderança\n- colocar um resultado concreto no currículo (*\"reduzi o tempo do relatório semanal de 2h para 30min\"*)\n- ensinar colegas, o que te torna referência no time\n\nDepois disso, escolha mais 3 tarefas e repita o ciclo."
+        },
+        {
+          "titulo": "Hábitos semanais",
+          "texto": "Depois do primeiro mês, o segredo é não deixar a IA virar moda passageira. O que mantém o ganho é **hábito**, não empolgação.\n\nUma rotina simples que cabe em qualquer agenda:\n\n- **Segunda**: escolha uma tarefa da semana para fazer com IA e anote quanto tempo ela leva hoje\n- **Quarta**: revise tua **biblioteca de prompts** e ajuste o que saiu ruim\n- **Sexta**: 10 minutos de **retrospectiva**: o que funcionou, o que errou e o que vale ensinar ao time\n\nRepara que nenhum desses passos exige muito tempo. O ponto é **constância**: 15 minutos toda semana valem mais do que uma tarde inteira uma vez por mês.\n\nOutro hábito importante é **registrar os erros**. Quando a IA inventa um dado, entende errado o pedido ou erra o tom, anota o caso e o que tu mudou no prompt. Essa lista vira teu manual pessoal de *\"onde não confiar\"*.\n\nPor fim, **revise as ferramentas a cada trimestre**. A empresa pode aprovar uma nova, uma função pode mudar de lugar, um recurso pago pode virar gratuito.\n\nExemplo real: uma analista que fazia a retrospectiva de sexta percebeu, em dois meses, que o resumo de chamados economizava 3 horas por semana e o relatório financeiro quase nada. Ela largou o segundo e caprichou no primeiro."
+        },
+        {
+          "titulo": "Montar uma rotina de estudo",
+          "texto": "Usar IA no trabalho é uma coisa. **Entender** a IA o suficiente para usar melhor é outra, e isso pede estudo, mesmo que pouco.\n\nUma rotina realista para quem trabalha em tempo integral:\n\n- **2 sessões de 30 minutos por semana**, marcadas na agenda como se fossem reunião\n- **1 tema por mês**: prompts, planilhas com IA, automação, segurança de dados\n- **sempre com prática**: cada sessão termina com algo aplicado numa tarefa real\n\nA regra mais importante é **estudar o que tu vai usar**. Se tua semana é cheia de e-mails e relatórios, comece por escrita e resumo. Se tu vive em planilha, comece por fórmulas e análise. Estudar automação avançada sem ter onde aplicar só gera frustração.\n\nUsa a própria IA como **professora**: peça explicações em linguagem simples, exercícios curtos e correção do que tu fez. Mas confere os conceitos importantes numa fonte oficial, porque ela também erra ensinando.\n\nPara não perder o fio, mantém um **caderno de estudo** com três colunas:\n\n- o que aprendi\n- onde apliquei\n- o que ainda não entendi\n\nQuando a terceira coluna crescer demais, é sinal de que tu precisa de um curso estruturado ou de pedir ajuda a alguém mais experiente. O modelo **Plano de estudos**, no Arquivo de modelos, é um ótimo ponto de partida."
+        },
+        {
+          "titulo": "Como pedir ajuda ao time",
+          "texto": "Ninguém aprende IA sozinho, e o time ao teu redor provavelmente já resolveu problemas que tu ainda vai encontrar.\n\nAntes de pedir ajuda, **faz a lição de casa**:\n\n- tente pelo menos duas versões do prompt\n- anote o que tu pediu, o que saiu e o que tu esperava\n- apague dados sensíveis do exemplo antes de mostrar\n\nCom isso, tua pergunta fica **concreta**. Compare:\n\n- Vago: *\"A IA não funciona para relatório.\"*\n- Concreto: *\"Pedi um resumo do relatório mensal em 5 tópicos, mas ela inventa números. Alguém já passou por isso?\"*\n\nA segunda pergunta recebe resposta em minutos. A primeira vira uma conversa longa e confusa.\n\n**Onde pedir**: num canal do time sobre IA, com a pessoa que já é referência no assunto ou com a TI, quando a dúvida for sobre ferramenta permitida ou acesso. Dúvida de segurança e dados vai sempre para quem cuida disso, nunca para um fórum público.\n\nE **fecha o ciclo**: quando a ajuda funcionar, compartilhe o resultado e o prompt final com o grupo. Isso mantém a troca viva e ajuda quem vier depois.\n\nPedir ajuda não é sinal de fraqueza. Em times que usam bem a IA, a troca de prompts e de erros é o que acelera todo mundo ao mesmo tempo."
+        }
+      ]
+    },
+    {
+      "id": "carreira-ferramentas",
+      "titulo": "As melhores IAs para cada tarefa",
+      "icone": "🛠️",
+      "cor": "#8e5cff",
+      "movel": "quadro",
+      "resumo": "Assistentes de conversa, pesquisa com fontes, teus documentos, código, imagens e reuniões.",
+      "capitulos": [
+        {
+          "titulo": "Antes de escolher",
+          "texto": "Não existe \"a melhor IA\". Existe a melhor **para a tua tarefa**, **permitida pela tua empresa** e **no teu orçamento**.\n\nPerguntas para fazer antes:\n\n- A empresa já tem alguma ferramenta aprovada (por exemplo, um Copilot ou um ChatGPT corporativo)?\n- Vou colocar dados internos? Então só ferramenta aprovada, com contrato que protege os dados.\n- A versão gratuita resolve ou preciso da paga?\n\nAs ferramentas mudam rápido. Teste duas lado a lado com a mesma tarefa e fique com a que entregar melhor."
+        },
+        {
+          "titulo": "Assistentes de conversa",
+          "texto": "São os \"faz-tudo\": escrevem, resumem, explicam, analisam e programam.\n\n- **ChatGPT** (OpenAI): muito popular, bom em tarefas gerais, tem versões para empresas\n- **Claude** (Anthropic): forte em textos longos, escrita e programação\n- **Gemini** (Google): integrado ao Google Workspace (Gmail, Docs, Planilhas)\n- **Microsoft Copilot**: integrado ao Microsoft 365 (Word, Excel, Outlook, Teams)\n\nDica: se tua empresa vive no Google ou na Microsoft, a IA que já mora lá costuma ser a mais prática e a mais fácil de aprovar."
+        },
+        {
+          "titulo": "Pesquisa com fontes",
+          "texto": "Para pesquisar algo atual, prefira ferramentas que **buscam na web e mostram as fontes**, como o **Perplexity** ou o modo de busca dos assistentes de conversa.\n\nMesmo assim, **abra as fontes** e confira. Uma resposta com link é mais fácil de verificar, mas não é automaticamente verdadeira.",
+          "linguagem": "prompt",
+          "codigo": "Pesquise as principais mudanças em [tema] nos últimos 12 meses.\nPara cada item, traga a fonte com link e a data da publicação.\nSe não tiver certeza de algo, diga."
+        },
+        {
+          "titulo": "IA com os teus documentos",
+          "texto": "Quando a pergunta é sobre **teus** materiais (manuais, contratos, apostilas), use ferramentas em que tu sobe os arquivos e a IA responde com base neles:\n\n- **NotebookLM** (Google): monta um caderno com teus documentos, gera resumos e responde citando o trecho\n- **Projetos** ou **arquivos anexados** nos assistentes de conversa\n- **Copilot** ou **Gemini** dentro do pacote de escritório da empresa\n\nÉ o RAG que o Arquimago Orion ensina, já pronto para usar. Lembra: só suba documento que a política da empresa permite."
+        },
+        {
+          "titulo": "Código e automação",
+          "texto": "- **GitHub Copilot** e outros assistentes no editor: sugerem código enquanto tu digita e explicam trechos\n- **Assistentes de conversa**: ótimos para gerar scripts, explicar erros e criar testes\n- **Ferramentas de automação sem código** (como Power Automate, Zapier ou Make): ligam sistemas e algumas já têm etapas com IA\n\nRegra da Kaela vale aqui: entenda o código antes de rodar, e nunca cole token ou senha no prompt."
+        },
+        {
+          "titulo": "Imagens, apresentações e reuniões",
+          "texto": "- **Imagens**: geradores de imagem (dentro do ChatGPT, do Gemini, do Copilot ou em ferramentas como Canva) para ilustrações e rascunhos visuais\n- **Apresentações**: Canva, Gamma e os próprios Copilot e Gemini ajudam a montar slides a partir de um texto\n- **Reuniões**: Teams, Meet e Zoom têm recursos de transcrição e resumo (dependendo da licença)\n\nCuidado com imagens de pessoas reais, marcas e logotipos, e avise os participantes quando uma reunião for gravada ou transcrita."
+        },
+        {
+          "titulo": "Comparar ferramentas lado a lado",
+          "texto": "O capítulo \"Antes de escolher\" disse para testar duas ferramentas com a mesma tarefa. Aqui está **como** fazer isso de forma justa.\n\nMonte um **teste pequeno e repetível**:\n\n- escolha **3 tarefas reais** do teu dia (resumir um documento, escrever um e-mail difícil, criar uma fórmula)\n- use **exatamente o mesmo prompt** em cada ferramenta\n- use dados de exemplo, sem nada sensível\n- avalie todas com os **mesmos critérios**\n\nCritérios que funcionam bem, com nota de 1 a 5:\n\n- **qualidade**: a resposta está correta e completa?\n- **correções**: quantos ajustes tu precisou fazer?\n- **tempo**: quanto demorou até ficar bom?\n- **integração**: ela funciona onde tu já trabalha?\n- **regras**: a empresa aprova e o contrato protege os dados?\n\nMonte uma tabela simples com as notas. Muitas vezes a vencedora não é a que escreve mais bonito, e sim a que **já está aprovada** e mora no teu e-mail ou nas tuas planilhas.\n\nDois cuidados. Primeiro, **uma resposta só não prova nada**: a IA varia, então rode cada tarefa pelo menos duas vezes. Segundo, repita o teste de tempos em tempos, porque as ferramentas mudam rápido e a melhor de hoje pode não ser a melhor daqui a seis meses.\n\nGuarda a tabela: ela também é um ótimo argumento para pedir uma licença à liderança."
+        },
+        {
+          "titulo": "Extensões e integrações",
+          "texto": "Boa parte do ganho da IA aparece quando ela está **dentro** das ferramentas que tu já usa, e não numa aba separada.\n\nOnde ela costuma aparecer:\n\n- **No pacote de escritório**: Copilot no Word, Excel, Outlook e Teams; Gemini no Gmail, Docs e Planilhas. Resumem e-mails, montam rascunhos e explicam planilhas sem copiar e colar\n- **No navegador**: extensões que resumem páginas, traduzem ou ajudam a escrever em qualquer site\n- **Nos sistemas da empresa**: CRM, central de atendimento e ferramentas de projeto já vêm com botões de IA\n\nO cuidado maior é com **extensões de navegador**. Uma extensão pode ler **tudo** o que aparece nas páginas que tu abre, inclusive sistemas internos, e-mails e dados de clientes. Antes de instalar:\n\n- confirme se a **empresa permite** (muitas bloqueiam extensões não aprovadas)\n- veja **quem publica** a extensão e quais permissões ela pede\n- desconfie de extensão gratuita e desconhecida que pede acesso a *\"todos os sites\"*\n\nNas integrações oficiais, entenda **o que a IA enxerga**. Um Copilot corporativo pode acessar os arquivos que tu tem permissão de abrir, e isso às vezes revela documentos que estavam compartilhados por engano.\n\nNa dúvida, pergunte à TI. Integração boa economiza tempo; integração errada vaza dado sem ninguém perceber."
+        },
+        {
+          "titulo": "Gravar e transcrever reuniões com cuidado",
+          "texto": "Transcrição e resumo automático de reuniões estão entre os recursos que mais economizam tempo. Também estão entre os que mais geram problema quando usados sem cuidado.\n\nAntes de gravar ou transcrever:\n\n- **avise todos os participantes** no início e, se possível, já no convite\n- confira se a **política da empresa** permite gravar aquele tipo de reunião\n- com pessoas de fora (clientes, fornecedores), peça **consentimento** de forma clara\n\nAlgumas reuniões **não devem** ser gravadas nem transcritas: feedback individual, assuntos de RH, temas jurídicos sensíveis e negociações confidenciais. Nesses casos, tu toma notas na mão.\n\nUse ferramentas **aprovadas**. Os recursos nativos do Teams, Meet e Zoom costumam ser os mais seguros. Evite os **robôs de anotação de terceiros** que entram sozinhos na reunião: eles levam o áudio para servidores que a empresa não controla.\n\nDepois da reunião, **revise o resumo** antes de mandar. A transcrição erra nomes, números e às vezes atribui a fala à pessoa errada. Um *\"vamos pensar em reduzir o prazo\"* pode virar *\"decidimos reduzir o prazo\"*.\n\nPor fim, pense no **armazenamento**: quem tem acesso à gravação e por quanto tempo ela fica guardada? Gravação esquecida numa pasta aberta é dado exposto."
+        }
+      ]
+    },
+    {
+      "id": "carreira-areas",
+      "titulo": "IA na tua área",
+      "icone": "💼",
+      "cor": "#e76f51",
+      "movel": "mesa",
+      "resumo": "Exemplos reais e prompts prontos para 10 áreas de trabalho.",
+      "capitulos": [
+        {
+          "titulo": "Suporte e infraestrutura de TI",
+          "texto": "- Explicar mensagens de erro e logs\n- Escrever scripts de PowerShell e Bash para tarefas repetitivas\n- Criar artigos da base de conhecimento a partir de chamados resolvidos\n- Rascunhar comunicados de manutenção para os usuários\n\n**Cuidado:** apague IPs, nomes de servidores e senhas antes de colar logs.",
+          "linguagem": "prompt",
+          "codigo": "Você é um analista de suporte sênior.\nResolvemos este chamado: [descrição sem dados sensíveis].\nEscreva um artigo de base de conhecimento com: sintoma, causa,\npasso a passo da solução e como evitar. Linguagem simples, em tópicos."
+        },
+        {
+          "titulo": "Desenvolvimento de software",
+          "texto": "- Explicar código legado e sugerir melhorias\n- Gerar testes automatizados\n- Escrever documentação e mensagens de commit\n- Revisar um trecho procurando bugs e problemas de segurança\n\n**Cuidado:** código de cliente e segredos só em ferramenta aprovada; revise tudo que for gerado.",
+          "linguagem": "prompt",
+          "codigo": "Você é um revisor de código experiente em Python.\nRevise a função abaixo procurando bugs, casos de borda e problemas de segurança.\nPara cada problema: explique, mostre a linha e sugira a correção.\n\n[código]"
+        },
+        {
+          "titulo": "Dados e BI",
+          "texto": "- Montar fórmulas de Excel e Planilhas Google\n- Escrever consultas SQL a partir de uma pergunta de negócio\n- Sugerir quais gráficos usar num painel\n- Explicar um resultado estatístico em linguagem simples\n\n**Cuidado:** lembra da Fortaleza dos Dados. Peça o **script** e rode com teus dados; não cole a base de clientes.",
+          "linguagem": "prompt",
+          "codigo": "Tenho uma tabela vendas(data, vendedor, regiao, valor).\nEscreva uma consulta SQL que mostre, por região, o total vendido\nem cada mês de 2026, do maior para o menor.\nExplique cada parte da consulta."
+        },
+        {
+          "titulo": "RH e recrutamento",
+          "texto": "- Escrever descrições de vaga claras e inclusivas\n- Criar roteiros de entrevista por competência\n- Montar planos de integração (onboarding)\n- Rascunhar comunicados internos\n\n**Cuidado:** a IA **não decide** quem contratar. Não envie currículos com dados pessoais para ferramentas não aprovadas e fique atento a vieses.",
+          "linguagem": "prompt",
+          "codigo": "Você é um especialista em recrutamento.\nCrie 8 perguntas de entrevista por competência para a vaga de [cargo],\nfocando em [competências]. Para cada pergunta, diga o que uma boa\nresposta deveria mostrar. Evite perguntas sobre vida pessoal."
+        },
+        {
+          "titulo": "Financeiro e contabilidade",
+          "texto": "- Explicar normas e conceitos (sempre confira na fonte oficial)\n- Criar fórmulas e modelos de planilha\n- Resumir relatórios e destacar variações\n- Rascunhar e-mails de cobrança educados\n\n**Cuidado:** números da empresa são sigilosos. Não confie em contas longas feitas pela IA sem conferir na planilha.",
+          "linguagem": "prompt",
+          "codigo": "Escreva um e-mail cordial lembrando um cliente de uma fatura vencida\nhá 10 dias. Tom profissional e gentil, ofereça ajuda caso haja\nalgum problema e deixe espaço para [número da fatura] e [valor]."
+        },
+        {
+          "titulo": "Marketing e comunicação",
+          "texto": "- Gerar ideias de pauta e calendário de posts\n- Adaptar um texto para canais diferentes (LinkedIn, Instagram, e-mail)\n- Criar variações de título para testar\n- Revisar o tom de voz da marca\n\n**Cuidado:** revise fatos e números, respeite direitos de imagem e não publique texto gerado sem leitura humana.",
+          "linguagem": "prompt",
+          "codigo": "Você é um redator de marketing B2B.\nTransforme o texto abaixo em: 1 post para LinkedIn (até 1200 caracteres),\n3 opções de título para e-mail e 1 legenda curta para Instagram.\nPúblico: [público]. Tom: [tom].\n\n[texto]"
+        },
+        {
+          "titulo": "Vendas e atendimento",
+          "texto": "- Preparar a reunião com um resumo do cliente e do setor\n- Escrever respostas para objeções comuns\n- Criar roteiros de atendimento e respostas padrão\n- Resumir conversas longas e listar os próximos passos\n\n**Cuidado:** não prometa nada que a IA escreveu sem conferir com a política da empresa.",
+          "linguagem": "prompt",
+          "codigo": "Sou vendedor de [produto] para [tipo de cliente].\nListe as 6 objeções mais comuns que ouço nesse tipo de venda e,\npara cada uma, sugira uma resposta curta, honesta e consultiva."
+        },
+        {
+          "titulo": "Jurídico e compliance",
+          "texto": "- Resumir documentos longos e listar cláusulas para revisar\n- Explicar termos jurídicos em linguagem simples\n- Montar checklists de conformidade\n- Rascunhar políticas internas para revisão do jurídico\n\n**Cuidado:** a IA pode citar leis e decisões que **não existem**. Toda referência precisa ser conferida na fonte oficial, e contrato sigiloso só em ferramenta aprovada.",
+          "linguagem": "prompt",
+          "codigo": "Resuma o contrato abaixo em linguagem simples e liste, em uma tabela,\nas cláusulas de: prazo, multa, rescisão, confidencialidade e reajuste.\nMarque como \"revisar\" tudo que for ambíguo. Não invente informação.\n\n[contrato sem dados sensíveis]"
+        },
+        {
+          "titulo": "Administrativo e gestão de projetos",
+          "texto": "- Transformar anotações soltas em ata organizada\n- Montar cronogramas e listas de tarefas\n- Escrever procedimentos (POP) passo a passo\n- Preparar relatórios de status para a liderança\n\nÉ uma das áreas com ganho mais rápido: muito texto, muita repetição e fácil de conferir.",
+          "linguagem": "prompt",
+          "codigo": "Transforme minhas anotações da reunião em uma ata com:\nparticipantes, decisões, pendências (responsável e prazo) e próximos passos.\nUse tópicos curtos.\n\n[anotações]"
+        },
+        {
+          "titulo": "Educação e treinamento",
+          "texto": "- Criar planos de aula e trilhas de treinamento\n- Gerar exercícios, quizzes e estudos de caso\n- Adaptar um conteúdo para níveis diferentes\n- Criar roteiros de vídeo curtos\n\nFoi assim que esta Academia nasceu: um conteúdo de workshop virando jogo!",
+          "linguagem": "prompt",
+          "codigo": "Você é um designer instrucional.\nCrie um treinamento de 1 hora sobre [tema] para [público].\nInclua: objetivos, 3 blocos com atividades práticas, um quiz de 5 perguntas\ncom gabarito e uma tarefa para depois do treinamento."
+        },
+        {
+          "titulo": "Saúde",
+          "texto": "Hospitais, clínicas e operadoras lidam com muito texto e muita regra, o que abre espaço para a IA no trabalho **administrativo** e de comunicação.\n\n- Resumir protocolos e normas internas para a equipe\n- Rascunhar orientações para pacientes em linguagem simples\n- Organizar escalas, checklists e procedimentos\n- Preparar materiais de treinamento para novos colaboradores\n\n**Cuidado:** dado de saúde é **dado pessoal sensível** pela LGPD. Prontuário, exame, nome de paciente e diagnóstico **nunca** entram em ferramenta não aprovada. E a IA **não diagnostica nem prescreve**: todo conteúdo clínico precisa ser validado por um profissional habilitado.\n\nUm uso seguro e muito útil é transformar uma orientação técnica em texto que o paciente entende, sem nenhum dado de paciente no prompt.\n\n**Prompt pronto:**\n\nVocê é um comunicador da área de saúde.\nReescreva a orientação abaixo para pacientes adultos sem formação técnica.\nUse frases curtas, explique os termos difíceis e organize em tópicos.\nNão acrescente nenhuma informação clínica que não esteja no texto original.\nNo fim, inclua: \"Em caso de dúvida, fale com a equipe de saúde.\"\n\n[orientação, sem dados de paciente]\n\nDepois, peça a um profissional de saúde para revisar antes de imprimir ou publicar."
+        },
+        {
+          "titulo": "Logística e operações",
+          "texto": "Operação é feita de rotina, prazo e exceção. A IA ajuda a organizar a rotina e a entender as exceções mais rápido.\n\n- Escrever procedimentos de recebimento, separação e expedição\n- Criar fórmulas e planilhas de controle de estoque\n- Resumir as ocorrências do turno e destacar o que se repete\n- Rascunhar comunicados para transportadoras e fornecedores\n\n**Cuidado:** a IA não conhece teu estoque, teus contratos nem tuas rotas reais. Previsões e números que ela sugerir são **ponto de partida**, não decisão. Dados de clientes, endereços de entrega e fretes negociados só entram em ferramenta aprovada.\n\nUm ganho rápido é o **relatório de ocorrências**: tu cola as anotações do turno (sem nomes de clientes) e recebe um resumo com os padrões.\n\n**Prompt pronto:**\n\nVocê é um analista de operações logísticas.\nAbaixo estão as ocorrências do turno.\nAgrupe por tipo (atraso, avaria, divergência de estoque, outros),\nconte quantas há em cada grupo, aponte o que se repete\ne sugira 3 ações para a próxima semana.\nResponda em tabela e depois em tópicos curtos.\nSe faltar informação, diga o que falta.\n\n[ocorrências sem dados de clientes]\n\nConfira as contagens na tua planilha antes de levar o resumo para a reunião."
+        },
+        {
+          "titulo": "Setor público e atendimento ao cidadão",
+          "texto": "No serviço público, a IA ajuda a **traduzir** a linguagem técnica e a dar conta do volume de demandas.\n\n- Reescrever comunicados e editais em **linguagem simples**\n- Criar respostas padrão para as dúvidas mais frequentes do cidadão\n- Resumir processos longos para quem vai decidir\n- Montar roteiros de atendimento e perguntas frequentes\n\n**Cuidado:** o serviço público segue regras próprias de contratação de ferramentas, sigilo e transparência. Dados de cidadãos (CPF, endereço, situação social) não entram em ferramenta não aprovada. E toda resposta oficial precisa seguir a **norma vigente**, conferida na fonte, porque a IA pode citar artigo de lei que não existe.\n\nA linguagem simples é um dos usos mais valiosos: o cidadão entende o que precisa fazer e o atendimento recebe menos dúvidas repetidas.\n\n**Prompt pronto:**\n\nVocê é especialista em linguagem simples no serviço público.\nReescreva o comunicado abaixo para qualquer cidadão entender.\nMantenha todas as datas, prazos e exigências exatamente como estão.\nOrganize em: o que é, quem pode, o que fazer e até quando.\nNão acrescente regras que não estejam no texto.\n\n[comunicado oficial]\n\nAntes de publicar, um servidor responsável compara a versão nova com a original, linha por linha."
+        }
+      ]
+    },
+    {
+      "id": "carreira-modelos",
+      "titulo": "Arquivo de modelos",
+      "icone": "🗂️",
+      "cor": "#c9a227",
+      "movel": "arquivo",
+      "resumo": "Documentos e prompts prontos para copiar e adaptar.",
+      "capitulos": [
+        {
+          "titulo": "Prompt mestre",
+          "texto": "Um modelo que funciona para quase tudo. Copie, troque o que está entre colchetes e vá ajustando.",
+          "linguagem": "prompt",
+          "codigo": "Você é [papel com experiência].\n\nContexto:\n- Situação: [o que está acontecendo]\n- Público: [para quem é]\n- Restrições: [prazo, tom, tamanho, o que evitar]\n\nTarefa: [o que fazer, passo a passo se precisar].\n\nFormato: [tabela / tópicos / e-mail / código], no máximo [tamanho].\n\nAntes de responder, me faça até 3 perguntas se faltar alguma informação importante."
+        },
+        {
+          "titulo": "Ata de reunião",
+          "texto": "Cole tuas anotações (ou a transcrição, se a empresa permitir) e peça a ata neste formato.",
+          "linguagem": "prompt",
+          "codigo": "Organize as anotações abaixo nesta estrutura:\n\n# Reunião: [assunto] — [data]\n## Participantes\n## Decisões tomadas\n## Pendências\n| O quê | Responsável | Prazo |\n## Próximos passos\n\nNão invente responsáveis ou prazos: se não estiver nas anotações, escreva \"a definir\".\n\n[anotações]"
+        },
+        {
+          "titulo": "E-mail difícil",
+          "texto": "Para atraso, recusa, cobrança ou má notícia: a IA ajuda a acertar o tom sem enrolar.",
+          "linguagem": "prompt",
+          "codigo": "Preciso escrever um e-mail para [pessoa/cargo] informando que [situação].\nQuero um tom [respeitoso e direto / empático / firme].\nInclua: o fato, o motivo em uma frase, o que vamos fazer e um próximo passo claro.\nMáximo 8 linhas. Me dê duas versões: uma mais formal e uma mais próxima."
+        },
+        {
+          "titulo": "Procedimento passo a passo (POP)",
+          "texto": "Documentar processos é chato e muito valioso. Descreva do teu jeito e a IA organiza.",
+          "linguagem": "prompt",
+          "codigo": "Transforme minha explicação em um Procedimento Operacional Padrão com:\nobjetivo, quando usar, responsáveis, materiais/acessos necessários,\npasso a passo numerado, erros comuns e como resolver.\nLinguagem simples para alguém que nunca fez.\n\n[minha explicação]"
+        },
+        {
+          "titulo": "Plano de estudos",
+          "texto": "Para aprender qualquer coisa nova (inclusive IA), peça um plano realista para tua rotina.",
+          "linguagem": "prompt",
+          "codigo": "Quero aprender [assunto] para [objetivo profissional].\nTenho [X] horas por semana e meu nível atual é [nível].\nMonte um plano de [N] semanas com: tema da semana, um recurso gratuito\npara estudar, um exercício prático e como saber que aprendi."
+        },
+        {
+          "titulo": "Política simples de uso de IA",
+          "texto": "Muitos times usam IA sem regra nenhuma. Um rascunho de política ajuda a começar a conversa com a liderança e com segurança da informação.",
+          "linguagem": "texto",
+          "codigo": "POLÍTICA DE USO DE IA DO TIME [NOME]\n\n1. Ferramentas permitidas: [lista aprovada pela empresa].\n2. Nunca inserir: senhas, tokens, dados pessoais de clientes ou colegas,\n   informações financeiras e documentos classificados como confidenciais.\n3. Todo conteúdo gerado por IA é revisado por uma pessoa antes de ser enviado,\n   publicado ou usado em decisões.\n4. Decisões sobre pessoas (contratação, avaliação, desligamento) não são\n   tomadas por IA.\n5. Quando relevante, informar que a IA foi usada na produção do material.\n6. Dúvidas e incidentes: falar com [responsável]."
+        },
+        {
+          "titulo": "Checklist de revisão",
+          "texto": "Antes de usar qualquer coisa que a IA gerou, passe por esta lista.",
+          "linguagem": "texto",
+          "codigo": "[ ] Os fatos, números e nomes estão corretos? Conferi na fonte?\n[ ] Há alguma lei, citação ou referência que preciso verificar se existe?\n[ ] O texto tem dado sensível que não deveria estar ali?\n[ ] O tom está adequado para quem vai ler?\n[ ] Eu entendo e consigo explicar tudo o que está escrito?\n[ ] Se for código: entendi o que faz e testei antes de usar?\n[ ] Eu assinaria embaixo disso com o meu nome?"
+        },
+        {
+          "titulo": "Relatório mensal",
+          "texto": "O relatório mensal toma horas porque mistura três trabalhos: juntar números, interpretar o que mudou e escrever de forma clara. A IA ajuda muito nos dois últimos.\n\nO jeito seguro de fazer:\n\n- **tu** junta os números na planilha e confere as contas\n- a IA organiza, compara com o mês anterior e escreve o texto\n- **tu** revisa as conclusões, porque quem conhece o contexto é tu\n\nSe os números forem sigilosos, use ferramenta aprovada ou troque os valores por percentuais e índices.\n\n**Prompt pronto:**\n\nVocê é um analista que escreve relatórios para a diretoria.\nAbaixo estão os indicadores de [mês] e do mês anterior.\nEscreva um relatório com:\n1. Resumo executivo em 3 linhas\n2. Destaques positivos\n3. Pontos de atenção, com a variação em %\n4. Possíveis causas (marque como \"hipótese\" o que não estiver nos dados)\n5. Próximos passos sugeridos\nTom objetivo, no máximo 1 página. Não invente números: use só os dados abaixo.\n\n[indicadores do mês atual e do anterior]\n\nRepara no item 4: pedir que a IA marque **hipóteses** evita que um palpite vire \"fato\" na frente da liderança. Guarda esse prompt na tua biblioteca e reutilize todo mês, trocando só os dados."
+        },
+        {
+          "titulo": "Feedback para colega",
+          "texto": "Dar feedback é difícil, e a IA pode ajudar a **organizar** o que tu quer dizer. Mas lembra do capítulo \"Quando NÃO usar IA\": feedback difícil merece a tua voz. A IA entra para estruturar, não para falar no teu lugar.\n\nUm bom feedback tem três partes:\n\n- **situação**: quando e onde aconteceu\n- **comportamento**: o que a pessoa fez, de forma observável\n- **impacto**: o efeito disso no time ou no trabalho\n\nEvite rótulos (*\"você é desorganizado\"*) e prefira fatos (*\"o relatório chegou dois dias depois do combinado\"*).\n\n**Prompt pronto:**\n\nQuero dar um feedback para um colega de trabalho.\nSituação: [quando e onde]\nComportamento: [o que a pessoa fez]\nImpacto: [o que isso causou]\nO que eu gostaria daqui para frente: [pedido]\nMe ajude a organizar uma fala de até 6 frases, respeitosa e direta,\ncomeçando por algo positivo e verdadeiro, sem julgar a pessoa.\nAponte se alguma frase minha soa como rótulo ou acusação.\n\nNão coloque o nome do colega nem detalhes pessoais. Use a resposta como **roteiro**, reescreva com tuas palavras e dê o feedback numa conversa, de preferência pessoalmente ou por vídeo. Feedback por e-mail gerado por IA soa frio e quase sempre piora a situação."
+        },
+        {
+          "titulo": "Análise de concorrência",
+          "texto": "Entender o que os concorrentes fazem ajuda a posicionar produto, preço e comunicação. A IA acelera a pesquisa e a organização, desde que tu cuide das fontes.\n\nDuas regras:\n\n- use ferramenta que **busca na web e mostra as fontes**, e abra os links\n- use só **informação pública**: site, materiais de divulgação, notícias, avaliações abertas\n\nNunca peça para a IA \"descobrir\" dados internos de outra empresa, e não cole dados sigilosos da tua para comparar.\n\n**Prompt pronto:**\n\nVocê é um analista de mercado.\nCompare [minha empresa/produto] com [concorrente 1], [concorrente 2] e [concorrente 3]\nusando apenas informações públicas.\nMonte uma tabela com: público-alvo, principais produtos, faixa de preço\n(se divulgada), canais de venda e pontos fortes e fracos citados por clientes.\nPara cada informação, traga a fonte com link e a data.\nEscreva \"não encontrado\" quando não houver dado; não estime.\nNo fim, liste 3 oportunidades para [minha empresa].\n\nRepara no **\"não estime\"**: sem ele, a IA tende a preencher lacunas com chutes que parecem dados. Confira preços e datas, porque concorrente muda rápido e a fonte pode estar desatualizada.\n\nO resultado é um **rascunho de análise**. As conclusões estratégicas continuam sendo do time."
+        }
+      ]
+    },
+    {
+      "id": "carreira-vagas",
+      "titulo": "Mural das vagas",
+      "icone": "📌",
+      "cor": "#3776ab",
+      "movel": "mural",
+      "resumo": "O que o mercado procura, currículo, LinkedIn, portfólio, entrevistas e onde estudar.",
+      "capitulos": [
+        {
+          "titulo": "O que o mercado procura",
+          "texto": "As empresas não procuram só \"quem sabe usar ChatGPT\". Procuram quem **resolve problemas melhor e mais rápido usando IA**, com responsabilidade.\n\nHabilidades que aparecem cada vez mais nas vagas:\n\n- escrever bons pedidos para a IA (o P-C-T-F da Torre do Prompt)\n- avaliar criticamente o que a IA entrega\n- automatizar tarefas (Python, PowerShell, Apps Script, ferramentas sem código)\n- cuidar de dados e privacidade\n- explicar para colegas e liderança como a IA ajudou\n\nIsso vale para qualquer área, não só para tecnologia."
+        },
+        {
+          "titulo": "IA no currículo",
+          "texto": "Troque frases vagas por **resultado com número**.\n\n- Fraco: *\"Conhecimento em Inteligência Artificial\"*\n- Forte: *\"Automatizei o relatório semanal com Python e IA, reduzindo de 3h para 20min\"*\n\nRegras de ouro:\n\n- cite ferramentas que tu **realmente usou**\n- mostre o problema, o que tu fez e o resultado\n- **nunca** deixe a IA inventar experiência, curso ou cargo. Isso aparece na entrevista e queima tua reputação",
+          "linguagem": "prompt",
+          "codigo": "Aqui está a descrição da vaga e meu currículo.\nAponte quais experiências minhas combinam com a vaga e sugira como\nreescrever esses tópicos mostrando resultados. Não invente nada que\nnão esteja no meu currículo; se faltar informação, me pergunte.\n\nVAGA: [descrição]\nCURRÍCULO: [texto, sem documentos pessoais]"
+        },
+        {
+          "titulo": "LinkedIn e portfólio",
+          "texto": "- **Título do perfil**: o que tu faz + o diferencial (*\"Analista de Suporte | Automação com Python e IA\"*)\n- **Sobre**: 4 a 6 linhas sobre problemas que tu resolve\n- **Destaques**: links para projetos, artigos ou o certificado desta Academia\n- **Publicações**: conte o que aprendeu ou automatizou (sem expor dados da empresa)\n\nNo portfólio (GitHub ou uma página simples), cada projeto precisa responder: **qual problema**, **como resolveu**, **qual resultado**. As missões da Arena das Missões são um ótimo começo."
+        },
+        {
+          "titulo": "Preparando a entrevista com IA",
+          "texto": "Use a IA como **treinadora**, não como cola.\n\n- Peça as perguntas mais prováveis para a vaga\n- Faça uma simulação: ela pergunta, tu responde, ela dá feedback\n- Peça para ela apontar pontos fracos das tuas respostas\n\nNo dia, tu responde sozinho. Se o processo tiver teste técnico, respeite a regra sobre uso de IA que a empresa definir.",
+          "linguagem": "prompt",
+          "codigo": "Você é um recrutador experiente para a vaga de [cargo].\nFaça uma entrevista simulada comigo: uma pergunta por vez.\nDepois de cada resposta minha, dê uma nota de 1 a 5, diga o que\nficou bom e o que melhorar. Comece pela primeira pergunta."
+        },
+        {
+          "titulo": "Perguntas sobre IA nas entrevistas",
+          "texto": "Algumas perguntas que estão aparecendo, e o que mostrar na resposta:\n\n- **\"Como você usa IA no seu trabalho?\"** Conte um caso real com resultado.\n- **\"Como você garante que a resposta da IA está certa?\"** Fale de conferir fontes, testar e revisar.\n- **\"Que cuidados você tem com dados?\"** Ferramentas aprovadas, anonimização, nada de segredos no prompt.\n- **\"Me dá um exemplo de quando a IA errou.\"** Mostre que tu percebeu e corrigiu.\n\nRecrutador gosta de ouvir **senso crítico**, não deslumbramento."
+        },
+        {
+          "titulo": "Onde estudar de graça",
+          "texto": "- **Microsoft Learn**: trilhas gratuitas sobre IA, Copilot, Azure e Power Platform\n- **Google**: cursos de IA generativa e de Google Workspace com Gemini\n- **Documentação das empresas de IA** (OpenAI, Anthropic, Google): guias de prompt e exemplos oficiais\n- **Coursera e edX**: muitos cursos podem ser assistidos de graça (o certificado costuma ser pago)\n- **YouTube e comunidades**: ótimos para ver gente usando na prática\n- **A Biblioteca desta Academia**: Python, PowerShell, Apps Script, APIs, Git, SQL e IA\n\nMais importante que o certificado: **um projeto que resolve um problema real**."
+        },
+        {
+          "titulo": "Transição de carreira com IA",
+          "texto": "A IA abriu espaço para gente de qualquer área migrar para funções novas, ou ganhar destaque na própria área. O caminho mais seguro raramente é largar tudo e recomeçar do zero.\n\nA estratégia que mais funciona é a **ponte**: usar o que tu já sabe e somar a IA.\n\n- quem é de RH pode ir para **automação de processos de pessoas**\n- quem é do financeiro pode ir para **análise de dados** e BI\n- quem é do atendimento pode ir para **operação de chatbots** e base de conhecimento\n- quem é professor pode ir para **design instrucional** e treinamento corporativo\n\nTeu conhecimento da área é o diferencial. Muita gente sabe usar IA; pouca gente sabe usar IA **num processo de RH** ou **num fechamento contábil**.\n\nPassos práticos:\n\n- escolha **uma função-alvo** e leia 10 vagas reais dela\n- anote as habilidades que se repetem e marque as que tu já tem\n- estude as que faltam com um **projeto prático**, não só com curso\n- procure oportunidades **dentro da tua empresa** primeiro: projetos internos e trocas de área são mais fáceis do que entrar do zero\n\nA IA ajuda a fazer esse mapa: cole as descrições das vagas e peça uma tabela de habilidades em comum. Mas desconfie de promessas de *\"nova carreira em 30 dias\"*. Transição leva meses e pede prática."
+        },
+        {
+          "titulo": "Freelas e portfólio prático",
+          "texto": "Projeto real vale mais que certificado. Se tu ainda não tem experiência com IA para mostrar, **cria a experiência**.\n\nFontes de projetos práticos:\n\n- **dentro do trabalho**: uma automação ou um modelo de prompt que o time adotou\n- **trabalho voluntário**: ONGs, associações e pequenos negócios costumam ter muito processo manual\n- **freelas pequenos**: organizar planilhas, criar perguntas frequentes, montar respostas padrão, documentar processos\n\nPara cada projeto, registre no portfólio:\n\n- **o problema** (o que era lento, confuso ou repetitivo)\n- **o que tu fez** (ferramentas e passos)\n- **o resultado**, com número sempre que possível\n- **o que tu aprendeu** ou faria diferente\n\nCuidados com freela:\n\n- combine **por escrito** o que será entregue, o prazo e o valor\n- deixe claro para o cliente que tu usa IA e que **revisa tudo**\n- não coloque dados do cliente em nenhuma ferramenta sem a autorização dele\n- nunca ponha no portfólio informação confidencial: troque nomes e números ou peça permissão\n\nTrês projetos pequenos e bem explicados mostram mais do que dez cursos concluídos. E cada projeto vira uma história pronta para contar na entrevista."
+        },
+        {
+          "titulo": "Negociar e mostrar resultados",
+          "texto": "Usar IA bem no trabalho só vira promoção ou aumento quando **alguém percebe**. E quem tem que fazer as pessoas perceberem é tu.\n\nMantém um **registro de conquistas** atualizado todo mês:\n\n- o que tu automatizou ou melhorou\n- quanto tempo ou dinheiro isso economizou\n- quantas pessoas passaram a usar\n- que elogio ou retorno tu recebeu\n\nNa conversa com a liderança, **traduza tempo em valor**. *\"Economizo 4 horas por semana no relatório\"* é bom. *\"Essas 4 horas agora vão para atender mais clientes\"* é melhor, porque mostra o impacto no negócio.\n\nA IA ajuda a preparar a conversa:\n\n- organizar teu registro numa página de resultados\n- simular a reunião: ela faz o papel da gestora e levanta objeções\n- sugerir como responder a um *\"agora não temos orçamento\"*\n\nMas os números precisam ser **teus e verdadeiros**. Inflar resultado é o jeito mais rápido de perder credibilidade.\n\nNa negociação, pesquise faixas salariais em fontes confiáveis e leve opções além do salário: um curso pago, uma certificação, um novo papel no time. E escolha bem o momento: logo depois de um resultado visível é muito melhor do que no meio de uma crise."
+        }
+      ]
+    },
+    {
+      "id": "carreira-cuidados",
+      "titulo": "Ética e segurança no trabalho",
+      "icone": "⚖️",
+      "cor": "#a8323e",
+      "movel": "placa",
+      "resumo": "O que nunca colocar na IA, direitos autorais, vieses e quando não usar.",
+      "capitulos": [
+        {
+          "titulo": "O que nunca entra",
+          "texto": "Em ferramenta que a empresa **não aprovou**, nunca coloque:\n\n- senhas, tokens e chaves de acesso\n- dados pessoais (CPF, telefone, endereço, dados de saúde)\n- dados de clientes e contratos sigilosos\n- números financeiros não publicados\n- código-fonte proprietário\n\nQuando precisar de ajuda com algo assim: **anonimize** (troque por *Cliente A*, *XXX*) ou peça um **script/modelo** e rode com os dados reais no teu ambiente. A LGPD vale para o que tu cola na IA também."
+        },
+        {
+          "titulo": "Transparência e direitos autorais",
+          "texto": "- Se a IA ajudou muito num material, é boa prática **avisar** (principalmente em relatórios e trabalhos acadêmicos)\n- Não publique como teu um texto que tu não leu nem revisou\n- Cuidado com imagens e textos que imitam artistas, marcas ou pessoas reais\n- Confira se o código gerado não copia trechos com licença restritiva\n\nNa dúvida, pergunte ao jurídico ou à comunicação da empresa."
+        },
+        {
+          "titulo": "Vieses e decisões sobre pessoas",
+          "texto": "A IA aprendeu com textos humanos, e herdou preconceitos humanos. Ela pode favorecer ou prejudicar pessoas por gênero, idade, origem ou jeito de escrever.\n\nPor isso:\n\n- IA **não decide** contratação, promoção, avaliação ou desligamento\n- use a IA para **organizar** informação, e uma pessoa para **julgar**\n- revise textos para linguagem inclusiva"
+        },
+        {
+          "titulo": "Quando NÃO usar IA",
+          "texto": "- Quando tu **não consegue verificar** se a resposta está certa e o erro custa caro\n- Em decisões sobre pessoas\n- Quando o processo proíbe (provas, alguns testes técnicos, contratos com cláusula de confidencialidade)\n- Em conversas que pedem empatia de verdade: um feedback difícil merece ser escrito por ti\n- Quando fazer na mão é mais rápido do que explicar para a IA\n\nUsar IA com sabedoria também é saber a hora de não usar."
+        },
+        {
+          "titulo": "A regra de ouro",
+          "texto": "Tudo se resume a uma frase da Academia:\n\n**A IA escreve o rascunho. Tu assina embaixo.**\n\nSe tu não assinaria aquele texto, código ou decisão com o teu nome, ele ainda não está pronto. Revisa, confere e só então usa."
+        },
+        {
+          "titulo": "Registro e auditoria",
+          "texto": "Quando algo dá errado, a primeira pergunta é: **como isso foi feito?** Se a IA participou, tu precisa conseguir responder.\n\nPara trabalhos importantes, mantém um **registro simples**:\n\n- qual ferramenta foi usada\n- o prompt principal (sem dados sensíveis)\n- o que a IA entregou e o que tu mudou\n- quem revisou e quando\n\nNão precisa registrar o e-mail de bom dia. Registre o que pesa: **relatórios para a diretoria, análises que embasam decisões, documentos para clientes e código que vai para produção**.\n\nEsse registro serve para:\n\n- **explicar** uma decisão meses depois\n- **corrigir** rápido quando um erro aparece, porque tu sabe de onde ele veio\n- **reaproveitar** o que funcionou\n- atender a uma **auditoria** ou exigência de compliance\n\nAlgumas empresas já pedem isso de forma formal, com campo próprio no sistema ou declaração de uso de IA no documento. Siga o que a tua empresa definir.\n\nCuidado para o registro não virar um problema novo: não guarde nele senhas, dados pessoais ou trechos sigilosos que não estariam no documento final.\n\nUma pasta com um arquivo de texto por entrega já resolve. O importante é que outra pessoa consiga entender o caminho."
+        },
+        {
+          "titulo": "IA no atendimento ao cliente",
+          "texto": "Chatbots e respostas geradas por IA já são comuns no atendimento. O cliente tem o direito de saber com quem está falando.\n\nRegras de **transparência**:\n\n- deixe claro quando o cliente fala com um **assistente virtual**\n- ofereça sempre um caminho fácil para falar com **uma pessoa**\n- não faça o robô fingir ser humano, com nome e foto de atendente real\n\nQuando um atendente usa IA para **rascunhar** a resposta, a responsabilidade continua sendo do atendente. Ler antes de enviar é obrigatório.\n\nOs erros mais perigosos:\n\n- **prometer o que a empresa não oferece** (prazo, desconto, reembolso)\n- **inventar política**: a IA responde com confiança uma regra que não existe\n- **tom inadequado** com cliente irritado ou em situação delicada\n- **vazar dado** de um cliente na conversa com outro\n\nPor isso, o assistente deve responder com base na **base de conhecimento oficial** e passar para um humano quando não souber, quando o cliente pedir ou quando o assunto for sensível, como reclamação grave, saúde ou dívida.\n\nRevise conversas por amostragem toda semana. Elas mostram onde o assistente erra e quais perguntas a base de conhecimento ainda não cobre."
+        },
+        {
+          "titulo": "Saúde mental e dependência da ferramenta",
+          "texto": "A IA economiza tempo, mas pode criar dois problemas silenciosos: **sobrecarga** e **dependência**.\n\n**Sobrecarga** acontece quando o tempo economizado vira mais tarefa, sem fim. Se tu termina o relatório em 30 minutos e recebe mais três, o ganho virou pressão. Converse com a liderança sobre **para onde vai o tempo liberado**: melhorar a qualidade, aprender, respirar.\n\n**Dependência** aparece quando tu não consegue mais começar nada sem a ferramenta. Sinais de alerta:\n\n- tu não consegue escrever um e-mail simples sem pedir à IA\n- tu aceita respostas sem ler porque *\"ela deve estar certa\"*\n- tu fica travado quando a ferramenta sai do ar\n- tu sente que perdeu habilidades que tinha\n\nPara manter tua autonomia:\n\n- faça algumas tarefas **na mão** de vez em quando, de propósito\n- escreva o **primeiro rascunho** sozinho e use a IA para melhorar\n- tente resolver o problema por 10 minutos antes de perguntar\n\nE lembra: a IA **não substitui apoio humano**. Para ansiedade, esgotamento ou problemas pessoais, procure pessoas de confiança, o RH ou um profissional de saúde.\n\nUsar IA bem é trabalhar melhor, não trabalhar sem parar."
+        }
+      ]
+    }
+  ]
+}

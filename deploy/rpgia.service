@@ -1,0 +1,26 @@
+[Unit]
+Description=RPG IA (Academia Arcana de Elyndor)
+After=network.target
+
+[Service]
+User=rpgia
+Group=rpgia
+WorkingDirectory=/opt/rpgia
+EnvironmentFile=-/opt/rpgia/.env
+# o gunicorn guarda o "control server" na pasta pessoal; /home é fechada (ProtectHome), então usa dados/
+Environment=HOME=/opt/rpgia/dados
+# 3 processos com 4 linhas de execução cada: a trava por jogador (banco.py) vale entre eles. Numa VM com
+# mais núcleos, suba os workers (regra comum: 2 x núcleos + 1).
+ExecStart=/opt/rpgia/.venv/bin/gunicorn --workers 3 --threads 4 --bind 127.0.0.1:8000 \
+  --timeout 60 --graceful-timeout 20 --access-logfile - wsgi:application
+Restart=always
+RestartSec=3
+# o jogo só escreve em dados/; o resto do sistema fica só leitura para ele
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/rpgia/dados
+
+[Install]
+WantedBy=multi-user.target

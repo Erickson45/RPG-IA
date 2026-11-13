@@ -1,0 +1,431 @@
+{
+  "legenda": {
+    "principais": "as 3 classes do jogo (a vocação escolhida no criador). Todo herói começa como iniciante e, no nível de escolha, vira uma das subclasses",
+    "trilha_inicial": "a trilha que o Reino puxa mais (perguntas, missões e livros recomendados) enquanto o herói ainda é iniciante; depois vale a trilha da subclasse",
+    "tema": "nomes e textos próprios da classe para o grimório, o domínio e as missões: a regra é a mesma para todas, só muda o jeito de contar",
+    "classes": "as subclasses. principal diz de qual classe ela é; trilha é a trilha de domínio que conta para subir no caminho",
+    "evolucoes": "os degraus 2 a 5 do caminho (o 1 é o iniciante da classe principal): cada um pede nível e, nos últimos, domínio na trilha e chefões vencidos",
+    "magias": "as 3 magias especiais da subclasse, liberadas nos degraus 2, 3 e 5",
+    "passiva": "habilidade que a subclasse ganha de graça no degrau 4 (o id é de uma habilidade da árvore)",
+    "efeito": "expulsar (monstro comum foge, paga uma parte), apagar (monstro comum some; pode levar o prêmio junto), dano, metade, derrubar, protecao (erros sem dano), combo (próximos acertos +1), cura, auto_acerto",
+    "recarga_horas": "horas de verdade de espera depois de usar (opcional: sem ele, quem vence a luta sozinho espera 24 h, lendária 12 h, épica 6 h e comum 2 h; ver conteudo.py); toda magia especial vale uma vez por batalha"
+  },
+  "nivel_escolha": 4,
+  "degraus_das_magias": [2, 3, 5],
+  "degrau_da_passiva": 4,
+  "principais": [
+    {
+      "id": "mago",
+      "icone": "🔮",
+      "titulo": "Mago",
+      "cor": "#a98bff",
+      "lema": "A palavra certa abre qualquer porta.",
+      "descricao": "Estuda runas, dados e golens. Vence pelo conhecimento e pela magia.",
+      "iniciante": { "titulo": "Aprendiz de Mago", "frase": "Ainda acende a varinha pelo lado errado." },
+      "trilha_inicial": "fundamentos",
+      "tema": {
+        "grimorio": {
+          "nome": "Grimório", "icone": "📖", "recurso": "Mana", "recurso_icone": "💧",
+          "magias": {
+            "renovar": { "frase": "Essa não valeu, próxima!" },
+            "visao": { "frase": "Enxergo a verdade entre as mentiras." },
+            "escudo": { "frase": "Runas antigas, proteção moderna." },
+            "cura": { "frase": "Um gole de poção e bora." },
+            "lamina": { "frase": "Luz que corta até código legado." }
+          }
+        },
+        "batalha": { "acerto": "Feitiço em cheio!", "icone": "✨", "efeito": "ZAP!", "proxima": "Manda a próxima! 🔮" },
+        "dominio": { "nome": "Domínio Arcano", "ranks": ["Novato", "Aprendiz", "Adepto", "Especialista", "Mestre"], "trilhas": {} },
+        "missoes": { "nome": "Diário de Missões", "textos": {} }
+      }
+    },
+    {
+      "id": "guerreiro",
+      "icone": "⚔️",
+      "titulo": "Guerreiro",
+      "cor": "#ff6b4a",
+      "lema": "Quem segura a linha segura o reino.",
+      "descricao": "Armadura, aço e coragem. Vence na linha de frente, com disciplina e força de vontade.",
+      "iniciante": { "titulo": "Recruta", "frase": "Segura a espada como quem segura o crachá no primeiro dia." },
+      "trilha_inicial": "seguranca",
+      "tema": {
+        "grimorio": {
+          "nome": "Arsenal de Técnicas", "icone": "🗡️", "recurso": "Fúria", "recurso_icone": "🔥",
+          "magias": {
+            "renovar": { "nome": "Pede Pra Repetir", "icone": "🔁", "descricao": "Finge que não ouviu e troca a pergunta da rodada por outra do mesmo perigo.", "frase": "Desculpa, cortou o áudio." },
+            "visao": { "nome": "Olho Clínico do Veterano", "icone": "👁️", "descricao": "Elimina duas alternativas erradas da pergunta da rodada.", "frase": "Já vi esse golpe em 1998." },
+            "escudo": { "nome": "Escudo do Não É Comigo", "icone": "🛡️", "descricao": "O próximo erro não tira vida.", "frase": "Isso é com outro setor." },
+            "cura": { "nome": "Pausa Pro Café", "icone": "☕", "descricao": "Recupera 1 coração no meio da batalha.", "frase": "Ninguém luta bem sem cafeína." },
+            "lamina": { "nome": "Golpe de Marreta", "icone": "🔨", "descricao": "O próximo acerto tira 1 de vida a mais do monstro.", "frase": "Se não resolveu na força, faltou força." }
+          }
+        },
+        "batalha": { "acerto": "Golpe em cheio!", "icone": "⚔️", "efeito": "TCHAK!", "proxima": "Manda a próxima! ⚔️" },
+        "dominio": {
+          "nome": "Maestria de Combate", "ranks": ["Recruta", "Escudeiro", "Cavaleiro", "Campeão", "Lenda de Guerra"],
+          "trilhas": {
+            "prompts": { "nome": "Grito de Comando", "icone": "📣" },
+            "fundamentos": { "nome": "Tática de Guerra", "icone": "🗺️" },
+            "codigo": { "nome": "Forja de Scripts", "icone": "⚒️" },
+            "seguranca": { "nome": "Muralha do Reino", "icone": "🏰" },
+            "trabalho": { "nome": "Arena Corporativa", "icone": "🏟️" }
+          }
+        },
+        "missoes": {
+          "nome": "Ordens do Quartel",
+          "textos": {
+            "praga-slimes": { "titulo": "Infantaria gosmenta", "texto": "Os fazendeiros dos Campos pedem reforço: esmaga 5 slimes." },
+            "gigante-campos": { "titulo": "Duelo com o gigante", "texto": "Um Slime Gigante desafiou a guarnição. Derrota 1 no braço." },
+            "uivos": { "titulo": "Matilha na fronteira", "texto": "Os lobos da Floresta Uivante cercam o acampamento. Vence 3 lobos." },
+            "alfa": { "titulo": "Duelo de alfas", "texto": "Só pode haver um alfa nesta floresta. Derrota o Lobo Alfa." },
+            "brejo": { "titulo": "Drenagem tática", "texto": "O Pântano virou trincheira de sapos e slimes. Vence 4 deles." },
+            "ferroes": { "titulo": "Escolta da caravana", "texto": "A caravana do deserto precisa de um escudo. Vence 4 escorpiões ou esqueletos." },
+            "cacador-dragoes": { "titulo": "Matador de dragões", "texto": "Todo guerreiro sonha com isso: vence 2 dragões das montanhas." },
+            "fortes": { "titulo": "Treino com os pesos-pesados", "texto": "Sem dor, sem glória: vence 2 monstros de força Forte." },
+            "patrulha": { "titulo": "Ronda do quartel", "texto": "O guarda Bento convocou reforços: vence 6 monstros de qualquer região." },
+            "rei-de-bioma": { "titulo": "Derrubar a coroa", "texto": "Um chefão ainda se acha rei. Mostra quem manda: derruba 1." },
+            "acertos-prompts": { "titulo": "Ordens claras", "texto": "Acerta 4 perguntas de Grito de Comando (Arte do Prompt). Ordem confusa perde batalha." },
+            "acertos-fundamentos": { "titulo": "Estudo de táticas", "texto": "Acerta 4 perguntas de Tática de Guerra (Fundamentos de IA). Conhecer o inimigo é metade da vitória." },
+            "acertos-codigo": { "titulo": "Na bigorna", "texto": "Acerta 5 perguntas de Forja de Scripts (Código e Automação). Até a espada tem manual." },
+            "acertos-seguranca": { "titulo": "Guarda do portão", "texto": "Acerta 4 perguntas de Muralha do Reino (Ética e Segurança). Ninguém passa sem senha." },
+            "acertos-trabalho": { "titulo": "Expediente na caserna", "texto": "Acerta 4 perguntas de Arena Corporativa (IA no Trabalho). Guerreiro também bate ponto." },
+            "maratona": { "titulo": "Cem flexões mentais", "texto": "Acerta 10 perguntas no Reino, de qualquer trilha. O cérebro também é músculo." },
+            "enigmista": { "titulo": "Cerco ao enigma", "texto": "Resolve 1 enigma das pedras rúnicas ou dos baús. Força bruta não abre tudo." },
+            "rato-biblioteca": { "titulo": "Manual da armadura", "texto": "Lê até o fim 1 livro ou guia. Sim, guerreiro também lê." },
+            "gabarito": { "titulo": "Treino perfeito", "texto": "Conclui 1 lição com 3 estrelas. Repetição é o treino do campeão." },
+            "masmorreiro": { "titulo": "Invasão da masmorra", "texto": "Arromba a porta e vence 1 dungeon (vale repetir)." }
+          }
+        }
+      }
+    },
+    {
+      "id": "arqueiro",
+      "icone": "🏹",
+      "titulo": "Arqueiro",
+      "cor": "#5fd35f",
+      "lema": "Paciência, mira e uma flecha só.",
+      "descricao": "Olhos de águia e passos leves. Vence de longe, com precisão e esperteza.",
+      "iniciante": { "titulo": "Batedor", "frase": "Já acertou o alvo. O alvo do vizinho, mas acertou." },
+      "trilha_inicial": "prompts",
+      "tema": {
+        "grimorio": {
+          "nome": "Aljava de Truques", "icone": "🏹", "recurso": "Foco", "recurso_icone": "🎯",
+          "magias": {
+            "renovar": { "nome": "Recarregar Flecha", "icone": "🔄", "descricao": "Troca a pergunta da rodada por outra do mesmo perigo.", "frase": "Essa flecha veio torta." },
+            "visao": { "nome": "Mira Telescópica", "icone": "🔭", "descricao": "Elimina duas alternativas erradas da pergunta da rodada.", "frase": "Zoom 4K, sem pixel." },
+            "escudo": { "nome": "Camuflagem de Arbusto", "icone": "🌿", "descricao": "O próximo erro não tira vida.", "frase": "Eu sou uma moita. Moitas não sentem dor." },
+            "cura": { "nome": "Chá de Ervas da Vó", "icone": "🍵", "descricao": "Recupera 1 coração no meio da batalha.", "frase": "Receita de família, não pergunta o que tem." },
+            "lamina": { "nome": "Flecha Perfurante", "icone": "🎯", "descricao": "O próximo acerto tira 1 de vida a mais do monstro.", "frase": "Atravessa até planilha protegida." }
+          }
+        },
+        "batalha": { "acerto": "Flecha na mosca!", "icone": "🏹", "efeito": "FWIP!", "proxima": "Manda a próxima! 🏹" },
+        "dominio": {
+          "nome": "Trilhas do Caçador", "ranks": ["Batedor", "Caçador", "Patrulheiro", "Atirador de Elite", "Olho de Águia"],
+          "trilhas": {
+            "prompts": { "nome": "Mira das Palavras", "icone": "🎯" },
+            "fundamentos": { "nome": "Leitura da Floresta", "icone": "🌲" },
+            "codigo": { "nome": "Armadilhas de Código", "icone": "🪤" },
+            "seguranca": { "nome": "Vigília da Torre", "icone": "🦉" },
+            "trabalho": { "nome": "Contratos de Caça", "icone": "📜" }
+          }
+        },
+        "missoes": {
+          "nome": "Quadro de Caçadas",
+          "textos": {
+            "praga-slimes": { "titulo": "Tiro ao slime", "texto": "Os fazendeiros pedem um bom atirador: acerta 5 slimes." },
+            "gigante-campos": { "titulo": "Alvo grande, flecha certa", "texto": "Um Slime Gigante é impossível de errar. Derrota 1." },
+            "uivos": { "titulo": "Caçada noturna", "texto": "Rastreia a matilha da Floresta Uivante. Vence 3 lobos." },
+            "alfa": { "titulo": "Troféu do Alfa", "texto": "O Lobo Alfa da Névoa é a presa mais esperta da floresta. Derrota 1." },
+            "brejo": { "titulo": "Pântano camuflado", "texto": "Sapos e slimes tóxicos se escondem no brejo. Vence 4 deles." },
+            "ferroes": { "titulo": "Batedor da caravana", "texto": "Vigia a estrada do deserto: vence 4 escorpiões ou esqueletos." },
+            "cacador-dragoes": { "titulo": "Flecha nos céus", "texto": "Dragões voam alto, mas não mais que tuas flechas. Vence 2." },
+            "fortes": { "titulo": "Presas de respeito", "texto": "Só as presas fortes valem a flecha: vence 2 monstros de força Forte." },
+            "patrulha": { "titulo": "Patrulha da floresta", "texto": "O guarda Bento pediu olhos atentos: vence 6 monstros de qualquer região." },
+            "rei-de-bioma": { "titulo": "Caçada real", "texto": "Um chefão reina no seu bioma. Põe ele na mira: derruba 1." },
+            "acertos-prompts": { "titulo": "Mira nas palavras", "texto": "Acerta 4 perguntas de Mira das Palavras (Arte do Prompt). Pedido certo, flecha certa." },
+            "acertos-fundamentos": { "titulo": "Ler a floresta", "texto": "Acerta 4 perguntas de Leitura da Floresta (Fundamentos de IA). Todo rastro conta uma história." },
+            "acertos-codigo": { "titulo": "Armadilha armada", "texto": "Acerta 5 perguntas de Armadilhas de Código (Código e Automação). Um bom script caça sozinho." },
+            "acertos-seguranca": { "titulo": "Olhos na trilha", "texto": "Acerta 4 perguntas de Vigília da Torre (Ética e Segurança). Nenhum invasor passa despercebido." },
+            "acertos-trabalho": { "titulo": "Contrato fechado", "texto": "Acerta 4 perguntas de Contratos de Caça (IA no Trabalho). Freela bem feito é freela pago." },
+            "maratona": { "titulo": "Aljava vazia", "texto": "Acerta 10 perguntas no Reino. Só volta quando acabarem as flechas." },
+            "enigmista": { "titulo": "Rastro do enigma", "texto": "Resolve 1 enigma das pedras rúnicas ou dos baús perdidos." },
+            "rato-biblioteca": { "titulo": "Mapa do caçador", "texto": "Lê até o fim 1 livro ou guia que tu ainda não leu." },
+            "gabarito": { "titulo": "Na mosca", "texto": "Conclui 1 lição com 3 estrelas. Três flechas, três no centro." },
+            "masmorreiro": { "titulo": "Emboscada na masmorra", "texto": "Vence 1 dungeon (vale repetir)." }
+          }
+        }
+      }
+    }
+  ],
+  "classes": [
+    {
+      "id": "runas", "principal": "mago", "icone": "🔮", "titulo": "Mago das Runas", "cor": "#a98bff",
+      "lema": "A palavra certa abre qualquer porta.",
+      "descricao": "Mestre das palavras. Transforma pedidos confusos em feitiços precisos: os prompts.",
+      "trilha": "prompts",
+      "passiva": { "habilidade": "eco", "nome": "Runa Pré-Carregada", "icone": "📖", "frase": "A primeira magia já vem escrita no grimório." },
+      "evolucoes": [
+        { "titulo": "Mago das Runas", "nivel": 4, "frase": "Ainda escreve \"faz um texto aí\" de vez em quando." },
+        { "titulo": "Tecelão de Prompts", "nivel": 7, "frase": "Papel, contexto, tarefa e formato: o feitiço já sai pronto." },
+        { "titulo": "Arquimago das Palavras", "nivel": 10, "dominio": 2, "frase": "Uma frase dele vale mais que mil tentativas." },
+        { "titulo": "Oráculo do Contexto Infinito", "nivel": 15, "chefes": 3, "frase": "Lembra até do que tu disse três conversas atrás." }
+      ],
+      "magias": [
+        { "id": "culpa-ia", "nome": "Foi Culpa da IA", "icone": "🤖", "raridade": "comum", "frase": "Eu só segui o que a IA me respondeu!", "descricao": "O monstro fica confuso e ignora teus próximos 2 erros.", "efeito": { "tipo": "protecao", "valor": 2 } },
+        { "id": "alucinacao", "nome": "Alucinação", "icone": "🌀", "raridade": "epica", "frase": "Tenho certeza absoluta de que isso aconteceu!", "descricao": "Três ilusões tuas confundem o monstro: tira 2 de vida e os próximos 2 erros não doem.", "efeito": { "tipo": "dano", "valor": 2, "protecao": 2 } },
+        { "id": "agi", "nome": "AGI: Inteligência Suprema", "icone": "🧠", "raridade": "lendaria", "frase": "Eu já pensei em todas as possibilidades.", "descricao": "Uma inteligência ancestral responde a pergunta por ti, certinho, com 2 de dano a mais.", "efeito": { "tipo": "auto_acerto", "valor": 2 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "alquimista", "principal": "mago", "icone": "⚗️", "titulo": "Alquimista de Dados", "cor": "#4fd1a5",
+      "lema": "Todo dado bruto esconde ouro.",
+      "descricao": "Transforma planilhas, APIs e números em respostas e painéis que todo mundo entende.",
+      "trilha": "trabalho",
+      "passiva": { "habilidade": "bolso", "nome": "Pedra Filosofal de Planilha", "icone": "👝", "frase": "Transforma qualquer célula em ouro: +20% de moedas." },
+      "evolucoes": [
+        { "titulo": "Alquimista de Dados", "nivel": 4, "frase": "Ainda confunde PROCV com feitiço de invocação." },
+        { "titulo": "Mestre das Planilhas Vivas", "nivel": 7, "frase": "Suas tabelas dinâmicas literalmente se mexem." },
+        { "titulo": "Arquiteto do Data Lake", "nivel": 10, "dominio": 2, "frase": "Mergulha no lago de dados sem se afogar." },
+        { "titulo": "Lorde do Big Data", "nivel": 15, "chefes": 3, "frase": "Conta os grãos de areia do Deserto dos Bugs por diversão." }
+      ],
+      "magias": [
+        { "id": "delete-sem-where", "nome": "DELETE sem WHERE", "icone": "🗑️", "raridade": "comum", "frase": "DELETE FROM inimigos; -- não pergunte o que será apagado", "descricao": "Apaga um monstro comum da existência. Metade das vezes apaga o prêmio junto. Chefões têm backup.", "efeito": { "tipo": "apagar", "chance_perder": 0.5 } },
+        { "id": "drop-table", "nome": "DROP TABLE", "icone": "💣", "raridade": "epica", "frase": "Essa tabela nunca deveria ter existido.", "descricao": "Tira 3 de vida de qualquer monstro, chefões inclusos.", "efeito": { "tipo": "dano", "valor": 3 } },
+        { "id": "truncate", "nome": "TRUNCATE DATABASE", "icone": "☢️", "raridade": "lendaria", "frase": "Backup? Que backup?", "descricao": "Arranca metade da vida que sobrou do monstro (chefões também) e enche tua mana.", "efeito": { "tipo": "metade", "mana_cheia": true }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "artifice", "principal": "mago", "icone": "⚙️", "titulo": "Artífice de Autômatos", "cor": "#f5a623",
+      "lema": "Se repete, um golem pode fazer.",
+      "descricao": "Constrói golens de código que trabalham sozinhos: scripts e automações.",
+      "trilha": "codigo",
+      "passiva": { "habilidade": "fluxo", "nome": "Golem Carregador", "icone": "🌊", "frase": "Um golem enche tua mana: cada acerto devolve 1 a mais." },
+      "evolucoes": [
+        { "titulo": "Artífice de Autômatos", "nivel": 4, "frase": "O primeiro golem dele só sabe dizer \"Hello, World\"." },
+        { "titulo": "Forjador de Golens", "nivel": 7, "frase": "Seus scripts rodam de madrugada enquanto ele dorme." },
+        { "titulo": "Mestre das Engrenagens Eternas", "nivel": 10, "dominio": 2, "frase": "Se fez duas vezes, já virou automação." },
+        { "titulo": "Senhor dos Mil Robôs", "nivel": 15, "chefes": 3, "frase": "Tem um robô só para lembrar os outros robôs de trabalhar." }
+      ],
+      "magias": [
+        { "id": "chamado", "nome": "Já Abriu Chamado?", "icone": "🎫", "raridade": "comum", "frase": "Sem protocolo, sem atendimento!", "descricao": "O monstro comum percebe que não tem protocolo e vai embora. Ganhas metade do prêmio. Chefões têm atendimento VIP.", "efeito": { "tipo": "expulsar", "fator": 0.5 } },
+        { "id": "loop", "nome": "Loop Infinito", "icone": "🔁", "raridade": "epica", "frase": "while (monstro.vivo) { monstro.repetir(); }", "descricao": "O monstro fica preso num ciclo: teus próximos 3 erros não doem.", "efeito": { "tipo": "protecao", "valor": 3 } },
+        { "id": "deploy-sexta", "nome": "Deploy de Sexta-Feira", "icone": "🚀", "raridade": "lendaria", "frase": "Se funcionar, ninguém mexe. Se quebrar, segunda a gente vê.", "descricao": "Tira 4 de vida de qualquer monstro. Mas 25% das vezes quebra a produção e zera tua mana.", "efeito": { "tipo": "dano", "valor": 4, "chance_falha": 0.25 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "guardiao", "principal": "mago", "icone": "🛡️", "titulo": "Guardião dos Selos", "cor": "#7fb2ff",
+      "lema": "Magia sem cuidado é maldição.",
+      "descricao": "Protege os segredos do reino: privacidade, senhas e dados de quem confia em ti.",
+      "trilha": "seguranca",
+      "passiva": { "habilidade": "esquiva", "nome": "Selo de Proteção", "icone": "💨", "frase": "O primeiro erro de cada batalha bate no selo, não em ti." },
+      "evolucoes": [
+        { "titulo": "Guardião dos Selos", "nivel": 4, "frase": "A senha dele ainda é \"123456\", mas está melhorando." },
+        { "titulo": "Sentinela do Firewall", "nivel": 7, "frase": "Nem pacote mal-intencionado nem fofoca passam por ele." },
+        { "titulo": "Paladino da Criptografia", "nivel": 10, "dominio": 2, "frase": "Até a lista do mercado dele é criptografada." },
+        { "titulo": "Lenda do Zero Trust", "nivel": 15, "chefes": 3, "frase": "Não confia nem no próprio reflexo sem autenticação em dois fatores." }
+      ],
+      "magias": [
+        { "id": "servidor-offline", "nome": "Servidor Offline", "icone": "🔌", "raridade": "comum", "frase": "Infelizmente estamos enfrentando uma instabilidade.", "descricao": "O monstro fica paralisado: teu próximo erro não dói e ganhas 1 de mana.", "efeito": { "tipo": "protecao", "valor": 1, "mana": 1 } },
+        { "id": "desligar-ligar", "nome": "Já Tentou Desligar e Ligar?", "icone": "🔄", "raridade": "epica", "frase": "Funciona em 90% dos casos. Os outros 10% são DNS.", "descricao": "Reinicia o herói: recupera 2 corações e toda a mana.", "efeito": { "tipo": "cura", "vida": 2, "mana_cheia": true } },
+        { "id": "infra-caiu", "nome": "A Infraestrutura Caiu", "icone": "🌩️", "raridade": "lendaria", "frase": "Não foi possível estabelecer conexão com a realidade.", "descricao": "Derruba um monstro comum na hora (prêmio inteiro). Chefões perdem 3 de vida.", "efeito": { "tipo": "derrubar", "valor": 3 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "domador", "principal": "mago", "icone": "🐉", "titulo": "Domador de Dragões", "cor": "#ff6b7a",
+      "lema": "Quanto maior o dragão, maior a lenda.",
+      "descricao": "Encara os maiores desafios: projetos completos, da ideia ao produto.",
+      "trilha": "fundamentos",
+      "passiva": { "habilidade": "primeiro-golpe", "nome": "Bafo de Dragão", "icone": "🗡️", "frase": "O primeiro acerto de cada batalha vem com fogo: +1 de dano." },
+      "evolucoes": [
+        { "titulo": "Domador de Dragões", "nivel": 4, "frase": "Por enquanto doma lagartixas, mas com muita convicção." },
+        { "titulo": "Cavaleiro do Deploy", "nivel": 7, "frase": "Sobe versão nova sem tremer a mão." },
+        { "titulo": "Comandante de Produção", "nivel": 10, "dominio": 2, "frase": "Quando cai, ele já sabe o motivo antes do alerta tocar." },
+        { "titulo": "Lenda Fullstack", "nivel": 15, "chefes": 3, "frase": "Do banco ao botão, da ideia ao dragão." }
+      ],
+      "magias": [
+        { "id": "bug-feature", "nome": "Não É Bug, É Feature", "icone": "🐛", "raridade": "comum", "frase": "Está funcionando conforme planejado.", "descricao": "Teu próximo erro vira funcionalidade: não dói e ainda rende 2 de mana.", "efeito": { "tipo": "protecao", "valor": 1, "mana": 2 } },
+        { "id": "stack-overflow", "nome": "Stack Overflow", "icone": "📚", "raridade": "epica", "frase": "Você chamou funções demais, meu amigo!", "descricao": "A pilha do monstro transborda: teus próximos 3 acertos tiram 1 de vida a mais cada.", "efeito": { "tipo": "combo", "valor": 3 } },
+        { "id": "minha-maquina", "nome": "Na Minha Máquina Funciona", "icone": "💻", "raridade": "lendaria", "frase": "Funciona aqui. Deve ser o teu ambiente.", "descricao": "Invoca tua versão de produção: tira 3 de vida e os próximos 2 acertos tiram +1.", "efeito": { "tipo": "dano", "valor": 3, "combo": 2 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "comandante", "principal": "guerreiro", "icone": "📣", "titulo": "Comandante de Batalha", "cor": "#ffb347",
+      "lema": "Ordem clara, batalha ganha.",
+      "descricao": "Vence com ordens precisas: os prompts que fazem a tropa (e a IA) entender de primeira.",
+      "trilha": "prompts",
+      "passiva": { "habilidade": "sequencia", "nome": "Formação em Cunha", "icone": "🔗", "frase": "Três ordens seguidas e o pelotão vira pipeline: o 3º acerto tira +1." },
+      "evolucoes": [
+        { "titulo": "Comandante de Batalha", "nivel": 4, "frase": "Ainda grita \"faz aí\" e espera milagre." },
+        { "titulo": "Capitão das Ordens Claras", "nivel": 7, "frase": "Papel, contexto, tarefa, formato: e marcha!" },
+        { "titulo": "General do Briefing", "nivel": 10, "dominio": 2, "frase": "Um briefing dele vale por um exército inteiro." },
+        { "titulo": "Marechal do Prompt Perfeito", "nivel": 15, "chefes": 3, "frase": "Até o dragão pede pra ele escrever o prompt." }
+      ],
+      "magias": [
+        { "id": "reuniao-email", "nome": "Reunião Que Podia Ser um E-mail", "icone": "📅", "raridade": "comum", "frase": "Vamos alinhar rapidinho? São só duas horas.", "descricao": "O monstro cochila de tédio: teus próximos 2 erros não doem.", "efeito": { "tipo": "protecao", "valor": 2 } },
+        { "id": "brainstorm", "nome": "Brainstorm Obrigatório", "icone": "💡", "raridade": "epica", "frase": "Não existe ideia ruim! (existe sim)", "descricao": "A tropa inteira ataca: tira 2 de vida e os próximos 2 acertos tiram +1.", "efeito": { "tipo": "dano", "valor": 2, "combo": 2 } },
+        { "id": "escopo-fechado", "nome": "Escopo Fechado", "icone": "📋", "raridade": "lendaria", "frase": "Isso não estava no escopo, meu amigo.", "descricao": "Tu define o escopo e o monstro aceita: a pergunta é respondida certinha por ti, com 2 de dano a mais.", "efeito": { "tipo": "auto_acerto", "valor": 2 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "paladino", "principal": "guerreiro", "icone": "🛡️", "titulo": "Paladino do Firewall", "cor": "#7fb2ff",
+      "lema": "Ninguém passa sem crachá.",
+      "descricao": "O escudo do reino: protege senhas, dados e pessoas de golpes e vazamentos.",
+      "trilha": "seguranca",
+      "passiva": { "habilidade": "pele", "nome": "Armadura de Compliance", "icone": "❤️", "frase": "+1 coração. LGPD também é armadura." },
+      "evolucoes": [
+        { "titulo": "Paladino do Firewall", "nivel": 4, "frase": "A senha dele já tem número E símbolo." },
+        { "titulo": "Cruzado da Senha Forte", "nivel": 7, "frase": "Troca a senha a cada 90 dias e nem reclama." },
+        { "titulo": "Templário da Criptografia", "nivel": 10, "dominio": 2, "frase": "Criptografa até o bom-dia no chat." },
+        { "titulo": "Santo Padroeiro do 2FA", "nivel": 15, "chefes": 3, "frase": "Pede código de verificação até pra entrar em casa." }
+      ],
+      "magias": [
+        { "id": "senha123", "nome": "Senha123", "icone": "🔑", "raridade": "comum", "frase": "Ninguém nunca vai adivinhar.", "descricao": "O monstro tenta invadir e trava na tua senha: teu próximo erro não dói e ganhas 1 de fúria.", "efeito": { "tipo": "protecao", "valor": 1, "mana": 1 } },
+        { "id": "backup-backup", "nome": "Backup do Backup", "icone": "💾", "raridade": "epica", "frase": "Quem tem um backup não tem nenhum.", "descricao": "Restaura o herói: recupera 2 corações e toda a fúria.", "efeito": { "tipo": "cura", "vida": 2, "mana_cheia": true } },
+        { "id": "patch-emergencial", "nome": "Patch de Segurança Emergencial", "icone": "🚨", "raridade": "lendaria", "frase": "Reinicie agora para aplicar as atualizações.", "descricao": "Derruba um monstro comum na hora (prêmio inteiro). Chefões perdem 3 de vida.", "efeito": { "tipo": "derrubar", "valor": 3 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "berserker", "principal": "guerreiro", "icone": "🪓", "titulo": "Berserker do Código", "cor": "#ff4d4d",
+      "lema": "Se compilou, tá pronto.",
+      "descricao": "Programa com fúria: scripts, automações e correções que saem na força do braço.",
+      "trilha": "codigo",
+      "passiva": { "habilidade": "primeiro-golpe", "nome": "Fúria do Hotfix", "icone": "🗡️", "frase": "Corrige primeiro, pergunta depois: o 1º acerto tira +1." },
+      "evolucoes": [
+        { "titulo": "Berserker do Código", "nivel": 4, "frase": "Programa de capacete e escudo." },
+        { "titulo": "Fúria do Hotfix", "nivel": 7, "frase": "Sobe correção em produção sem tirar a armadura." },
+        { "titulo": "Destruidor de Bugs", "nivel": 10, "dominio": 2, "frase": "Os bugs fogem quando ouvem o teclado dele." },
+        { "titulo": "Lenda do Commit na Main", "nivel": 15, "chefes": 3, "frase": "Faz commit direto na main e nada quebra. Ninguém sabe como." }
+      ],
+      "magias": [
+        { "id": "push-force", "nome": "git push --force", "icone": "💪", "raridade": "comum", "frase": "Se deu conflito, o meu vence.", "descricao": "Empurra o monstro comum pra fora do repositório: ele foge e ganhas metade do prêmio. Chefões têm branch protegida.", "efeito": { "tipo": "expulsar", "fator": 0.5 } },
+        { "id": "direto-producao", "nome": "Rodar Direto em Produção", "icone": "🔥", "raridade": "epica", "frase": "Ambiente de teste é pra quem tem medo.", "descricao": "Tira 3 de vida de qualquer monstro, chefões inclusos.", "efeito": { "tipo": "dano", "valor": 3 } },
+        { "id": "rm-rf", "nome": "rm -rf /", "icone": "☠️", "raridade": "lendaria", "frase": "Limpei tudo. Inclusive o que não devia.", "descricao": "Arranca metade da vida que sobrou do monstro (chefões também) e enche tua fúria.", "efeito": { "tipo": "metade", "mana_cheia": true }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "gladiador", "principal": "guerreiro", "icone": "🏟️", "titulo": "Gladiador Corporativo", "cor": "#f5c451",
+      "lema": "A arena é o escritório.",
+      "descricao": "Luta nas batalhas do dia a dia: e-mails, relatórios, reuniões e prazos, com a IA do lado.",
+      "trilha": "trabalho",
+      "passiva": { "habilidade": "curiosa", "nome": "Feedback Construtivo", "icone": "🧠", "frase": "+20% de XP. Toda crítica vira aprendizado (e planilha)." },
+      "evolucoes": [
+        { "titulo": "Gladiador Corporativo", "nivel": 4, "frase": "Sobrevive a três reuniões seguidas sem café." },
+        { "titulo": "Campeão da Daily", "nivel": 7, "frase": "Faz a daily em 15 minutos. Um verdadeiro herói." },
+        { "titulo": "Senhor do Kanban", "nivel": 10, "dominio": 2, "frase": "Move cards com a força de mil estagiários." },
+        { "titulo": "Imperador do OKR", "nivel": 15, "chefes": 3, "frase": "Bateu todas as metas. Inclusive as dos outros." }
+      ],
+      "magias": [
+        { "id": "daily-2h", "nome": "Daily de Duas Horas", "icone": "⏰", "raridade": "comum", "frase": "Só mais um ponto rapidinho...", "descricao": "O monstro se perde no status report: teus próximos 3 erros não doem.", "efeito": { "tipo": "protecao", "valor": 3 } },
+        { "id": "prazo-ontem", "nome": "Prazo Pra Ontem", "icone": "📆", "raridade": "epica", "frase": "É urgente. Tudo é urgente.", "descricao": "A pressão acelera teus golpes: os próximos 3 acertos tiram +1 de vida.", "efeito": { "tipo": "combo", "valor": 3 } },
+        { "id": "promocao", "nome": "Promoção Relâmpago", "icone": "🏆", "raridade": "lendaria", "frase": "Parabéns, agora tu é gerente. De ti mesmo.", "descricao": "Tira 4 de vida de qualquer monstro. Mas 25% das vezes vira só mais responsabilidade e zera tua fúria.", "efeito": { "tipo": "dano", "valor": 4, "chance_falha": 0.25 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "cavaleiro", "principal": "guerreiro", "icone": "🐎", "titulo": "Cavaleiro dos Fundamentos", "cor": "#4fd1a5",
+      "lema": "Sem base, nem a armadura para em pé.",
+      "descricao": "Conhece o inimigo por dentro: como os modelos aprendem, erram e alucinam.",
+      "trilha": "fundamentos",
+      "passiva": { "habilidade": "esquiva", "nome": "Gradiente Descendente", "icone": "💨", "frase": "Desvia do primeiro erro de cada batalha descendo pelo caminho certo." },
+      "evolucoes": [
+        { "titulo": "Cavaleiro dos Fundamentos", "nivel": 4, "frase": "Ainda acha que a IA mora numa nuvem de verdade." },
+        { "titulo": "Templário do Dataset", "nivel": 7, "frase": "Limpa os dados antes de qualquer batalha." },
+        { "titulo": "Lorde dos Parâmetros", "nivel": 10, "dominio": 2, "frase": "Ajusta a temperatura como quem afia a espada." },
+        { "titulo": "Rei da Rede Neural", "nivel": 15, "chefes": 3, "frase": "Tem mais camadas que a própria armadura." }
+      ],
+      "magias": [
+        { "id": "treino-supervisionado", "nome": "Treino Supervisionado", "icone": "🧑‍🏫", "raridade": "comum", "frase": "Errou? O instrutor corrige na hora.", "descricao": "O próximo erro não dói e ainda rende 2 de fúria.", "efeito": { "tipo": "protecao", "valor": 1, "mana": 2 } },
+        { "id": "overfitting", "nome": "Overfitting no Monstro", "icone": "🎯", "raridade": "epica", "frase": "Decorei cada movimento dele. Só dele.", "descricao": "Tira 2 de vida e os próximos 2 erros não doem.", "efeito": { "tipo": "dano", "valor": 2, "protecao": 2 } },
+        { "id": "rede-aco", "nome": "Rede Neural de Aço", "icone": "🧠", "raridade": "lendaria", "frase": "Bilhões de parâmetros. Todos afiados.", "descricao": "Tira 3 de vida e os próximos 2 acertos tiram +1.", "efeito": { "tipo": "dano", "valor": 3, "combo": 2 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "cacador", "principal": "arqueiro", "icone": "🎯", "titulo": "Caçador de Prompts", "cor": "#c084fc",
+      "lema": "Pedido certo, flecha certa.",
+      "descricao": "Mira nas palavras: escreve o pedido exato para a IA acertar de primeira.",
+      "trilha": "prompts",
+      "passiva": { "habilidade": "golpe-mestre", "nome": "Tiro Certeiro", "icone": "💥", "frase": "O golpe certeiro do domínio vale desde a 2ª patente." },
+      "evolucoes": [
+        { "titulo": "Caçador de Prompts", "nivel": 4, "frase": "Mira no pedido certo... às vezes." },
+        { "titulo": "Rastreador de Contexto", "nivel": 7, "frase": "Segue as pistas do contexto até o fim da conversa." },
+        { "titulo": "Atirador de Few-Shot", "nivel": 10, "dominio": 2, "frase": "Três exemplos e a flecha já sabe o caminho." },
+        { "titulo": "Olho do Prompt Perfeito", "nivel": 15, "chefes": 3, "frase": "Acerta o alvo antes de tu terminar de pedir." }
+      ],
+      "magias": [
+        { "id": "ctrl-c-v", "nome": "Ctrl+C, Ctrl+V", "icone": "📋", "raridade": "comum", "frase": "Funcionou da outra vez, vai funcionar agora.", "descricao": "Copia o melhor tiro: teus próximos 2 acertos tiram +1 de vida.", "efeito": { "tipo": "combo", "valor": 2 } },
+        { "id": "flecha-few-shot", "nome": "Flecha Few-Shot", "icone": "🏹", "raridade": "epica", "frase": "Exemplo 1, exemplo 2, exemplo 3... FOGO!", "descricao": "Três flechas de exemplo: tira 2 de vida e os próximos 2 erros não doem.", "efeito": { "tipo": "dano", "valor": 2, "protecao": 2 } },
+        { "id": "prompt-perfeito", "nome": "Prompt Perfeito", "icone": "✨", "raridade": "lendaria", "frase": "Nem uma vírgula fora do lugar.", "descricao": "A flecha responde a pergunta por ti, certinha, com 2 de dano a mais.", "efeito": { "tipo": "auto_acerto", "valor": 2 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "sentinela", "principal": "arqueiro", "icone": "🦉", "titulo": "Sentinela da Torre", "cor": "#7fb2ff",
+      "lema": "Quem vigia não é pego de surpresa.",
+      "descricao": "Vigia o reino do alto: golpes, vazamentos e invasores não passam pelos olhos dele.",
+      "trilha": "seguranca",
+      "passiva": { "habilidade": "esquiva", "nome": "Visão Noturna", "icone": "💨", "frase": "Vê o primeiro golpe de cada batalha antes do monstro decidir." },
+      "evolucoes": [
+        { "titulo": "Sentinela da Torre", "nivel": 4, "frase": "Já desconfia de e-mail com URGENTE no assunto." },
+        { "titulo": "Vigia dos Logs", "nivel": 7, "frase": "Lê log de servidor como quem lê romance." },
+        { "titulo": "Caçador de Phishing", "nivel": 10, "dominio": 2, "frase": "Fareja link falso a três reinos de distância." },
+        { "titulo": "Olho Que Tudo Audita", "nivel": 15, "chefes": 3, "frase": "Nem o dragão passa sem crachá." }
+      ],
+      "magias": [
+        { "id": "captcha", "nome": "Captcha Impossível", "icone": "🧩", "raridade": "comum", "frase": "Selecione todos os quadrados com semáforos.", "descricao": "O monstro trava tentando provar que não é robô: teus próximos 2 erros não doem.", "efeito": { "tipo": "protecao", "valor": 2 } },
+        { "id": "phishing-reverso", "nome": "Phishing Reverso", "icone": "🎣", "raridade": "epica", "frase": "Clique aqui para ganhar um prêmio, monstro.", "descricao": "O monstro comum cai no golpe e some. Metade das vezes leva o prêmio junto. Chefões não clicam em link.", "efeito": { "tipo": "apagar", "chance_perder": 0.5 } },
+        { "id": "zero-trust", "nome": "Zero Trust", "icone": "🔒", "raridade": "lendaria", "frase": "Não confio nem em mim mesmo.", "descricao": "Derruba um monstro comum na hora (prêmio inteiro). Chefões perdem 3 de vida.", "efeito": { "tipo": "derrubar", "valor": 3 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "ranger", "principal": "arqueiro", "icone": "🐍", "titulo": "Ranger do Código", "cor": "#7dff9a",
+      "lema": "Um bom script caça sozinho.",
+      "descricao": "Arma armadilhas de código: scripts e automações que trabalham por ele.",
+      "trilha": "codigo",
+      "passiva": { "habilidade": "fluxo", "nome": "Loop de Recarga", "icone": "🌊", "frase": "Cada acerto devolve 1 de foco a mais." },
+      "evolucoes": [
+        { "titulo": "Ranger do Código", "nivel": 4, "frase": "Debuga com print() e muita fé." },
+        { "titulo": "Atirador de Regex", "nivel": 7, "frase": "Escreve regex que nem ele entende depois." },
+        { "titulo": "Mestre do One-Liner", "nivel": 10, "dominio": 2, "frase": "Resolve tudo em uma linha. Uma linha de 400 caracteres." },
+        { "titulo": "Lenda do Script Noturno", "nivel": 15, "chefes": 3, "frase": "Os scripts dele caçam enquanto o reino dorme." }
+      ],
+      "magias": [
+        { "id": "print-debug", "nome": "Print Debug", "icone": "🖨️", "raridade": "comum", "frase": "print(\"chegou aqui 2\")", "descricao": "Revela o caminho do monstro: o próximo erro não dói e ganhas 2 de foco.", "efeito": { "tipo": "protecao", "valor": 1, "mana": 2 } },
+        { "id": "regex", "nome": "Regex Que Ninguém Entende", "icone": "🌀", "raridade": "epica", "frase": "^(?=.*monstro)(?!.*vivo).*$", "descricao": "O monstro tenta ler e trava: teus próximos 3 erros não doem.", "efeito": { "tipo": "protecao", "valor": 3 } },
+        { "id": "nao-mexe", "nome": "Funciona e Ninguém Sabe Por Quê", "icone": "🤷", "raridade": "lendaria", "frase": "Não mexe! Tá funcionando!", "descricao": "Tira 4 de vida de qualquer monstro. Mas 25% das vezes alguém mexe e quebra tudo: zera teu foco.", "efeito": { "tipo": "dano", "valor": 4, "chance_falha": 0.25 }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "mercenario", "principal": "arqueiro", "icone": "💰", "titulo": "Mercenário Freelancer", "cor": "#ffd166",
+      "lema": "Cada flecha tem nota fiscal.",
+      "descricao": "Usa IA no trabalho de verdade: entrega rápido, cobra justo e nunca perde um prazo.",
+      "trilha": "trabalho",
+      "passiva": { "habilidade": "bolso", "nome": "Nota Fiscal Premium", "icone": "👝", "frase": "+20% de moedas. Freela bom cobra bem." },
+      "evolucoes": [
+        { "titulo": "Mercenário Freelancer", "nivel": 4, "frase": "Cobra por hora, entrega por minuto." },
+        { "titulo": "Consultor de Elite", "nivel": 7, "frase": "Responde \"depende\" com muita autoridade." },
+        { "titulo": "Caçador de Recompensas PJ", "nivel": 10, "dominio": 2, "frase": "Tem CNPJ, MEI e uma aljava cheia." },
+        { "titulo": "Lenda do Home Office", "nivel": 15, "chefes": 3, "frase": "Venceu um dragão de pijama, com a câmera desligada." }
+      ],
+      "magias": [
+        { "id": "orcamento", "nome": "Orçamento Sem Compromisso", "icone": "🧾", "raridade": "comum", "frase": "Te mando o orçamento até sexta.", "descricao": "O monstro comum desiste do contrato e vai embora: ganhas metade do prêmio. Chefões exigem contrato assinado.", "efeito": { "tipo": "expulsar", "fator": 0.5 } },
+        { "id": "hora-extra", "nome": "Hora Extra Infinita", "icone": "🌙", "raridade": "epica", "frase": "Só mais essa entrega e eu durmo.", "descricao": "Recupera 2 corações e todo o foco.", "efeito": { "tipo": "cura", "vida": 2, "mana_cheia": true } },
+        { "id": "reajuste", "nome": "Reajuste Anual", "icone": "📈", "raridade": "lendaria", "frase": "Inflação, né? Não tem jeito.", "descricao": "Arranca metade da vida que sobrou do monstro (chefões também) e enche teu foco.", "efeito": { "tipo": "metade", "mana_cheia": true }, "recarga": 3 }
+      ]
+    },
+    {
+      "id": "patrulheiro", "principal": "arqueiro", "icone": "🌲", "titulo": "Patrulheiro dos Dados", "cor": "#4fd1a5",
+      "lema": "Toda floresta tem um padrão.",
+      "descricao": "Lê a floresta dos dados: como os modelos aprendem, decidem e às vezes se perdem.",
+      "trilha": "fundamentos",
+      "passiva": { "habilidade": "faro", "nome": "Faro de Floresta", "icone": "🗝️", "frase": "25% de chance de achar uma Poção da Clareza ao vencer um monstro." },
+      "evolucoes": [
+        { "titulo": "Patrulheiro dos Dados", "nivel": 4, "frase": "Acha que dataset é um tipo de cogumelo." },
+        { "titulo": "Explorador do Dataset", "nivel": 7, "frase": "Encontra outlier até em formigueiro." },
+        { "titulo": "Guardião da Árvore de Decisão", "nivel": 10, "dominio": 2, "frase": "Cada galho, uma pergunta. Cada folha, uma resposta." },
+        { "titulo": "Druida da Floresta Aleatória", "nivel": 15, "chefes": 3, "frase": "Mil árvores votam e ele sempre acerta." }
+      ],
+      "magias": [
+        { "id": "arvore-decisao", "nome": "Árvore de Decisão", "icone": "🌳", "raridade": "comum", "frase": "Se monstro, então flecha. Senão, flecha também.", "descricao": "Tira 1 de vida do monstro e o próximo erro não dói.", "efeito": { "tipo": "dano", "valor": 1, "protecao": 1 } },
+        { "id": "validacao-cruzada", "nome": "Validação Cruzada", "icone": "✖️", "raridade": "epica", "frase": "Testa de novo, e de novo, e de novo...", "descricao": "Teus próximos 3 acertos tiram +1 de vida cada.", "efeito": { "tipo": "combo", "valor": 3 } },
+        { "id": "floresta-aleatoria", "nome": "Floresta Aleatória", "icone": "🌲", "raridade": "lendaria", "frase": "Mil árvores, uma decisão.", "descricao": "Tira 3 de vida e os próximos 2 acertos tiram +1.", "efeito": { "tipo": "dano", "valor": 3, "combo": 2 }, "recarga": 3 }
+      ]
+    }
+  ]
+}

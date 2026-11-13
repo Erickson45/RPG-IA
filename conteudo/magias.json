@@ -1,0 +1,23 @@
+{
+  "legenda": {
+    "mana": "a mana é uma só, no mapa e na batalha: o máximo é base + 1 a cada tantos níveis (até a máxima), recarrega 1 ponto a cada regen_segundos e cada acerto na batalha devolve um pouco",
+    "custo": "mana gasta para lançar a magia",
+    "nivel": "nível do herói para a magia aparecer no grimório",
+    "habilidades_mapa": "as 5 habilidades da barra do mapa (teclas 1 a 5); duracao em segundos para as que ficam valendo um tempo"
+  },
+  "mana": { "base": 3, "por_niveis": 4, "maxima": 8, "por_acerto": 1, "regen_segundos": 12 },
+  "habilidades_mapa": [
+    { "id": "corrida", "tecla": "1", "nome": "Corrida", "icone": "💨", "custo": 1, "duracao": 8, "descricao": "Corre bem mais rápido por 8 segundos." },
+    { "id": "luz", "tecla": "2", "nome": "Luz Arcana", "icone": "🔆", "custo": 1, "duracao": 60, "descricao": "Uma luz forte em volta do herói por 1 minuto. Ótima à noite." },
+    { "id": "cura", "tecla": "3", "nome": "Cura", "icone": "💚", "custo": 2, "descricao": "Recupera 1 coração." },
+    { "id": "teleporte", "tecla": "4", "nome": "Teleporte", "icone": "🌀", "custo": 2, "descricao": "Volta num piscar de olhos para o Portal da Academia, na vila (só no Reino)." },
+    { "id": "golpe", "tecla": "5", "nome": "Golpe Arcano", "icone": "☄️", "custo": 1, "descricao": "Dispara na direção em que tu olha. O monstro atingido começa a luta com 1 de vida a menos (a mana só é gasta se acertar)." }
+  ],
+  "magias": [
+    { "id": "renovar", "nome": "Pergunta Nova", "icone": "🔄", "custo": 1, "nivel": 1, "descricao": "Troca a pergunta da rodada por outra do mesmo perigo." },
+    { "id": "visao", "nome": "Visão Clara", "icone": "🔍", "custo": 2, "nivel": 2, "descricao": "Dissolve duas alternativas erradas da pergunta da rodada." },
+    { "id": "escudo", "nome": "Escudo de Runas", "icone": "🛡️", "custo": 2, "nivel": 4, "descricao": "O próximo erro não tira vida." },
+    { "id": "cura", "nome": "Cura Arcana", "icone": "💚", "custo": 3, "nivel": 6, "descricao": "Recupera 1 coração no meio da batalha." },
+    { "id": "lamina", "nome": "Lâmina de Luz", "icone": "✨", "custo": 3, "nivel": 8, "descricao": "O próximo acerto tira 1 de vida a mais do monstro." }
+  ]
+}

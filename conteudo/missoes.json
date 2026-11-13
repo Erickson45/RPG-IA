@@ -1,0 +1,33 @@
+{
+  "legenda": {
+    "evento": "o que conta para a missão: monstro, chefe, acerto, enigma, leitura, licao ou dungeon",
+    "filtro": "detalhes que o evento precisa ter (regiao, tipo, forca ou trilha; uma lista aceita qualquer um)",
+    "alvo": "quantas vezes o evento precisa acontecer",
+    "nivel": "nível mínimo do herói para a missão aparecer (missões de região também exigem a região liberada)"
+  },
+  "ativas": 3,
+  "preco_troca": 10,
+  "missoes": [
+    { "id": "praga-slimes", "titulo": "Praga de slimes", "texto": "Os fazendeiros dos Campos pedem socorro: vence 5 slimes.", "evento": "monstro", "filtro": { "tipo": ["slimeVerde", "slimeAzul", "slimeRoxo", "slimeGigante", "slimeFantasma"] }, "alvo": 5, "recompensa": { "moedas": 40, "xp": 40 } },
+    { "id": "gigante-campos", "titulo": "O gigante gosmento", "texto": "Um Slime Gigante está pisoteando a plantação. Derrota 1.", "evento": "monstro", "filtro": { "tipo": "slimeGigante" }, "alvo": 1, "recompensa": { "moedas": 35, "xp": 30, "itens": { "pocao": 1 } } },
+    { "id": "uivos", "titulo": "Uivos na madrugada", "texto": "Os lobos da Floresta Uivante não deixam a vila dormir. Vence 3 lobos.", "evento": "monstro", "filtro": { "tipo": ["lobo", "loboAlfa", "loboSombrio"] }, "alvo": 3, "recompensa": { "moedas": 60, "xp": 60 } },
+    { "id": "alfa", "titulo": "Caçada ao Alfa", "texto": "O Lobo Alfa da Névoa lidera a matilha. Derrota 1.", "evento": "monstro", "filtro": { "tipo": "loboAlfa" }, "alvo": 1, "recompensa": { "moedas": 50, "xp": 50, "itens": { "elixir": 1 } } },
+    { "id": "brejo", "titulo": "Limpeza do brejo", "texto": "Sapos e slimes tóxicos tomaram o Pântano. Vence 4 deles.", "evento": "monstro", "filtro": { "regiao": "pantano" }, "alvo": 4, "recompensa": { "moedas": 70, "xp": 70 } },
+    { "id": "ferroes", "titulo": "Ferrões na estrada", "texto": "A caravana do deserto foi atacada. Vence 4 escorpiões ou esqueletos.", "evento": "monstro", "filtro": { "regiao": "deserto" }, "alvo": 4, "recompensa": { "moedas": 90, "xp": 90 } },
+    { "id": "cacador-dragoes", "titulo": "Caçador de dragões", "texto": "Os dragões das montanhas queimaram o posto avançado. Vence 2 dragões.", "evento": "monstro", "filtro": { "tipo": ["dragao", "dragaoGelo"] }, "alvo": 2, "recompensa": { "moedas": 150, "xp": 140, "itens": { "elixir": 1 } } },
+    { "id": "fortes", "titulo": "Só os fortes", "texto": "Prova teu valor: vence 2 monstros de força Forte.", "evento": "monstro", "filtro": { "forca": "Forte" }, "alvo": 2, "recompensa": { "moedas": 70, "xp": 70 }, "nivel": 3 },
+    { "id": "cacador-lua", "titulo": "Caçador da Lua", "texto": "Quando escurece, criaturas estranhas saem das sombras. Vence 3 monstros da noite.", "evento": "monstro", "filtro": { "noite": true }, "alvo": 3, "recompensa": { "moedas": 70, "xp": 70, "itens": { "pocao": 1 } } },
+    { "id": "patrulha", "titulo": "Patrulha do Reino", "texto": "O guarda Bento precisa de ajuda: vence 6 monstros, de qualquer região.", "evento": "monstro", "alvo": 6, "recompensa": { "moedas": 50, "xp": 50 } },
+    { "id": "rei-de-bioma", "titulo": "Coroas caídas", "texto": "Um dos chefões ainda reina no seu bioma. Derruba 1.", "evento": "chefe", "alvo": 1, "recompensa": { "moedas": 100, "xp": 80, "itens": { "amuleto": 1 } } },
+    { "id": "acertos-prompts", "titulo": "Palavras de poder", "texto": "Acerta 4 perguntas da trilha Arte do Prompt.", "evento": "acerto", "filtro": { "trilha": "prompts" }, "alvo": 4, "recompensa": { "moedas": 45, "xp": 45 } },
+    { "id": "acertos-fundamentos", "titulo": "Olhos de arcano", "texto": "Acerta 4 perguntas da trilha Fundamentos de IA.", "evento": "acerto", "filtro": { "trilha": "fundamentos" }, "alvo": 4, "recompensa": { "moedas": 45, "xp": 45 } },
+    { "id": "acertos-codigo", "titulo": "Mãos no código", "texto": "Acerta 5 perguntas da trilha Código e Automação.", "evento": "acerto", "filtro": { "trilha": "codigo" }, "alvo": 5, "recompensa": { "moedas": 50, "xp": 50 }, "nivel": 3 },
+    { "id": "acertos-seguranca", "titulo": "Guardião dos dados", "texto": "Acerta 4 perguntas da trilha Ética e Segurança.", "evento": "acerto", "filtro": { "trilha": "seguranca" }, "alvo": 4, "recompensa": { "moedas": 45, "xp": 45 } },
+    { "id": "acertos-trabalho", "titulo": "Dia de escritório", "texto": "Acerta 4 perguntas da trilha IA no Trabalho.", "evento": "acerto", "filtro": { "trilha": "trabalho" }, "alvo": 4, "recompensa": { "moedas": 45, "xp": 45 } },
+    { "id": "maratona", "titulo": "Maratona arcana", "texto": "Acerta 10 perguntas no Reino, de qualquer trilha.", "evento": "acerto", "alvo": 10, "recompensa": { "moedas": 60, "xp": 70, "itens": { "pergaminho": 1 } } },
+    { "id": "enigmista", "titulo": "Mente de enigmista", "texto": "Resolve 1 enigma das pedras rúnicas ou dos baús perdidos.", "evento": "enigma", "alvo": 1, "recompensa": { "moedas": 40, "xp": 40 } },
+    { "id": "rato-biblioteca", "titulo": "Rato de biblioteca", "texto": "Lê até o fim 1 livro ou guia que tu ainda não leu.", "evento": "leitura", "alvo": 1, "recompensa": { "moedas": 30, "xp": 30 } },
+    { "id": "gabarito", "titulo": "Gabarito perfeito", "texto": "Conclui 1 lição com 3 estrelas (vale repetir uma antiga).", "evento": "licao", "filtro": { "estrelas": 3 }, "alvo": 1, "recompensa": { "moedas": 40, "xp": 30 } },
+    { "id": "masmorreiro", "titulo": "Desce a masmorra", "texto": "Vence 1 dungeon (vale repetir).", "evento": "dungeon", "alvo": 1, "recompensa": { "moedas": 60, "xp": 50, "itens": { "pocao": 1 } } }
+  ]
+}

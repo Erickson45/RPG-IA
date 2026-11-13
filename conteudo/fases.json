@@ -1,0 +1,2256 @@
+{
+  "fases": [
+    {
+      "id": 1,
+      "trilha": "fundamentos",
+      "titulo": "Primeiros passos",
+      "local": "Vila do Despertar",
+      "subtitulo": "O que é IA, o que ela faz bem e onde ela tropeça",
+      "icone": "🌱",
+      "xp": 100,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Bem-vindo à **Academia Arcana de Elyndor**, {nome}! Eu sou o **Zetsu**, e vou ser teu professor da nova magia do reino: a **Inteligência Artificial**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🏰",
+                "texto": "Uma magia nova chegou a Elyndor. Ela escreve, resume, explica e **automatiza** o trabalho do reino.",
+                "titulo": "A nova magia",
+                "efeito": "ZÁS!"
+              }
+            },
+            "Antes de sair construindo coisa, a gente precisa entender com o que está lidando. Bora?",
+            {
+              "texto": "Quando a galera fala de IA hoje, quase sempre está falando de um **LLM**, um *Large Language Model*. ChatGPT, Claude, Gemini e Copilot são exemplos.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Os grimórios vivos (LLMs)",
+                "itens": [
+                  {
+                    "icone": "💬",
+                    "titulo": "ChatGPT",
+                    "texto": "da OpenAI"
+                  },
+                  {
+                    "icone": "🧠",
+                    "titulo": "Claude",
+                    "texto": "da Anthropic"
+                  },
+                  {
+                    "icone": "✨",
+                    "titulo": "Gemini",
+                    "texto": "do Google"
+                  },
+                  {
+                    "icone": "🤖",
+                    "titulo": "Copilot",
+                    "texto": "da Microsoft"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Um LLM foi treinado com uma montanha de texto. O truque dele é prever, palavra por palavra, qual é a continuação mais provável para o que você escreveu.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "Como um LLM pensa",
+                "itens": [
+                  {
+                    "icone": "📚",
+                    "texto": "Lê uma **montanha de texto**"
+                  },
+                  {
+                    "icone": "🧩",
+                    "texto": "Aprende os **padrões**"
+                  },
+                  {
+                    "icone": "💬",
+                    "texto": "Prevê a **próxima palavra**"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Parece simples, mas isso faz ele ser ótimo em **escrever, resumir, explicar, traduzir e gerar código**.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Onde essa magia brilha",
+                "itens": [
+                  {
+                    "icone": "✍️",
+                    "titulo": "Escrever",
+                    "texto": "e-mails e textos"
+                  },
+                  {
+                    "icone": "📝",
+                    "titulo": "Resumir",
+                    "texto": "documentos longos"
+                  },
+                  {
+                    "icone": "🎓",
+                    "titulo": "Explicar",
+                    "texto": "qualquer assunto"
+                  },
+                  {
+                    "icone": "🌍",
+                    "titulo": "Traduzir",
+                    "texto": "entre línguas"
+                  },
+                  {
+                    "icone": "💻",
+                    "titulo": "Programar",
+                    "texto": "scripts e sistemas"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Só que tem um porém: ele não \"sabe\" as coisas como a gente. Às vezes inventa uma resposta com toda a confiança do mundo. Isso tem nome: **alucinação**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🌫️",
+                "texto": "Quando a IA **inventa** uma resposta com toda a confiança do mundo.",
+                "titulo": "Alucinação",
+                "efeito": "PUF!"
+              }
+            },
+            {
+              "texto": "Por isso, minha primeira regra: **você é o responsável pelo resultado. Sempre.** A IA é tua parceira, não tua chefe.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🛡️",
+                "texto": "**Você é o responsável pelo resultado. Sempre.** A IA é parceira, não chefe.",
+                "titulo": "Regra nº 1",
+                "efeito": "LEI!"
+              }
+            },
+            {
+              "texto": "Meu método para começar tem quatro passos: **1. Escolha uma IA** (a versão gratuita já serve), **2. Pegue uma tarefa real e pequena**, **3. Converse** (a primeira resposta é rascunho) e **4. Confira** tudo.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "Os 4 passos do aprendiz",
+                "itens": [
+                  {
+                    "icone": "🔮",
+                    "texto": "Escolha **uma IA**"
+                  },
+                  {
+                    "icone": "🎯",
+                    "texto": "Uma **tarefa real** e pequena"
+                  },
+                  {
+                    "icone": "💬",
+                    "texto": "**Converse** e ajuste"
+                  },
+                  {
+                    "icone": "✅",
+                    "texto": "**Confira** tudo"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Agora vamos ver se ficou claro. Hora do quiz!",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "📜",
+                "texto": "Cinco perguntas para provar que a lição entrou.",
+                "titulo": "Hora do quiz",
+                "efeito": "DESAFIO!"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "quiz",
+          "perguntas": [
+            {
+              "pergunta": "O que um LLM faz, no fundo?",
+              "opcoes": [
+                "Pesquisa a resposta certa num banco de dados oficial",
+                "Prevê a continuação mais provável de um texto",
+                "Pensa e entende exatamente como um ser humano",
+                "Copia respostas prontas da internet em tempo real"
+              ],
+              "correta": 1,
+              "explicacao": "Isso aí! Ele aprende padrões de texto e prevê a continuação mais provável. Por isso escreve tão bem, mas também pode errar."
+            },
+            {
+              "pergunta": "A IA te deu uma resposta muito convincente, com números e nomes. O que você faz?",
+              "opcoes": [
+                "Uso direto, ela sempre está certa quando parece confiante",
+                "Descarto, IA nunca acerta números",
+                "Confiro as informações importantes antes de usar",
+                "Pergunto de novo até ela concordar comigo"
+              ],
+              "correta": 2,
+              "explicacao": "Exato. Confiança não é garantia. Informação importante a gente confere, porque quem responde pelo resultado é você."
+            },
+            {
+              "pergunta": "Como se chama quando a IA inventa uma informação que parece verdadeira?",
+              "opcoes": [
+                "Overfitting",
+                "Alucinação",
+                "Prompt injection",
+                "Bug de compilação"
+              ],
+              "correta": 1,
+              "explicacao": "Alucinação! Guarda esse nome, ele vai aparecer muito na tua vida."
+            },
+            {
+              "pergunta": "A primeira resposta da IA não ficou boa. Qual é o melhor próximo passo?",
+              "opcoes": [
+                "Desistir, IA não serve para isso",
+                "Continuar a conversa pedindo ajustes específicos",
+                "Trocar de IA imediatamente",
+                "Copiar a resposta mesmo assim"
+              ],
+              "correta": 1,
+              "explicacao": "Isso! A primeira resposta é rascunho. Diga o que faltou, o que sobrou e o que mudar."
+            },
+            {
+              "pergunta": "Qual é uma boa primeira tarefa para treinar com IA?",
+              "opcoes": [
+                "Pedir para ela construir um sistema bancário inteiro",
+                "Algo pequeno e real do teu dia: um e-mail, um erro, um resumo",
+                "Perguntar o sentido da vida",
+                "Nada, é melhor só ler sobre IA antes"
+              ],
+              "correta": 1,
+              "explicacao": "Perfeito. Tarefa pequena e real dá retorno rápido e te ensina a conversar com a IA."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Mandou bem, aprendiz! Agora você já sabe o que é um LLM e qual é a tua responsabilidade.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🏅",
+                "texto": "Tu já sabe o que é um LLM e qual é a tua responsabilidade.",
+                "titulo": "Primeira lição dominada",
+                "efeito": "BOA!"
+              }
+            },
+            "Na próxima fase vou te ensinar a habilidade mais importante de todas: **pedir direito**. Te vejo lá!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "trilha": "prompts",
+      "titulo": "A arte do prompt",
+      "local": "Torre do Prompt",
+      "subtitulo": "As quatro partes de um bom pedido",
+      "icone": "🎯",
+      "xp": 150,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Bem-vindo à segunda fase! Aqui mora o segredo de quem tira resultado de verdade da IA.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🗼",
+                "texto": "Aqui mora o segredo de quem tira resultado de verdade da IA.",
+                "titulo": "Torre do Prompt"
+              }
+            },
+            {
+              "texto": "O texto que você manda para a IA se chama **prompt**. Olha esse aqui: `faz um script de backup`.",
+              "cena": {
+                "tipo": "codigo",
+                "titulo": "Um prompt (o feitiço que tu escreve)",
+                "codigo": "faz um script de backup"
+              }
+            },
+            {
+              "texto": "O que a IA vai devolver? Algo genérico, que provavelmente não serve para o teu caso. Ela não sabe qual sistema, qual banco, quantos dias guardar...",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🤷",
+                "texto": "Sem detalhes, a IA **chuta**: qual sistema? qual banco? quantos dias guardar?",
+                "titulo": "Resultado genérico",
+                "efeito": "HÃ?"
+              }
+            },
+            {
+              "texto": "Um bom prompt tem **quatro partes**. Decora essa sigla comigo: **P-C-T-F**.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "As 4 runas do prompt",
+                "itens": [
+                  {
+                    "icone": "🎭",
+                    "titulo": "Papel",
+                    "texto": "quem a IA deve ser"
+                  },
+                  {
+                    "icone": "🗺️",
+                    "titulo": "Contexto",
+                    "texto": "a situação real"
+                  },
+                  {
+                    "icone": "🎯",
+                    "titulo": "Tarefa",
+                    "texto": "o que fazer, com detalhes"
+                  },
+                  {
+                    "icone": "📐",
+                    "titulo": "Formato",
+                    "texto": "como quer a resposta"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "**Papel**: quem a IA deve ser. Ex.: \"Você é um analista de infraestrutura.\"",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🎭",
+                "texto": "**Papel**: \"Você é um analista de infraestrutura.\"",
+                "titulo": "Runa 1: Papel"
+              }
+            },
+            {
+              "texto": "**Contexto**: a situação real. Ex.: \"Servidor Ubuntu 22.04 com PostgreSQL 15.\"",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🗺️",
+                "texto": "**Contexto**: \"Servidor Ubuntu 22.04 com PostgreSQL 15.\"",
+                "titulo": "Runa 2: Contexto"
+              }
+            },
+            {
+              "texto": "**Tarefa**: o que fazer, com detalhes. Ex.: \"Crie um backup diário do banco, mantendo 7 dias, e avise no Teams se falhar.\"",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🎯",
+                "texto": "**Tarefa**: \"Crie um backup diário, mantendo 7 dias, e avise no Teams se falhar.\"",
+                "titulo": "Runa 3: Tarefa"
+              }
+            },
+            {
+              "texto": "**Formato**: como você quer a resposta. Ex.: \"Script Bash comentado + linha do cron.\"",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "📐",
+                "texto": "**Formato**: \"Script Bash comentado + linha do cron.\"",
+                "titulo": "Runa 4: Formato"
+              }
+            },
+            {
+              "texto": "Viu a diferença? Agora é contigo. Primeiro, um treino: vou te mostrar uns trechos e você me diz qual parte do prompt cada um é.",
+              "cena": {
+                "tipo": "comparacao",
+                "titulo": "Antes e depois",
+                "ruim": {
+                  "rotulo": "Prompt fraco",
+                  "texto": "faz um script de backup"
+                },
+                "bom": {
+                  "rotulo": "Prompt P-C-T-F",
+                  "texto": "Você é um analista de infra. Servidor Ubuntu com PostgreSQL. Crie um backup diário mantendo 7 dias. Entregue um script Bash comentado."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "classificar",
+          "enunciado": "Para cada trecho, escolha se ele é Papel, Contexto, Tarefa ou Formato.",
+          "partes": [
+            "papel",
+            "contexto",
+            "tarefa",
+            "formato"
+          ],
+          "trechos": [
+            {
+              "texto": "Você é um professor de matemática paciente.",
+              "parte": "papel"
+            },
+            {
+              "texto": "Responda em uma tabela com três colunas.",
+              "parte": "formato"
+            },
+            {
+              "texto": "Meu sistema roda em Windows Server 2019 com IIS.",
+              "parte": "contexto"
+            },
+            {
+              "texto": "Liste os 5 erros mais comuns e como resolver cada um.",
+              "parte": "tarefa"
+            },
+            {
+              "texto": "Atue como um especialista em segurança da informação.",
+              "parte": "papel"
+            },
+            {
+              "texto": "A equipe tem 4 pessoas e nenhuma sabe Python ainda.",
+              "parte": "contexto"
+            },
+            {
+              "texto": "Entregue em tópicos curtos, no máximo 10 linhas.",
+              "parte": "formato"
+            },
+            {
+              "texto": "Escreva um e-mail pedindo prorrogação do prazo em 2 dias.",
+              "parte": "tarefa"
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            "Boa! Reconhecer as partes é meio caminho andado.",
+            {
+              "texto": "Agora o desafio de verdade: **você vai escrever um prompt completo**. Eu vou avaliar cada parte e te dar dicas.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "✍️",
+                "texto": "Agora tu escreve um prompt completo, e eu avalio **runa por runa**.",
+                "titulo": "Desafio da Torre",
+                "efeito": "VALENDO!"
+              }
+            },
+            "Lê o cenário com calma antes de escrever. Pensa antes de pedir!"
+          ]
+        },
+        {
+          "tipo": "construir_prompt",
+          "cenario": "Teu coordenador mandou: \"Preciso saber quantos chamados abertos temos por categoria. Exportei tudo do sistema num arquivo chamados.csv, com as colunas id, categoria, status e data_abertura.\" Você vai pedir para a IA um script que resolva isso.",
+          "prompt_fraco": "faz um código que lê os chamados",
+          "pistas_contexto": [
+            "csv",
+            "chamados",
+            "coluna",
+            "categoria",
+            "status",
+            "python",
+            "windows",
+            "arquivo",
+            "data_abertura"
+          ],
+          "nota_minima": 60
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            "É isso, aprendiz! Agora você sabe montar um pedido que a IA consegue atender de verdade.",
+            {
+              "texto": "Usa o **P-C-T-F** em tudo: e-mail, código, resumo, planilha. Vai ver a diferença na hora.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "P-C-T-F serve pra tudo",
+                "itens": [
+                  {
+                    "icone": "✉️",
+                    "titulo": "E-mail",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "💻",
+                    "titulo": "Código",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "📝",
+                    "titulo": "Resumo",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "📊",
+                    "titulo": "Planilha",
+                    "texto": ""
+                  }
+                ]
+              }
+            },
+            "As próximas fases estão sendo preparadas. Lá a gente vai configurar o ambiente e partir para as missões práticas. Até já!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "trilha": "seguranca",
+      "titulo": "Preparando o terreno",
+      "local": "Forja das Ferramentas",
+      "subtitulo": "VS Code, Python e o primeiro script com ajuda da IA",
+      "icone": "🛠️",
+      "xp": 150,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Chegou a hora de montar tua bancada de trabalho, aprendiz! Sem ferramenta, não tem projeto.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🛠️",
+                "texto": "Sem ferramenta não tem projeto. Bora montar tua bancada!",
+                "titulo": "Forja das Ferramentas",
+                "efeito": "CLANG!"
+              }
+            },
+            {
+              "texto": "Você vai precisar de três coisas. A primeira é o **VS Code**: o editor onde você escreve e organiza o código.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Tuas 3 ferramentas",
+                "itens": [
+                  {
+                    "icone": "📝",
+                    "titulo": "VS Code",
+                    "texto": "o editor de código"
+                  },
+                  {
+                    "icone": "🐍",
+                    "titulo": "Python",
+                    "texto": "a linguagem da IA"
+                  },
+                  {
+                    "icone": "⌨️",
+                    "titulo": "Terminal",
+                    "texto": "onde tu dá ordens ao PC"
+                  }
+                ]
+              }
+            },
+            "A segunda é o **Python**: a linguagem mais usada em IA. É fácil de ler e tem biblioteca para tudo.",
+            "A terceira é o **terminal**: uma janela onde você conversa com o computador por comandos, tipo `python --version`.",
+            {
+              "texto": "Um detalhe que derruba muita gente: na instalação do Python no Windows, marque **Add python.exe to PATH**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "⚠️",
+                "texto": "Na instalação do Python, marque **Add python.exe to PATH**!",
+                "titulo": "Atenção",
+                "efeito": "CUIDADO!"
+              }
+            },
+            {
+              "texto": "O **PATH** é a lista de lugares onde o Windows procura programas. Se o Python não estiver nela, o terminal responde que não conhece o comando `python`.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "O que é o PATH",
+                "itens": [
+                  {
+                    "icone": "⌨️",
+                    "texto": "Tu digita `python`"
+                  },
+                  {
+                    "icone": "🔍",
+                    "texto": "O Windows procura no **PATH**"
+                  },
+                  {
+                    "icone": "✅",
+                    "texto": "Achou? **Roda!**"
+                  }
+                ]
+              }
+            },
+            "Bora instalar? Vou te passar um checklist. Nos itens com verificação, você cola o que apareceu no teu terminal e eu confiro."
+          ]
+        },
+        {
+          "tipo": "checklist",
+          "titulo": "Checklist da bancada",
+          "itens": [
+            {
+              "titulo": "Instalar o VS Code",
+              "descricao": "Baixe em **code.visualstudio.com** e instale com as opções padrão.",
+              "ajuda": "No instalador, deixa marcada a opção **Adicionar ao PATH** e, se quiser, **Abrir com Code** no menu do botão direito. Ajuda muito no dia a dia."
+            },
+            {
+              "titulo": "Instalar o Python 3",
+              "descricao": "Baixe em **python.org**. Na primeira tela do instalador, marque **Add python.exe to PATH** antes de clicar em *Install Now*.",
+              "ajuda": "Esqueceu de marcar o PATH? Sem drama: roda o instalador de novo, escolhe **Modify** e marca **Add Python to environment variables**."
+            },
+            {
+              "titulo": "Conferir o Python no terminal",
+              "descricao": "Abra um terminal novo (no Windows: tecla Windows, digite *PowerShell*) e rode o comando abaixo.",
+              "comando": "python --version",
+              "verificacao": {
+                "rotulo": "Cole aqui o que apareceu no terminal",
+                "exemplo": "Python 3.12.4",
+                "padrao": "python\\s+3\\.\\d+",
+                "sucesso": "Python 3 encontrado! Tua bancada já tem motor.",
+                "erros": [
+                  {
+                    "padrao": "reconhecido|not recognized|não encontrado|not found",
+                    "mensagem": "Esse erro é o clássico do **PATH**: o Windows não achou o Python. Reinstala marcando **Add python.exe to PATH** e abre um terminal **novo**. Enquanto isso, tenta `py --version`."
+                  },
+                  {
+                    "padrao": "python\\s+2\\.",
+                    "mensagem": "Esse é o Python 2, que já se aposentou. Instala o Python 3 do python.org e tenta de novo."
+                  },
+                  {
+                    "padrao": "microsoft store|loja",
+                    "mensagem": "O Windows abriu a Microsoft Store no lugar do Python. Instala pelo python.org, marcando o PATH, e abre um terminal novo."
+                  }
+                ],
+                "falha": "Hmm, não reconheci isso como uma versão do Python 3. Cola exatamente o que o terminal mostrou, tipo `Python 3.12.4`."
+              },
+              "ajuda": "Se o comando não funcionar logo depois de instalar, **fecha e abre o terminal de novo**. Ele só enxerga o PATH novo quando é aberto de novo."
+            },
+            {
+              "titulo": "Conferir o pip",
+              "descricao": "O **pip** instala bibliotecas Python (tipo as de IA). Ele vem junto com o Python.",
+              "comando": "pip --version",
+              "verificacao": {
+                "rotulo": "Cole aqui o que apareceu no terminal",
+                "exemplo": "pip 24.0 from ... (python 3.12)",
+                "padrao": "pip\\s+\\d+",
+                "sucesso": "pip funcionando! Agora você consegue instalar qualquer biblioteca.",
+                "erros": [
+                  {
+                    "padrao": "reconhecido|not recognized|não encontrado|not found",
+                    "mensagem": "O pip não foi encontrado pelo PATH. Tenta `python -m pip --version`, que funciona mesmo assim."
+                  }
+                ],
+                "falha": "Não reconheci a saída do pip. Ela começa com `pip` e o número da versão, tipo `pip 24.0`."
+              },
+              "ajuda": "Se `pip` não funcionar, use `python -m pip` no lugar. É o mesmo programa, chamado pelo Python."
+            },
+            {
+              "titulo": "Instalar a extensão Python no VS Code",
+              "descricao": "No VS Code, aperte **Ctrl+Shift+X**, pesquise *Python* e instale a extensão da **Microsoft**.",
+              "ajuda": "A extensão dá cores no código, autocompletar e um botão de ▶ para rodar o arquivo. Confere se o autor é Microsoft, tem várias parecidas."
+            },
+            {
+              "titulo": "Criar a pasta do projeto",
+              "descricao": "Crie uma pasta chamada `meu-primeiro-projeto` e abra no VS Code em **File > Open Folder**.",
+              "ajuda": "Uma pasta por projeto: assim o terminal do VS Code já abre no lugar certo e você não se perde nos arquivos."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Bancada montada! Agora vem a parte divertida: o **primeiro script com ajuda da IA**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "📜",
+                "texto": "Teu primeiro script, escrito com ajuda da IA.",
+                "titulo": "Primeiro feitiço de código"
+              }
+            },
+            {
+              "texto": "Lembra do P-C-T-F? Um bom pedido seria: \"**Você é** um professor de Python paciente. **Sou iniciante** e uso Windows com Python 3. **Crie** um script `ola.py` que pergunte meu nome e responda com uma saudação e quantas letras o nome tem. **Entregue** o código comentado e como rodar.\"",
+              "cena": {
+                "tipo": "codigo",
+                "titulo": "O feitiço (prompt P-C-T-F)",
+                "codigo": "Você é um professor de Python paciente.\nSou iniciante e uso Windows com Python 3.\nCrie um script ola.py que pergunte meu nome e\nresponda com uma saudação e quantas letras ele tem.\nEntregue o código comentado e como rodar."
+              }
+            },
+            {
+              "texto": "A IA te devolve o código. E agora? Muita gente trava aqui. Vamos ver se você sabe a ordem certa das coisas.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🤔",
+                "texto": "A IA te deu o código... e agora? Muita gente trava aqui.",
+                "titulo": "O momento da verdade",
+                "efeito": "E AGORA?"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "ordenar",
+          "enunciado": "Coloque os passos na ordem certa, do pedido até o script rodando. Use as setas para mover.",
+          "itens": [
+            "Escrever o prompt P-C-T-F pedindo o script",
+            "Ler a resposta e entender o que o código faz",
+            "Criar o arquivo ola.py na pasta do projeto",
+            "Colar o código no arquivo e salvar com Ctrl+S",
+            "Abrir o terminal do VS Code com Ctrl+'",
+            "Rodar o comando python ola.py",
+            "Se der erro, copiar a mensagem inteira e pedir ajuda à IA"
+          ]
+        },
+        {
+          "tipo": "quiz",
+          "perguntas": [
+            {
+              "pergunta": "A IA te entregou este código. Se você digitar Ana, o que aparece?",
+              "codigo": "nome = input(\"Qual é o seu nome? \")\nprint(f\"Olá, {nome}! Seu nome tem {len(nome)} letras.\")",
+              "opcoes": [
+                "Olá, nome! Seu nome tem 4 letras.",
+                "Olá, Ana! Seu nome tem 3 letras.",
+                "Olá, {nome}! Seu nome tem {len(nome)} letras.",
+                "Dá erro, porque falta importar o input"
+              ],
+              "correta": 1,
+              "explicacao": "Isso! O `f` antes das aspas faz o Python trocar `{nome}` pelo valor, e `len()` conta as letras."
+            },
+            {
+              "pergunta": "Você rodou o comando e o terminal respondeu isto. Qual é o problema mais provável?",
+              "codigo": "'python' não é reconhecido como um comando interno\nou externo, um programa operável ou um arquivo em lotes.",
+              "opcoes": [
+                "O código do script está errado",
+                "O Python não está no PATH (ou o terminal foi aberto antes da instalação)",
+                "Falta internet",
+                "O VS Code está desatualizado"
+              ],
+              "correta": 1,
+              "explicacao": "Exato. É o PATH! Reinstala marcando a opção e abre um terminal novo."
+            },
+            {
+              "pergunta": "Rodou `python ola.py` e veio este erro. O que aconteceu?",
+              "codigo": "python: can't open file 'ola.py': [Errno 2] No such file or directory",
+              "opcoes": [
+                "O terminal está numa pasta diferente da pasta do arquivo",
+                "O Python não está instalado",
+                "O código tem erro de digitação",
+                "O arquivo precisa terminar em .txt"
+              ],
+              "correta": 0,
+              "explicacao": "Isso aí. O terminal procura o arquivo na pasta onde ele está. Abre o terminal pelo VS Code, com a pasta do projeto aberta."
+            },
+            {
+              "pergunta": "Apareceu este erro. Qual é o melhor próximo passo?",
+              "codigo": "Traceback (most recent call last):\n  File \"ola.py\", line 2, in <module>\n    print(f\"Olá, {nme}!\")\nNameError: name 'nme' is not defined",
+              "opcoes": [
+                "Apagar tudo e pedir um código novo",
+                "Ignorar, erro é normal",
+                "Ler a última linha do erro e, se não entender, mandar o erro inteiro para a IA explicar",
+                "Reinstalar o Python"
+              ],
+              "correta": 2,
+              "explicacao": "Perfeito. A última linha diz tudo: `nme` não existe. Foi erro de digitação de `nome`. E se não entender, a IA explica com o erro completo."
+            },
+            {
+              "pergunta": "A IA te deu um script. Antes de rodar, o que você faz?",
+              "opcoes": [
+                "Rodo direto, a IA sabe o que faz",
+                "Leio e entendo o que ele faz, principalmente se apaga ou envia arquivos",
+                "Só rodo se tiver menos de 10 linhas",
+                "Peço para outra IA rodar por mim"
+              ],
+              "correta": 1,
+              "explicacao": "Isso! Lembra da regra da Fase 1: você é o responsável. Código que apaga, move ou envia coisas merece atenção dobrada."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Mandou bem! Agora a missão final desta fase: **rodar teu primeiro script de verdade**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🚀",
+                "texto": "Missão final da Forja: **rodar teu primeiro script de verdade**.",
+                "titulo": "Missão"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "checklist",
+          "titulo": "Missão: o primeiro script",
+          "itens": [
+            {
+              "titulo": "Criar o arquivo ola.py",
+              "descricao": "Na pasta `meu-primeiro-projeto`, crie o arquivo `ola.py` e cole este código (ou o que a tua IA gerou). Salve com **Ctrl+S**.",
+              "codigo": "# Pergunta o nome e responde com uma saudação\nnome = input(\"Qual é o seu nome? \")\nprint(f\"Olá, {nome}! Seu nome tem {len(nome)} letras.\")",
+              "ajuda": "No VS Code, clique no ícone de **Novo Arquivo** ao lado do nome da pasta e digite `ola.py`. A extensão `.py` é o que diz que é Python."
+            },
+            {
+              "titulo": "Rodar o script",
+              "descricao": "Abra o terminal do VS Code (**Ctrl+'**), rode o comando abaixo, digite teu nome e aperte Enter.",
+              "comando": "python ola.py",
+              "verificacao": {
+                "rotulo": "Cole aqui a última linha que o script mostrou",
+                "exemplo": "Olá, Ana! Seu nome tem 3 letras.",
+                "padrao": "ol[aá],?\\s+\\S+.*\\d+\\s+letras",
+                "sucesso": "É ISSO, aprendiz! Teu primeiro script rodou. Daqui pra frente é só subir de nível.",
+                "erros": [
+                  {
+                    "padrao": "no such file|errno 2|can't open",
+                    "mensagem": "O terminal não achou o `ola.py`. Confere se salvou o arquivo e se o terminal está na pasta do projeto (abre ele pelo VS Code)."
+                  },
+                  {
+                    "padrao": "nameerror|syntaxerror|indentationerror|traceback",
+                    "mensagem": "Deu erro no código. Lê a **última linha** do erro: ela diz o que houve e em qual linha. Confere se colou o código inteiro, com as aspas."
+                  },
+                  {
+                    "padrao": "reconhecido|not recognized",
+                    "mensagem": "Problema de PATH de novo! Tenta `py ola.py` ou reinstala o Python marcando o PATH."
+                  }
+                ],
+                "falha": "Não reconheci essa saída. Ela deve parecer com `Olá, Ana! Seu nome tem 3 letras.`"
+              },
+              "ajuda": "Se o terminal mostrar `Qual é o seu nome?` e ficar parado, é ele esperando você digitar. Escreve o nome e aperta Enter."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Primeiro script rodando, {nome}! Pode comemorar, é um marco de verdade.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🎉",
+                "texto": "Teu primeiro script rodou. Isso é um marco!",
+                "titulo": "Conquista",
+                "efeito": "FUNCIONOU!"
+              }
+            },
+            {
+              "texto": "Repara no ciclo que você acabou de fazer: **pedir bem, entender, rodar e corrigir**. É assim que profissional trabalha com IA.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "O ciclo do mago programador",
+                "itens": [
+                  {
+                    "icone": "🗣️",
+                    "texto": "**Pedir** bem"
+                  },
+                  {
+                    "icone": "🧠",
+                    "texto": "**Entender**"
+                  },
+                  {
+                    "icone": "▶️",
+                    "texto": "**Rodar**"
+                  },
+                  {
+                    "icone": "🔧",
+                    "texto": "**Corrigir**"
+                  }
+                ]
+              }
+            },
+            "Na próxima fase a gente fala de um assunto sério: o que você **pode e não pode** mandar para uma IA. Até lá!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "trilha": "seguranca",
+      "titulo": "Dados com responsabilidade",
+      "local": "Fortaleza dos Dados",
+      "subtitulo": "Peça o script, não a análise: privacidade e segurança",
+      "icone": "🛡️",
+      "xp": 200,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Senta aí, {nome}. Essa fase é diferente: aqui a gente não aprende a fazer mais, aprende a **não fazer besteira**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🛡️",
+                "texto": "Aqui tu aprende a **não fazer besteira** com a magia.",
+                "titulo": "Fortaleza dos Dados"
+              }
+            },
+            {
+              "texto": "Quando você cola algo numa IA, esse texto **sai do teu computador** e vai para o servidor de outra empresa.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "Pra onde vai o que tu cola",
+                "itens": [
+                  {
+                    "icone": "💻",
+                    "texto": "Tu cola o texto"
+                  },
+                  {
+                    "icone": "🌐",
+                    "texto": "Ele **viaja** pela internet"
+                  },
+                  {
+                    "icone": "🏢",
+                    "texto": "Chega no servidor de **outra empresa**"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Dependendo do plano e da ferramenta, ele pode ficar guardado, ser revisado por pessoas ou até usado para treinar modelos. E você não controla mais.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "O que pode acontecer lá",
+                "itens": [
+                  {
+                    "icone": "💾",
+                    "titulo": "Guardado",
+                    "texto": "por tempo indeterminado"
+                  },
+                  {
+                    "icone": "👀",
+                    "titulo": "Revisado",
+                    "texto": "por pessoas"
+                  },
+                  {
+                    "icone": "🧪",
+                    "titulo": "Treino",
+                    "texto": "de modelos novos"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Aqui no Brasil existe a **LGPD**, a Lei Geral de Proteção de Dados. Ela diz que **dado pessoal** é qualquer informação que identifica uma pessoa: nome, CPF, e-mail, telefone, endereço...",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Dados pessoais (LGPD)",
+                "itens": [
+                  {
+                    "icone": "👤",
+                    "titulo": "Nome",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🪪",
+                    "titulo": "CPF",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "📧",
+                    "titulo": "E-mail",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "📱",
+                    "titulo": "Telefone",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🏠",
+                    "titulo": "Endereço",
+                    "texto": ""
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "E tem os **dados pessoais sensíveis**, que pedem cuidado redobrado: saúde, religião, biometria, opinião política, origem racial.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Dados sensíveis: cuidado redobrado",
+                "itens": [
+                  {
+                    "icone": "🏥",
+                    "titulo": "Saúde",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🙏",
+                    "titulo": "Religião",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🧬",
+                    "titulo": "Biometria",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🗳️",
+                    "titulo": "Política",
+                    "texto": ""
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Além disso tem o que é **sigiloso da empresa e dos clientes**: senhas, tokens de API, contratos, código interno, dados de processo.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Os segredos do reino",
+                "itens": [
+                  {
+                    "icone": "🔑",
+                    "titulo": "Senhas",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🎟️",
+                    "titulo": "Tokens",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "📄",
+                    "titulo": "Contratos",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "💻",
+                    "titulo": "Código interno",
+                    "texto": ""
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Minha regra de ouro é simples: **na dúvida, não cola**. E confere sempre se a tua empresa tem uma IA aprovada e uma política de uso.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🚫",
+                "texto": "**Na dúvida, não cola.** E siga a política de IA da tua empresa.",
+                "titulo": "Regra de ouro",
+                "efeito": "ALTO LÁ!"
+              }
+            },
+            {
+              "texto": "Bora treinar o olho? Vou te mostrar umas situações e você me diz se **pode**, se precisa de **cuidado** ou se **não pode** de jeito nenhum.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "O semáforo da magia",
+                "itens": [
+                  {
+                    "icone": "✅",
+                    "titulo": "Pode",
+                    "texto": "manda sem medo"
+                  },
+                  {
+                    "icone": "⚠️",
+                    "titulo": "Cuidado",
+                    "texto": "anonimize antes"
+                  },
+                  {
+                    "icone": "⛔",
+                    "titulo": "Não pode",
+                    "texto": "de jeito nenhum"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "classificar",
+          "enunciado": "Para cada situação: pode mandar para uma IA pública, precisa de cuidado antes, ou não pode de jeito nenhum?",
+          "partes": [
+            "pode",
+            "cuidado",
+            "nao"
+          ],
+          "rotulos": {
+            "pode": "✅ Pode",
+            "cuidado": "⚠️ Cuidado",
+            "nao": "⛔ Não pode"
+          },
+          "trechos": [
+            {
+              "texto": "Pedir para a IA explicar o que é uma API REST.",
+              "parte": "pode",
+              "explicacao": "Pergunta conceitual, sem dado nenhum. Pode à vontade!"
+            },
+            {
+              "texto": "Colar a planilha de clientes com CPF para a IA fazer um resumo.",
+              "parte": "nao",
+              "explicacao": "Dados pessoais de clientes numa IA pública: violação da LGPD. Peça o script e rode no teu computador."
+            },
+            {
+              "texto": "Colar a senha do banco de dados para a IA achar o erro de conexão.",
+              "parte": "nao",
+              "explicacao": "Senha nunca vai para a IA. Troque por SENHA_AQUI: a IA resolve o erro do mesmo jeito."
+            },
+            {
+              "texto": "Colar uma mensagem de erro, trocando o nome do servidor por SERVIDOR_X.",
+              "parte": "pode",
+              "explicacao": "Isso aí: anonimizou antes de mandar. A mensagem de erro é o que importa para a IA."
+            },
+            {
+              "texto": "Colar um trecho do código-fonte da empresa numa IA pública.",
+              "parte": "cuidado",
+              "explicacao": "Depende da política da empresa. Use a IA aprovada por ela, ou só um trecho pequeno, sem segredos e sem regra de negócio."
+            },
+            {
+              "texto": "Colar o e-mail de um cliente reclamando, com nome e telefone, para a IA escrever a resposta.",
+              "parte": "cuidado",
+              "explicacao": "Dá para fazer, mas só depois de anonimizar: troque nome e telefone por [NOME] e [TELEFONE]."
+            },
+            {
+              "texto": "Colar o token de API do Zabbix para a IA testar a integração.",
+              "parte": "nao",
+              "explicacao": "Token é chave de acesso. Se vazar, alguém entra no sistema. Use TOKEN_AQUI no prompt."
+            },
+            {
+              "texto": "Colar o resultado de exames médicos de um colega para a IA interpretar.",
+              "parte": "nao",
+              "explicacao": "Dado de saúde de outra pessoa é dado sensível pela LGPD. Nunca."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Agora a técnica que separa amador de profissional: **peça o script, não a análise**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "📜",
+                "texto": "**Peça o script, não a análise.**",
+                "titulo": "Técnica secreta",
+                "efeito": "SHHH!"
+              }
+            },
+            "Imagina: teu coordenador pede um levantamento dos problemas de um cliente no Zabbix, no último mês, por grupo de host e tipo de problema.",
+            {
+              "texto": "O jeito errado é exportar tudo e colar na IA: \"analisa isso aqui pra mim\". Os dados do cliente acabaram de vazar.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "💥",
+                "texto": "Exportar tudo e colar na IA: os dados do cliente acabaram de **vazar**.",
+                "titulo": "O jeito errado",
+                "efeito": "VAZOU!"
+              }
+            },
+            {
+              "texto": "O jeito certo é **descrever a estrutura** dos dados (as colunas, o formato, a API) e pedir um **script** que faça a análise.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "O jeito certo",
+                "itens": [
+                  {
+                    "icone": "📋",
+                    "texto": "Descreve a **estrutura**"
+                  },
+                  {
+                    "icone": "🤖",
+                    "texto": "A IA escreve o **script**"
+                  },
+                  {
+                    "icone": "💻",
+                    "texto": "Tu roda **no teu PC**"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Aí você roda o script **no teu computador**. A IA nunca viu um dado sequer, e o resultado é o mesmo. Ou melhor: dá para repetir todo mês.",
+              "cena": {
+                "tipo": "comparacao",
+                "titulo": "Análise x script",
+                "ruim": {
+                  "rotulo": "\"Analisa isso aqui\"",
+                  "texto": "Cola os dados do cliente na IA."
+                },
+                "bom": {
+                  "rotulo": "\"Me faz um script\"",
+                  "texto": "Descreve as colunas e roda o script em casa."
+                }
+              }
+            },
+            {
+              "texto": "E quando você precisar mesmo mostrar um texto para a IA, tipo um chamado, use a **anonimização**: troque cada dado pessoal por um marcador, como `[NOME]`, `[CPF]` e `[EMAIL]`.",
+              "cena": {
+                "tipo": "comparacao",
+                "titulo": "Anonimização",
+                "ruim": {
+                  "rotulo": "Original",
+                  "texto": "Cliente: Maria Souza, CPF 123.456.789-09"
+                },
+                "bom": {
+                  "rotulo": "Anonimizado",
+                  "texto": "Cliente: [NOME], CPF [CPF]"
+                }
+              }
+            },
+            "Bora praticar? Vou te passar um chamado real... quer dizer, fictício. Anonimiza ele para mim."
+          ]
+        },
+        {
+          "tipo": "anonimizar",
+          "enunciado": "Edite o texto para tirar todos os dados pessoais e sigilosos. Troque cada um por um marcador como [NOME], [CPF], [TELEFONE], [EMAIL], [SENHA] ou [PROCESSO]. Mas cuidado: o problema técnico precisa continuar claro para a IA conseguir ajudar.",
+          "texto": "Chamado #4821\nCliente: Maria Fernanda Souza, CPF 123.456.789-09\nTelefone: (48) 99812-3344 | E-mail: maria.souza@exemplo.com.br\nA senha do portal dela é Floripa@2024.\nEla não consegue emitir a guia de custas do processo 0801234-56.2024.8.24.0023.\nErro exibido: \"Timeout ao consultar serviço de pagamento\".\nPediu retorno urgente.",
+          "sensiveis": [
+            {
+              "tipo": "Nome da cliente",
+              "palavras": [
+                "maria",
+                "fernanda",
+                "souza"
+              ]
+            },
+            {
+              "tipo": "CPF",
+              "digitos": "12345678909"
+            },
+            {
+              "tipo": "Telefone",
+              "digitos": "48998123344"
+            },
+            {
+              "tipo": "E-mail",
+              "palavras": [
+                "maria.souza@exemplo.com.br"
+              ]
+            },
+            {
+              "tipo": "Senha",
+              "palavras": [
+                "floripa@2024",
+                "floripa"
+              ]
+            },
+            {
+              "tipo": "Número do processo",
+              "digitos": "08012345620248240023"
+            }
+          ],
+          "manter": [
+            {
+              "trecho": "guia de custas",
+              "motivo": "o que a cliente estava tentando fazer (emitir a guia de custas)"
+            },
+            {
+              "trecho": "timeout",
+              "motivo": "a mensagem de erro (Timeout ao consultar serviço de pagamento)"
+            }
+          ]
+        },
+        {
+          "tipo": "quiz",
+          "perguntas": [
+            {
+              "pergunta": "Pela LGPD, qual destes NÃO é um dado pessoal?",
+              "opcoes": [
+                "O e-mail de um cliente",
+                "O CPF de um colega",
+                "A versão do PostgreSQL do servidor",
+                "O telefone de um fornecedor"
+              ],
+              "correta": 2,
+              "explicacao": "Isso! A versão do banco não identifica ninguém. Os outros identificam uma pessoa, então são dados pessoais."
+            },
+            {
+              "pergunta": "Você precisa de um relatório com os chamados de um cliente, que estão numa planilha com nomes e CPFs. O que você pede para a IA?",
+              "opcoes": [
+                "Colo a planilha e peço o relatório",
+                "Colo só as 100 primeiras linhas para economizar",
+                "Descrevo as colunas e peço um script que gere o relatório, e rodo no meu computador",
+                "Mando a planilha por e-mail para a IA"
+              ],
+              "correta": 2,
+              "explicacao": "Peça o script, não a análise! A IA conhece a estrutura, mas nunca vê os dados."
+            },
+            {
+              "pergunta": "Sem querer, você colou um token de API numa conversa com a IA. E agora?",
+              "opcoes": [
+                "Apago a conversa e está tudo resolvido",
+                "Revogo o token e gero um novo o quanto antes, e aviso quem cuida da segurança",
+                "Peço para a IA esquecer o token",
+                "Nada, a IA não guarda nada"
+              ],
+              "correta": 1,
+              "explicacao": "Exato. Depois que saiu do teu computador, considera vazado. Revogar é o único jeito de garantir."
+            },
+            {
+              "pergunta": "Qual destes é um dado pessoal SENSÍVEL pela LGPD?",
+              "opcoes": [
+                "O cargo de um funcionário",
+                "O diagnóstico médico de uma pessoa",
+                "O nome da empresa cliente",
+                "O endereço do data center"
+              ],
+              "correta": 1,
+              "explicacao": "Isso aí. Saúde está na lista de dados sensíveis, junto com religião, biometria e opinião política."
+            },
+            {
+              "pergunta": "Tua empresa oferece uma IA corporativa aprovada pela segurança. Quando faz sentido usar ela em vez de uma pública?",
+              "opcoes": [
+                "Nunca, a pública é sempre melhor",
+                "Quando o trabalho envolve código ou documentos internos, sempre seguindo a política da empresa",
+                "Só quando a pública estiver fora do ar",
+                "Em qualquer caso, e aí posso colar senhas à vontade"
+              ],
+              "correta": 1,
+              "explicacao": "Perfeito. A IA aprovada existe para o trabalho do dia a dia. Mas senha e token continuam fora de qualquer prompt."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Último desafio: juntar tudo. Um **prompt P-C-T-F** que peça o script do levantamento do Zabbix, **sem nenhum dado do cliente**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "✍️",
+                "texto": "Um prompt P-C-T-F do levantamento, **sem nenhum dado do cliente**.",
+                "titulo": "Desafio final"
+              }
+            },
+            {
+              "texto": "Fica esperto: se eu achar CPF, e-mail, senha ou token no teu prompt, a nota despenca.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🔍",
+                "texto": "Se eu achar CPF, e-mail, senha ou token, a nota despenca.",
+                "titulo": "Tô de olho",
+                "efeito": "DE OLHO!"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "construir_prompt",
+          "cenario": "O coordenador pediu: \"Preciso de um levantamento do cliente no Zabbix, referente ao último mês. Quero os problemas separados por grupo de host e por tipo de problema, com a quantidade de cada um.\" Você tem acesso à API do Zabbix com um token. Peça para a IA um script que faça isso, sem colar nenhum dado do cliente.",
+          "prompt_fraco": "segue o export do zabbix do cliente, analisa e me diz os problemas",
+          "pistas_contexto": [
+            "zabbix",
+            "api",
+            "grupo",
+            "host",
+            "problema",
+            "mes",
+            "python",
+            "json",
+            "token",
+            "trigger",
+            "severidade"
+          ],
+          "nota_minima": 60
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            "Agora sim, {nome}. Você sabe usar a IA **e** sabe proteger as pessoas e a empresa enquanto usa. Isso vale ouro no mercado.",
+            {
+              "texto": "Resumindo a fase: **na dúvida, não cola**; **anonimize** quando precisar mostrar um texto; e **peça o script, não a análise**.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "O juramento do Guardião",
+                "itens": [
+                  {
+                    "icone": "🚫",
+                    "titulo": "Na dúvida",
+                    "texto": "não cola"
+                  },
+                  {
+                    "icone": "🎭",
+                    "titulo": "Anonimize",
+                    "texto": "quando precisar mostrar"
+                  },
+                  {
+                    "icone": "📜",
+                    "titulo": "Peça o script",
+                    "texto": "não a análise"
+                  }
+                ]
+              }
+            },
+            "Com isso, tu tá pronto para as **missões práticas**. Lá a coisa fica séria: portfólio, APIs e dashboard. Te vejo lá!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "trilha": "trabalho",
+      "titulo": "Missões práticas",
+      "local": "Arena das Missões",
+      "subtitulo": "Portfólio, coleta de dados via API e dashboard",
+      "icone": "⚔️",
+      "xp": 300,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Bem-vindo às **missões práticas**, {nome}! Acabou o treino: daqui pra frente é trabalho de verdade.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "⚔️",
+                "texto": "Acabou o treino. Daqui pra frente é trabalho de verdade.",
+                "titulo": "Arena das Missões",
+                "efeito": "LUTA!"
+              }
+            },
+            {
+              "texto": "São três missões, iguais às que aparecem no dia a dia: um **portfólio**, uma **coleta de dados via API** e um **dashboard executivo**.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "As 3 missões",
+                "itens": [
+                  {
+                    "icone": "🧑‍🎨",
+                    "titulo": "Portfólio",
+                    "texto": "tua vitrine"
+                  },
+                  {
+                    "icone": "📡",
+                    "titulo": "Coleta",
+                    "texto": "dados via API"
+                  },
+                  {
+                    "icone": "📊",
+                    "titulo": "Dashboard",
+                    "texto": "painel executivo"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Você pode usar a IA que quiser, do jeito que quiser. Mas lembra de tudo que a gente viu: **P-C-T-F**, **entender antes de rodar** e **nada de dado sensível no prompt**.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Leve na mochila",
+                "itens": [
+                  {
+                    "icone": "🎯",
+                    "titulo": "P-C-T-F",
+                    "texto": "pedir bem"
+                  },
+                  {
+                    "icone": "🧠",
+                    "titulo": "Entender",
+                    "texto": "antes de rodar"
+                  },
+                  {
+                    "icone": "🛡️",
+                    "titulo": "Proteger",
+                    "texto": "nada de dado sensível"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "Eu preparei um Zabbix e um Grafana de treino aqui dentro da Academia. Teus scripts vão conversar com eles de verdade.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🏟️",
+                "texto": "Um **Zabbix** e um **Grafana** de treino, dentro da Academia. Teus scripts falam com eles de verdade.",
+                "titulo": "Campo de treino"
+              }
+            },
+            {
+              "texto": "Primeira missão: o **portfólio**. Antes de pedir qualquer coisa para a IA, **pensa**: o que um portfólio precisa mostrar?",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "💭",
+                "texto": "Antes de abrir a IA: o que um portfólio precisa mostrar?",
+                "titulo": "Pense antes de pedir"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "classificar",
+          "enunciado": "O que entra no teu portfólio e o que fica de fora?",
+          "partes": [
+            "entra",
+            "fora"
+          ],
+          "rotulos": {
+            "entra": "✅ Entra",
+            "fora": "🚫 Fica de fora"
+          },
+          "trechos": [
+            {
+              "texto": "Projetos com link e o problema que cada um resolve.",
+              "parte": "entra",
+              "explicacao": "É o coração do portfólio: mostra o que você sabe fazer."
+            },
+            {
+              "texto": "Uma frase sobre quem você é e o que busca.",
+              "parte": "entra",
+              "explicacao": "Quem lê decide em segundos. Diga logo quem você é."
+            },
+            {
+              "texto": "Teu CPF e endereço residencial.",
+              "parte": "fora",
+              "explicacao": "Lembra da Fase 4? Portfólio é público: nada de dado pessoal sensível."
+            },
+            {
+              "texto": "Links do GitHub e do LinkedIn.",
+              "parte": "entra",
+              "explicacao": "É por ali que o recrutador confere teu trabalho e te chama."
+            },
+            {
+              "texto": "As habilidades que você domina, com exemplos.",
+              "parte": "entra",
+              "explicacao": "Habilidade com exemplo convence muito mais que uma lista solta."
+            },
+            {
+              "texto": "A senha do teu GitHub, para provar que a conta é tua.",
+              "parte": "fora",
+              "explicacao": "Senha nunca, em lugar nenhum. O link do perfil já prova."
+            },
+            {
+              "texto": "Texto de exemplo \"lorem ipsum\" que veio no modelo.",
+              "parte": "fora",
+              "explicacao": "Texto de modelo esquecido passa a impressão de desleixo. Troca pelo teu conteúdo."
+            }
+          ]
+        },
+        {
+          "tipo": "verificar_codigo",
+          "titulo": "Missão 1: teu portfólio",
+          "instrucoes": [
+            "Escreva um prompt P-C-T-F pedindo um portfólio em **um único arquivo `index.html`**, com o CSS dentro dele.",
+            "Salve o arquivo na pasta do teu projeto e abra no navegador (duplo clique no arquivo).",
+            "Gostou? Abra o `index.html` no VS Code, copie **todo** o código e cole aqui embaixo."
+          ],
+          "dica_prompt": "Você é um desenvolvedor front-end que cria portfólios simples e bonitos. Sou iniciante em IA e quero um portfólio para mostrar meus projetos. Crie um único arquivo index.html, com CSS embutido, que funcione no celular, com seções: sobre mim, habilidades, projetos (com links) e contato (GitHub e LinkedIn). Entregue o código completo e comentado.",
+          "rotulo": "Cole aqui o código do teu index.html",
+          "checks": [
+            {
+              "descricao": "É um arquivo HTML completo",
+              "padrao": "<html",
+              "dica": "Faltou a tag <html>. Peça para a IA o arquivo completo, do <!DOCTYPE html> até o </html>."
+            },
+            {
+              "descricao": "Tem título na aba do navegador",
+              "padrao": "<title>[^<]{3,}</title>",
+              "dica": "Coloque um <title> com teu nome. É o que aparece na aba e no Google."
+            },
+            {
+              "descricao": "Funciona no celular",
+              "padrao": "name=[\"']viewport",
+              "dica": "Faltou a meta tag viewport. Peça para a IA deixar o site responsivo."
+            },
+            {
+              "descricao": "Tem estilo (CSS)",
+              "padrao": "<style|stylesheet",
+              "dica": "Sem CSS fica tudo cru. Peça o estilo dentro de uma tag <style>."
+            },
+            {
+              "descricao": "Tem pelo menos 3 seções",
+              "padrao": "<section|<h2",
+              "minimo": 3,
+              "dica": "Organize em seções: sobre, habilidades, projetos, contato."
+            },
+            {
+              "descricao": "Mostra pelo menos um projeto",
+              "padrao": "projeto",
+              "dica": "Portfólio sem projeto não é portfólio! Coloque pelo menos um, nem que seja o ola.py."
+            },
+            {
+              "descricao": "Tem link para GitHub ou LinkedIn",
+              "padrao": "github\\.com|linkedin\\.com",
+              "dica": "Coloque os links dos teus perfis. É por ali que te chamam."
+            }
+          ],
+          "proibidos": [
+            {
+              "padrao": "lorem ipsum",
+              "mensagem": "Tem \"lorem ipsum\" no código: troque pelo teu texto de verdade."
+            },
+            {
+              "padrao": "\\b\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}\\b",
+              "mensagem": "Tem um CPF no portfólio! Portfólio é público, tira isso."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Portfólio no ar! Guarda esse arquivo: ele vai crescer junto com você.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🏆",
+                "texto": "Portfólio no ar! Ele vai crescer junto contigo.",
+                "titulo": "Missão 1 cumprida",
+                "efeito": "BOA!"
+              }
+            },
+            {
+              "texto": "Missão 2. Teu coordenador mandou mensagem: \"Preciso de um levantamento do **último mês** no Zabbix, com os problemas **por grupo de host** e **por tipo de problema**.\"",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "📨",
+                "texto": "\"Preciso de um levantamento do **último mês** no Zabbix, por **grupo de host** e **tipo de problema**.\"",
+                "titulo": "O coordenador pediu"
+              }
+            },
+            "Na Fase 4 você escreveu o prompt. Agora vai **rodar o script de verdade** contra o meu Zabbix de treino.",
+            {
+              "texto": "Repara que a documentação da API pode ir para a IA sem medo: ela não tem dado de cliente nenhum. Já o **token**, esse fica numa variável de ambiente.",
+              "cena": {
+                "tipo": "comparacao",
+                "titulo": "Onde guardar o token",
+                "ruim": {
+                  "rotulo": "No prompt ou no código",
+                  "texto": "token = \"zetsu-treino-2026\""
+                },
+                "bom": {
+                  "rotulo": "Variável de ambiente",
+                  "texto": "TOKEN = os.environ[\"ZETSU_TOKEN\"]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "missao_api",
+          "titulo": "Missão 2: coleta de dados no Zabbix de treino",
+          "documentacao": [
+            {
+              "titulo": "Endpoint",
+              "texto": "Lista os problemas registrados. Use o parâmetro `desde` para filtrar por data.",
+              "codigo": "GET http://localhost:5050/simulador/api/problemas?desde=AAAA-MM-DD"
+            },
+            {
+              "titulo": "Autenticação",
+              "texto": "Envie o token no cabeçalho `Authorization`. Guarde o token numa variável de ambiente, nunca no código.",
+              "codigo": "Authorization: Bearer <token>"
+            },
+            {
+              "titulo": "Exemplo de resposta",
+              "codigo": "{\n  \"total\": 2,\n  \"problemas\": [\n    {\n      \"eventid\": \"10500\",\n      \"host\": \"srv-app-01\",\n      \"grupo\": \"Servidores Linux\",\n      \"tipo\": \"Disco cheio\",\n      \"severidade\": \"Alta\",\n      \"inicio\": \"2026-10-30T14:05\"\n    }\n  ]\n}"
+            },
+            {
+              "titulo": "Preparando o terminal (PowerShell)",
+              "texto": "Instale a biblioteca `requests` e guarde o token de treino numa variável de ambiente:",
+              "codigo": "pip install requests\n$env:ZETSU_TOKEN = \"zetsu-treino-2026\""
+            }
+          ],
+          "testar": "/simulador/api/problemas?desde=2000-01-01",
+          "perguntas": [
+            {
+              "pergunta": "Quantos problemas aconteceram nos últimos 30 dias?",
+              "chave": "total",
+              "tipo": "numero",
+              "dica": "Confere o filtro: `desde` deve ser a data de hoje menos 30 dias."
+            },
+            {
+              "pergunta": "Qual grupo de host teve mais problemas nesse período?",
+              "chave": "grupo_mais",
+              "tipo": "texto",
+              "dica": "Conte os problemas por grupo (um Counter do Python resolve) e veja o maior."
+            },
+            {
+              "pergunta": "Quantos problemas do tipo \"Disco cheio\" no grupo \"Servidores Linux\"?",
+              "chave": "linux_disco",
+              "tipo": "numero",
+              "dica": "Filtre os dois campos ao mesmo tempo: grupo e tipo."
+            }
+          ],
+          "solucao": "coleta_zabbix.py"
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Dados coletados sem vazar nada. Teu coordenador vai adorar!",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "📈",
+                "texto": "Dados coletados sem vazar nada. O coordenador vai adorar!",
+                "titulo": "Missão 2 cumprida",
+                "efeito": "BOA!"
+              }
+            },
+            {
+              "texto": "Missão 3, a última. Ele mandou outra: \"Preciso de um **dashboard executivo no Grafana**. Pode usar dados fictícios: quero ver o **layout** antes de ligar nos dados reais.\"",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "📨",
+                "texto": "\"Quero um **dashboard executivo** no Grafana. Pode usar dados fictícios: quero ver o **layout**.\"",
+                "titulo": "O coordenador pediu de novo"
+              }
+            },
+            {
+              "texto": "Antes de desenhar painel, a pergunta mais importante: **o que o gestor quer ver?** Executivo não lê log. Executivo quer resposta em 5 segundos.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "⏱️",
+                "texto": "Executivo não lê log. Executivo quer resposta em **5 segundos**.",
+                "titulo": "Pense no leitor"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "classificar",
+          "enunciado": "Qual destas métricas vai para o dashboard executivo e qual é coisa do time técnico?",
+          "partes": [
+            "executivo",
+            "tecnico"
+          ],
+          "rotulos": {
+            "executivo": "📊 Executivo",
+            "tecnico": "🔧 Técnico"
+          },
+          "trechos": [
+            {
+              "texto": "Disponibilidade dos serviços no mês (%).",
+              "parte": "executivo",
+              "explicacao": "Um número que responde \"estamos bem?\". Clássico de executivo."
+            },
+            {
+              "texto": "Uso de CPU do servidor db-03, minuto a minuto.",
+              "parte": "tecnico",
+              "explicacao": "Detalhe demais para o gestor. Isso é para quem opera o servidor."
+            },
+            {
+              "texto": "Quantidade de incidentes críticos no mês.",
+              "parte": "executivo",
+              "explicacao": "Mostra impacto no negócio de forma direta."
+            },
+            {
+              "texto": "Tempo médio de resolução dos chamados.",
+              "parte": "executivo",
+              "explicacao": "O famoso MTTR: diz se o time está respondendo rápido."
+            },
+            {
+              "texto": "Logs de erro do Apache.",
+              "parte": "tecnico",
+              "explicacao": "Log é ferramenta de investigação, não de decisão."
+            },
+            {
+              "texto": "SLA cumprido versus violado.",
+              "parte": "executivo",
+              "explicacao": "SLA é contrato. Gestor precisa ver isso de cara."
+            },
+            {
+              "texto": "Latência de ping de cada switch.",
+              "parte": "tecnico",
+              "explicacao": "Importante para a rede, mas não para a reunião de diretoria."
+            }
+          ]
+        },
+        {
+          "tipo": "missao_dashboard",
+          "titulo": "Missão 3: dashboard executivo no Grafana de treino",
+          "documentacao": [
+            {
+              "titulo": "Endpoint (igual ao Grafana de verdade)",
+              "texto": "Cria ou atualiza um dashboard. Mande o JSON do dashboard dentro da chave `dashboard`.",
+              "codigo": "POST http://localhost:5050/simulador/grafana/api/dashboards/db\nAuthorization: Bearer <token>\nContent-Type: application/json"
+            },
+            {
+              "titulo": "Formato do corpo",
+              "texto": "Cada painel tem `type` (stat, gauge, timeseries, barchart, piechart, table), `title` e `gridPos`. A grade tem **24 colunas** de largura.",
+              "codigo": "{\n  \"dashboard\": {\n    \"title\": \"Meu dashboard\",\n    \"panels\": [\n      {\n        \"id\": 1,\n        \"type\": \"stat\",\n        \"title\": \"Disponibilidade (%)\",\n        \"gridPos\": { \"x\": 0, \"y\": 0, \"w\": 6, \"h\": 4 }\n      }\n    ]\n  },\n  \"overwrite\": true\n}"
+            },
+            {
+              "titulo": "Token",
+              "texto": "É o mesmo da missão anterior, na variável de ambiente `ZETSU_TOKEN`."
+            }
+          ],
+          "solucao": "dashboard_grafana.py"
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            "Três missões, três entregas de verdade. {nome}, tu já faz o que muita gente com anos de mercado não faz: **usa IA com método**.",
+            {
+              "texto": "Repara no padrão de todas elas: **entender o pedido, pensar antes de pedir, pedir bem, rodar no teu ambiente e conferir**.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "O padrão de toda missão",
+                "itens": [
+                  {
+                    "icone": "🎯",
+                    "texto": "**Entender** o pedido"
+                  },
+                  {
+                    "icone": "💭",
+                    "texto": "**Pensar**"
+                  },
+                  {
+                    "icone": "🗣️",
+                    "texto": "**Pedir** bem"
+                  },
+                  {
+                    "icone": "💻",
+                    "texto": "**Rodar**"
+                  },
+                  {
+                    "icone": "✅",
+                    "texto": "**Conferir**"
+                  }
+                ]
+              }
+            },
+            "Só falta uma coisa: o **projeto final**. Lá é você quem escolhe a ideia. Te vejo na última fase!"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "trilha": "trabalho",
+      "titulo": "Projeto final",
+      "local": "Covil do Dragão",
+      "subtitulo": "Da ideia ao produto com IA, e o pitch para o Zetsu",
+      "icone": "🏆",
+      "xp": 500,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "{nome}, chegou a hora. A última fase da Academia é a mais livre de todas: **o projeto final é teu**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🐉",
+                "texto": "A última fase é a mais livre: **o projeto final é teu**.",
+                "titulo": "Covil do Dragão",
+                "efeito": "RAAAWR!"
+              }
+            },
+            {
+              "texto": "O desafio é simples de falar e gostoso de fazer: pensa numa **ideia de negócio**, constrói um **front-end funcionando** com ajuda da IA e me **vende essa ideia em 1 minuto**.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "O desafio do dragão",
+                "itens": [
+                  {
+                    "icone": "💡",
+                    "texto": "Uma **ideia** de negócio"
+                  },
+                  {
+                    "icone": "🖥️",
+                    "texto": "Um **front-end** funcionando"
+                  },
+                  {
+                    "icone": "🎤",
+                    "texto": "Um **pitch** de 1 minuto"
+                  }
+                ]
+              }
+            },
+            "Pode ser um app para a tua área, algo para o teu bairro, uma ferramenta para o teu time... O que importa é resolver um problema de verdade.",
+            {
+              "texto": "Primeiro passo: colocar a ideia no papel. Antes de abrir a IA, **pensa**. Quem tem o problema? Por que pagaria pela solução?",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "💭",
+                "texto": "Quem tem o problema? Por que pagaria pela solução?",
+                "titulo": "Pense antes de abrir a IA"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "canvas",
+          "titulo": "O canvas da tua ideia",
+          "campos": [
+            {
+              "chave": "nome",
+              "rotulo": "Nome do produto",
+              "placeholder": "Ex.: Marmita Fit",
+              "minimo": 3,
+              "dica": "Um nome curto e fácil de lembrar."
+            },
+            {
+              "chave": "problema",
+              "rotulo": "Qual problema ele resolve, e para quem?",
+              "minimo": 40,
+              "placeholder": "Ex.: Quem trabalha o dia todo perde tempo decidindo o que comer e acaba gastando com delivery caro.",
+              "dica": "Diga quem sofre e qual é a dor. Problema bom é aquele que alguém sente no bolso ou no relógio.",
+              "pistas": [
+                "para",
+                "quem",
+                "perde",
+                "tempo",
+                "dinheiro",
+                "dificil",
+                "nao consegue",
+                "sofre",
+                "problema",
+                "gasta",
+                "demora"
+              ]
+            },
+            {
+              "chave": "solucao",
+              "rotulo": "Como o produto resolve isso?",
+              "minimo": 40,
+              "placeholder": "Ex.: Um app que monta o cardápio da semana e já gera a lista de compras.",
+              "dica": "Explique o que o produto faz, com um verbo de ação: organiza, sugere, automatiza...",
+              "pistas": [
+                "ajuda",
+                "permite",
+                "automatiza",
+                "organiza",
+                "mostra",
+                "conecta",
+                "calcula",
+                "sugere",
+                "reduz",
+                "gera",
+                "monta",
+                "avisa"
+              ]
+            },
+            {
+              "chave": "ia",
+              "rotulo": "Onde a IA entra?",
+              "minimo": 25,
+              "placeholder": "Ex.: A IA sugere receitas com o que a pessoa tem na geladeira.",
+              "dica": "No produto (sugere, resume, classifica) ou na construção (a IA me ajudou a criar o front).",
+              "pistas": [
+                "ia",
+                "inteligencia artificial",
+                "gera",
+                "sugere",
+                "classifica",
+                "resume",
+                "prompt",
+                "modelo",
+                "automatiza",
+                "recomenda"
+              ]
+            },
+            {
+              "chave": "publico",
+              "rotulo": "Quem é o cliente?",
+              "minimo": 15,
+              "placeholder": "Ex.: Profissionais de 25 a 40 anos que moram sozinhos.",
+              "dica": "Quanto mais específico, melhor. \"Todo mundo\" não é público."
+            },
+            {
+              "chave": "dinheiro",
+              "rotulo": "Como ele ganha dinheiro?",
+              "minimo": 15,
+              "placeholder": "Ex.: Assinatura mensal de R$ 19,90, com 7 dias grátis.",
+              "dica": "Assinatura, comissão, venda única, plano gratuito com premium...",
+              "pistas": [
+                "assinatura",
+                "mensal",
+                "plano",
+                "comissao",
+                "venda",
+                "anuncio",
+                "licenca",
+                "gratuito",
+                "premium",
+                "por uso",
+                "r$",
+                "taxa"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Ideia no papel! Agora, a armadilha que mais derruba projeto: **querer fazer tudo de uma vez**.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "⚠️",
+                "texto": "A armadilha que mais derruba projeto: querer fazer **tudo de uma vez**.",
+                "titulo": "Cilada",
+                "efeito": "CILADA!"
+              }
+            },
+            {
+              "texto": "A gente vai construir um **MVP**, o *Produto Mínimo Viável*: só o necessário para mostrar a ideia funcionando.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🧪",
+                "texto": "**MVP**: o Produto Mínimo Viável. Só o necessário para mostrar a ideia funcionando.",
+                "titulo": "MVP"
+              }
+            },
+            {
+              "texto": "Regras do desafio: **só o front-end**, com **dados fictícios**, mas com **telas e navegação de verdade**. Nada de banco de dados, login real ou pagamento.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Regras do MVP",
+                "itens": [
+                  {
+                    "icone": "🖥️",
+                    "titulo": "Só o front",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🎲",
+                    "titulo": "Dados fictícios",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🧭",
+                    "titulo": "Telas e navegação",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🚫",
+                    "titulo": "Sem login e pagamento",
+                    "texto": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "classificar",
+          "enunciado": "O que entra no teu MVP e o que fica para a versão 2?",
+          "partes": [
+            "mvp",
+            "depois"
+          ],
+          "rotulos": {
+            "mvp": "🚀 Entra no MVP",
+            "depois": "⏳ Fica para depois"
+          },
+          "trechos": [
+            {
+              "texto": "Uma tela inicial que explica o produto em uma frase.",
+              "parte": "mvp",
+              "explicacao": "É a primeira coisa que alguém vê. Sem ela, ninguém entende a ideia."
+            },
+            {
+              "texto": "Login com banco de dados e recuperação de senha.",
+              "parte": "depois",
+              "explicacao": "Dá trabalho e não ajuda a mostrar a ideia. Um botão \"Entrar\" de mentirinha basta."
+            },
+            {
+              "texto": "Navegação entre pelo menos três telas.",
+              "parte": "mvp",
+              "explicacao": "É o que faz parecer um produto de verdade, e não só uma página."
+            },
+            {
+              "texto": "Pagamento com cartão de crédito de verdade.",
+              "parte": "depois",
+              "explicacao": "Pagamento real exige segurança, contrato e testes. Mostre só a tela do plano."
+            },
+            {
+              "texto": "Uma lista com dados fictícios, tipo produtos ou pedidos.",
+              "parte": "mvp",
+              "explicacao": "Dado fictício deixa a demo viva sem precisar de backend."
+            },
+            {
+              "texto": "Aplicativo nativo para iPhone e Android.",
+              "parte": "depois",
+              "explicacao": "Um site que funciona no celular já prova a ideia."
+            },
+            {
+              "texto": "Layout que funciona no celular.",
+              "parte": "mvp",
+              "explicacao": "Muita gente vai abrir no celular. Tem que funcionar lá."
+            }
+          ]
+        },
+        {
+          "tipo": "ordenar",
+          "enunciado": "Coloque na ordem os passos para construir o MVP com ajuda da IA.",
+          "itens": [
+            "Desenhar no papel quais telas o produto vai ter",
+            "Escrever um prompt P-C-T-F pedindo a estrutura do site",
+            "Pedir e testar uma tela de cada vez",
+            "Ligar a navegação entre as telas",
+            "Colocar os dados fictícios",
+            "Testar no celular e corrigir o que quebrou",
+            "Ensaiar o pitch de 1 minuto"
+          ]
+        },
+        {
+          "tipo": "verificar_codigo",
+          "titulo": "O front-end do teu produto",
+          "preview": true,
+          "instrucoes": [
+            "Peça para a IA um front-end em **um único arquivo `index.html`**, com CSS e JavaScript dentro dele.",
+            "Ele precisa ter **pelo menos 3 telas** (ou seções) e **navegação** entre elas, usando **dados fictícios**.",
+            "Construa uma tela por vez, testando no navegador. Quando estiver orgulhoso, cole o código inteiro aqui: eu vou rodar teu produto aqui mesmo."
+          ],
+          "dica_prompt": "Você é um desenvolvedor front-end que cria protótipos rápidos e bonitos. Estou criando o MVP de [NOME DO PRODUTO], que [O QUE ELE FAZ] para [PÚBLICO]. Crie um único arquivo index.html, com CSS e JavaScript embutidos, que funcione no celular, com 3 telas: início, [TELA 2] e [TELA 3]. A navegação entre as telas deve funcionar com JavaScript, sem recarregar a página. Use dados fictícios num array de objetos. Entregue o código completo e comentado.",
+          "rotulo": "Cole aqui o código do teu index.html",
+          "checks": [
+            {
+              "descricao": "É um arquivo HTML completo",
+              "padrao": "<html",
+              "dica": "Faltou a tag <html>. Peça o arquivo completo para a IA."
+            },
+            {
+              "descricao": "Tem título na aba",
+              "padrao": "<title>[^<]{3,}</title>",
+              "dica": "Coloque o nome do produto no <title>."
+            },
+            {
+              "descricao": "Funciona no celular",
+              "padrao": "name=[\"']viewport",
+              "dica": "Faltou a meta tag viewport."
+            },
+            {
+              "descricao": "Tem estilo (CSS)",
+              "padrao": "<style|stylesheet",
+              "dica": "Um produto precisa de cara bonita: peça o CSS."
+            },
+            {
+              "descricao": "Tem JavaScript",
+              "padrao": "<script",
+              "dica": "Sem JavaScript não tem navegação. Peça a lógica num <script>."
+            },
+            {
+              "descricao": "Tem pelo menos 3 telas",
+              "padrao": "<section|data-tela|data-screen|class=[\"'][^\"']*\\b(?:tela|screen|page|pagina)\\b",
+              "minimo": 3,
+              "dica": "Organize em 3 telas, cada uma numa <section> por exemplo."
+            },
+            {
+              "descricao": "Tem navegação funcionando",
+              "padrao": "addEventListener|onclick|href=[\"']#",
+              "dica": "Os botões precisam levar de uma tela para outra. Peça a navegação em JavaScript."
+            },
+            {
+              "descricao": "Usa dados fictícios",
+              "padrao": "\\[\\s*\\{",
+              "dica": "Coloque os dados fictícios num array de objetos no JavaScript, tipo [{ nome: ... }]."
+            }
+          ],
+          "proibidos": [
+            {
+              "padrao": "lorem ipsum",
+              "mensagem": "Tem \"lorem ipsum\" no código: escreva os textos do teu produto."
+            },
+            {
+              "padrao": "\\b\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}\\b",
+              "mensagem": "Tem um CPF no código! Use dados fictícios sem formato de documento real."
+            },
+            {
+              "padrao": "sk-[A-Za-z0-9_-]{20,}",
+              "mensagem": "Tem uma chave de API no código! Front-end é público: nunca coloque chaves nele."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Teu produto existe, {nome}! Ele roda, tem tela, tem navegação. Muita ideia boa morre antes de chegar aqui.",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🎉",
+                "texto": "Teu produto existe! Ele roda, tem tela, tem navegação.",
+                "titulo": "Conquista",
+                "efeito": "FUNCIONOU!"
+              }
+            },
+            "Agora, a última habilidade: **vender**. Uma ideia que ninguém entende em 1 minuto não sai do papel.",
+            {
+              "texto": "Um bom pitch tem quatro partes: um **gancho** (uma pergunta ou um \"imagina...\"), o **problema**, a **solução** com o nome do produto e um **pedido** no final.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "Anatomia de um pitch",
+                "itens": [
+                  {
+                    "icone": "🪝",
+                    "texto": "**Gancho**"
+                  },
+                  {
+                    "icone": "😣",
+                    "texto": "**Problema**"
+                  },
+                  {
+                    "icone": "💡",
+                    "texto": "**Solução** com o nome"
+                  },
+                  {
+                    "icone": "🙋",
+                    "texto": "**Pedido**"
+                  }
+                ]
+              }
+            },
+            {
+              "texto": "E um segredo: um **número** convence mais que adjetivo. \"Economiza 3 horas por semana\" vence \"economiza muito tempo\".",
+              "cena": {
+                "tipo": "comparacao",
+                "titulo": "Número convence",
+                "ruim": {
+                  "rotulo": "Adjetivo",
+                  "texto": "\"Economiza muito tempo.\""
+                },
+                "bom": {
+                  "rotulo": "Número",
+                  "texto": "\"Economiza 3 horas por semana.\""
+                }
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "pitch",
+          "titulo": "Teu pitch de 1 minuto",
+          "palavras_min": 90,
+          "palavras_max": 200
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "...",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🐉",
+                "texto": "O dragão ouviu teu pitch em silêncio...",
+                "titulo": "O veredito",
+                "efeito": "..."
+              }
+            },
+            {
+              "texto": "Eu compraria. 🥹",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🥹",
+                "texto": "\"Eu compraria.\"",
+                "titulo": "O dragão foi domado",
+                "efeito": "UAU!"
+              }
+            },
+            {
+              "texto": "{nome}, você chegou aqui sem saber o que era um LLM. Agora você sabe **pedir bem**, **proteger dados**, **rodar código**, **integrar APIs** e **transformar uma ideia em produto**.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Tuas conquistas",
+                "itens": [
+                  {
+                    "icone": "🎯",
+                    "titulo": "Pedir bem",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🛡️",
+                    "titulo": "Proteger dados",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "💻",
+                    "titulo": "Rodar código",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "📡",
+                    "titulo": "Integrar APIs",
+                    "texto": ""
+                  },
+                  {
+                    "icone": "🚀",
+                    "titulo": "Criar produto",
+                    "texto": ""
+                  }
+                ]
+              }
+            },
+            "A IA vai continuar evoluindo. Mas o método que você aprendeu não muda: **pensar antes de pedir, entender antes de rodar e conferir sempre**.",
+            {
+              "texto": "Tua formação na Academia está completa. Vai lá pegar teu certificado. Foi uma honra ser teu professor!",
+              "cena": {
+                "tipo": "destaque",
+                "icone": "🎓",
+                "texto": "Tua formação na Academia Arcana de Elyndor está completa.",
+                "titulo": "Formatura",
+                "efeito": "FORMADO!"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

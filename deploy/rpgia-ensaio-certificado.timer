@@ -1,0 +1,10 @@
+[Unit]
+Description=Ensaio semanal da renovação do certificado (domingo de manhã)
+
+[Timer]
+OnCalendar=Sun *-*-* 06:00:00
+RandomizedDelaySec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

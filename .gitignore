@@ -1,0 +1,26 @@
+# Segredos e configuração local
+.env
+.claude/
+CLAUDE.md
+COMANDOS.txt
+
+# Dados dos jogadores (banco, backups, travas)
+dados/
+
+# Ambiente e arquivos gerados
+.venv/
+venv/
+__pycache__/
+*.pyc
+publicar/
+saida/
+
+# Artes de divulgação (pesadas, ficam fora do código)
+divulgacao/
+
+# Página de apresentação (publicada à parte)
+site/
+
+# Sistema
+.DS_Store
+Thumbs.db

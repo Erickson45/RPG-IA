@@ -1,0 +1,103 @@
+{
+  "puzzles": [
+    {
+      "id": "enigma-vale", "nome": "Pedra Rúnica do Vale", "movel": "runa", "regiao": "Vale de Elyndor", "tipo": "enigma",
+      "texto": "Sou um pedido escrito com cuidado. Tenho Papel, Contexto, Tarefa e Formato. Quanto melhor me escrevem, melhor a IA responde. O que sou?",
+      "opcoes": ["Um log", "Um bom prompt", "Um token", "Uma planilha"], "correta": 1,
+      "explicacao": "Um bom prompt P-C-T-F!", "recompensa": { "moedas": 25, "xp": 20 }
+    },
+    {
+      "id": "enigma-campos", "nome": "Baú do Moinho", "movel": "bau", "regiao": "Campos de Elyndor", "tipo": "ordem",
+      "texto": "O fazendeiro deixou um bilhete: \"coloque o ritual do primeiro script na ordem e o baú se abre\".",
+      "itens": ["Escrever o prompt pedindo o script", "Ler e entender o código", "Salvar o arquivo .py", "Rodar no terminal", "Se der erro, ler a última linha da mensagem"],
+      "explicacao": "Pedir, entender, salvar, rodar e ler o erro com calma.", "recompensa": { "moedas": 35, "xp": 25, "itens": { "pocao": 1 } }
+    },
+    {
+      "id": "enigma-floresta", "nome": "Totem dos Lobos", "movel": "runa", "regiao": "Floresta Uivante", "tipo": "enigma",
+      "texto": "O totem uiva uma pergunta: o que este feitiço mostra?",
+      "codigo": "uivos = ['auu', 'auuu', 'au']\nprint(max(uivos, key=len))",
+      "opcoes": ["au", "auu", "auuu", "3"], "correta": 2,
+      "explicacao": "max com key=len escolhe o mais comprido: 'auuu'.", "recompensa": { "moedas": 45, "xp": 35 }
+    },
+    {
+      "id": "enigma-torre", "nome": "Baú da Torre em Ruínas", "movel": "bau", "regiao": "Floresta Uivante", "tipo": "ordem",
+      "texto": "Gravado na tampa: \"Ordene o caminho de um script robusto e as engrenagens giram\".",
+      "itens": ["Ler o token da variável de ambiente", "Registrar no log que começou", "Chamar a API com timeout", "Conferir se os dados vieram completos", "Registrar o sucesso no log"],
+      "explicacao": "Segredo fora do código, log, timeout, validação e registro.", "recompensa": { "moedas": 50, "xp": 40, "itens": { "elixir": 1 } }
+    },
+    {
+      "id": "enigma-pantano", "nome": "Pedra do Brejo", "movel": "runa", "regiao": "Pântano das Alucinações", "tipo": "enigma",
+      "texto": "Uma voz borbulha da lama: \"Pareço verdade, tenho número e citação, mas fui inventada. Quem sou eu?\"",
+      "opcoes": ["Uma fonte oficial", "Uma alucinação", "Um backup", "Um commit"], "correta": 1,
+      "explicacao": "Alucinação: confere sempre na fonte!", "recompensa": { "moedas": 45, "xp": 35 }
+    },
+    {
+      "id": "enigma-bruxa", "nome": "Caldeirão da Bruxa", "movel": "bau", "regiao": "Pântano das Alucinações", "tipo": "ordem",
+      "texto": "A receita da poção da privacidade está embaralhada. Arruma a ordem!",
+      "itens": ["Identificar os dados pessoais no texto", "Trocar nomes por marcadores (Cliente A)", "Remover CPF, telefone e endereço", "Usar só a ferramenta aprovada", "Revisar o resultado antes de enviar"],
+      "explicacao": "Identificar, anonimizar, remover, ferramenta certa e revisão.", "recompensa": { "moedas": 55, "xp": 40, "itens": { "amuleto": 1 } }
+    },
+    {
+      "id": "enigma-deserto", "nome": "Obelisco das Dunas", "movel": "runa", "regiao": "Deserto dos Bugs", "tipo": "enigma",
+      "texto": "Hieróglifos brilham: \"Respondi 404. O que o viajante pediu?\"",
+      "opcoes": ["Algo que não existe naquele endereço", "Algo que deu certo", "Algo proibido por falta de login", "Algo que derrubou o servidor"], "correta": 0,
+      "explicacao": "404: o recurso não foi encontrado.", "recompensa": { "moedas": 60, "xp": 45 }
+    },
+    {
+      "id": "enigma-ruinas", "nome": "Baú das Ruínas", "movel": "bau", "regiao": "Deserto dos Bugs", "tipo": "ordem",
+      "texto": "As colunas antigas guardam o ritual do Git. Ordene para abrir.",
+      "itens": ["git pull", "git switch -c minha-melhoria", "editar e testar", "git add", "git commit -m \"mensagem clara\"", "git push"],
+      "explicacao": "Atualiza, cria a branch, trabalha, adiciona, commita e envia.", "recompensa": { "moedas": 70, "xp": 50, "itens": { "pergaminho": 2 } }
+    },
+    {
+      "id": "enigma-oasis", "nome": "Pedra do Oásis", "movel": "runa", "regiao": "Deserto dos Bugs", "tipo": "enigma",
+      "texto": "O oásis só mata a sede de quem responde: o que esta consulta devolve?",
+      "codigo": "SELECT COUNT(*) FROM camelos WHERE sede = 'muita';",
+      "opcoes": ["Os nomes dos camelos", "Quantos camelos estão com muita sede", "Apaga os camelos", "A média da sede"], "correta": 1,
+      "explicacao": "COUNT(*) com WHERE conta as linhas filtradas.", "recompensa": { "moedas": 60, "xp": 45 }
+    },
+    {
+      "id": "enigma-neve", "nome": "Runa Congelada", "movel": "runa", "regiao": "Montanhas do Dragão", "tipo": "enigma",
+      "texto": "A runa só derrete para quem sabe: num agente, quem executa as ferramentas?",
+      "opcoes": ["O próprio modelo, sozinho", "O código da aplicação, quando o modelo pede", "O usuário final", "A internet"], "correta": 1,
+      "explicacao": "O modelo pede; teu código decide e executa.", "recompensa": { "moedas": 80, "xp": 60 }
+    },
+    {
+      "id": "enigma-dragao", "nome": "Tesouro do Ninho do Dragão", "movel": "bau", "regiao": "Montanhas do Dragão", "tipo": "ordem",
+      "texto": "O dragão dorme sobre o tesouro. Monte o pipeline do RAG em silêncio para pegá-lo!",
+      "itens": ["Dividir os documentos em pedaços", "Gerar o embedding de cada pedaço", "Gerar o embedding da pergunta", "Buscar os pedaços mais parecidos", "Montar o prompt com os pedaços", "Responder citando a fonte"],
+      "explicacao": "Dividir, embutir, buscar e responder com fonte.", "recompensa": { "moedas": 120, "xp": 90, "itens": { "elixir": 2, "pocao": 2 } }
+    },
+    {
+      "id": "enigma-pico", "nome": "Pedra do Pico Gelado", "movel": "runa", "regiao": "Montanhas do Dragão", "tipo": "enigma",
+      "texto": "No topo do mundo, a última charada: \"Escondo ordens dentro de um e-mail ou site, esperando que a IA me obedeça. Quem sou?\"",
+      "opcoes": ["Um embedding", "Um prompt injection", "Um timeout", "Uma branch"], "correta": 1,
+      "explicacao": "Prompt injection: conteúdo de fora é dado, nunca ordem.", "recompensa": { "moedas": 100, "xp": 80 }
+    },
+    {
+      "id": "enigma-espantalho", "nome": "Espantalho do Script", "movel": "runa", "regiao": "Campos de Elyndor", "tipo": "lacuna",
+      "texto": "O espantalho segura um pergaminho rasgado. Completa a lacuna para ele cumprimentar todos os fazendeiros.",
+      "codigo": "fazendeiros = [\"Ana\", \"Bia\", \"Caio\"]\nfor nome in ____:\n    print(\"Olá,\", nome)",
+      "opcoes": ["nome", "fazendeiros", "print", "range"], "correta": 1,
+      "explicacao": "O for passa por cada item da lista fazendeiros.", "recompensa": { "moedas": 40, "xp": 30 }
+    },
+    {
+      "id": "enigma-arvore", "nome": "Árvore das Verdades", "movel": "runa", "regiao": "Floresta Uivante", "tipo": "relampago",
+      "texto": "As folhas sussurram rápido: verdadeiro ou falso? Responde as quatro antes que o vento leve as palavras.",
+      "afirmacoes": [
+        { "texto": "Uma IA pode inventar fontes que parecem reais.", "verdade": true },
+        { "texto": "Colar a senha do sistema no chat da IA tudo bem, se a conversa for rápida.", "verdade": false },
+        { "texto": "Um prompt com contexto e formato costuma dar respostas melhores.", "verdade": true },
+        { "texto": "Se a IA respondeu com confiança, não precisa conferir.", "verdade": false }
+      ],
+      "explicacao": "IA alucina, senha nunca vai no chat, contexto ajuda e conferir é sempre preciso.", "recompensa": { "moedas": 55, "xp": 45, "itens": { "pocao": 1 } }
+    },
+    {
+      "id": "enigma-miragem", "nome": "Miragem do Servidor", "movel": "bau", "regiao": "Deserto dos Bugs", "tipo": "lacuna",
+      "texto": "O baú só abre para um script que confere se a resposta veio certa. Completa a lacuna.",
+      "codigo": "resposta = requests.get(url, timeout=10)\nif resposta.status_code == ____:\n    tesouro = resposta.json()",
+      "opcoes": ["404", "500", "200", "301"], "correta": 2,
+      "explicacao": "200 é o OK do HTTP: só aí vale ler o JSON.", "recompensa": { "moedas": 75, "xp": 55, "itens": { "elixir": 1 } }
+    }
+  ]
+}

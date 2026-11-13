@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Mascotes</title>
+<style>
+  body { margin: 0; padding: 16px; background: #2f6b45; color: #fff; font: 13px sans-serif; }
+  .linha { display: flex; gap: 6px; align-items: flex-end; margin-bottom: 10px; }
+  .linha b { width: 80px; }
+  canvas { image-rendering: pixelated; width: auto; height: 84px; }
+</style>
+</head>
+<body>
+<div id="lista"></div>
+<script src="../js/pixel.js"></script>
+<script src="../js/bestiario.js"></script>
+<script>
+  const ids = { coelho: "#e8e4f0", lobo: "#8a8fa3", lume: "#2fd6e8", tartaruga: "#4a7a5a", cristal: "#9fe8ff", gato: "#2b2540", raposa: "#e8742a" };
+  window.ERROS = [];
+  for (const [id, cor] of Object.entries(ids)) {
+    const linha = document.createElement("div");
+    linha.className = "linha";
+    linha.innerHTML = `<b>${id}</b>`;
+    try {
+      const a = mascoteArte(id, cor);
+      [...a.parado, ...a.correndo].forEach((c) => { c.style.height = `${c.height * 3}px`; linha.append(c); });
+    } catch (e) { ERROS.push(id + ": " + e.message); }
+    document.getElementById("lista").append(linha);
+  }
+</script>
+</body>
+</html>

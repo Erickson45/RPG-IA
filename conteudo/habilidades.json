@@ -1,0 +1,50 @@
+{
+  "legenda": {
+    "pontos": "o herói ganha 1 ponto por nível acima do 1 e 1 por chefão vencido",
+    "custo": "pontos gastos para aprender; cada habilidade pede a anterior do mesmo ramo",
+    "lenda": "a habilidade do topo da árvore: pede várias habilidades de 3 pontos (requer_finais)",
+    "preco_reiniciar": "moedas para devolver todos os pontos e montar a árvore de novo"
+  },
+  "preco_reiniciar": 50,
+  "bonus_fortuna": 0.2,
+  "chance_faro": 0.25,
+  "ramos": [
+    {
+      "id": "ataque", "nome": "Lâmina", "icone": "⚔️", "cor": "#ff6b7a", "descricao": "Derruba monstros mais rápido.",
+      "habilidades": [
+        { "id": "primeiro-golpe", "nome": "Primeiro Golpe", "icone": "🗡️", "custo": 1, "descricao": "O primeiro acerto de cada batalha tira 1 de vida a mais.", "frase": "Quem bate primeiro faz o commit inicial." },
+        { "id": "sequencia", "nome": "Sequência Arcana", "icone": "🔗", "custo": 2, "descricao": "A cada 3 acertos seguidos na mesma batalha, o terceiro tira 1 de vida a mais.", "frase": "Três acertos seguidos? Isso já é um pipeline." },
+        { "id": "golpe-mestre", "nome": "Golpe de Mestre", "icone": "💥", "custo": 3, "descricao": "O golpe certeiro do domínio já vale a partir da patente Aprendiz.", "frase": "Sênior não é cargo, é estado de espírito." }
+      ]
+    },
+    {
+      "id": "defesa", "nome": "Guardião", "icone": "🛡️", "cor": "#7fb2ff", "descricao": "Aguenta mais tempo de pé.",
+      "habilidades": [
+        { "id": "pele", "nome": "Pele de Pergaminho", "icone": "❤️", "custo": 1, "descricao": "+1 coração de vida máxima.", "frase": "Couro grosso de quem já leu muita documentação." },
+        { "id": "esquiva", "nome": "Esquiva", "icone": "💨", "custo": 2, "descricao": "O primeiro erro de cada batalha não tira vida.", "frase": "Ctrl+Z no golpe do monstro." },
+        { "id": "segunda-chance", "nome": "Segunda Chance", "icone": "🕊️", "custo": 3, "descricao": "Desmaiar não custa moedas: os aprendizes te carregam de graça.", "frase": "O RH entende: foi só um desmaio." }
+      ]
+    },
+    {
+      "id": "magia", "nome": "Arcano", "icone": "🔮", "cor": "#a98bff", "descricao": "Mais magias por batalha.",
+      "habilidades": [
+        { "id": "poco-mana", "nome": "Poço de Mana", "icone": "💧", "custo": 1, "descricao": "+1 de mana máxima.", "frase": "Um café extra no copo arcano." },
+        { "id": "fluxo", "nome": "Fluxo Arcano", "icone": "🌊", "custo": 2, "descricao": "Cada acerto devolve 1 de mana a mais.", "frase": "Mana em streaming, sem buffering." },
+        { "id": "eco", "nome": "Eco do Grimório", "icone": "📖", "custo": 3, "descricao": "A primeira magia de cada batalha é de graça.", "frase": "A primeira é por conta da casa." }
+      ]
+    },
+    {
+      "id": "fortuna", "nome": "Explorador", "icone": "🪙", "cor": "#f5c451", "descricao": "Ganha mais com cada aventura.",
+      "habilidades": [
+        { "id": "bolso", "nome": "Bolso Fundo", "icone": "👝", "custo": 1, "descricao": "+20% de moedas dos monstros e das missões.", "frase": "Armazenamento ilimitado. Na nuvem, claro." },
+        { "id": "curiosa", "nome": "Mente Curiosa", "icone": "🧠", "custo": 2, "descricao": "+20% de XP dos monstros e das missões.", "frase": "Lê até os termos de uso." },
+        { "id": "faro", "nome": "Faro de Tesouro", "icone": "🗝️", "custo": 3, "descricao": "25% de chance de achar uma Poção da Clareza ao vencer um monstro.", "frase": "Fareja tesouro igual estagiário fareja bolo na copa." }
+      ]
+    }
+  ],
+  "lenda": {
+    "id": "experiencia", "nome": "Tenho 20 Anos de Experiência", "icone": "🧓", "custo": 4, "requer_finais": 2,
+    "descricao": "Uma vez por batalha, mesmo respondendo errado, tu convences o monstro de que estava certo.",
+    "frase": "Eu já fazia isso antes de inventarem o computador."
+  }
+}

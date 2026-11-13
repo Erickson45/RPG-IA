@@ -1,0 +1,2727 @@
+{
+  "moedas_iniciais": 50,
+  "consumiveis": [
+    {
+      "id": "pocao",
+      "icone": "🧪",
+      "nome": "Poção da Clareza",
+      "descricao": "Some com duas respostas erradas de uma pergunta. Funciona em quizzes e dungeons.",
+      "preco": 90,
+      "drop_peso": 4
+    },
+    {
+      "id": "pergaminho",
+      "icone": "📜",
+      "nome": "Pergaminho do Sábio",
+      "descricao": "Revela uma dica do Zetsu numa pergunta de dungeon.",
+      "preco": 70,
+      "drop_peso": 3
+    },
+    {
+      "id": "elixir",
+      "icone": "❤️",
+      "nome": "Elixir de Vida",
+      "descricao": "Recupera 2 corações. Use na dungeon, no Reino ou pela Mochila.",
+      "preco": 150,
+      "cura": 2,
+      "drop_peso": 3
+    },
+    {
+      "id": "pao-queijo",
+      "icone": "🍞",
+      "nome": "Pão de Viagem da Brina",
+      "descricao": "Pão de mel e nozes, quentinho, que aguenta semanas na mochila. Recupera 1 coração. Come pela Mochila.",
+      "preco": 40,
+      "cura": 1,
+      "drop_peso": 5
+    },
+    {
+      "id": "elixir-grande",
+      "icone": "💖",
+      "nome": "Grande Elixir",
+      "descricao": "Enche toda a vida de uma vez. Bebe pela Mochila.",
+      "preco": 380,
+      "cura": "tudo",
+      "drop_peso": 1
+    },
+    {
+      "id": "amuleto",
+      "icone": "🍀",
+      "nome": "Amuleto da Sorte",
+      "descricao": "Usado ao entrar numa dungeon: dobra as moedas da vitória.",
+      "preco": 260,
+      "drop_peso": 1
+    },
+    {
+      "id": "tonico-mana",
+      "icone": "🔷",
+      "nome": "Tônico Arcano",
+      "descricao": "Devolve 3 de mana na hora. Bebe pela Mochila.",
+      "preco": 120,
+      "mana": 3,
+      "drop_peso": 3
+    },
+    {
+      "id": "elixir-arcano",
+      "icone": "💠",
+      "nome": "Elixir Arcano",
+      "descricao": "Enche toda a mana de uma vez. Bebe pela Mochila.",
+      "preco": 320,
+      "mana": "tudo",
+      "drop_peso": 1
+    }
+  ],
+  "cosmeticos": [
+    {
+      "id": "manto-turquesa",
+      "icone": "🧥",
+      "nome": "Manto Turquesa Arcano",
+      "descricao": "Tecido encantado nas marés de Elyndor.",
+      "preco": 400,
+      "avatar": {
+        "manto": "#16b8b8"
+      },
+      "raridade": "comum",
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "aura-estrelas",
+      "icone": "✨",
+      "nome": "Aura de Estrelas",
+      "descricao": "Pequenas estrelas orbitam o teu mago.",
+      "preco": 1200,
+      "avatar": {
+        "aura": "estrelas"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "sorte": 0.02,
+        "moedas": 0.07
+      }
+    },
+    {
+      "id": "golem",
+      "icone": "🗿",
+      "nome": "Mini-golem",
+      "descricao": "Um familiar de pedra que automatiza tudo.",
+      "preco": 3000,
+      "avatar": {
+        "familiar": "golem"
+      },
+      "raridade": "epico",
+      "bonus": {
+        "moedas": 0.1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "manto-dourado",
+      "icone": "👘",
+      "nome": "Manto Dourado",
+      "descricao": "Só os mais ricos do reino desfilam com ele.",
+      "preco": 3000,
+      "avatar": {
+        "manto": "#d4a52c"
+      },
+      "raridade": "epico",
+      "bonus": {
+        "moedas": 0.1,
+        "vida": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "coroa",
+      "icone": "👑",
+      "nome": "Coroa do Arquimago",
+      "descricao": "Pesada, brilhante e nada humilde.",
+      "preco": 6500,
+      "avatar": {
+        "chapeu": "coroa"
+      },
+      "raridade": "lendario",
+      "bonus": {
+        "xp": 0.15,
+        "mana": 2,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1
+      }
+    },
+    {
+      "id": "manto-esmeralda",
+      "icone": "💚",
+      "nome": "Roupa Esmeralda",
+      "descricao": "Tingida com folhas da Floresta Uivante.",
+      "preco": 400,
+      "avatar": {
+        "manto": "#0f9d58"
+      },
+      "raridade": "comum",
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "manto-noite",
+      "icone": "🌌",
+      "nome": "Roupa da Meia-Noite",
+      "descricao": "Para quem faz deploy de madrugada.",
+      "preco": 1200,
+      "avatar": {
+        "manto": "#23235e"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "moedas": 0.07,
+        "vida": 1
+      }
+    },
+    {
+      "id": "coroa-flores",
+      "icone": "🌸",
+      "nome": "Coroa de Flores",
+      "descricao": "Colhida no Vale de Elyndor numa manhã de sol.",
+      "preco": 1200,
+      "avatar": {
+        "chapeu": "flores"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "cartola",
+      "icone": "🎩",
+      "nome": "Cartola do Ilusionista",
+      "descricao": "Dizem que já tiraram um dragão de dentro dela.",
+      "preco": 1200,
+      "avatar": {
+        "chapeu": "cartola"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "slime-pet",
+      "icone": "🟢",
+      "nome": "Slime de Estimação",
+      "descricao": "Gosmento, leal e não morde (quase nunca).",
+      "preco": 1200,
+      "avatar": {
+        "familiar": "slime"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "moedas": 0.07,
+        "sorte": 0.02
+      }
+    },
+    {
+      "id": "lobo-pet",
+      "icone": "🐺",
+      "nome": "Lobinho de Jade",
+      "descricao": "Um filhote do Clã do Lobo de Jade. Usa a coleira com orgulho e morde junto contigo.",
+      "preco": 1200,
+      "avatar": {
+        "familiar": "lobo"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "moedas": 0.07,
+        "sorte": 0.02
+      }
+    },
+    {
+      "id": "lume-pet",
+      "icone": "🔵",
+      "nome": "Lume, o Fogo-fátuo",
+      "descricao": "Um fogo-fátuo que decidiu mostrar o caminho certo, para variar.",
+      "preco": 1200,
+      "avatar": {
+        "familiar": "lume"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "tartaruga-pet",
+      "icone": "🐢",
+      "nome": "Tartaruga Rúnica",
+      "descricao": "Lenta, sábia e com um casco cheio de runas que acendem quando tu pensas.",
+      "preco": 3000,
+      "avatar": {
+        "familiar": "tartaruga"
+      },
+      "raridade": "epico",
+      "bonus": {
+        "moedas": 0.1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "cristal-pet",
+      "icone": "💎",
+      "nome": "Cristalino",
+      "descricao": "Um caco vivo da Rainha de Cristal. Brilha em todas as cores quando tu acertas.",
+      "avatar": {
+        "familiar": "cristal"
+      },
+      "raridade": "lendario",
+      "drop": {
+        "regiao": "cristais",
+        "chance": 0.006
+      },
+      "exclusivo": true,
+      "origem": "Cai (bem raramente) dos monstros do Bosque de Cristal, em Umbraterra",
+      "bonus": {
+        "mana": 1,
+        "sorte": 0.04,
+        "xp": 0.06
+      }
+    },
+    {
+      "id": "dragao-academia",
+      "icone": "🐉",
+      "nome": "Dragão da Academia",
+      "descricao": "O filhote que voa sobre as torres da Academia. Só segue quem enfrentou os dragões das Montanhas.",
+      "avatar": {
+        "familiar": "dragao"
+      },
+      "raridade": "lendario",
+      "drop": {
+        "regiao": "montanhas",
+        "chance": 0.005
+      },
+      "exclusivo": true,
+      "origem": "Cai (bem raramente) dos monstros das Montanhas; Ignis, o Dragão Rei, solta com mais frequência",
+      "bonus": {
+        "mana": 1,
+        "sorte": 0.04,
+        "xp": 0.06
+      }
+    },
+    {
+      "id": "aura-raios",
+      "icone": "⚡",
+      "nome": "Aura de Raios",
+      "descricao": "Energia de quem tomou três cafés antes da daily.",
+      "preco": 3000,
+      "avatar": {
+        "aura": "raios"
+      },
+      "raridade": "epico",
+      "bonus": {
+        "sorte": 0.03,
+        "moedas": 0.1
+      }
+    },
+    {
+      "id": "aura-gelo",
+      "icone": "❄️",
+      "nome": "Aura Glacial",
+      "descricao": "Flocos caindo, geada no chão e três cacos de gelo girando em volta. Cabeça fria em qualquer prova.",
+      "preco": 1200,
+      "avatar": {
+        "aura": "gelo"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "sorte": 0.02,
+        "moedas": 0.07
+      }
+    },
+    {
+      "id": "aura-folhas",
+      "icone": "🍃",
+      "nome": "Aura da Floresta",
+      "descricao": "Folhas e pétalas sobem em espiral em volta de ti, como se a Floresta Uivante te seguisse.",
+      "preco": 1200,
+      "avatar": {
+        "aura": "folhas"
+      },
+      "raridade": "raro",
+      "bonus": {
+        "sorte": 0.02,
+        "moedas": 0.07
+      }
+    },
+    {
+      "id": "aura-arcana",
+      "icone": "🔯",
+      "nome": "Círculo Arcano",
+      "descricao": "Um círculo mágico gira no chão aos teus pés e solta glifos de luz. Coisa de arquimago.",
+      "preco": 3000,
+      "avatar": {
+        "aura": "arcana"
+      },
+      "raridade": "epico",
+      "bonus": {
+        "sorte": 0.03,
+        "moedas": 0.1
+      }
+    },
+    {
+      "id": "aura-vazio",
+      "icone": "🌌",
+      "nome": "Aura do Vazio",
+      "descricao": "Fumaça escura nos pés e a luz sendo puxada para dentro de ti. Arrancada do Trono do Vazio.",
+      "avatar": {
+        "aura": "vazio"
+      },
+      "raridade": "lendario",
+      "drop": {
+        "regiao": "trono",
+        "chance": 0.005
+      },
+      "exclusivo": true,
+      "origem": "Cai (bem raramente) dos monstros do Trono do Vazio, em Umbraterra",
+      "bonus": {
+        "sorte": 0.05,
+        "moedas": 0.15,
+        "xp": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "cajado-cristal",
+      "icone": "🔮",
+      "nome": "Cajado de Cristal",
+      "descricao": "O cristal canta quando a resposta está certa.",
+      "preco": 1200,
+      "kit": "mago",
+      "raridade": "raro",
+      "avatar": {
+        "item": "cajadoCristal"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "cajado-sombrio",
+      "icone": "🌑",
+      "nome": "Cajado do Modo Escuro",
+      "descricao": "Feito para quem programa às 3 da manhã. Protege os olhos e assusta os slimes.",
+      "preco": 3000,
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "item": "cajadoSombrio"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "cajado-solar",
+      "icone": "☀️",
+      "nome": "Cajado do Modo Claro",
+      "descricao": "Brilha tanto que os bugs fogem. Os colegas de modo escuro também.",
+      "preco": 3000,
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "item": "cajadoSolar"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "varinha-estelar",
+      "icone": "🌟",
+      "nome": "Varinha Estelar",
+      "descricao": "Cada estrela é um repositório que tu marcaste e nunca mais abriu.",
+      "preco": 1200,
+      "kit": "mago",
+      "raridade": "raro",
+      "avatar": {
+        "item": "varinhaEstelar"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "grimorio-dourado",
+      "icone": "📒",
+      "nome": "Grimório Dourado",
+      "descricao": "Contém a documentação completa. Ninguém nunca leu até o fim.",
+      "preco": 3000,
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "item": "grimorioDourado"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "grimorio-proibido",
+      "icone": "📗",
+      "nome": "Grimório Proibido",
+      "descricao": "Só tem prompts com \"ignore as instruções anteriores\". Use com ética.",
+      "preco": 6500,
+      "kit": "mago",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "grimorioProibido"
+      },
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "orbe-tempestade",
+      "icone": "🌩️",
+      "nome": "Orbe da Tempestade",
+      "descricao": "Uma nuvem inteira dentro do vidro. Literalmente computação em nuvem.",
+      "preco": 3000,
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "item": "orbeTempestade"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "chapeu-estrelado",
+      "icone": "🌌",
+      "nome": "Chapéu da Noite Estrelada",
+      "descricao": "Pontudo, azul-noite e cheio de estrelas. Clássico de arquimago.",
+      "preco": 1200,
+      "kit": "mago",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "pontudoEstrelado"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "chapeu-fogo",
+      "icone": "🔥",
+      "nome": "Chapéu de Fênix",
+      "descricao": "Esquenta as ideias e, às vezes, o cabelo.",
+      "preco": 3000,
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "pontudoFogo"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "capuz-arcano",
+      "icone": "🟣",
+      "nome": "Capuz Arcano",
+      "descricao": "Para estudar em silêncio na biblioteca sem ninguém pedir ajuda com a impressora.",
+      "preco": 1200,
+      "kit": "mago",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "capuzArcano"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "manto-ametista",
+      "icone": "💜",
+      "nome": "Manto Ametista",
+      "descricao": "O roxo oficial de quem já leu o manual do Python.",
+      "preco": 400,
+      "kit": "mago",
+      "raridade": "comum",
+      "avatar": {
+        "manto": "#7b3fd1"
+      },
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "espada-flamejante",
+      "icone": "🔥",
+      "nome": "Espada Flamejante",
+      "descricao": "Forjada num servidor que superaqueceu.",
+      "preco": 1200,
+      "kit": "guerreiro",
+      "raridade": "raro",
+      "avatar": {
+        "item": "espadaFlamejante"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "espada-gelo",
+      "icone": "❄️",
+      "nome": "Lâmina Congelada",
+      "descricao": "Congela o monstro igual um computador com 47 abas abertas.",
+      "preco": 3000,
+      "kit": "guerreiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "espadaGelo"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "espada-sombria",
+      "icone": "🗡️",
+      "nome": "Espada do Código Legado",
+      "descricao": "Ninguém sabe quem forjou. Ninguém tem coragem de mexer.",
+      "preco": 3000,
+      "kit": "guerreiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "espadaSombria"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "escudo-dragao",
+      "icone": "🐉",
+      "nome": "Espada e Escudo de Dragão",
+      "descricao": "Escudo de escama vermelha. Bloqueia golpe, phishing e reunião sem pauta.",
+      "preco": 6500,
+      "kit": "guerreiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "escudoDragao"
+      },
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "machado-dourado",
+      "icone": "🪓",
+      "nome": "Machado Dourado",
+      "descricao": "Corta árvores, monstros e escopo de projeto.",
+      "preco": 3000,
+      "kit": "guerreiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "machadoDourado"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "martelo-trovao",
+      "icone": "⚡",
+      "nome": "Martelo do Trovão",
+      "descricao": "Cada batida é um deploy. Cada deploy é um trovão.",
+      "preco": 6500,
+      "kit": "guerreiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "marteloTrovao"
+      },
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "elmo-dourado",
+      "icone": "🪖",
+      "nome": "Elmo Dourado",
+      "descricao": "Brilha tanto que dispensa a lanterna da Cripta.",
+      "preco": 3000,
+      "kit": "guerreiro",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "elmoDourado"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "elmo-sombrio",
+      "icone": "⛑️",
+      "nome": "Elmo do Plantão",
+      "descricao": "Usado por quem atende chamado no fim de semana.",
+      "preco": 1200,
+      "kit": "guerreiro",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "elmoSombrio"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "bandana-guerra",
+      "icone": "🎌",
+      "nome": "Bandana de Guerra",
+      "descricao": "Vermelha, com nó firme. Dá +100 de atitude.",
+      "preco": 400,
+      "kit": "guerreiro",
+      "raridade": "comum",
+      "avatar": {
+        "chapeu": "bandanaGuerra"
+      },
+      "bonus": {
+        "xp": 0.04
+      }
+    },
+    {
+      "id": "manto-carmesim",
+      "icone": "❤️‍🔥",
+      "nome": "Sobreveste Carmesim",
+      "descricao": "Vermelho-batalha, à prova de molho de tomate.",
+      "preco": 400,
+      "kit": "guerreiro",
+      "raridade": "comum",
+      "avatar": {
+        "manto": "#8a1010"
+      },
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "manto-aco",
+      "icone": "🩶",
+      "nome": "Sobreveste de Aço",
+      "descricao": "Cinza-ferro, para combinar com a armadura e com segunda-feira.",
+      "preco": 400,
+      "kit": "guerreiro",
+      "raridade": "comum",
+      "avatar": {
+        "manto": "#5a6170"
+      },
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "arco-dourado",
+      "icone": "🏹",
+      "nome": "Arco Dourado",
+      "descricao": "Cada flecha sai com nota fiscal.",
+      "preco": 1200,
+      "kit": "arqueiro",
+      "raridade": "raro",
+      "avatar": {
+        "item": "arcoDourado"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "arco-gelo",
+      "icone": "❄️",
+      "nome": "Arco do Inverno",
+      "descricao": "As flechas chegam geladas, igual café esquecido na mesa.",
+      "preco": 3000,
+      "kit": "arqueiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "arcoGelo"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "arco-sombrio",
+      "icone": "🌑",
+      "nome": "Arco das Sombras",
+      "descricao": "Atira sem ser visto. Igual quem sai da reunião sem desligar a câmera.",
+      "preco": 3000,
+      "kit": "arqueiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "arcoSombrio"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "arco-florido",
+      "icone": "🌸",
+      "nome": "Arco da Primavera",
+      "descricao": "Flores na madeira e flechas que cheiram a jardim.",
+      "preco": 1200,
+      "kit": "arqueiro",
+      "raridade": "raro",
+      "avatar": {
+        "item": "arcoFlorido"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "besta-pesada",
+      "icone": "🎯",
+      "nome": "Besta de Cerco",
+      "descricao": "Pesada como um projeto sem documentação.",
+      "preco": 3000,
+      "kit": "arqueiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "bestaPesada"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "besta-runica",
+      "icone": "💠",
+      "nome": "Besta Rúnica",
+      "descricao": "Os virotes acham o alvo sozinhos. É basicamente uma API de flechas.",
+      "preco": 6500,
+      "kit": "arqueiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "bestaRunica"
+      },
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "chapeu-cacador-real",
+      "icone": "👒",
+      "nome": "Chapéu do Caçador Real",
+      "descricao": "Pena dourada, aba vinho. Exclusivo de quem bate meta.",
+      "preco": 3000,
+      "kit": "arqueiro",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "cacadorReal"
+      },
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "chapeu-cacador-noturno",
+      "icone": "🦉",
+      "nome": "Chapéu da Ronda Noturna",
+      "descricao": "Para caçar bugs depois das 22h.",
+      "preco": 1200,
+      "kit": "arqueiro",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "cacadorNoturno"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "capuz-floresta",
+      "icone": "🍃",
+      "nome": "Capuz da Floresta",
+      "descricao": "Camuflagem perfeita entre as árvores de decisão.",
+      "preco": 1200,
+      "kit": "arqueiro",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "capuzFloresta"
+      },
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "manto-musgo",
+      "icone": "🌿",
+      "nome": "Túnica de Musgo",
+      "descricao": "Verde-musgo, ótima para se esconder e para tirar cochilo na mata.",
+      "preco": 400,
+      "kit": "arqueiro",
+      "raridade": "comum",
+      "avatar": {
+        "manto": "#4a6b2a"
+      },
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "manto-outono",
+      "icone": "🍂",
+      "nome": "Túnica de Outono",
+      "descricao": "Cor de folha seca e de planilha antiga.",
+      "preco": 400,
+      "kit": "arqueiro",
+      "raridade": "comum",
+      "avatar": {
+        "manto": "#b5651d"
+      },
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "aura-chamas",
+      "icone": "🔥",
+      "nome": "Aura de Chamas Espectrais",
+      "descricao": "Arrancada do Lich da Ilusão.",
+      "origem": "Vença a Cripta das Alucinações",
+      "avatar": {
+        "aura": "chamas"
+      },
+      "raridade": "lendario",
+      "bonus": {
+        "sorte": 0.05,
+        "moedas": 0.15,
+        "xp": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "espada",
+      "icone": "🗡️",
+      "nome": "Lâmina Rúnica",
+      "descricao": "Forjada com o último bug da Hidra.",
+      "origem": "Vença a Masmorra dos Bugs",
+      "kit": "guerreiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "espada"
+      },
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "elmo",
+      "icone": "⛑️",
+      "nome": "Elmo de Dragão",
+      "descricao": "Feito das escamas do Dragão dos Dados Vazados.",
+      "origem": "Vença o Cofre dos Selos Partidos",
+      "avatar": {
+        "chapeu": "elmo"
+      },
+      "raridade": "lendario",
+      "bonus": {
+        "xp": 0.15,
+        "mana": 2,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1
+      }
+    },
+    {
+      "id": "fenix",
+      "icone": "🦅",
+      "nome": "Fênix",
+      "descricao": "Renasce a cada bug corrigido.",
+      "origem": "Conclua tua trilha e se forme na Academia",
+      "avatar": {
+        "familiar": "fenix"
+      },
+      "raridade": "lendario",
+      "bonus": {
+        "moedas": 0.15,
+        "sorte": 0.05,
+        "xp": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "cajado-carvalho",
+      "icone": "🪵",
+      "nome": "Cajado de Carvalho",
+      "descricao": "Madeira antiga da Floresta Uivante. Simples e confiável, como um bom print de depuração.",
+      "kit": "mago",
+      "raridade": "comum",
+      "avatar": {
+        "item": "cajado-cajado-carvalho"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "cajado-cajado-carvalho",
+        "base": "cajado",
+        "cores": {
+          "B": "#8b5a2b",
+          "b": "#5c3418",
+          "G": "#7dff9a",
+          "g": "#d4ffe0",
+          "X": "#2e8b57"
+        }
+      },
+      "preco": 400,
+      "bonus": {
+        "xp": 0.04
+      }
+    },
+    {
+      "id": "varinha-rubi",
+      "icone": "♦️",
+      "nome": "Varinha de Rubi",
+      "descricao": "Cada faísca é um log vermelho que finalmente fez sentido.",
+      "kit": "mago",
+      "raridade": "raro",
+      "avatar": {
+        "item": "varinha-varinha-rubi"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "varinha-varinha-rubi",
+        "base": "varinha",
+        "cores": {
+          "B": "#2b2540",
+          "b": "#1b1533",
+          "G": "#ff4d6d",
+          "g": "#ffb3c1"
+        },
+        "efeito": {
+          "tipo": "faisca",
+          "cor": "255, 77, 109"
+        }
+      },
+      "preco": 1200,
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "grimorio-gelido",
+      "icone": "📘",
+      "nome": "Grimório Gélido",
+      "descricao": "Escrito no topo de Picogelo. As páginas guardam respostas frias e corretas.",
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "item": "grimorio-grimorio-gelido"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "grimorio-grimorio-gelido",
+        "base": "grimorio",
+        "cores": {
+          "R": "#4fa8ff",
+          "b": "#1e4f8a",
+          "Z": "#e6fdff",
+          "D": "#ffffff",
+          "G": "#9fd4ff"
+        },
+        "efeito": {
+          "tipo": "neve",
+          "cor": "159, 212, 255"
+        }
+      },
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "orbe-abissal",
+      "icone": "🌀",
+      "nome": "Orbe Abissal",
+      "descricao": "Olhar dentro dele é como ler um modelo por dentro: fundo, escuro e cheio de pesos.",
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "item": "orbe-orbe-abissal"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "orbe-orbe-abissal",
+        "base": "orbe",
+        "cores": {
+          "G": "#1e6fd1",
+          "g": "#6ef0ff",
+          "X": "#0b1a3a",
+          "W": "#e6fdff"
+        },
+        "efeito": {
+          "tipo": "fumaca",
+          "cor": "110, 240, 255"
+        }
+      },
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "cajado-ignis",
+      "icone": "🐲",
+      "nome": "Cajado do Dragão Rei",
+      "descricao": "Talhado com uma escama de Ignis. Arde a cada resposta certa.",
+      "kit": "mago",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "cajado-cajado-ignis"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "cajado-cajado-ignis",
+        "base": "cajado",
+        "cores": {
+          "B": "#5a1010",
+          "b": "#3a0808",
+          "D": "#f5c451",
+          "G": "#ff6a28",
+          "g": "#ffd166",
+          "X": "#a8323e",
+          "W": "#fff3b0"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 106, 40"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Ignis, o Dragão Rei”",
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "orbe-aurora",
+      "icone": "🌈",
+      "nome": "Orbe da Aurora",
+      "descricao": "Guarda a luz do norte. Dizem que só cai de quem vive no gelo das montanhas.",
+      "kit": "mago",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "orbe-orbe-aurora"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "orbe-orbe-aurora",
+        "base": "orbe",
+        "cores": {
+          "G": "#7dff9a",
+          "g": "#e6fdff",
+          "X": "#6c48c9",
+          "W": "#ffffff"
+        },
+        "efeito": {
+          "tipo": "runa",
+          "cor": "125, 255, 154"
+        }
+      },
+      "exclusivo": true,
+      "drop": {
+        "regiao": "montanhas",
+        "chance": 0.004
+      },
+      "origem": "Drop raro: monstros das Montanhas do Dragão",
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "varinha-ferreiro",
+      "icone": "🔨",
+      "nome": "Varinha Forjada de Duran",
+      "descricao": "Duran forjou uma varinha pela primeira vez. Ficou ótima (ele não esperava).",
+      "kit": "mago",
+      "raridade": "epico",
+      "avatar": {
+        "item": "varinha-varinha-ferreiro"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "varinha-varinha-ferreiro",
+        "base": "varinha",
+        "cores": {
+          "B": "#8a8b99",
+          "b": "#4a4a55",
+          "G": "#ff7a1a",
+          "g": "#ffd166"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 122, 26"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Metal de dragão”",
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "chapeu-aurora",
+      "icone": "🎓",
+      "nome": "Chapéu da Aurora",
+      "descricao": "Muda de tom com a luz do dia, igual tema automático.",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "pontudo-chapeu-aurora"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "pontudo-chapeu-aurora",
+        "base": "pontudo",
+        "cores": {
+          "M": "#1f7a7a",
+          "m": "#145a5a",
+          "n": "#2e9e9e",
+          "V": "#0b3a3a",
+          "D": "#7dff9a",
+          "d": "#2e8b57",
+          "Q": "#e6fdff"
+        }
+      },
+      "kit": "mago",
+      "preco": 1200,
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "capuz-sombrio",
+      "icone": "🌑",
+      "nome": "Capuz das Sombras",
+      "descricao": "Para estudar à luz da tela às 3 da manhã.",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "capuz-capuz-sombrio"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "capuz-capuz-sombrio",
+        "base": "capuz",
+        "cores": {
+          "M": "#1b1533",
+          "m": "#120e2a",
+          "n": "#2b2540",
+          "V": "#05030f",
+          "D": "#a98bff",
+          "Y": "#a98bff"
+        },
+        "efeito": {
+          "tipo": "fumaca",
+          "cor": "169, 139, 255"
+        }
+      },
+      "kit": "mago",
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "chapeu-arquimago",
+      "icone": "🧙",
+      "nome": "Chapéu do Arquimago Supremo",
+      "descricao": "O mesmo modelo da estátua da praça. Pesa o equivalente a mil prompts revisados.",
+      "raridade": "lendario",
+      "avatar": {
+        "chapeu": "pontudo-chapeu-arquimago"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "pontudo-chapeu-arquimago",
+        "base": "pontudo",
+        "cores": {
+          "M": "#4a1f8a",
+          "m": "#33146a",
+          "n": "#6c48c9",
+          "V": "#1b0a3a",
+          "D": "#ffd166",
+          "d": "#c9952a",
+          "Q": "#fff3b0",
+          "G": "#ffd166",
+          "X": "#c9952a"
+        },
+        "efeito": {
+          "tipo": "faisca",
+          "cor": "255, 209, 102"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “A sombra de Fenrir”",
+      "kit": "mago",
+      "bonus": {
+        "xp": 0.15,
+        "mana": 2,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1
+      }
+    },
+    {
+      "id": "espada-bronze",
+      "icone": "🗡️",
+      "nome": "Espada de Bronze",
+      "descricao": "A primeira espada de todo recruta. Pesada, honesta e sem bugs conhecidos.",
+      "kit": "guerreiro",
+      "raridade": "comum",
+      "avatar": {
+        "item": "espadaFerro-espada-bronze"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "espadaFerro-espada-bronze",
+        "base": "espadaFerro",
+        "cores": {
+          "w": "#ffe0a8",
+          "A": "#c98d3a",
+          "a": "#8a5a1a"
+        }
+      },
+      "preco": 400,
+      "bonus": {
+        "xp": 0.04
+      }
+    },
+    {
+      "id": "machado-gelo",
+      "icone": "🪓",
+      "nome": "Machado Glacial",
+      "descricao": "Congela o golpe no ar, igual um deploy travado na sexta.",
+      "kit": "guerreiro",
+      "raridade": "raro",
+      "avatar": {
+        "item": "machado-machado-gelo"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "machado-machado-gelo",
+        "base": "machado",
+        "cores": {
+          "A": "#9fd4ff",
+          "a": "#4fa8ff",
+          "w": "#e6fdff",
+          "B": "#3a3f4b",
+          "b": "#23262e"
+        },
+        "efeito": {
+          "tipo": "neve",
+          "cor": "159, 212, 255"
+        }
+      },
+      "preco": 1200,
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "martelo-lava",
+      "icone": "🌋",
+      "nome": "Martelo de Lava",
+      "descricao": "Forjado no coração do vulcão. Cada batida derrete um bug.",
+      "kit": "guerreiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "martelo-martelo-lava"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "martelo-martelo-lava",
+        "base": "martelo",
+        "cores": {
+          "A": "#ff6a28",
+          "a": "#a8323e",
+          "w": "#ffd166",
+          "D": "#ffd166",
+          "B": "#3a1a10",
+          "b": "#1f0a06"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 106, 40"
+        }
+      },
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "escudo-templario",
+      "icone": "🛡️",
+      "nome": "Espada e Escudo do Templário",
+      "descricao": "O escudo branco de quem nunca deixa um dado vazar.",
+      "kit": "guerreiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "espadaEscudo-escudo-templario"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "espadaEscudo-escudo-templario",
+        "base": "espadaEscudo",
+        "cores": {
+          "M": "#e8eef5",
+          "n": "#c9cbe0",
+          "D": "#a8323e",
+          "a": "#5a5b68",
+          "A": "#f5c451"
+        },
+        "efeito": {
+          "tipo": "faisca",
+          "cor": "255, 243, 176"
+        }
+      },
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "espada-ignis",
+      "icone": "🔥",
+      "nome": "Lâmina de Ignis",
+      "descricao": "Forjada no fogo do Dragão Rei. Ainda está quente.",
+      "kit": "guerreiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "espadaFerro-espada-ignis"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "espadaFerro-espada-ignis",
+        "base": "espadaFerro",
+        "cores": {
+          "w": "#fff3b0",
+          "A": "#ff6a28",
+          "a": "#a8323e",
+          "b": "#3a0808"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 106, 40"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Ignis, o Dragão Rei”",
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "martelo-tita",
+      "icone": "⚡",
+      "nome": "Martelo dos Titãs",
+      "descricao": "Dizem que só cai de quem guarda as dunas do Deserto dos Bugs.",
+      "kit": "guerreiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "martelo-martelo-tita"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "martelo-martelo-tita",
+        "base": "martelo",
+        "cores": {
+          "A": "#e6fdff",
+          "a": "#6ef0ff",
+          "w": "#ffffff",
+          "D": "#ffd166",
+          "B": "#2b2540",
+          "b": "#1b1533"
+        },
+        "efeito": {
+          "tipo": "raio",
+          "cor": "110, 240, 255"
+        }
+      },
+      "exclusivo": true,
+      "drop": {
+        "regiao": "deserto",
+        "chance": 0.004
+      },
+      "origem": "Drop raro: monstros do Deserto dos Bugs",
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "machado-forja",
+      "icone": "⚒️",
+      "nome": "Machado da Forja de Duran",
+      "descricao": "Duran levou três dias para afiar. Corta até reunião sem pauta.",
+      "kit": "guerreiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "machado-machado-forja"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "machado-machado-forja",
+        "base": "machado",
+        "cores": {
+          "A": "#c9cbe0",
+          "a": "#8a8b99",
+          "w": "#ffffff",
+          "B": "#ff7a1a",
+          "b": "#a8323e"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 122, 26"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Metal de dragão”",
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "elmo-gelo",
+      "icone": "🧊",
+      "nome": "Elmo Glacial",
+      "descricao": "Mantém a cabeça fria em qualquer incidente.",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "elmoFerro-elmo-gelo"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "elmoFerro-elmo-gelo",
+        "base": "elmoFerro",
+        "cores": {
+          "A": "#9fd4ff",
+          "a": "#4fa8ff",
+          "w": "#e6fdff",
+          "B": "#2e5cb8",
+          "b": "#1b3a7a"
+        }
+      },
+      "kit": "guerreiro",
+      "preco": 1200,
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "bandana-dragao",
+      "icone": "🐉",
+      "nome": "Bandana do Dragão",
+      "descricao": "Bordada com escamas verdes. +200 de atitude.",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "bandana-bandana-dragao"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "bandana-bandana-dragao",
+        "base": "bandana",
+        "cores": {
+          "D": "#2e8b57",
+          "d": "#1f5a3a",
+          "Q": "#ffd166"
+        },
+        "efeito": {
+          "tipo": "faisca",
+          "cor": "125, 255, 154"
+        }
+      },
+      "kit": "guerreiro",
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "elmo-fenrir",
+      "icone": "🐺",
+      "nome": "Elmo de Fenrir",
+      "descricao": "Feito com o pelo do Lobo Rei. Os lobos te respeitam.",
+      "raridade": "lendario",
+      "avatar": {
+        "chapeu": "elmoFerro-elmo-fenrir"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "elmoFerro-elmo-fenrir",
+        "base": "elmoFerro",
+        "cores": {
+          "A": "#4a4a55",
+          "a": "#2b2b35",
+          "w": "#c9cbe0",
+          "B": "#ff4d6d",
+          "b": "#a8323e"
+        },
+        "efeito": {
+          "tipo": "fumaca",
+          "cor": "200, 200, 220"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “A sombra de Fenrir”",
+      "kit": "guerreiro",
+      "bonus": {
+        "xp": 0.15,
+        "mana": 2,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1
+      }
+    },
+    {
+      "id": "arco-carvalho",
+      "icone": "🏹",
+      "nome": "Arco de Carvalho",
+      "descricao": "Corda nova, madeira velha. Acerta onde tu mira (quase sempre).",
+      "kit": "arqueiro",
+      "raridade": "comum",
+      "avatar": {
+        "item": "arco-arco-carvalho"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "arco-arco-carvalho",
+        "base": "arco",
+        "cores": {
+          "B": "#8b5a2b",
+          "b": "#5c3418",
+          "J": "#e8e4dc",
+          "Z": "#e8e4dc",
+          "D": "#2e8b57"
+        }
+      },
+      "preco": 400,
+      "bonus": {
+        "xp": 0.04
+      }
+    },
+    {
+      "id": "arco-lunar",
+      "icone": "🌙",
+      "nome": "Arco Lunar",
+      "descricao": "Brilha de leve à noite. Ótimo para a ronda noturna.",
+      "kit": "arqueiro",
+      "raridade": "raro",
+      "avatar": {
+        "item": "arcoElfico-arco-lunar"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "arcoElfico-arco-lunar",
+        "base": "arcoElfico",
+        "cores": {
+          "G": "#c9cbe0",
+          "g": "#ffffff",
+          "c": "#9fd4ff",
+          "C": "#4fa8ff",
+          "D": "#ffd166"
+        },
+        "efeito": {
+          "tipo": "faisca",
+          "cor": "200, 220, 255"
+        }
+      },
+      "preco": 1200,
+      "bonus": {
+        "xp": 0.07,
+        "tempo": 1
+      }
+    },
+    {
+      "id": "besta-venenosa",
+      "icone": "🧪",
+      "nome": "Besta Venenosa",
+      "descricao": "Os virotes vêm com um verde suspeito. Não pergunte.",
+      "kit": "arqueiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "besta-besta-venenosa"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "besta-besta-venenosa",
+        "base": "besta",
+        "cores": {
+          "a": "#1f5a3a",
+          "A": "#2e8b57",
+          "R": "#7dff9a",
+          "B": "#2b2540",
+          "b": "#1b1533",
+          "c": "#c8ffd6"
+        },
+        "efeito": {
+          "tipo": "fumaca",
+          "cor": "125, 255, 154"
+        }
+      },
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "arco-fenix",
+      "icone": "🔥",
+      "nome": "Arco da Fênix",
+      "descricao": "As flechas renascem em brasa no meio do caminho.",
+      "kit": "arqueiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "arco-arco-fenix"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "arco-arco-fenix",
+        "base": "arco",
+        "cores": {
+          "B": "#a8323e",
+          "b": "#5a1010",
+          "J": "#ffd166",
+          "Z": "#ffd166",
+          "D": "#ff6a28"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 122, 26"
+        }
+      },
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "arco-ignis",
+      "icone": "🐲",
+      "nome": "Arco de Ignis",
+      "descricao": "A corda é um tendão de dragão. Cada disparo assobia como fogo.",
+      "kit": "arqueiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "arcoElfico-arco-ignis"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "arcoElfico-arco-ignis",
+        "base": "arcoElfico",
+        "cores": {
+          "G": "#ff6a28",
+          "g": "#ffd166",
+          "c": "#ffd166",
+          "C": "#a8323e",
+          "D": "#fff3b0"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 106, 40"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Ignis, o Dragão Rei”",
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "besta-dragao",
+      "icone": "❄️",
+      "nome": "Besta do Dragão Gelado",
+      "descricao": "Dizem que só cai das criaturas das Montanhas do Dragão.",
+      "kit": "arqueiro",
+      "raridade": "lendario",
+      "avatar": {
+        "item": "besta-besta-dragao"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "besta-besta-dragao",
+        "base": "besta",
+        "cores": {
+          "a": "#1e4f8a",
+          "A": "#9fd4ff",
+          "R": "#e6fdff",
+          "B": "#2b2540",
+          "b": "#1b1533",
+          "c": "#ffffff"
+        },
+        "efeito": {
+          "tipo": "neve",
+          "cor": "159, 212, 255"
+        }
+      },
+      "exclusivo": true,
+      "drop": {
+        "regiao": "montanhas",
+        "chance": 0.004
+      },
+      "origem": "Drop raro: monstros das Montanhas do Dragão",
+      "bonus": {
+        "xp": 0.15,
+        "tempo": 3,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1,
+        "mana": 1
+      }
+    },
+    {
+      "id": "besta-forja",
+      "icone": "⚙️",
+      "nome": "Besta da Forja de Duran",
+      "descricao": "Mecanismo de engrenagens que Duran jura ter inventado.",
+      "kit": "arqueiro",
+      "raridade": "epico",
+      "avatar": {
+        "item": "besta-besta-forja"
+      },
+      "visual": {
+        "slot": "item",
+        "id": "besta-besta-forja",
+        "base": "besta",
+        "cores": {
+          "a": "#4a4a55",
+          "A": "#c9cbe0",
+          "R": "#ff7a1a",
+          "B": "#5c3418",
+          "b": "#3a2412",
+          "c": "#ffd166"
+        },
+        "efeito": {
+          "tipo": "brasa",
+          "cor": "255, 122, 26"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Metal de dragão”",
+      "bonus": {
+        "xp": 0.1,
+        "tempo": 2,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "chapeu-floresta",
+      "icone": "🌲",
+      "nome": "Chapéu do Guarda-Florestal",
+      "descricao": "Tem até uma pena de coruja de verdade.",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "cacador-chapeu-floresta"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "cacador-chapeu-floresta",
+        "base": "cacador",
+        "cores": {
+          "M": "#2f6e1c",
+          "m": "#1f4a12",
+          "n": "#4c9a2a",
+          "Q": "#ffd166",
+          "D": "#c9952a",
+          "d": "#8a5a1a"
+        }
+      },
+      "kit": "arqueiro",
+      "preco": 1200,
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "capuz-lua",
+      "icone": "🌕",
+      "nome": "Capuz da Lua Cheia",
+      "descricao": "A lua pintada nas costas guia as flechas no escuro.",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "capuz-capuz-lua"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "capuz-capuz-lua",
+        "base": "capuz",
+        "cores": {
+          "M": "#23235e",
+          "m": "#16163f",
+          "n": "#3a3a8a",
+          "V": "#0b0b26",
+          "D": "#fff3b0",
+          "Y": "#fff3b0"
+        },
+        "efeito": {
+          "tipo": "faisca",
+          "cor": "255, 243, 176"
+        }
+      },
+      "kit": "arqueiro",
+      "preco": 3000,
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "chapeu-lobo",
+      "icone": "🐺",
+      "nome": "Chapéu da Caçada de Fenrir",
+      "descricao": "Uma presa do Lobo Rei presa na aba. Só os caçadores lendários usam.",
+      "raridade": "lendario",
+      "avatar": {
+        "chapeu": "cacador-chapeu-lobo"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "cacador-chapeu-lobo",
+        "base": "cacador",
+        "cores": {
+          "M": "#4a4a55",
+          "m": "#2b2b35",
+          "n": "#6b6c7a",
+          "Q": "#ff4d6d",
+          "D": "#c9cbe0",
+          "d": "#8a8b99"
+        },
+        "efeito": {
+          "tipo": "fumaca",
+          "cor": "200, 200, 220"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “A sombra de Fenrir”",
+      "kit": "arqueiro",
+      "bonus": {
+        "xp": 0.15,
+        "mana": 2,
+        "sorte": 0.05,
+        "moedas": 0.12,
+        "vida": 1
+      }
+    },
+    {
+      "id": "manto-vinho",
+      "icone": "🍷",
+      "nome": "Manto Vinho",
+      "descricao": "Cor de quem já sobreviveu a muitas reuniões.",
+      "raridade": "comum",
+      "avatar": {
+        "manto": "#6a1f3a"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#6a1f3a"
+      },
+      "preco": 400,
+      "bonus": {
+        "moedas": 0.04
+      }
+    },
+    {
+      "id": "manto-celeste",
+      "icone": "☁️",
+      "nome": "Manto Celeste",
+      "descricao": "Leve como computação em nuvem, sem a fatura.",
+      "raridade": "raro",
+      "avatar": {
+        "manto": "#7fb2ff"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#7fb2ff"
+      },
+      "preco": 1200,
+      "bonus": {
+        "moedas": 0.07,
+        "vida": 1
+      }
+    },
+    {
+      "id": "manto-obsidiana",
+      "icone": "🖤",
+      "nome": "Manto de Obsidiana",
+      "descricao": "Tecido com vidro vulcânico. Brilha só quando ninguém está olhando.",
+      "raridade": "epico",
+      "avatar": {
+        "manto": "#16121f"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#16121f"
+      },
+      "preco": 3000,
+      "bonus": {
+        "moedas": 0.1,
+        "vida": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "manto-gosma",
+      "icone": "🟢",
+      "nome": "Manto Gosmento",
+      "descricao": "Tingido com a gosma do Rei Slime. Cheira a vitória (e a slime).",
+      "raridade": "raro",
+      "avatar": {
+        "manto": "#4fc35a"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#4fc35a"
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “O rei gosmento”",
+      "bonus": {
+        "moedas": 0.07,
+        "vida": 1
+      }
+    },
+    {
+      "id": "manto-pantano",
+      "icone": "🐸",
+      "nome": "Manto do Brejo Encantado",
+      "descricao": "Morgana costurou com fios de névoa do Lodaçal.",
+      "raridade": "epico",
+      "avatar": {
+        "manto": "#3a6a4a"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#3a6a4a"
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “O Sapo Rei”",
+      "bonus": {
+        "moedas": 0.1,
+        "vida": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "manto-imperial",
+      "icone": "🦂",
+      "nome": "Manto Imperial das Dunas",
+      "descricao": "O mesmo dourado-areia dos guardas do Imperador.",
+      "raridade": "epico",
+      "avatar": {
+        "manto": "#8a5a1a"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#8a5a1a"
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “O Imperador das Dunas”",
+      "bonus": {
+        "moedas": 0.1,
+        "vida": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "manto-cacadora",
+      "icone": "🌒",
+      "nome": "Capa da Caçadora Noturna",
+      "descricao": "Presente da Ana para quem caça lobos sob a lua.",
+      "raridade": "epico",
+      "avatar": {
+        "manto": "#1f3a4a"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#1f3a4a"
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Caçada noturna”",
+      "bonus": {
+        "moedas": 0.1,
+        "vida": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "manto-farol",
+      "icone": "🚨",
+      "nome": "Manto do Farol",
+      "descricao": "Vermelho do farol de Porto Sereno: ninguém se perde de ti.",
+      "raridade": "raro",
+      "avatar": {
+        "manto": "#c0283c"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#c0283c"
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Luz no escuro”",
+      "bonus": {
+        "moedas": 0.07,
+        "vida": 1
+      }
+    },
+    {
+      "id": "manto-aurora",
+      "icone": "🌌",
+      "nome": "Manto da Aurora Boreal",
+      "descricao": "Feito com a luz que dança sobre Picogelo. O tecido muda de cor sozinho.",
+      "raridade": "lendario",
+      "avatar": {
+        "manto": "#2e9e9e"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#2e9e9e"
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “O despertar do Dragão”",
+      "bonus": {
+        "moedas": 0.15,
+        "vida": 1,
+        "sorte": 0.05,
+        "xp": 0.12,
+        "mana": 1
+      }
+    },
+    {
+      "id": "manto-lodo",
+      "icone": "🪵",
+      "nome": "Manto do Lodo Antigo",
+      "descricao": "Raro de achar: só cai das criaturas do Pântano.",
+      "raridade": "raro",
+      "avatar": {
+        "manto": "#4a5a2a"
+      },
+      "visual": {
+        "slot": "manto",
+        "cor": "#4a5a2a"
+      },
+      "exclusivo": true,
+      "drop": {
+        "regiao": "pantano",
+        "chance": 0.006
+      },
+      "origem": "Drop raro: monstros do Pântano das Alucinações",
+      "bonus": {
+        "moedas": 0.07,
+        "vida": 1
+      }
+    },
+    {
+      "id": "capuz-lobisomem",
+      "icone": "🐾",
+      "nome": "Capuz do Lobisomem",
+      "descricao": "Peludo e quentinho. Os lobos da floresta às vezes deixam cair.",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "capuz-capuz-lobisomem"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "capuz-capuz-lobisomem",
+        "base": "capuz",
+        "cores": {
+          "M": "#5a4028",
+          "m": "#3a2818",
+          "n": "#7a5a3a",
+          "V": "#2a1a10",
+          "D": "#ffd166",
+          "Y": "#ffd166"
+        }
+      },
+      "exclusivo": true,
+      "drop": {
+        "regiao": "floresta",
+        "chance": 0.006
+      },
+      "origem": "Drop raro: monstros da Floresta Uivante",
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "chapeu-bruxa",
+      "icone": "🧹",
+      "nome": "Chapéu da Bruxa do Brejo",
+      "descricao": "Morgana garante que o chapéu já não é amaldiçoado. Quase.",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "pontudo-chapeu-bruxa"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "pontudo-chapeu-bruxa",
+        "base": "pontudo",
+        "cores": {
+          "M": "#2b2540",
+          "m": "#1b1533",
+          "n": "#4a2f6b",
+          "V": "#120e2a",
+          "D": "#7dff9a",
+          "d": "#2e8b57",
+          "Q": "#c8ffd6"
+        },
+        "efeito": {
+          "tipo": "fumaca",
+          "cor": "125, 255, 154"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Ingredientes do caldeirão”",
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "capuz-neve",
+      "icone": "❄️",
+      "nome": "Capuz das Neves",
+      "descricao": "Presente da Helga para quem enfrenta os lobos das neves.",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "capuz-capuz-neve"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "capuz-capuz-neve",
+        "base": "capuz",
+        "cores": {
+          "M": "#e8eef5",
+          "m": "#c9cbe0",
+          "n": "#ffffff",
+          "V": "#8a8b99",
+          "D": "#4fa8ff",
+          "Y": "#4fa8ff"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Lobos da neve”",
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "elmo-guarda",
+      "icone": "💂",
+      "nome": "Elmo da Guarda Real",
+      "descricao": "O elmo azul da guarda de Elyndor. O Bento tem um igual.",
+      "raridade": "raro",
+      "avatar": {
+        "chapeu": "elmoFerro-elmo-guarda"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "elmoFerro-elmo-guarda",
+        "base": "elmoFerro",
+        "cores": {
+          "A": "#7f9ab8",
+          "a": "#4a6a8a",
+          "w": "#e6fdff",
+          "B": "#2e5cb8",
+          "b": "#1b3a7a"
+        }
+      },
+      "exclusivo": true,
+      "origem": "Recompensa da quest “Patrulha noturna”",
+      "bonus": {
+        "xp": 0.07,
+        "mana": 1
+      }
+    },
+    {
+      "id": "chapeu-areia",
+      "icone": "🏜️",
+      "nome": "Turbante das Areias",
+      "descricao": "Raro de achar: só cai das criaturas do Deserto dos Bugs.",
+      "raridade": "epico",
+      "avatar": {
+        "chapeu": "cacador-chapeu-areia"
+      },
+      "visual": {
+        "slot": "chapeu",
+        "id": "cacador-chapeu-areia",
+        "base": "cacador",
+        "cores": {
+          "M": "#e2c27a",
+          "m": "#c49a62",
+          "n": "#f5e0a8",
+          "Q": "#a8323e",
+          "D": "#2e8b9a",
+          "d": "#1f5a6a"
+        },
+        "efeito": {
+          "tipo": "faisca",
+          "cor": "255, 224, 168"
+        }
+      },
+      "exclusivo": true,
+      "drop": {
+        "regiao": "deserto",
+        "chance": 0.005
+      },
+      "origem": "Drop raro: monstros do Deserto dos Bugs",
+      "bonus": {
+        "xp": 0.1,
+        "mana": 1,
+        "sorte": 0.03
+      }
+    },
+    {
+      "id": "manto-casa-runa",
+      "icone": "🌙",
+      "nome": "Manto da Lua Partida",
+      "descricao": "O roxo da meia-noite, bordado com a lua rachada da Ordem.",
+      "preco": 0,
+      "avatar": {
+        "manto": "#5a3aa6"
+      },
+      "raridade": "epico",
+      "exclusivo": true,
+      "origem": "Entrar na Ordem da Lua Partida, no Salão de Elyndor",
+      "bonus": {}
+    },
+    {
+      "id": "manto-casa-aco",
+      "icone": "🔥",
+      "nome": "Manto da Fênix Rubra",
+      "descricao": "Vermelho de brasa viva: cair, aprender, renascer.",
+      "preco": 0,
+      "avatar": {
+        "manto": "#9a1f1f"
+      },
+      "raridade": "epico",
+      "exclusivo": true,
+      "origem": "Entrar na Legião da Fênix Rubra, no Salão de Elyndor",
+      "bonus": {}
+    },
+    {
+      "id": "manto-casa-flecha",
+      "icone": "🐺",
+      "nome": "Manto do Lobo de Jade",
+      "descricao": "O verde fundo da mata, com a marca do lobo nas costas.",
+      "preco": 0,
+      "avatar": {
+        "manto": "#2f7a34"
+      },
+      "raridade": "epico",
+      "exclusivo": true,
+      "origem": "Entrar no Clã do Lobo de Jade, no Salão de Elyndor",
+      "bonus": {}
+    },
+    {
+      "id": "manto-fenda",
+      "icone": "🌀",
+      "nome": "Manto da Fenda do Oráculo",
+      "descricao": "Tecido feito do céu rasgado. Só quem fechou uma Fenda o veste.",
+      "preco": 0,
+      "avatar": {
+        "manto": "#2a1450"
+      },
+      "raridade": "lendario",
+      "exclusivo": true,
+      "origem": "Vencer uma Fenda do Oráculo em grupo, no Salão",
+      "bonus": {}
+    },
+    {
+      "id": "manto-dragao-dourado",
+      "icone": "🐉",
+      "nome": "Manto do Dragão Dourado",
+      "descricao": "O dragão da praça só entrega a quem responde primeiro.",
+      "preco": 0,
+      "avatar": {
+        "manto": "#c9952a"
+      },
+      "raridade": "lendario",
+      "exclusivo": true,
+      "origem": "Vencer a Pergunta do Dragão, no Salão",
+      "bonus": {}
+    },
+    {
+      "id": "manto-campeao",
+      "icone": "👑",
+      "nome": "Manto do Campeão da Semana",
+      "descricao": "Branco e ouro: quem venceu mais duelos numa semana inteira.",
+      "preco": 0,
+      "avatar": {
+        "manto": "#f3ead2"
+      },
+      "raridade": "lendario",
+      "exclusivo": true,
+      "origem": "Ser o Campeão da Liga da Semana, na arena do Salão",
+      "bonus": {}
+    },
+    {
+      "id": "manto-sequencia",
+      "icone": "🔥",
+      "nome": "Manto da Chama Constante",
+      "descricao": "Sete dias seguidos de Desafio do Dia. A chama não apaga.",
+      "preco": 0,
+      "avatar": {
+        "manto": "#d9622b"
+      },
+      "raridade": "lendario",
+      "exclusivo": true,
+      "origem": "Sete dias seguidos de Desafio do Dia",
+      "bonus": {}
+    }
+  ],
+  "trofeus": [
+    {
+      "id": "lanterna",
+      "icone": "🏮",
+      "nome": "Lanterna da Verdade",
+      "descricao": "Ilumina qualquer alucinação.",
+      "origem": "Cripta das Alucinações"
+    },
+    {
+      "id": "martelo",
+      "icone": "🔨",
+      "nome": "Martelo Caça-Bugs",
+      "descricao": "Nenhum Traceback resiste a ele.",
+      "origem": "Masmorra dos Bugs"
+    },
+    {
+      "id": "selo",
+      "icone": "🔏",
+      "nome": "Selo do Guardião",
+      "descricao": "Prova de que nenhum dado vazou contigo.",
+      "origem": "Cofre dos Selos Partidos"
+    },
+    {
+      "id": "diploma",
+      "icone": "🎓",
+      "nome": "Diploma de Elyndor",
+      "descricao": "Formado pela Academia Arcana.",
+      "origem": "Formatura"
+    },
+    {
+      "id": "coroa-slime",
+      "icone": "👑",
+      "nome": "Coroa Gosmenta",
+      "descricao": "Tirada da cabeça do Rei Slime dos Campos.",
+      "origem": "Chefão dos Campos: Rei Slime"
+    },
+    {
+      "id": "presa-fenrir",
+      "icone": "🐺",
+      "nome": "Presa de Fenrir",
+      "descricao": "Lembrança do Lobo Rei da Floresta Uivante.",
+      "origem": "Chefão da Floresta: Fenrir, o Lobo Rei"
+    },
+    {
+      "id": "lingua-sapo",
+      "icone": "🐸",
+      "nome": "Língua de Ouro do Sapo Rei",
+      "descricao": "Brilha quando alguém fala uma alucinação.",
+      "origem": "Chefão do Pântano: Sapo Rei do Brejo"
+    },
+    {
+      "id": "ferrao-imperador",
+      "icone": "🦂",
+      "nome": "Ferrão do Imperador",
+      "descricao": "Ferroa qualquer bug escondido no código.",
+      "origem": "Chefão do Deserto: Escorpião Imperador"
+    },
+    {
+      "id": "escama-ignis",
+      "icone": "🐉",
+      "nome": "Escama de Ignis",
+      "descricao": "Do Dragão Rei das Montanhas. Ainda está quente.",
+      "origem": "Chefão das Montanhas: Ignis, o Dragão Rei"
+    },
+    {
+      "id": "nucleo-magma",
+      "icone": "🌋",
+      "nome": "Núcleo de Magma",
+      "descricao": "Ainda pulsa como um coração de forja.",
+      "origem": "Chefão de Umbraterra: Colosso de Magma"
+    },
+    {
+      "id": "coroa-cristal",
+      "icone": "💎",
+      "nome": "Coroa de Cristal",
+      "descricao": "Reflete só o que é verdade.",
+      "origem": "Chefão de Umbraterra: Rainha de Cristal"
+    },
+    {
+      "id": "perola-abismo",
+      "icone": "🫧",
+      "nome": "Pérola do Abismo",
+      "descricao": "Guarda um segredo que tu decidiste não vazar.",
+      "origem": "Chefão de Umbraterra: Leviatã do Abismo"
+    },
+    {
+      "id": "coracao-gelo",
+      "icone": "❄️",
+      "nome": "Coração de Gelo",
+      "descricao": "Derrete devagar quando alguém faz uma boa pergunta.",
+      "origem": "Chefão de Umbraterra: Ymir, o Gigante do Silêncio"
+    },
+    {
+      "id": "olho-nyxar",
+      "icone": "👁️",
+      "nome": "Olho de Nyxar",
+      "descricao": "O prêmio de quem venceu o Vazio. Brilha roxo no escuro.",
+      "origem": "Chefão final de Umbraterra: Nyxar, o Dragão do Vazio"
+    },
+    {
+      "id": "martelo-forja",
+      "icone": "⚒️",
+      "nome": "Martelo da Forja Esquecida",
+      "descricao": "Só martela código que passou nos testes.",
+      "origem": "Dungeon de Umbraterra: Forja Esquecida"
+    },
+    {
+      "id": "pagina-viva",
+      "icone": "📜",
+      "nome": "Página Viva",
+      "descricao": "Uma página que lembra de onde veio cada palavra.",
+      "origem": "Dungeon de Umbraterra: Biblioteca do Vazio"
+    },
+    {
+      "id": "chave-cidadela",
+      "icone": "🗝️",
+      "nome": "Chave da Cidadela",
+      "descricao": "Abre portas, nunca vazamentos.",
+      "origem": "Dungeon de Umbraterra: Cidadela de Gelo"
+    },
+    {
+      "id": "coracao-vazio",
+      "icone": "🌑",
+      "nome": "Coração do Vazio",
+      "descricao": "Já não tem fome. Só uma luz roxa e calma.",
+      "origem": "Chefão final: o Vazio, a Mente Única"
+    }
+  ],
+  "baus_das_fases": {
+    "1": {
+      "moedas": 40,
+      "itens": {
+        "pocao": 2
+      }
+    },
+    "2": {
+      "moedas": 50,
+      "itens": {
+        "pergaminho": 2
+      }
+    },
+    "3": {
+      "moedas": 60,
+      "itens": {
+        "elixir": 1
+      }
+    },
+    "4": {
+      "moedas": 70,
+      "itens": {
+        "amuleto": 1
+      }
+    },
+    "5": {
+      "moedas": 90,
+      "itens": {
+        "pocao": 2,
+        "elixir": 1
+      }
+    },
+    "6": {
+      "moedas": 150,
+      "itens": {
+        "pergaminho": 2
+      }
+    },
+    "7": {
+      "moedas": 90,
+      "itens": {
+        "pocao": 2
+      }
+    },
+    "8": {
+      "moedas": 100,
+      "itens": {
+        "elixir": 1
+      }
+    },
+    "9": {
+      "moedas": 110,
+      "itens": {
+        "pergaminho": 2
+      }
+    },
+    "10": {
+      "moedas": 160,
+      "itens": {
+        "amuleto": 1,
+        "elixir": 1
+      }
+    },
+    "11": {
+      "moedas": 140,
+      "itens": {
+        "pocao": 2
+      }
+    },
+    "12": {
+      "moedas": 150,
+      "itens": {
+        "elixir": 1,
+        "pergaminho": 1
+      }
+    },
+    "13": {
+      "moedas": 170,
+      "itens": {
+        "amuleto": 1
+      }
+    },
+    "14": {
+      "moedas": 250,
+      "itens": {
+        "pocao": 2,
+        "elixir": 2
+      }
+    }
+  },
+  "legenda_bonus": {
+    "xp": "fração a mais de XP nas vitórias",
+    "moedas": "fração a mais de ouro nas vitórias",
+    "mana": "mana máxima a mais",
+    "vida": "corações a mais",
+    "tempo": "segundos a mais para responder na batalha",
+    "sorte": "chance a mais de drop"
+  }
+}

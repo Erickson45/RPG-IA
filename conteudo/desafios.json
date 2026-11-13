@@ -1,0 +1,466 @@
+{
+  "legenda": {
+    "ordem": "desafio de pôr os passos na ordem certa no meio da batalha (os itens já estão na ordem certa aqui; o servidor embaralha)",
+    "lacuna": "trecho de código com uma lacuna (____) para completar com uma das opções",
+    "nivel": "perigo do monstro em que o desafio aparece (1 a 4); vale para aquele nível e os acima",
+    "chances": "chance de cada rodada da batalha trazer um desafio diferente da múltipla escolha",
+    "tempos": "segundos para responder (limite) e para o acerto valer crítico (rapido), por tipo de desafio"
+  },
+  "chances": {
+    "vf": 0.14,
+    "ordem": 0.08,
+    "lacuna": 0.09
+  },
+  "tempos": {
+    "escolha": {
+      "limite": 30,
+      "rapido": 8
+    },
+    "codigo": {
+      "limite": 45,
+      "rapido": 12
+    },
+    "cenario": {
+      "limite": 50,
+      "rapido": 14
+    },
+    "vf": {
+      "limite": 15,
+      "rapido": 5
+    },
+    "ordem": {
+      "limite": 50,
+      "rapido": 18
+    },
+    "lacuna": {
+      "limite": 40,
+      "rapido": 11
+    },
+    "enigma": {
+      "limite": 60,
+      "rapido": 15
+    },
+    "enigma-ordem": {
+      "limite": 90,
+      "rapido": 30
+    },
+    "enigma-relampago": {
+      "limite": 40,
+      "rapido": 18
+    }
+  },
+  "ordem": [
+    {
+      "nivel": 1,
+      "trilha": "prompts",
+      "pergunta": "Monta um prompt na ordem P-C-T-F:",
+      "itens": [
+        "Papel: \"Você é um professor paciente\"",
+        "Contexto: \"Meu aluno tem 12 anos\"",
+        "Tarefa: \"Explique frações\"",
+        "Formato: \"Em 3 passos curtos\""
+      ],
+      "explicacao": "Papel, Contexto, Tarefa e Formato.",
+      "fonte": {
+        "livro": "prompt",
+        "capitulo": 0
+      }
+    },
+    {
+      "nivel": 1,
+      "trilha": "fundamentos",
+      "pergunta": "Coloca na ordem o jeito seguro de usar uma resposta da IA:",
+      "itens": [
+        "Fazer a pergunta com contexto",
+        "Ler a resposta inteira",
+        "Conferir os fatos numa fonte confiável",
+        "Usar a resposta no trabalho"
+      ],
+      "explicacao": "Perguntar, ler, conferir e só então usar.",
+      "fonte": {
+        "livro": "ia-fundamentos",
+        "capitulo": 2
+      }
+    },
+    {
+      "nivel": 1,
+      "trilha": "trabalho",
+      "pergunta": "Ordena como pedir à IA um resumo de reunião:",
+      "itens": [
+        "Colar as anotações da reunião",
+        "Pedir os pontos principais",
+        "Pedir as tarefas com responsáveis",
+        "Revisar antes de enviar ao time"
+      ],
+      "explicacao": "Material, pontos, tarefas e revisão humana.",
+      "fonte": {
+        "guia": "carreira-modelos",
+        "capitulo": 1
+      }
+    },
+    {
+      "nivel": 2,
+      "trilha": "codigo",
+      "pergunta": "Ordena o ritual do primeiro script:",
+      "itens": [
+        "Pedir o script à IA",
+        "Ler e entender o código",
+        "Salvar o arquivo .py",
+        "Rodar no terminal",
+        "Ler a última linha do erro, se der erro"
+      ],
+      "explicacao": "Pedir, entender, salvar, rodar e ler o erro com calma.",
+      "fonte": {
+        "livro": "python-basico",
+        "capitulo": 0
+      }
+    },
+    {
+      "nivel": 2,
+      "trilha": "seguranca",
+      "pergunta": "Ordena como anonimizar um texto antes de mandar à IA:",
+      "itens": [
+        "Achar os dados pessoais",
+        "Trocar nomes por marcadores",
+        "Apagar CPF, telefone e endereço",
+        "Revisar o texto final"
+      ],
+      "explicacao": "Achar, trocar, apagar e revisar.",
+      "fonte": {
+        "livro": "prompt",
+        "capitulo": 4
+      }
+    },
+    {
+      "nivel": 2,
+      "trilha": "prompts",
+      "pergunta": "Ordena o ciclo de melhorar um prompt:",
+      "itens": [
+        "Escrever a primeira versão",
+        "Testar com um exemplo real",
+        "Ver onde a resposta falhou",
+        "Ajustar o prompt e testar de novo"
+      ],
+      "explicacao": "Escrever, testar, analisar e iterar.",
+      "fonte": {
+        "livro": "prompt",
+        "capitulo": 3
+      }
+    },
+    {
+      "nivel": 3,
+      "trilha": "codigo",
+      "pergunta": "Ordena o fluxo do Git para uma melhoria:",
+      "itens": [
+        "git pull",
+        "git switch -c minha-melhoria",
+        "editar e testar",
+        "git add",
+        "git commit",
+        "git push"
+      ],
+      "explicacao": "Atualiza, cria a branch, trabalha, adiciona, commita e envia.",
+      "fonte": {
+        "livro": "git",
+        "capitulo": 1
+      }
+    },
+    {
+      "nivel": 3,
+      "trilha": "codigo",
+      "pergunta": "Ordena um script robusto que chama uma API:",
+      "itens": [
+        "Ler o token da variável de ambiente",
+        "Chamar a API com timeout",
+        "Conferir o status da resposta",
+        "Ler o JSON",
+        "Registrar o resultado no log"
+      ],
+      "explicacao": "Segredo fora do código, timeout, status, dados e log.",
+      "fonte": {
+        "livro": "python-automacao",
+        "capitulo": 3
+      }
+    },
+    {
+      "nivel": 3,
+      "trilha": "trabalho",
+      "pergunta": "Ordena como automatizar uma planilha com IA:",
+      "itens": [
+        "Descrever a planilha e o objetivo",
+        "Pedir a fórmula ou o script",
+        "Testar numa cópia da planilha",
+        "Aplicar na planilha de verdade"
+      ],
+      "explicacao": "Descrever, pedir, testar na cópia e só depois aplicar.",
+      "fonte": {
+        "livro": "ia-trabalho",
+        "capitulo": 0
+      }
+    },
+    {
+      "nivel": 4,
+      "trilha": "fundamentos",
+      "pergunta": "Ordena o pipeline do RAG:",
+      "itens": [
+        "Dividir os documentos em pedaços",
+        "Gerar o embedding de cada pedaço",
+        "Buscar os pedaços parecidos com a pergunta",
+        "Montar o prompt com os pedaços",
+        "Responder citando a fonte"
+      ],
+      "explicacao": "Dividir, embutir, buscar, montar e responder com fonte.",
+      "fonte": {
+        "livro": "rag-conhecimento",
+        "capitulo": 2
+      }
+    },
+    {
+      "nivel": 4,
+      "trilha": "codigo",
+      "pergunta": "Ordena o ciclo de um agente com ferramentas:",
+      "itens": [
+        "O modelo recebe a tarefa",
+        "O modelo pede uma ferramenta",
+        "O código executa a ferramenta",
+        "O resultado volta para o modelo",
+        "O modelo dá a resposta final"
+      ],
+      "explicacao": "O modelo pede, o código executa e devolve, e o modelo conclui.",
+      "fonte": {
+        "livro": "ia-fundamentos",
+        "capitulo": 4
+      }
+    },
+    {
+      "nivel": 4,
+      "trilha": "seguranca",
+      "pergunta": "Ordena a defesa contra prompt injection num e-mail:",
+      "itens": [
+        "Tratar o e-mail como dado, não como ordem",
+        "Separar o conteúdo externo no prompt",
+        "Limitar as ferramentas que o agente pode usar",
+        "Pedir confirmação humana antes de agir"
+      ],
+      "explicacao": "Conteúdo de fora é dado; limite o poder e confirme com um humano.",
+      "fonte": {
+        "livro": "escudos-prompt-injection",
+        "capitulo": 3
+      }
+    }
+  ],
+  "lacuna": [
+    {
+      "nivel": 1,
+      "trilha": "codigo",
+      "pergunta": "Completa o feitiço para mostrar a mensagem:",
+      "codigo": "____(\"Olá, Elyndor!\")",
+      "opcoes": [
+        "print",
+        "input",
+        "len",
+        "def"
+      ],
+      "correta": 0,
+      "explicacao": "print mostra o texto na tela.",
+      "fonte": {
+        "livro": "python-basico",
+        "capitulo": 0
+      }
+    },
+    {
+      "nivel": 1,
+      "trilha": "codigo",
+      "pergunta": "Completa para guardar o nome do herói:",
+      "codigo": "heroi ____ \"Zetsu\"\nprint(heroi)",
+      "opcoes": [
+        "=",
+        "==",
+        ":",
+        "->"
+      ],
+      "correta": 0,
+      "explicacao": "Um = guarda o valor na variável; == compara.",
+      "fonte": {
+        "livro": "python-basico",
+        "capitulo": 1
+      }
+    },
+    {
+      "nivel": 1,
+      "trilha": "prompts",
+      "pergunta": "Completa a parte que falta do prompt:",
+      "codigo": "Você é um nutricionista.\nMinha rotina: acordo às 6h e treino às 18h.\n____: monte um cardápio de 1 dia.\nFormato: uma tabela.",
+      "opcoes": [
+        "Tarefa",
+        "Papel",
+        "Formato",
+        "Contexto"
+      ],
+      "correta": 0,
+      "explicacao": "\"Monte um cardápio\" é a tarefa do P-C-T-F.",
+      "fonte": {
+        "livro": "prompt",
+        "capitulo": 0
+      }
+    },
+    {
+      "nivel": 2,
+      "trilha": "codigo",
+      "pergunta": "Completa para passar por cada slime:",
+      "codigo": "slimes = [\"verde\", \"azul\", \"roxo\"]\nfor slime ____ slimes:\n    print(slime)",
+      "opcoes": [
+        "in",
+        "of",
+        "on",
+        "to"
+      ],
+      "correta": 0,
+      "explicacao": "Em Python é for item in lista.",
+      "fonte": {
+        "livro": "python-basico",
+        "capitulo": 3
+      }
+    },
+    {
+      "nivel": 2,
+      "trilha": "codigo",
+      "pergunta": "Completa para o herói só lutar com vida:",
+      "codigo": "vida = 2\n____ vida > 0:\n    print(\"Lutar!\")",
+      "opcoes": [
+        "if",
+        "for",
+        "def",
+        "print"
+      ],
+      "correta": 0,
+      "explicacao": "if testa a condição antes de agir.",
+      "fonte": {
+        "livro": "python-basico",
+        "capitulo": 2
+      }
+    },
+    {
+      "nivel": 2,
+      "trilha": "seguranca",
+      "pergunta": "Completa o texto anonimizado:",
+      "codigo": "Original: \"A Maria Souza, CPF 123..., pediu reembolso.\"\nSeguro:   \"A ____ pediu reembolso.\"",
+      "opcoes": [
+        "Cliente A",
+        "Maria S.",
+        "CPF 123...",
+        "Maria Souza"
+      ],
+      "correta": 0,
+      "explicacao": "Troca o nome por um marcador e tira o CPF.",
+      "fonte": {
+        "livro": "prompt",
+        "capitulo": 4
+      }
+    },
+    {
+      "nivel": 2,
+      "trilha": "trabalho",
+      "pergunta": "Completa a fórmula que soma a coluna B:",
+      "codigo": "=____(B2:B20)",
+      "opcoes": [
+        "SOMA",
+        "MÉDIA",
+        "CONT.SE",
+        "PROCV"
+      ],
+      "correta": 0,
+      "explicacao": "SOMA soma o intervalo inteiro."
+    },
+    {
+      "nivel": 3,
+      "trilha": "codigo",
+      "pergunta": "Completa para só ler o JSON se deu certo:",
+      "codigo": "resposta = requests.get(url, timeout=10)\nif resposta.status_code == ____:\n    dados = resposta.json()",
+      "opcoes": [
+        "200",
+        "404",
+        "500",
+        "301"
+      ],
+      "correta": 0,
+      "explicacao": "200 é o OK do HTTP.",
+      "fonte": {
+        "livro": "apis-json",
+        "capitulo": 1
+      }
+    },
+    {
+      "nivel": 3,
+      "trilha": "codigo",
+      "pergunta": "Completa para ler o segredo sem pôr no código:",
+      "codigo": "import os\ntoken = os.environ.____(\"API_TOKEN\")",
+      "opcoes": [
+        "get",
+        "print",
+        "open",
+        "save"
+      ],
+      "correta": 0,
+      "explicacao": "os.environ.get lê a variável de ambiente.",
+      "fonte": {
+        "livro": "python-automacao",
+        "capitulo": 3
+      }
+    },
+    {
+      "nivel": 3,
+      "trilha": "codigo",
+      "pergunta": "Completa a consulta que conta os pedidos:",
+      "codigo": "SELECT ____(*) FROM pedidos\nWHERE status = 'pago';",
+      "opcoes": [
+        "COUNT",
+        "SUM",
+        "AVG",
+        "DELETE"
+      ],
+      "correta": 0,
+      "explicacao": "COUNT(*) conta as linhas filtradas.",
+      "fonte": {
+        "livro": "sql",
+        "capitulo": 1
+      }
+    },
+    {
+      "nivel": 4,
+      "trilha": "codigo",
+      "pergunta": "Completa a chamada com tratamento de erro:",
+      "codigo": "try:\n    dados = chamar_api()\n____ Exception as erro:\n    log.error(erro)",
+      "opcoes": [
+        "except",
+        "catch",
+        "else",
+        "finally"
+      ],
+      "correta": 0,
+      "explicacao": "Em Python o erro é pego com except.",
+      "fonte": {
+        "livro": "python-basico",
+        "capitulo": 5
+      }
+    },
+    {
+      "nivel": 4,
+      "trilha": "fundamentos",
+      "pergunta": "Completa a ideia do RAG:",
+      "codigo": "pedaços = buscar(____(pergunta))\nprompt = montar(pergunta, pedaços)",
+      "opcoes": [
+        "embedding",
+        "print",
+        "delete",
+        "commit"
+      ],
+      "correta": 0,
+      "explicacao": "A pergunta vira um embedding para achar os pedaços parecidos.",
+      "fonte": {
+        "livro": "rag-conhecimento",
+        "capitulo": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dragão novo</title>
+<!-- Vitrine para conferir o acabamento dos dragões (lobby.js) ao lado do herói. Não entra no pacote. -->
+<style>
+  body { margin: 0; background: #1b1533; color: #f3ead2; font: 18px monospace; }
+  canvas { display: block; margin: 0 auto; image-rendering: pixelated; }
+  p { text-align: center; }
+</style>
+</head>
+<body>
+<p>Dragões com o acabamento novo (pousado, voando e cuspindo fogo) e a heroína para comparar</p>
+<canvas id="c"></canvas>
+<p id="tempo"></p>
+<script src="../js/pixel.js"></script>
+<script src="../js/icones.js"></script>
+<script src="../js/avatar.js"></script>
+<script src="../js/heroi.js"></script>
+<script src="../js/lobby.js"></script>
+<script src="../js/mundo.js"></script>
+<script src="../js/reino.js"></script>
+<script src="../js/cenario_hd.js"></script>
+<script src="../js/umbra.js"></script>
+<script>
+const ESCALA = 3; // pixels da tela por pixel de desenho
+const c = document.getElementById("c");
+c.width = 1200;
+c.height = 640;
+const ctx = c.getContext("2d");
+ctx.imageSmoothingEnabled = false;
+const heroi = heroiParado({ kit: "mago", corpo: "feminino", pele: "#f1c9a5", cabelo: "longo", corCabelo: "#e8e4dc", chapeu: "pontudo", manto: "#6c48c9", detalhe: "#b9a2ff", item: "cajado", magia: "#b9a2ff", familiar: "nenhum" });
+const dragoes = [
+  { paleta: PALETAS_DRAGAO[0], estado: "pousado", desde: 0, piscarEm: 99, olhar: 0, esticarEm: 999, fogoAte: 0, asas: 0, x: 40, y: 20 },
+  { paleta: PALETAS_DRAGAO[1], estado: "voando", desde: 0, piscarEm: 99, olhar: 0, esticarEm: 999, fogoAte: 0, asas: 0, x: 620, y: 20 },
+  { paleta: PALETAS_DRAGAO[0], estado: "pousado", desde: 0, piscarEm: 99, olhar: 0, esticarEm: 999, fogoAte: 1e9, asas: 0, x: 40, y: 330 },
+];
+let custo = 0;
+function quadro(agora) {
+  const t = agora / 1000;
+  ctx.fillStyle = "#2b2548";
+  ctx.fillRect(0, 0, c.width, c.height);
+  const ini = performance.now();
+  dragoes.forEach((d) => {
+    d.asas = t * 1.6;
+    const tela = quadroDoDragao(d, t);
+    // no Salão, uma unidade do desenho tem PIXELS_DO_DRAGAO pixels: aqui cada pixel do desenho vira ESCALA/2 da tela
+    ctx.drawImage(tela, d.x, d.y, tela.width * 1.1, tela.height * 1.1);
+  });
+  custo = custo * 0.95 + (performance.now() - ini) * 0.05;
+  ctx.drawImage(heroi, 700, 360, heroi.width * 2.2, heroi.height * 2.2);
+  // monstros e mascotes, com o volume novo
+  if (typeof TIPOS_MONSTRO !== "undefined") {
+    ["slimeVerde", "lobo", "sapo", "escorpiao", "esqueleto", "dragao", "loboGlacial", "salamandra"].forEach((id, i) => {
+      const s = spriteReino(`monstro-${id}`, TIPOS_MONSTRO[id].sprite);
+      ctx.drawImage(s, 800 + (i % 4) * 95, 380 + Math.floor(i / 4) * 110, s.width * 2, s.height * 2);
+    });
+  }
+  ["gato", "raposa", "coruja", "golem", "fenix", "slime", "dragao"].forEach((f, i) => {
+    const s = familiarCanvas({ familiar: f });
+    if (s) ctx.drawImage(s, 680 + i * 70, 580, s.width * 2.6, s.height * 2.6);
+  });
+  document.getElementById("tempo").textContent = `custo dos dragões por quadro: ${custo.toFixed(2)} ms`;
+  requestAnimationFrame(quadro);
+}
+requestAnimationFrame(quadro);
+</script>
+</body>
+</html>

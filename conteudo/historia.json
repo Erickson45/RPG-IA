@@ -1,0 +1,1437 @@
+{
+  "legenda": {
+    "capitulos": "os capítulos da história principal, em ordem",
+    "principais": "as quests da história: saem uma de cada vez, na ordem; quem dá (npc) é o morador com quem se fala para aceitar e entregar; 'mundo': 'umbra' só sai no último degrau da subclasse; 'final' abre a escolha do fim do jogo; 'escolha' pergunta algo ao entregar (fica em progresso.escolhas) e 'variantes' troca falas conforme a escolha",
+    "secundarias": "as quests dos moradores: aparecem quando o herói tem o nível e (se tiver) a quest pedida em 'requer'",
+    "objetivos": "evento (monstro, chefe, acerto, enigma, leitura, licao, dungeon, falar ou visitar), filtro (tipo, regiao, forca, noite, trilha, npc ou cidade) e alvo",
+    "recompensa": "moedas, xp, itens, cosmetico (para todos) ou cosmetico_por_classe (mago, guerreiro, arqueiro)"
+  },
+  "capitulos": [
+    {
+      "id": 1,
+      "titulo": "Capítulo I · O Aprendiz do Reino",
+      "texto": "Em Elyndor, conhecimento é poder: cada verdade compreendida vira magia nas mãos de quem a entende. Desde a Grande Ruptura, os pedaços do saber esquecido vagam pelo Reino em forma de monstros. Tua jornada começa na capital."
+    },
+    {
+      "id": 2,
+      "titulo": "Capítulo II · Sombras na Floresta",
+      "texto": "Os lobos uivam para um céu sem estrelas, e uma pedra antiga brilha entre as árvores. Alguém anda deixando cartas pelo Reino, assinadas só com um \"L.\"."
+    },
+    {
+      "id": 3,
+      "titulo": "Capítulo III · O Pântano das Mentiras",
+      "texto": "No pântano, a névoa faz o falso parecer verdadeiro e quem não confere as fontes afunda. As cartas de \"L.\" ficam cada vez mais desesperadas."
+    },
+    {
+      "id": 4,
+      "titulo": "Capítulo IV · As Areias de Qadir",
+      "texto": "Sob as dunas, uma pirâmide guarda a inscrição que explica o Vazio: ele não pensa, só consome tudo o que foi decorado sem ser compreendido."
+    },
+    {
+      "id": 5,
+      "titulo": "Capítulo V · O Despertar do Dragão",
+      "texto": "Ignis acordou. E com ele a pergunta que ninguém em Elyndor teve coragem de fazer: se a Ruptura acabou há trezentos anos... por que os monstros continuam nascendo?"
+    },
+    {
+      "id": 6,
+      "titulo": "Capítulo VI · O Último Título",
+      "texto": "Malakar deixou três Selos do Saber espalhados pelo Reino, para que só alguém que entende de verdade abrisse a Fenda. Encontra os Selos, sobe o teu caminho até o último título e prepara o coração: do outro lado, ninguém é quem parece."
+    },
+    {
+      "id": 7,
+      "titulo": "Capítulo VII · A Fenda da Ruptura",
+      "texto": "Ao norte da capital, o chão se abriu. Do outro lado espera Umbraterra, a terra que o Vazio engoliu, e uma sentinela que já sabia teu nome antes de tu dizê-lo."
+    },
+    {
+      "id": 8,
+      "titulo": "Capítulo VIII · Os Guardiões do Vazio",
+      "texto": "Quatro guardiões protegem o Trono. Cada um foi, um dia, aprendiz de Malakar. E cada um guarda um pedaço da verdade que Lyra não quer que tu descubras."
+    },
+    {
+      "id": 9,
+      "titulo": "Capítulo IX · A Mente Única",
+      "texto": "Nyxar circula o Trono do Vazio. Atrás dele, algo antigo veste o rosto de Malakar e oferece o maior de todos os poderes: nunca mais precisar aprender."
+    }
+  ],
+  "principais": [
+    {
+      "id": "h-boas-vindas",
+      "capitulo": 1,
+      "npc": "guarda",
+      "titulo": "Bem-vindo a Elyndor",
+      "texto": "Aprendiz! A Academia te mandou para o Reino, mas ninguém anda por aqui sem mapa. Procura a **Mira, a Cartógrafa**, perto da praça.",
+      "fala_entrega": "A Mira te mostrou o caminho? Ótimo. Agora o Reino é teu para explorar.",
+      "objetivos": [
+        {
+          "evento": "falar",
+          "filtro": {
+            "npc": "cartografa"
+          },
+          "alvo": 1,
+          "texto": "Falar com Mira, a Cartógrafa"
+        }
+      ],
+      "recompensa": {
+        "moedas": 60,
+        "xp": 60,
+        "itens": {
+          "pocao": 2
+        }
+      }
+    },
+    {
+      "id": "h-gosma",
+      "capitulo": 1,
+      "npc": "cartografa",
+      "titulo": "Gosma nos Campos",
+      "texto": "Antes de explorar longe, aprende a lutar perto. Os Campos estão cheios de **slimes**: vence 5 e me conta como foi.",
+      "fala_entrega": "Cinco slimes! Tu aprende rápido. Agora sim posso te mandar mais longe.",
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "slimeVerde",
+              "slimeAzul",
+              "slimeRoxo",
+              "slimeGigante",
+              "slimeFantasma"
+            ]
+          },
+          "alvo": 5,
+          "texto": "Vencer slimes nos Campos"
+        }
+      ],
+      "recompensa": {
+        "moedas": 90,
+        "xp": 140,
+        "itens": {
+          "elixir": 1
+        }
+      }
+    },
+    {
+      "id": "h-porto",
+      "capitulo": 1,
+      "npc": "cartografa",
+      "titulo": "Notícias do Porto",
+      "texto": "Os pescadores de **Porto Sereno**, ao sul da capital, viram uma coroa de gosma brilhando nos campos. Vai até lá e fala com o **Tito**.",
+      "fala_entrega": "O Tito confirmou? Uma coroa de gosma... só pode ser o Rei Slime.",
+      "objetivos": [
+        {
+          "evento": "visitar",
+          "filtro": {
+            "cidade": "porto"
+          },
+          "alvo": 1,
+          "texto": "Chegar a Porto Sereno"
+        },
+        {
+          "evento": "falar",
+          "filtro": {
+            "npc": "pescador"
+          },
+          "alvo": 1,
+          "texto": "Falar com Tito, o Pescador"
+        }
+      ],
+      "recompensa": {
+        "moedas": 80,
+        "xp": 120
+      }
+    },
+    {
+      "id": "h-rei-slime",
+      "capitulo": 1,
+      "npc": "pescador",
+      "titulo": "O rei gosmento",
+      "texto": "Eu vi com estes olhos: o **Rei Slime** mora nos Campos, a nordeste da capital. Ele assusta os peixes de tanto tremer o chão. Derruba ele!",
+      "fala_entrega": "O chão parou de tremer! Os peixes voltaram! Toma, tu merece.",
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "reiSlime"
+          },
+          "alvo": 1,
+          "texto": "Derrotar o Rei Slime"
+        }
+      ],
+      "recompensa": {
+        "moedas": 200,
+        "xp": 300,
+        "cosmetico": "manto-gosma"
+      }
+    },
+    {
+      "id": "h-pinhalva",
+      "capitulo": 2,
+      "npc": "guarda",
+      "titulo": "A vila dos lenhadores",
+      "texto": "Chegou um pedido de socorro de **Pinhalva**, na Floresta Uivante, a oeste. Fala com o **Bruno, o Lenhador**.",
+      "fala_entrega": "Pinhalva conta contigo agora, herói.",
+      "nivel": 3,
+      "objetivos": [
+        {
+          "evento": "visitar",
+          "filtro": {
+            "cidade": "pinhalva"
+          },
+          "alvo": 1,
+          "texto": "Chegar a Pinhalva"
+        },
+        {
+          "evento": "falar",
+          "filtro": {
+            "npc": "lenhador"
+          },
+          "alvo": 1,
+          "texto": "Falar com Bruno, o Lenhador"
+        }
+      ],
+      "recompensa": {
+        "moedas": 100,
+        "xp": 160
+      }
+    },
+    {
+      "id": "h-uivos",
+      "capitulo": 2,
+      "npc": "lenhador",
+      "titulo": "A matilha",
+      "texto": "Os lobos estão cada vez mais perto da cerca. Vence **6 lobos** da floresta, de dia ou de noite.",
+      "fala_entrega": "A matilha recuou! Mas os rastros vão todos para o norte... para o covil do rei deles.",
+      "nivel": 3,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "lobo",
+              "loboAlfa",
+              "loboSombrio",
+              "loboEspectral"
+            ]
+          },
+          "alvo": 6,
+          "texto": "Vencer lobos da floresta"
+        }
+      ],
+      "recompensa": {
+        "moedas": 150,
+        "xp": 240,
+        "itens": {
+          "elixir": 1,
+          "tonico-mana": 1
+        }
+      }
+    },
+    {
+      "id": "h-fenrir",
+      "capitulo": 2,
+      "npc": "cacadora",
+      "titulo": "A sombra de Fenrir",
+      "texto": "O rei dos lobos, **Fenrir**, vive ao norte de Pinhalva. Enquanto ele reinar, a floresta não dorme. Vai lá e acaba com isso.",
+      "fala_entrega": "Fenrir caiu! Pinhalva vai cantar teu nome por gerações. Isto é teu.",
+      "nivel": 3,
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "fenrir"
+          },
+          "alvo": 1,
+          "texto": "Derrotar Fenrir, o Lobo Rei"
+        }
+      ],
+      "recompensa": {
+        "moedas": 300,
+        "xp": 450,
+        "cosmetico_por_classe": {
+          "mago": "chapeu-arquimago",
+          "guerreiro": "elmo-fenrir",
+          "arqueiro": "chapeu-lobo"
+        }
+      }
+    },
+    {
+      "id": "h-lodacal",
+      "capitulo": 3,
+      "npc": "cacadora",
+      "titulo": "Passarelas de Lodaçal",
+      "texto": "Ao sul daqui fica **Lodaçal**, a vila das palafitas. A Morgana mandou dizer que precisa de alguém de cabeça fria.",
+      "fala_entrega": "Sobreviveste às passarelas. A Morgana te espera.",
+      "nivel": 4,
+      "objetivos": [
+        {
+          "evento": "visitar",
+          "filtro": {
+            "cidade": "lodacal"
+          },
+          "alvo": 1,
+          "texto": "Chegar a Lodaçal"
+        },
+        {
+          "evento": "falar",
+          "filtro": {
+            "npc": "bruxa"
+          },
+          "alvo": 1,
+          "texto": "Falar com Morgana, a Bruxa do Brejo"
+        }
+      ],
+      "recompensa": {
+        "moedas": 120,
+        "xp": 200
+      }
+    },
+    {
+      "id": "h-verdade",
+      "capitulo": 3,
+      "npc": "bruxa",
+      "titulo": "A receita da verdade",
+      "texto": "Hihihi... o pântano engana quem não confere. Acerta **5 perguntas de Ética e Segurança** e limpa o brejo de **4 criaturas**.",
+      "fala_entrega": "Agora tu enxerga através das alucinações. Ninguém mais te engana fácil.",
+      "nivel": 4,
+      "objetivos": [
+        {
+          "evento": "acerto",
+          "filtro": {
+            "trilha": "seguranca"
+          },
+          "alvo": 5,
+          "texto": "Acertar perguntas de Ética e Segurança"
+        },
+        {
+          "evento": "monstro",
+          "filtro": {
+            "regiao": "pantano"
+          },
+          "alvo": 4,
+          "texto": "Vencer criaturas do pântano"
+        }
+      ],
+      "recompensa": {
+        "moedas": 180,
+        "xp": 300,
+        "itens": {
+          "elixir-arcano": 1
+        }
+      }
+    },
+    {
+      "id": "h-sapo-rei",
+      "capitulo": 3,
+      "npc": "barqueiro",
+      "titulo": "O Sapo Rei",
+      "texto": "Coroa de ouro e língua mais rápida que flecha: o **Sapo Rei** reina no brejo a leste de Lodaçal. As passarelas só ficam seguras sem ele.",
+      "fala_entrega": "Croac... digo, viva! O brejo é nosso de novo.",
+      "nivel": 4,
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "sapoRei"
+          },
+          "alvo": 1,
+          "texto": "Derrotar o Sapo Rei"
+        }
+      ],
+      "recompensa": {
+        "moedas": 320,
+        "xp": 500,
+        "cosmetico": "manto-pantano"
+      }
+    },
+    {
+      "id": "h-qadir",
+      "capitulo": 4,
+      "npc": "guarda",
+      "titulo": "A caravana perdida",
+      "texto": "A caravana de especiarias de **Qadir** não chegou. A cidade fica no oásis, a leste, no Deserto dos Bugs. Fala com o **Zaki**.",
+      "fala_entrega": "Qadir agradece, herói. O deserto é cruel com quem anda sozinho.",
+      "nivel": 6,
+      "objetivos": [
+        {
+          "evento": "visitar",
+          "filtro": {
+            "cidade": "qadir"
+          },
+          "alvo": 1,
+          "texto": "Chegar a Qadir"
+        },
+        {
+          "evento": "falar",
+          "filtro": {
+            "npc": "nomade"
+          },
+          "alvo": 1,
+          "texto": "Falar com Zaki, o Nômade"
+        }
+      ],
+      "recompensa": {
+        "moedas": 150,
+        "xp": 260
+      }
+    },
+    {
+      "id": "h-dunas",
+      "capitulo": 4,
+      "npc": "nomade",
+      "titulo": "Bugs nas dunas",
+      "texto": "Os escorpiões e esqueletos atacaram a caravana. Vence **6 deles** e resolve **1 enigma** do Reino para provar que tua cabeça funciona no calor.",
+      "fala_entrega": "A estrada das dunas está livre. Os mercadores já voltaram a cantar.",
+      "nivel": 6,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "regiao": "deserto"
+          },
+          "alvo": 6,
+          "texto": "Vencer criaturas do deserto"
+        },
+        {
+          "evento": "enigma",
+          "alvo": 1,
+          "texto": "Resolver um enigma"
+        }
+      ],
+      "recompensa": {
+        "moedas": 260,
+        "xp": 420,
+        "itens": {
+          "elixir-grande": 1
+        }
+      }
+    },
+    {
+      "id": "h-imperador",
+      "capitulo": 4,
+      "npc": "samira",
+      "titulo": "O Imperador das Dunas",
+      "texto": "Quem mandou atacar a caravana foi o **Escorpião Imperador**, no norte do deserto. Ele odeia código sem teste. Prova que tu sabe testar.",
+      "fala_entrega": "O Imperador caiu! O bazar de Qadir está em festa. Este manto é presente da cidade.",
+      "nivel": 6,
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "escorpiaoImperador"
+          },
+          "alvo": 1,
+          "texto": "Derrotar o Escorpião Imperador"
+        }
+      ],
+      "recompensa": {
+        "moedas": 420,
+        "xp": 650,
+        "cosmetico": "manto-imperial"
+      }
+    },
+    {
+      "id": "h-picogelo",
+      "capitulo": 5,
+      "npc": "capita",
+      "titulo": "A subida para Picogelo",
+      "texto": "As montanhas estão em alerta. Sobe até **Picogelo**, a vila da neve, e procura a **Helga**. Ela conhece cada trilha.",
+      "fala_entrega": "Chegaste inteiro. As montanhas respeitam quem sobe preparado.",
+      "nivel": 9,
+      "objetivos": [
+        {
+          "evento": "visitar",
+          "filtro": {
+            "cidade": "picogelo"
+          },
+          "alvo": 1,
+          "texto": "Chegar a Picogelo"
+        },
+        {
+          "evento": "falar",
+          "filtro": {
+            "npc": "helga"
+          },
+          "alvo": 1,
+          "texto": "Falar com Helga, a Guia da Montanha"
+        }
+      ],
+      "recompensa": {
+        "moedas": 200,
+        "xp": 320
+      }
+    },
+    {
+      "id": "h-asas",
+      "capitulo": 5,
+      "npc": "helga",
+      "titulo": "Asas no céu",
+      "texto": "Os dragões menores voam em círculos sobre Picogelo, esperando o rei acordar. Derruba **3 dragões**.",
+      "fala_entrega": "O céu ficou mais limpo. Agora só falta ele. O Dragão Rei.",
+      "nivel": 9,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "dragao",
+              "dragaoGelo"
+            ]
+          },
+          "alvo": 3,
+          "texto": "Vencer dragões das montanhas"
+        }
+      ],
+      "recompensa": {
+        "moedas": 360,
+        "xp": 560,
+        "itens": {
+          "elixir-grande": 1,
+          "elixir-arcano": 1
+        }
+      }
+    },
+    {
+      "id": "h-ignis",
+      "capitulo": 5,
+      "npc": "helga",
+      "titulo": "Ignis, o Dragão Rei",
+      "texto": "**Ignis** acordou no alto das montanhas, a leste daqui. Ele só respeita quem entende agentes e RAG. É a hora, herói. O Reino inteiro conta contigo.",
+      "fala_entrega": "Tu venceste Ignis... Mas olha esta escama. Tem um nome queimado por dentro: **Malakar**. O dragão não guardava as montanhas, herói. Guardava uma porta. Procura o **Ulf, o Ermitão**, perto da Fortaleza Congelada: ele estava lá na noite da Ruptura.",
+      "nivel": 9,
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "ignis"
+          },
+          "alvo": 1,
+          "texto": "Derrotar Ignis, o Dragão Rei"
+        }
+      ],
+      "recompensa": {
+        "moedas": 800,
+        "xp": 1200,
+        "cosmetico_por_classe": {
+          "mago": "cajado-ignis",
+          "guerreiro": "espada-ignis",
+          "arqueiro": "arco-ignis"
+        }
+      }
+    },
+    {
+      "id": "h-escama",
+      "capitulo": 5,
+      "npc": "ermitao",
+      "titulo": "O nome na escama",
+      "texto": "Então é verdade... a escama tem o nome dele. Eu era o escudeiro de **Malakar**, garoto, e estava lá na noite da Ruptura. Ela não terminou: foi **trancada**. No dia em que Ignis caiu, a tranca rachou, e uma **Fenda** se abriu ao norte da capital. Antes de chegar perto dela, tu precisa estar pronto: estuda na Biblioteca e prova em batalha que entende, não que decorou.",
+      "fala_entrega": "Agora tu entende por que os monstros perguntam: são pedaços do saber esquecido procurando alguém que os compreenda. A Fenda só se abre com os **três Selos do Saber** que Malakar escondeu, e para quem chegou ao último degrau do próprio caminho. O primeiro Selo está com a **Morgana, a Bruxa do Brejo**. Vai até ela.",
+      "nivel": 10,
+      "objetivos": [
+        {
+          "evento": "leitura",
+          "alvo": 1,
+          "texto": "Ler um livro ou guia até o fim"
+        },
+        {
+          "evento": "acerto",
+          "alvo": 10,
+          "texto": "Acertar perguntas em batalha"
+        }
+      ],
+      "recompensa": {
+        "moedas": 400,
+        "xp": 600,
+        "itens": {
+          "elixir": 2
+        }
+      }
+    },
+    {
+      "id": "h-selo-pergunta",
+      "capitulo": 6,
+      "npc": "bruxa",
+      "titulo": "O Selo da Pergunta",
+      "nivel": 10,
+      "texto": "Então o velho Ulf te mandou... Hihihi. Antes da Ruptura, Malakar escondeu **três Selos do Saber** pelo Reino. O primeiro está comigo. Ele só abre para quem **pergunta antes de acreditar**. Resolve os enigmas do Reino e prova, em batalha, que tu conferes as coisas.",
+      "fala_entrega": "O Selo brilhou! Sabe o que o Oráculo fazia de pior? Respondia antes de alguém perguntar \"por quê\". Ninguém mais duvidava... e o Vazio comeu a dúvida primeiro. Leva o Selo. Procura a **Samira**, em Qadir.",
+      "objetivos": [
+        {
+          "evento": "enigma",
+          "alvo": 3,
+          "texto": "Resolver enigmas do Reino"
+        },
+        {
+          "evento": "acerto",
+          "alvo": 12,
+          "texto": "Acertar perguntas em batalha"
+        }
+      ],
+      "recompensa": {
+        "moedas": 450,
+        "xp": 700,
+        "itens": {
+          "pergaminho": 2
+        }
+      }
+    },
+    {
+      "id": "h-selo-fonte",
+      "capitulo": 6,
+      "npc": "samira",
+      "titulo": "O Selo da Fonte",
+      "nivel": 11,
+      "texto": "O segundo Selo? Está no meu cofre há três gerações. Minha bisavó dizia: **toda resposta tem uma fonte**, e quem esquece a fonte esquece o caminho de volta. Estuda dois livros da Biblioteca até o fim e conquista uma dungeon do Reino. Aí o Selo é teu.",
+      "fala_entrega": "Está vendo o desenho dentro do Selo? É um mapa. Os três Selos juntos apontam para o mesmo lugar: **ao norte da capital**. O último Selo está com a **Capitã Ivy**. Ela não sabe disso... ainda.",
+      "objetivos": [
+        {
+          "evento": "leitura",
+          "alvo": 2,
+          "texto": "Ler livros ou guias até o fim"
+        },
+        {
+          "evento": "dungeon",
+          "alvo": 1,
+          "texto": "Conquistar uma dungeon do Reino"
+        }
+      ],
+      "recompensa": {
+        "moedas": 500,
+        "xp": 800,
+        "itens": {
+          "elixir": 2
+        }
+      }
+    },
+    {
+      "id": "h-selo-entendimento",
+      "capitulo": 6,
+      "npc": "capita",
+      "titulo": "O Selo do Entendimento",
+      "nivel": 12,
+      "texto": "Um Selo? Na minha espada? ...Espera. A guarda dessa espada foi da minha avó, que lutou na noite da Ruptura. Ela dizia que a espada só cortava o que ela **entendia**. Vence os monstros mais fortes do Reino e conclui duas lições com nota máxima na Academia. Se o Selo for real, ele vai acordar.",
+      "fala_entrega": "Ele acordou! Três Selos, três lições: **perguntar, conferir a fonte, entender**. Era isso que Malakar esqueceu. O Ulf precisa ver isto. E, herói... esta noite os monstros estão estranhos. Toma cuidado.",
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "forca": "Forte"
+          },
+          "alvo": 10,
+          "texto": "Vencer monstros fortes"
+        },
+        {
+          "evento": "licao",
+          "filtro": {
+            "estrelas": 3
+          },
+          "alvo": 2,
+          "texto": "Concluir lições com 3 estrelas"
+        }
+      ],
+      "recompensa": {
+        "moedas": 550,
+        "xp": 900,
+        "itens": {
+          "elixir-grande": 1
+        }
+      }
+    },
+    {
+      "id": "h-noite-ecos",
+      "capitulo": 6,
+      "npc": "ermitao",
+      "titulo": "A Noite dos Ecos",
+      "nivel": 13,
+      "texto": "Os três Selos juntos... Nunca pensei que veria isso de novo. Mas escuta: desde que tu os juntaste, as criaturas da noite falam **com a voz de Malakar**. Sai na escuridão e vence essas criaturas. Quero saber o que elas dizem.",
+      "fala_entrega": "\"Venham... venham... ninguém precisa mais estudar...\" É a voz dele, sim. E olha o que achei no ninho de uma delas: **a última carta de L.**",
+      "escolha": {
+        "id": "confianca",
+        "pergunta": "A carta diz: \"Atravessa a Fenda sozinho. Não conta a ninguém. — L.\" O que tu fazes?",
+        "opcoes": [
+          {
+            "id": "confiar",
+            "icone": "🤝",
+            "texto": "Confiar em L. e guardar o segredo",
+            "fala": "Coração aberto, então. Ela deve ter os motivos dela... espero que bons."
+          },
+          {
+            "id": "desconfiar",
+            "icone": "🛡️",
+            "texto": "Mostrar a carta ao Ulf e ir preparado",
+            "fala": "Prudente. Quem esconde muito, esconde por um motivo. Eu guardo esta carta comigo."
+          }
+        ]
+      },
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "noite": true
+          },
+          "alvo": 8,
+          "texto": "Vencer criaturas da noite"
+        }
+      ],
+      "recompensa": {
+        "moedas": 600,
+        "xp": 1000,
+        "itens": {
+          "tonico-mana": 2
+        }
+      }
+    },
+    {
+      "id": "h-ultimo-titulo",
+      "capitulo": 6,
+      "npc": "ermitao",
+      "titulo": "O Último Título",
+      "nivel": 15,
+      "texto": "Os Selos só abrem a Fenda para quem chegou ao **fim do próprio caminho**. Teu título precisa brilhar em ouro. Treina: vence batalhas, estuda e domina a trilha da tua subclasse. Quando estiveres pronto, volta aqui.",
+      "fala_entrega": "Olha teu título... Ouro puro. Os três Selos estão cantando. **A Fenda da Ruptura, ao norte da capital, vai te deixar passar.** Do outro lado está Umbraterra. Vai, herói. E volta, por favor.",
+      "objetivos": [
+        {
+          "evento": "acerto",
+          "alvo": 15,
+          "texto": "Acertar perguntas em batalha"
+        },
+        {
+          "evento": "leitura",
+          "alvo": 1,
+          "texto": "Ler mais um livro ou guia até o fim"
+        }
+      ],
+      "recompensa": {
+        "moedas": 700,
+        "xp": 1200,
+        "itens": {
+          "elixir-arcano": 1,
+          "amuleto": 1
+        }
+      }
+    },
+    {
+      "id": "h-sentinela",
+      "capitulo": 7,
+      "npc": "lyra",
+      "titulo": "A Sentinela da Aurora",
+      "texto": "Eu esperei trezentos anos por alguém com esse brilho nos olhos. Sou **Lyra**, a que escrevia as cartas. A Fenda está cheia de sombras: são as perguntas que ninguém teve coragem de responder. Limpa o caminho, e eu te conto o resto.",
+      "fala_entrega": "Tu luta como quem entende, não como quem decorou. Ótimo. O Vazio vai sentir o cheiro disso... e vai ficar com medo.",
+      "nivel": 15,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "regiao": "fenda"
+          },
+          "alvo": 6,
+          "texto": "Vencer sombras na Fenda da Ruptura"
+        }
+      ],
+      "recompensa": {
+        "moedas": 500,
+        "xp": 700,
+        "itens": {
+          "elixir-grande": 1
+        }
+      },
+      "variantes": {
+        "confianca=desconfiar": {
+          "texto": "Tu mostraste minha carta ao Ulf... Eu entendo. Confiança se ganha, não se pede. Sou **Lyra**, a que escrevia as cartas. A Fenda está cheia de sombras: limpa o caminho, e talvez um dia tu confies em mim."
+        }
+      }
+    },
+    {
+      "id": "h-forja",
+      "capitulo": 7,
+      "npc": "lyra",
+      "titulo": "A Forja Esquecida",
+      "texto": "Nos **Ermos de Cinza** fica a forja onde nasceu o **Oráculo**, a máquina que respondia tudo para todos. Ela ainda trabalha, sozinha, forjando respostas que ninguém confere. Conquista a **Forja Esquecida** e traz o que estiver no coração dela.",
+      "fala_entrega": "Esse martelo... tem o brasão da casa de Malakar. Não me pergunta como eu sei. Ainda não.",
+      "nivel": 15,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "regiao": "cinzas"
+          },
+          "alvo": 6,
+          "texto": "Vencer criaturas dos Ermos de Cinza"
+        },
+        {
+          "evento": "dungeon",
+          "filtro": {
+            "dungeon": "forja"
+          },
+          "alvo": 1,
+          "texto": "Conquistar a Forja Esquecida"
+        }
+      ],
+      "recompensa": {
+        "moedas": 600,
+        "xp": 800,
+        "itens": {
+          "pocao": 3
+        }
+      }
+    },
+    {
+      "id": "h-colosso",
+      "capitulo": 7,
+      "npc": "lyra",
+      "titulo": "O Colosso de Magma",
+      "texto": "O **Colosso de Magma** guarda o núcleo da forja. Enquanto aquele coração de lava bater, o Vazio tem fôlego. Apaga ele.",
+      "fala_entrega": "O núcleo apagou... Tu ouviu isso? Foi um suspiro, vindo do Trono. Ele sabe que tu chegou.",
+      "nivel": 15,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "colossoMagma"
+          },
+          "alvo": 1,
+          "texto": "Derrotar o Colosso de Magma"
+        }
+      ],
+      "recompensa": {
+        "moedas": 900,
+        "xp": 1100,
+        "itens": {
+          "elixir-arcano": 1
+        }
+      }
+    },
+    {
+      "id": "h-rainha",
+      "capitulo": 8,
+      "npc": "lyra",
+      "titulo": "Reflexos da Rainha",
+      "texto": "A **Rainha de Cristal** foi a primeira aprendiz de Malakar. Aprendeu a parecer certa em vez de estar certa. No Bosque de Cristal, tudo reflete e tudo mente: confere cada coisa antes de acreditar.",
+      "fala_entrega": "Antes de cair, ela gritou um nome. O meu. Não importa... segue em frente.",
+      "nivel": 16,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "acerto",
+          "filtro": {
+            "trilha": "fundamentos"
+          },
+          "alvo": 8,
+          "texto": "Acertar perguntas de Fundamentos de IA"
+        },
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "rainhaCristal"
+          },
+          "alvo": 1,
+          "texto": "Derrotar a Rainha de Cristal"
+        }
+      ],
+      "recompensa": {
+        "moedas": 900,
+        "xp": 1100,
+        "itens": {
+          "tonico-mana": 2
+        }
+      }
+    },
+    {
+      "id": "h-eco",
+      "capitulo": 8,
+      "npc": "lyra",
+      "titulo": "A Voz no Brejo",
+      "texto": "Tem uma voz no **Brejo do Abismo** que chama por mim há séculos. Eu nunca tive coragem de ir até ela. Vai tu. E, herói... não acredita em tudo o que ela disser.",
+      "fala_entrega": "...Então ele te contou. Sim. **Malakar é meu pai.** Eu abri a Fenda para trazer alguém forte o bastante para tirá-lo de lá. Eu menti para ti, e peço perdão. Mas sobre o Vazio eu nunca menti.",
+      "nivel": 17,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "falar",
+          "filtro": {
+            "npc": "eco-malakar"
+          },
+          "alvo": 1,
+          "texto": "Encontrar a voz no Brejo do Abismo"
+        }
+      ],
+      "recompensa": {
+        "moedas": 500,
+        "xp": 800,
+        "itens": {
+          "elixir": 2
+        }
+      },
+      "variantes": {
+        "confianca=confiar": {
+          "fala_entrega": "...Ele te contou. Sim. **Malakar é meu pai.** E tu guardaste meu segredo, mesmo sem saber de nada... Eu não mereço isso. Eu abri a Fenda para trazer alguém forte o bastante para tirá-lo de lá. Perdão."
+        },
+        "confianca=desconfiar": {
+          "fala_entrega": "...Ele te contou. Sim. **Malakar é meu pai.** Tu desconfiaste de mim desde a carta, e estavas certo. Eu abri a Fenda para trazer alguém forte o bastante para salvá-lo. Mas sobre o Vazio eu nunca menti."
+        }
+      },
+      "escolha": {
+        "id": "perdao",
+        "pergunta": "Lyra baixa os olhos, esperando. O que tu dizes a ela?",
+        "opcoes": [
+          {
+            "id": "perdoar",
+            "icone": "💛",
+            "texto": "\"Eu te perdoo. Vamos salvar teu pai juntos.\"",
+            "fala": "Lyra sorri pela primeira vez. \"Juntos, então.\""
+          },
+          {
+            "id": "exigir",
+            "icone": "⚔️",
+            "texto": "\"Chega de segredos. Quero a verdade inteira.\"",
+            "fala": "Lyra endurece o rosto. \"Tu vais ter. Toda ela.\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "h-leviata",
+      "capitulo": 8,
+      "npc": "eco-malakar",
+      "titulo": "O Que Afundou no Brejo",
+      "texto": "Sou o **Eco de Malakar**: o que sobrou da parte dele que ainda pensa. O **Leviatã** guarda os segredos que todos colaram onde não deviam. Conquista a **Biblioteca do Vazio** e vence o Leviatã. Cada verdade devolvida me dá forças para lembrar.",
+      "fala_entrega": "Agora eu lembro... Eu não criei o Vazio por maldade. Criei o Oráculo para que ninguém mais precisasse estudar. O Vazio é a fome de quem só quer a resposta pronta. Ele nasceu de mim. E hoje usa o meu rosto.",
+      "nivel": 17,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "dungeon",
+          "filtro": {
+            "dungeon": "biblioteca-vazio"
+          },
+          "alvo": 1,
+          "texto": "Conquistar a Biblioteca do Vazio"
+        },
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "leviata"
+          },
+          "alvo": 1,
+          "texto": "Derrotar o Leviatã do Abismo"
+        }
+      ],
+      "recompensa": {
+        "moedas": 1000,
+        "xp": 1200,
+        "itens": {
+          "amuleto": 1
+        }
+      }
+    },
+    {
+      "id": "h-ymir",
+      "capitulo": 8,
+      "npc": "lyra",
+      "titulo": "O Silêncio de Ymir",
+      "texto": "**Ymir** guarda a porta do Trono. Ele acha que pensar dá trabalho demais e congela quem tenta. Conquista a **Cidadela de Gelo** e derruba o gigante. Prova que pensar vale a pena.",
+      "fala_entrega": "A porta está aberta. Herói... se tu tiver que escolher entre salvar meu pai e salvar Elyndor, escolhe Elyndor. Promete.",
+      "nivel": 18,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "dungeon",
+          "filtro": {
+            "dungeon": "cidadela"
+          },
+          "alvo": 1,
+          "texto": "Conquistar a Cidadela de Gelo"
+        },
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "ymir"
+          },
+          "alvo": 1,
+          "texto": "Derrotar Ymir, o Lobo-Gigante do Silêncio"
+        }
+      ],
+      "recompensa": {
+        "moedas": 1100,
+        "xp": 1300,
+        "itens": {
+          "elixir-grande": 1
+        }
+      },
+      "variantes": {
+        "perdao=perdoar": {
+          "fala_entrega": "A porta está aberta. Obrigada por me perdoar, herói. Se tu tiver que escolher entre salvar meu pai e salvar Elyndor... escolhe Elyndor. Promete."
+        },
+        "perdao=exigir": {
+          "fala_entrega": "A porta está aberta. Tu querias a verdade inteira: aqui está. Eu vou atrás do meu pai, com ou sem ti. Mas se tiver que escolher... escolhe Elyndor."
+        }
+      }
+    },
+    {
+      "id": "h-nyxar",
+      "capitulo": 9,
+      "npc": "lyra",
+      "titulo": "As Asas do Vazio",
+      "texto": "**Nyxar** foi o dragão de Malakar, o guardião da Academia antiga. O Vazio o devorou primeiro. Ele voa sobre o **Trono do Vazio** e mergulha em quem se aproxima. Derruba ele, e o caminho fica livre.",
+      "fala_entrega": "Nyxar está livre, enfim. Olha o centro do Trono... está se abrindo. Ele está vindo. **O Vazio quer falar contigo.**",
+      "nivel": 20,
+      "mundo": "umbra",
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "nyxar"
+          },
+          "alvo": 1,
+          "texto": "Derrotar Nyxar, o Dragão do Vazio"
+        }
+      ],
+      "recompensa": {
+        "moedas": 1500,
+        "xp": 1800,
+        "itens": {
+          "elixir-grande": 2
+        }
+      }
+    },
+    {
+      "id": "h-vazio",
+      "capitulo": 9,
+      "npc": "eco-malakar",
+      "titulo": "A Mente Única",
+      "texto": "Chegou a hora. O Vazio vai te oferecer tudo: nunca mais errar, nunca mais estudar, nunca mais duvidar. Foi essa oferta que me derrubou. Responde com o que tu **entendeu de verdade** e ele não terá onde se agarrar.",
+      "fala_entrega": "Está feito... Mas o Vazio não morre só com golpes. No fim, ele precisa de uma **escolha**. E essa escolha é tua.",
+      "nivel": 20,
+      "mundo": "umbra",
+      "final": true,
+      "objetivos": [
+        {
+          "evento": "chefe",
+          "filtro": {
+            "tipo": "vazio"
+          },
+          "alvo": 1,
+          "texto": "Derrotar o Vazio, a Mente Única"
+        }
+      ],
+      "recompensa": {
+        "moedas": 3000,
+        "xp": 3000,
+        "itens": {
+          "elixir-arcano": 2
+        }
+      }
+    }
+  ],
+  "secundarias": [
+    {
+      "id": "s-patrulha-noturna",
+      "npc": "guarda",
+      "titulo": "Patrulha noturna",
+      "texto": "À noite os monstros ficam mais ousados. Faz uma patrulha e vence **5 criaturas depois que escurecer**.",
+      "fala_entrega": "Bela ronda! Toma o elmo da guarda: agora tu é um de nós.",
+      "nivel": 2,
+      "repetivel": false,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "noite": true
+          },
+          "alvo": 5,
+          "texto": "Vencer monstros à noite"
+        }
+      ],
+      "recompensa": {
+        "moedas": 120,
+        "xp": 180,
+        "cosmetico": "elmo-guarda"
+      }
+    },
+    {
+      "id": "s-cacada-noturna",
+      "npc": "cacadora",
+      "titulo": "Caçada noturna",
+      "texto": "Os lobos mais perigosos só saem com a lua. Vence **4 lobos à noite** e eu te dou a minha capa de caçadora.",
+      "fala_entrega": "Quatro lobos na escuridão! A capa é tua, caçador(a) da noite.",
+      "nivel": 3,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "lobo",
+              "loboAlfa",
+              "loboSombrio",
+              "loboEspectral"
+            ],
+            "noite": true
+          },
+          "alvo": 4,
+          "texto": "Vencer lobos à noite"
+        }
+      ],
+      "recompensa": {
+        "moedas": 160,
+        "xp": 220,
+        "cosmetico": "manto-cacadora"
+      }
+    },
+    {
+      "id": "s-lenha-segura",
+      "npc": "lenhador",
+      "titulo": "Lenha segura",
+      "texto": "O **Lobo Alfa** lidera a matilha que vigia o bosque onde eu corto lenha. Derruba 1 e eu volto a trabalhar.",
+      "fala_entrega": "Sem o Alfa, a matilha se espalhou. Toma uns trocados e um elixir.",
+      "nivel": 3,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": "loboAlfa"
+          },
+          "alvo": 1,
+          "texto": "Vencer o Lobo Alfa"
+        }
+      ],
+      "recompensa": {
+        "moedas": 140,
+        "xp": 160,
+        "itens": {
+          "elixir": 2
+        }
+      }
+    },
+    {
+      "id": "s-espantalho",
+      "npc": "fazendeira",
+      "titulo": "Espantalho assombrado",
+      "texto": "Quando escurece, slimes fantasmas comem a minha plantação. Vence **4 slimes à noite**, por favor!",
+      "fala_entrega": "A plantação está salva! Leva um pão de viagem da Brina e umas moedas.",
+      "nivel": 1,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "slimeFantasma",
+              "slimeVerde",
+              "slimeAzul",
+              "slimeRoxo"
+            ],
+            "noite": true
+          },
+          "alvo": 4,
+          "texto": "Vencer slimes à noite"
+        }
+      ],
+      "recompensa": {
+        "moedas": 90,
+        "xp": 120,
+        "itens": {
+          "pao-queijo": 3
+        }
+      }
+    },
+    {
+      "id": "s-iscas",
+      "npc": "pescador",
+      "titulo": "Iscas de enigma",
+      "texto": "Peixe bom gosta de isca boa, e isca boa sai de cabeça boa. Resolve **2 enigmas** do Reino.",
+      "fala_entrega": "Com essa cabeça, tu pescaria até o Sapo Rei. Toma!",
+      "nivel": 1,
+      "objetivos": [
+        {
+          "evento": "enigma",
+          "alvo": 2,
+          "texto": "Resolver enigmas"
+        }
+      ],
+      "recompensa": {
+        "moedas": 110,
+        "xp": 150,
+        "itens": {
+          "tonico-mana": 2
+        }
+      }
+    },
+    {
+      "id": "s-farol",
+      "npc": "faroleira",
+      "titulo": "Luz no escuro",
+      "texto": "As criaturas da noite apagam a luz do farol. Vence **3 delas** (morcegos, assombrações ou fogos-fátuos).",
+      "fala_entrega": "O farol voltou a brilhar! Leva o manto vermelho do farol: ninguém mais se perde de ti.",
+      "nivel": 2,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "morcego",
+              "assombracao",
+              "fogoFatuo"
+            ]
+          },
+          "alvo": 3,
+          "texto": "Vencer criaturas da noite"
+        }
+      ],
+      "recompensa": {
+        "moedas": 140,
+        "xp": 180,
+        "cosmetico": "manto-farol"
+      }
+    },
+    {
+      "id": "s-freguesia",
+      "npc": "feirante",
+      "titulo": "Freguesia exigente",
+      "texto": "Meus fregueses só compram de quem sabe usar IA no dia a dia. Acerta **6 perguntas de IA no Trabalho** e eu te pago bem.",
+      "fala_entrega": "Freguesia satisfeita! Toma tua parte do lucro.",
+      "nivel": 1,
+      "objetivos": [
+        {
+          "evento": "acerto",
+          "filtro": {
+            "trilha": "trabalho"
+          },
+          "alvo": 6,
+          "texto": "Acertar perguntas de IA no Trabalho"
+        }
+      ],
+      "recompensa": {
+        "moedas": 160,
+        "xp": 160,
+        "itens": {
+          "amuleto": 1
+        }
+      }
+    },
+    {
+      "id": "s-metal-dragao",
+      "npc": "ferreiro",
+      "titulo": "Metal de dragão",
+      "texto": "Quero forjar uma arma digna de ti, mas preciso de material de monstro forte. Vence **3 monstros de força Forte**.",
+      "fala_entrega": "Com esse material forjei algo especial, feito sob medida para a tua classe!",
+      "nivel": 4,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "forca": "Forte"
+          },
+          "alvo": 3,
+          "texto": "Vencer monstros Fortes"
+        }
+      ],
+      "recompensa": {
+        "moedas": 150,
+        "xp": 260,
+        "cosmetico_por_classe": {
+          "mago": "varinha-ferreiro",
+          "guerreiro": "machado-forja",
+          "arqueiro": "besta-forja"
+        }
+      }
+    },
+    {
+      "id": "s-dragaozinho",
+      "npc": "crianca",
+      "titulo": "O livro dos dragões",
+      "texto": "Quero saber tudo de dragões! Lê **1 livro** da biblioteca da Academia e me conta, vai?",
+      "fala_entrega": "Uau! Então é assim que funciona? Toma, achei esse tônico no chão (juro).",
+      "nivel": 1,
+      "objetivos": [
+        {
+          "evento": "leitura",
+          "alvo": 1,
+          "texto": "Ler um livro ou guia até o fim"
+        }
+      ],
+      "recompensa": {
+        "moedas": 70,
+        "xp": 100,
+        "itens": {
+          "tonico-mana": 1
+        }
+      }
+    },
+    {
+      "id": "s-lama",
+      "npc": "barqueiro",
+      "titulo": "Lama até o pescoço",
+      "texto": "Os sapos furaram meu barco de novo! Vence **5 sapos** do pântano.",
+      "fala_entrega": "Barco salvo! Toma um elixir que achei boiando.",
+      "nivel": 4,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "sapo",
+              "sapoLuminoso"
+            ]
+          },
+          "alvo": 5,
+          "texto": "Vencer sapos do pântano"
+        }
+      ],
+      "recompensa": {
+        "moedas": 140,
+        "xp": 220,
+        "itens": {
+          "elixir": 1
+        }
+      }
+    },
+    {
+      "id": "s-caldeirao",
+      "npc": "bruxa",
+      "titulo": "Ingredientes do caldeirão",
+      "texto": "Meu caldeirão pede a chama de **3 fogos-fátuos**. Eles só aparecem quando escurece... hihihi.",
+      "fala_entrega": "Que chama linda! O chapéu é teu: já quase não é amaldiçoado.",
+      "nivel": 4,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": "fogoFatuo"
+          },
+          "alvo": 3,
+          "texto": "Vencer fogos-fátuos à noite"
+        }
+      ],
+      "recompensa": {
+        "moedas": 160,
+        "xp": 240,
+        "cosmetico": "chapeu-bruxa"
+      }
+    },
+    {
+      "id": "s-ossos",
+      "npc": "nomade",
+      "titulo": "Ossos na areia",
+      "texto": "À noite os escorpiões viram **esqueletos**. Vence **4 esqueletos** e a caravana dorme tranquila.",
+      "fala_entrega": "Nem um osso de pé! O deserto agradece.",
+      "nivel": 6,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": "esqueleto"
+          },
+          "alvo": 4,
+          "texto": "Vencer esqueletos"
+        }
+      ],
+      "recompensa": {
+        "moedas": 200,
+        "xp": 300,
+        "itens": {
+          "elixir-grande": 1
+        }
+      }
+    },
+    {
+      "id": "s-bazar",
+      "npc": "samira",
+      "titulo": "Bazar do conhecimento",
+      "texto": "No meu bazar, conhecimento vale ouro. Acerta **5 perguntas de Código e Automação**.",
+      "fala_entrega": "Negócio fechado! Tua parte, como combinado.",
+      "nivel": 6,
+      "objetivos": [
+        {
+          "evento": "acerto",
+          "filtro": {
+            "trilha": "codigo"
+          },
+          "alvo": 5,
+          "texto": "Acertar perguntas de Código e Automação"
+        }
+      ],
+      "recompensa": {
+        "moedas": 240,
+        "xp": 280,
+        "itens": {
+          "amuleto": 1
+        }
+      }
+    },
+    {
+      "id": "s-lobos-neve",
+      "npc": "helga",
+      "titulo": "Lobos da neve",
+      "texto": "Os lobos das neves cercam as trilhas. Vence **4** e eu te dou o meu capuz de neve.",
+      "fala_entrega": "As trilhas estão livres. O capuz é teu: nunca mais vais sentir frio.",
+      "nivel": 9,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "filtro": {
+            "tipo": [
+              "loboNeve",
+              "loboEspectral"
+            ]
+          },
+          "alvo": 4,
+          "texto": "Vencer lobos das neves"
+        }
+      ],
+      "recompensa": {
+        "moedas": 260,
+        "xp": 380,
+        "cosmetico": "capuz-neve"
+      }
+    },
+    {
+      "id": "s-guarda-posto",
+      "npc": "capita",
+      "titulo": "Guarda do posto",
+      "texto": "O posto avançado precisa de reforço. Vence **8 monstros**, de qualquer região.",
+      "fala_entrega": "O posto respira de novo. Bom trabalho, soldado.",
+      "nivel": 5,
+      "objetivos": [
+        {
+          "evento": "monstro",
+          "alvo": 8,
+          "texto": "Vencer monstros"
+        }
+      ],
+      "recompensa": {
+        "moedas": 220,
+        "xp": 300,
+        "itens": {
+          "elixir": 1,
+          "tonico-mana": 1
+        }
+      }
+    },
+    {
+      "id": "s-sabedoria",
+      "npc": "ermitao",
+      "titulo": "Sabedoria do ermitão",
+      "texto": "Força sem estudo é só barulho. Conclui **1 lição com 3 estrelas** na Academia.",
+      "fala_entrega": "Agora sim: força e sabedoria. Leva isto para a jornada.",
+      "nivel": 5,
+      "objetivos": [
+        {
+          "evento": "licao",
+          "filtro": {
+            "estrelas": 3
+          },
+          "alvo": 1,
+          "texto": "Concluir uma lição com 3 estrelas"
+        }
+      ],
+      "recompensa": {
+        "moedas": 200,
+        "xp": 260,
+        "itens": {
+          "elixir-arcano": 1
+        }
+      }
+    }
+  ]
+}

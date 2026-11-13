@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bestiário</title>
+<!-- Vitrine dos monstros novos (bestiario.js), animados, com os antigos ao lado. Não entra no pacote. -->
+<style>
+  body { margin: 0; background: #2b2548; color: #f3ead2; font: 16px monospace; }
+  canvas { display: block; margin: 0 auto; image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script src="../js/pixel.js"></script>
+<script src="../js/icones.js"></script>
+<script src="../js/avatar.js"></script>
+<script src="../js/heroi.js"></script>
+<script src="../js/bestiario.js"></script>
+<script src="../js/mundo.js"></script>
+<script src="../js/reino.js"></script>
+<script>
+const c = document.getElementById("c");
+c.width = 760;
+c.height = 600;
+const ctx = c.getContext("2d");
+ctx.imageSmoothingEnabled = false;
+const E = 3;
+const fileiras = [
+  ["slime", () => slimeArte("#5fd35f"), () => spriteSlime("#5fd35f")],
+  ["sapo", () => sapoArte(), () => spriteSapo()],
+  ["morcego", () => morcegoArte(), () => spriteMorcego()],
+  ["fogo", () => fogoFatuoArte(), () => spriteFogoFatuo()],
+  ["fantasma", () => assombracaoArte(), () => spriteAssombracao()],
+  ["escorpião", () => escorpiaoArte(), () => spriteEscorpiao()],
+  ["esqueleto", () => esqueletoArte(), () => spriteEsqueleto()],
+];
+const heroi = heroiParado({ kit: "mago", corpo: "feminino", pele: "#f1c9a5", cabelo: "longo", corCabelo: "#e8e4dc", chapeu: "pontudo", manto: "#6c48c9", detalhe: "#b9a2ff", item: "cajado", magia: "#b9a2ff", familiar: "nenhum" });
+const prontos = fileiras.map(([nome, novo, velho]) => ({ nome, quadros: novo(), velho: velho() }));
+const rei = slimeArte("#5fd35f", { escala: 3, coroa: true });
+function quadro(agora) {
+  const t = agora / 1000;
+  ctx.fillStyle = "#3a3360";
+  ctx.fillRect(0, 0, c.width, c.height);
+  prontos.forEach((b, i) => {
+    const col = i % 4;
+    const lin = Math.floor(i / 4);
+    const x = 20 + col * 185;
+    const y = 30 + lin * 170;
+    ctx.fillStyle = "#f3ead2";
+    ctx.fillText(b.nome, x, y - 8);
+    ctx.drawImage(b.velho, x, y, b.velho.width * 2, b.velho.height * 2);
+    const q = b.quadros[Math.floor(t * 7) % b.quadros.length];
+    ctx.drawImage(q, x + 70, y, q.width * E, q.height * E);
+  });
+  ctx.drawImage(heroi, 600, 360, heroi.width * E, heroi.height * E);
+  const qr = rei[Math.floor(t * 7) % rei.length];
+  ctx.drawImage(qr, 380, 360, qr.width * 2, qr.height * 2);
+  requestAnimationFrame(quadro);
+}
+requestAnimationFrame(quadro);
+</script>
+</body>
+</html>

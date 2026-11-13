@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacidade · RPG IA</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap">
+  <style>
+    /* A página de privacidade no visual do jogo: céu de Elyndor com estrelas, um pergaminho escuro com
+       moldura de pixel dourada, a faixa vermelha no título e cada seção num quadro com ícone. Tudo em CSS. */
+    :root {
+      color-scheme: dark;
+      --ouro: #ffd166; --ouro-claro: #ffe08a; --ouro-escuro: #8a6d12; --tinta: #f2ebdc; --suave: #b8aecd;
+      --pedra: #1c1634; --pedra-escura: #120e26; --preto: #05030a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; padding: 40px 16px 48px; color: var(--tinta);
+      font: 21px/1.45 "Jersey 10", "Segoe UI", sans-serif; font-size-adjust: cap-height 0.64; font-synthesis: none;
+      background:
+        radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 78% 9%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 33% 72%, #cfe0ff 50%, transparent 51%),
+        radial-gradient(1px 1px at 88% 58%, #fff 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 56% 31%, #ffe9b0 50%, transparent 51%),
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.35) 0.6px, transparent 1px) 0 0 / 41px 37px,
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(110, 60, 180, 0.35), transparent 70%),
+        linear-gradient(180deg, #070418, #120e2a 50%, #1a0f30);
+      background-attachment: fixed;
+    }
+    main {
+      position: relative; max-width: 760px; margin: 0 auto; padding: 22px 28px 28px;
+      background: linear-gradient(180deg, var(--pedra), var(--pedra-escura));
+      /* a moldura de pixel: degraus de preto e ouro */
+      box-shadow: 0 0 0 3px var(--preto), 0 0 0 6px var(--ouro-escuro), 0 0 0 8px var(--ouro), 0 0 0 10px var(--ouro-claro),
+        0 0 0 13px var(--preto), 0 30px 60px rgba(0, 0, 0, 0.6);
+    }
+    .topo { display: grid; justify-items: center; gap: 8px; margin-bottom: 20px; text-align: center; }
+    .brasao {
+      width: 64px; height: 64px; display: grid; place-items: center; font-size: 2rem;
+      background: linear-gradient(180deg, #3a2a6a, #1a1236);
+      box-shadow: 0 0 0 3px var(--preto), 0 0 0 5px var(--ouro), 0 0 0 7px var(--preto), 0 0 22px rgba(110, 240, 255, 0.45);
+    }
+    .faixa {
+      padding: 6px 54px 9px;
+      background: linear-gradient(180deg, #c0283c, #8a1424 60%, #5a0e1a);
+      clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 50%, 100% 100%, 0 100%, 20px 50%);
+    }
+    h1 { margin: 0; color: #fff3cf; font-weight: 400; font-size: 1.8rem; letter-spacing: 0.04em; text-shadow: 2px 2px 0 #3a0610; }
+    .topo small { color: var(--suave); }
+    section {
+      display: grid; grid-template-columns: 48px 1fr; gap: 4px 14px; align-items: start; margin: 0 0 14px; padding: 12px 14px;
+      background: rgba(5, 3, 10, 0.4); box-shadow: 0 0 0 2px var(--preto), 0 0 0 3px rgba(217, 169, 58, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.04);
+    }
+    .icone {
+      grid-row: span 2; width: 48px; height: 48px; display: grid; place-items: center; font-size: 1.5rem;
+      background: linear-gradient(180deg, #ffe08a, #d9a93a); box-shadow: 0 0 0 2px var(--preto), inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+    }
+    h2 { margin: 0; color: var(--ouro-claro); font-weight: 400; font-size: 1.35rem; letter-spacing: 0.03em; text-shadow: 1px 1px 0 #000; }
+    section p, section ul { margin: 0; }
+    ul { padding-left: 18px; }
+    li { margin: 4px 0; }
+    p, li { color: #e6dcc8; }
+    b { color: var(--ouro-claro); font-weight: 400; }
+    a { color: #6ec8ff; }
+    .rodape { display: grid; justify-items: center; gap: 12px; margin-top: 22px; text-align: center; }
+    .rodape small { color: var(--suave); }
+    .voltar {
+      display: inline-block; padding: 8px 22px; color: #2a1606; text-decoration: none; font-size: 1.15rem; letter-spacing: 0.03em;
+      background: linear-gradient(180deg, #fff1b8, #ffd166 50%, #d9a93a);
+      box-shadow: 0 0 0 2px var(--preto), 0 0 0 4px var(--ouro-escuro), 0 0 0 6px var(--preto), 0 5px 0 6px rgba(0, 0, 0, 0.45);
+    }
+    .voltar:hover { filter: brightness(1.12); }
+    @media (max-width: 560px) {
+      body { padding: 24px 12px; font-size: 19px; }
+      main { padding: 16px 14px 20px; }
+      section { grid-template-columns: 1fr; }
+      .icone { grid-row: auto; width: 40px; height: 40px; font-size: 1.2rem; }
+      .faixa { padding: 6px 34px 9px; }
+      h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="topo">
+      <span class="brasao" aria-hidden="true">🛡️</span>
+      <div class="faixa"><h1>Privacidade no RPG IA</h1></div>
+      <small>Academia Arcana de Elyndor · o que o jogo guarda e por quê</small>
+    </header>
+
+    <section>
+      <span class="icone" aria-hidden="true">📜</span>
+      <h2>O que guardamos</h2>
+      <ul>
+        <li><b>O nome do herói</b> que tu escreves (pode ser um apelido: não precisa ser teu nome de verdade).</li>
+        <li><b>O progresso do jogo</b>: nível, XP, moedas, itens, missões, respostas certas e erradas, classe e aparência do herói.</li>
+        <li><b>Um histórico das ações</b> do jogo (batalhas, compras, recompensas), para o jogo funcionar e evitar trapaça.</li>
+        <li><b>Contadores por endereço de internet (IP)</b>, só para limitar abuso (por exemplo, criar heróis demais). Eles somem em até 1 dia.</li>
+      </ul>
+    </section>
+
+    <section>
+      <span class="icone" aria-hidden="true">🚫</span>
+      <h2>O que não guardamos</h2>
+      <p>Não pedimos e-mail, senha, telefone, documento nem dados de pagamento. Não há anúncios nem rastreadores de terceiros.</p>
+    </section>
+
+    <section>
+      <span class="icone" aria-hidden="true">⚙️</span>
+      <h2>Para que usamos</h2>
+      <p>Só para o jogo funcionar: salvar teu progresso e corrigir as respostas. Não vendemos nem compartilhamos esses dados.</p>
+    </section>
+
+    <section>
+      <span class="icone" aria-hidden="true">🏰</span>
+      <h2>Onde fica</h2>
+      <p>No servidor do jogo e no armazenamento do teu navegador (que guarda qual herói é teu). Fazemos cópias de segurança diárias, guardadas por até 14 dias.</p>
+    </section>
+
+    <section>
+      <span class="icone" aria-hidden="true">🧙</span>
+      <h2>A segunda opinião do Zetsu (IA)</h2>
+      <p>Se a função de IA estiver ligada e tu pedires a opinião do Zetsu, o texto do teu prompt é enviado a um serviço de IA para gerar a resposta. Não escrevas dados pessoais ou sigilosos nesses campos.</p>
+    </section>
+
+    <section>
+      <span class="icone" aria-hidden="true">🗑️</span>
+      <h2>Apagar teus dados</h2>
+      <p>Na tela de escolher aventureiro, a lixeira de cada herói apaga o save e todo o histórico dele do servidor, na hora.</p>
+    </section>
+
+    <footer class="rodape">
+      <a class="voltar" href="/">◂ Voltar ao jogo</a>
+      <small>Dúvidas: fale com quem mantém o jogo.</small>
+    </footer>
+  </main>
+</body>
+</html>

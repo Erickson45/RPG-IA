@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Árvores pintadas</title>
+<style>
+  body { margin: 0; padding: 10px; background: #4f9a3e; font: 12px sans-serif; color: #fff; }
+  .g { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+  canvas { image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<div class="g" id="g"></div>
+<script src="../js/pixel.js"></script>
+<script src="../js/bestiario.js"></script>
+<script src="../js/reino.js"></script>
+<script src="../js/cenario_hd.js"></script>
+<script src="../js/arvores_arte.js"></script>
+<script>
+  window.ERROS = [];
+  for (const tipo of ["morta", "palmeira", "cacto", "arbusto", "cogumelo", "junco", "osso", "rocha", "rochaNeve", "cristal", "redonda", "pinheiro", "vaso"]) {
+    for (let v = 0; v < 3; v++) {
+      try {
+        const c = arvorePintada(tipo, v);
+        c.style.width = `${c.width * 1.5}px`;
+        document.getElementById("g").append(c);
+      } catch (e) { ERROS.push(`${tipo} ${v}: ${e.message}`); }
+    }
+  }
+</script>
+</body>
+</html>

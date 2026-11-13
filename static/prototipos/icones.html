@@ -1,0 +1,7 @@
+﻿<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Ícones de RPG</title>
+<style>body{margin:0;padding:12px;background:#1b1533;color:#e9e1c8;font:12px sans-serif}.g{display:flex;flex-wrap:wrap;gap:6px}figure{margin:0;width:62px;text-align:center}img{width:54px;height:54px;image-rendering:pixelated;background:#2b2250;border:1px solid #5a4a8a}</style></head>
+<body><div class="g" id="g"></div>
+<script src="../js/pixel.js"></script><script src="../js/bestiario.js"></script><script src="../js/itens_arte.js"></script><script src="../js/icones_arte.js"></script>
+<script>window.ERROS=[];for(const e of Object.keys(ICONE_DO_EMOJI)){try{document.getElementById("g").insertAdjacentHTML("beforeend",`<figure><img src="${iconeDoEmoji(e)}" class="sem-icone-px"><figcaption class="sem-icone-px">${e}</figcaption></figure>`)}catch(x){ERROS.push(e+": "+x.message)}}</script>
+</body></html>

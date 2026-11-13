@@ -1,0 +1,29 @@
+# RPG IA: o que o fail2ban vigia (vai para /etc/fail2ban/jail.d/rpgia.local)
+
+[DEFAULT]
+# o próprio servidor nunca é banido
+ignoreip = 127.0.0.1/8 ::1
+
+# SSH: 4 erros em 10 minutos, 1 hora de castigo
+[sshd]
+enabled = true
+maxretry = 4
+findtime = 10m
+bantime = 1h
+
+# quem fica batendo no limite de pedidos do nginx (só um robô chega lá: o limite é bem folgado)
+[nginx-limit-req]
+enabled = true
+port = http,https
+logpath = /var/log/nginx/error.log
+maxretry = 30
+findtime = 5m
+bantime = 30m
+
+# reincidentes: banido 3 vezes num dia, fica uma semana de fora
+[recidive]
+enabled = true
+logpath = /var/log/fail2ban.log
+maxretry = 3
+findtime = 1d
+bantime = 1w

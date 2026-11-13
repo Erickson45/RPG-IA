@@ -1,0 +1,27 @@
+[Unit]
+Description=RPG IA - o Salão do multijogador (WebSocket, salao.py)
+After=network.target rpgia.service
+
+[Service]
+User=rpgia
+Group=rpgia
+WorkingDirectory=/opt/rpgia
+EnvironmentFile=-/opt/rpgia/.env
+# um processo só, assíncrono: guarda o lobby e os duelos na memória. Só escuta na máquina; quem fala com
+# a internet é o nginx (location /salao em deploy/nginx-rpgia-salao.conf)
+Environment=SALAO_HOST=127.0.0.1
+Environment=SALAO_PORTA=5051
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/rpgia/.venv/bin/python salao.py
+Restart=always
+RestartSec=3
+# o mesmo cercado do jogo: só escreve em dados/ (o banco e as travas)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/rpgia/dados
+MemoryMax=200M
+
+[Install]
+WantedBy=multi-user.target

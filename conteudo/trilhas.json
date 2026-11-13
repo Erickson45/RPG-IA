@@ -1,0 +1,30 @@
+{
+  "legenda": {
+    "trilhas": "as áreas de conhecimento; cada pergunta, lição e dungeon pertence a uma (campo trilha)",
+    "ranks": "pontos de domínio para alcançar cada patente numa trilha",
+    "pontos": "quanto domínio cada conquista rende",
+    "bonus_por_rank": "moedas ganhas ao subir de patente (vezes a posição da patente)",
+    "golpe_a_partir_de": "posição da patente que faz cada acerto daquela trilha tirar 2 de vida do monstro"
+  },
+  "trilhas": {
+    "prompts": { "nome": "Arte do Prompt", "icone": "🪄", "cor": "#c084fc", "descricao": "Pedir bem: papel, contexto, tarefa, formato e iteração." },
+    "fundamentos": { "nome": "Fundamentos de IA", "icone": "🔮", "cor": "#6ee7ff", "descricao": "Como os modelos pensam: contexto, alucinação, RAG e agentes." },
+    "codigo": { "nome": "Código e Automação", "icone": "🐍", "cor": "#7dff9a", "descricao": "Python, PowerShell, APIs, Git e SQL para automatizar o dia a dia." },
+    "seguranca": { "nome": "Ética e Segurança", "icone": "🛡️", "cor": "#ff8a65", "descricao": "Dados sensíveis, LGPD, prompt injection e decisões responsáveis." },
+    "trabalho": { "nome": "IA no Trabalho", "icone": "💼", "cor": "#ffd166", "descricao": "Usar IA nas tarefas reais: e-mails, relatórios, reuniões e custos." }
+  },
+  "ranks": [
+    { "nome": "Novato", "pontos": 0 },
+    { "nome": "Aprendiz", "pontos": 8 },
+    { "nome": "Adepto", "pontos": 25 },
+    { "nome": "Especialista", "pontos": 50 },
+    { "nome": "Mestre", "pontos": 90 }
+  ],
+  "pontos": { "acerto_por_perigo": 1, "estrela_nova": 2, "dungeon_primeira": 8, "leitura": 4 },
+  "bonus_por_rank": 25,
+  "golpe_a_partir_de": 2,
+  "estantes": {
+    "Programação": "codigo", "Automação": "codigo", "Inteligência Artificial": "fundamentos",
+    "Arte do Prompt": "prompts", "Segurança e Ética": "seguranca", "IA no Trabalho": "trabalho"
+  }
+}

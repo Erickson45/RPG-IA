@@ -1,0 +1,34 @@
+{
+  "perguntas": [
+    {
+      "chave": "ia",
+      "fala": "Antes de abrir o mapa do reino, preciso conhecer teus poderes. Me diz com sinceridade: **qual é a tua experiência com a magia da IA?**",
+      "opcoes": [
+        { "valor": 0, "icone": "🌱", "titulo": "Nunca usei", "fala": "Nunca usei, mestre. Tô chegando agora nesse mundo.", "reacao": "Perfeito! Quem chega sem vícios aprende do jeito certo." },
+        { "valor": 1, "icone": "🔮", "titulo": "Uso de vez em quando", "fala": "Já conjurei umas coisas no ChatGPT, de vez em quando.", "reacao": "Ah, já sentiu a magia na ponta dos dedos. Ótimo começo!" },
+        { "valor": 2, "icone": "⚡", "titulo": "Uso todo dia", "fala": "Uso todo dia, mestre. A IA já faz parte do meu trabalho.", "reacao": "Um praticante! Então vamos afiar teu método." }
+      ]
+    },
+    {
+      "chave": "codigo",
+      "fala": "Interessante... E as **runas do código**? Já escreveu um programa alguma vez?",
+      "opcoes": [
+        { "valor": 0, "icone": "📜", "titulo": "Nunca programei", "fala": "Código pra mim ainda é runa antiga, mestre.", "reacao": "Sem problema. Na Forja eu te mostro tudo do zero." },
+        { "valor": 1, "icone": "🛠️", "titulo": "Um pouco", "fala": "Já mexi em script e fórmula de planilha, um pouco.", "reacao": "Já é meio caminho! Vamos transformar isso em poder de verdade." },
+        { "valor": 2, "icone": "🐍", "titulo": "Programo", "fala": "Programo sim! Python não me assusta.", "reacao": "Excelente! Então tuas mãos já sabem forjar." }
+      ]
+    }
+  ],
+  "leituras": [
+    "Toda grande jornada começa com um primeiro passo. A tua começa na Vila do Despertar, e eu vou estar contigo em cada uma das paradas.",
+    "Já sentiu a magia, agora vamos transformar curiosidade em método. Tua trilha passa por quase todo o reino.",
+    "Tu já sabe se virar. Vamos afiar o que importa: pedir bem e usar a magia com responsabilidade.",
+    "Mãos de quem constrói! Vou te levar direto para onde a magia vira produto.",
+    "Poder não te falta. Tua trilha vai direto para os desafios que separam os bons dos lendários."
+  ],
+  "motivos_opcionais": {
+    "1": "Tu já usa IA, então os conceitos básicos ficam como revisão.",
+    "2": "Quem usa IA todo dia já pede bem. A Torre do Prompt fica aberta se quiser treinar.",
+    "3": "Tu já programa: a montagem do ambiente fica como revisão."
+  }
+}

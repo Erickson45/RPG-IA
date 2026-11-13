@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herói e mascotes</title>
+<!-- Vitrine do herói (as três classes), dos mascotes, das armas e da aura. Não entra no pacote. -->
+<style>
+  body { margin: 0; background: #2b2548; color: #f3ead2; font: 16px monospace; }
+  canvas { display: block; margin: 0 auto; image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script src="../js/pixel.js"></script>
+<script src="../js/icones.js"></script>
+<script src="../js/avatar.js"></script>
+<script src="../js/heroi.js"></script>
+<script src="../js/bestiario.js"></script>
+<script src="../js/mundo.js"></script>
+<script>
+const c = document.getElementById("c");
+c.width = 780;
+c.height = 600;
+const ctx = c.getContext("2d");
+ctx.imageSmoothingEnabled = false;
+const E = 3;
+const herois = [
+  { kit: "mago", corpo: "feminino", pele: "#f1c9a5", cabelo: "longo", corCabelo: "#e8e4dc", chapeu: "pontudo", manto: "#6c48c9", detalhe: "#b9a2ff", item: "cajado", magia: "#b9a2ff", familiar: "coruja" },
+  { kit: "guerreiro", corpo: "masculino", pele: "#c98d63", cabelo: "curto", corCabelo: "#2b1d14", chapeu: "elmoFerro", manto: "#b8322a", item: "espadaEscudo", familiar: "golem", acessorio: "barba" },
+  { kit: "arqueiro", corpo: "feminino", pele: "#8d5a3b", cabelo: "longo", corCabelo: "#1b1205", chapeu: "cacador", manto: "#2f8a3a", item: "arco", familiar: "raposa" },
+];
+const mascotes = ["gato", "raposa", "coruja", "golem", "fenix", "slime", "dragao"];
+function quadro(agora) {
+  const t = agora / 1000;
+  ctx.fillStyle = "#3a3360";
+  ctx.fillRect(0, 0, c.width, c.height);
+  herois.forEach((h, i) => {
+    const s = spritesHeroi(h);
+    const q = s.baixo[Math.floor(t * 8) % 8];
+    const x = 30 + i * 140;
+    ctx.save();
+    ctx.translate(x + 16 * E, 40 + 51 * E);
+    ctx.scale(E, E);
+    if (typeof desenharAura === "function") desenharAura(ctx, { rgb: "169, 139, 255", degrau: 4 }, t, false);
+    ctx.drawImage(q, -16, -PE_HEROI);
+    desenharEfeitosHeroi(ctx, h, t, -16, -PE_HEROI, "baixo");
+    if (typeof desenharAura === "function") desenharAura(ctx, { rgb: "169, 139, 255", degrau: 4 }, t, true);
+    ctx.restore();
+  });
+  mascotes.forEach((m, i) => {
+    const qs = familiarQuadros({ familiar: m }) || [familiarCanvas({ familiar: m })];
+    const q = qs[Math.floor(t * 4) % qs.length];
+    if (q) ctx.drawImage(q, 20 + i * 105, 300, q.width * E, q.height * E);
+    const corrida = familiarCorrida({ familiar: m });
+    const qc = corrida?.quadros?.[Math.floor(t * (corrida.ritmo || 8)) % corrida.quadros.length];
+    if (qc) ctx.drawImage(qc, 20 + i * 105, 400, qc.width * E, qc.height * E);
+  });
+  ["cajado", "grimorio", "orbe", "espadaFerro", "machado", "martelo", "arco", "besta"].forEach((item, i) => {
+    const kit = ["cajado", "grimorio", "orbe"].includes(item) ? "mago" : ["arco", "besta"].includes(item) ? "arqueiro" : "guerreiro";
+    const d = typeof desenhoDoItem === "function" ? null : null;
+    const a = escolhasCompletas({ ...AVATAR_PADRAO, kit, item });
+    const { canvas, ctx: cx } = criarTela(56, 72);
+    itemHeroi(pincelHeroi(cx, paletaHeroi(a)), a, 26, 48);
+    const pronto = contornar(acabamentoDoHeroi(canvas, a), "auto");
+    ctx.drawImage(pronto, 450 + (i % 4) * 80, 20 + Math.floor(i / 4) * 140, 56 * 2, 72 * 2);
+  });
+  requestAnimationFrame(quadro);
+}
+requestAnimationFrame(quadro);
+</script>
+</body>
+</html>

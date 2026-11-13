@@ -1,0 +1,7 @@
+flask>=3.0
+python-dotenv>=1.0
+# o Salão do multijogador (salao.py): o servidor de tempo real, com WebSocket
+websockets>=13
+
+# Opcional: só precisa se for ligar a IA de verdade (ANTHROPIC_API_KEY no .env)
+anthropic

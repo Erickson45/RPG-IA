@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup do banco do RPG IA
+
+[Service]
+Type=oneshot
+User=rpgia
+Group=rpgia
+WorkingDirectory=/opt/rpgia
+EnvironmentFile=-/opt/rpgia/.env
+ExecStart=/opt/rpgia/.venv/bin/python /opt/rpgia/backup_banco.py

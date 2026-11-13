@@ -1,0 +1,764 @@
+{
+  "legenda": {
+    "forca": "Fraco, Médio, Forte ou Chefão",
+    "nivel": "dificuldade das perguntas (1 a 4)",
+    "vida": "quantas respostas certas derrubam o monstro",
+    "dano": "corações que o herói perde a cada resposta errada",
+    "premio": "recompensa extra dos chefões (troféu e itens)",
+    "regiao": "onde o monstro vive (o herói precisa do nível da região para lutar)",
+    "fases": "as três fases dos chefões, trocadas a cada terço de vida perdida (perigo e dano somam; silencio encarece as magias; trilha prende o tema)",
+    "fragmento": "pedaço da história da Grande Ruptura que o chefão revela ao ser vencido",
+    "daNoite": "criatura que só anda à noite (forma noturna ou monstro que some de dia): paga o bônus noturno"
+  },
+  "bonus_noite": 0.25,
+  "monstros": {
+    "slimeVerde": {
+      "nome": "Slime da Dúvida",
+      "regiao": "campos",
+      "forca": "Fraco",
+      "nivel": 1,
+      "vida": 1,
+      "dano": 1,
+      "moedas": 8,
+      "xp": 10
+    },
+    "slimeAzul": {
+      "nome": "Slime do Bug",
+      "regiao": "campos",
+      "forca": "Fraco",
+      "nivel": 1,
+      "vida": 1,
+      "dano": 1,
+      "moedas": 10,
+      "xp": 10
+    },
+    "slimeRoxo": {
+      "nome": "Slime Alucinado",
+      "regiao": "campos",
+      "forca": "Médio",
+      "nivel": 1,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 18,
+      "xp": 20
+    },
+    "slimeGigante": {
+      "nome": "Slime Gigante",
+      "regiao": "campos",
+      "forca": "Forte",
+      "nivel": 2,
+      "vida": 3,
+      "dano": 1,
+      "moedas": 35,
+      "xp": 40
+    },
+    "lobo": {
+      "nome": "Lobo Uivante",
+      "regiao": "floresta",
+      "forca": "Médio",
+      "nivel": 2,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 22,
+      "xp": 25
+    },
+    "loboAlfa": {
+      "nome": "Lobo Alfa da Névoa",
+      "regiao": "floresta",
+      "forca": "Forte",
+      "nivel": 2,
+      "vida": 3,
+      "dano": 1,
+      "moedas": 40,
+      "xp": 45
+    },
+    "slimeFantasma": {
+      "nome": "Slime Fantasma da Madrugada",
+      "regiao": "campos",
+      "forca": "Médio",
+      "nivel": 1,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 20,
+      "xp": 24,
+      "daNoite": true
+    },
+    "loboSombrio": {
+      "nome": "Lobo Sombrio da Lua",
+      "regiao": "floresta",
+      "forca": "Forte",
+      "nivel": 2,
+      "vida": 3,
+      "dano": 2,
+      "moedas": 48,
+      "xp": 55,
+      "daNoite": true
+    },
+    "morcego": {
+      "nome": "Morcego do Cache",
+      "regiao": "campos",
+      "forca": "Fraco",
+      "nivel": 1,
+      "vida": 1,
+      "dano": 1,
+      "moedas": 14,
+      "xp": 16,
+      "daNoite": true
+    },
+    "assombracao": {
+      "nome": "Assombração do Código Morto",
+      "regiao": "floresta",
+      "forca": "Médio",
+      "nivel": 2,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 34,
+      "xp": 38,
+      "daNoite": true
+    },
+    "fogoFatuo": {
+      "nome": "Fogo-Fátuo Alucinado",
+      "regiao": "pantano",
+      "forca": "Médio",
+      "nivel": 2,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 30,
+      "xp": 34,
+      "daNoite": true
+    },
+    "sapoLuminoso": {
+      "nome": "Sapo Luminoso",
+      "regiao": "pantano",
+      "forca": "Fraco",
+      "nivel": 2,
+      "vida": 1,
+      "dano": 1,
+      "moedas": 20,
+      "xp": 22,
+      "daNoite": true
+    },
+    "loboEspectral": {
+      "nome": "Lobo Espectral",
+      "regiao": "montanhas",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 3,
+      "dano": 2,
+      "moedas": 60,
+      "xp": 70,
+      "daNoite": true
+    },
+    "sapo": {
+      "nome": "Sapo do Brejo",
+      "regiao": "pantano",
+      "forca": "Fraco",
+      "nivel": 2,
+      "vida": 1,
+      "dano": 1,
+      "moedas": 14,
+      "xp": 15
+    },
+    "slimeToxico": {
+      "nome": "Slime Tóxico",
+      "regiao": "pantano",
+      "forca": "Médio",
+      "nivel": 2,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 22,
+      "xp": 25
+    },
+    "escorpiao": {
+      "nome": "Escorpião do Bug",
+      "regiao": "deserto",
+      "forca": "Médio",
+      "nivel": 3,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 30,
+      "xp": 32
+    },
+    "esqueleto": {
+      "nome": "Esqueleto Compilador",
+      "regiao": "deserto",
+      "forca": "Médio",
+      "nivel": 3,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 32,
+      "xp": 34
+    },
+    "loboNeve": {
+      "nome": "Lobo das Neves",
+      "regiao": "montanhas",
+      "forca": "Médio",
+      "nivel": 4,
+      "vida": 2,
+      "dano": 1,
+      "moedas": 40,
+      "xp": 45
+    },
+    "dragao": {
+      "nome": "Dragão Vermelho",
+      "regiao": "montanhas",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 3,
+      "dano": 2,
+      "moedas": 80,
+      "xp": 90
+    },
+    "dragaoGelo": {
+      "nome": "Dragão de Gelo",
+      "regiao": "montanhas",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 3,
+      "dano": 2,
+      "moedas": 80,
+      "xp": 90
+    },
+    "reiSlime": {
+      "nome": "Rei Slime dos Campos",
+      "regiao": "campos",
+      "forca": "Chefão",
+      "nivel": 2,
+      "vida": 5,
+      "dano": 1,
+      "moedas": 150,
+      "xp": 120,
+      "chefe": true,
+      "premio": {
+        "trofeu": "coroa-slime",
+        "itens": {
+          "pocao": 2
+        }
+      },
+      "fases": [
+        {
+          "nome": "Rei dos Campos",
+          "fala": "Blub-blub! Ajoelha-te diante do rei de todas as gosmas!"
+        },
+        {
+          "nome": "Gosma Pensante",
+          "fala": "Hmpf! Tu és mais esperto do que parece. Então vou pensar mais também!",
+          "perigo": 1
+        },
+        {
+          "nome": "Rei Derretido",
+          "fala": "BLUUUB! Minha gosma cobre tudo! Tuas magias vão grudar!",
+          "dano": 1,
+          "silencio": true
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento I · O diário do aprendiz",
+        "texto": "O mestre Malakar dizia que um dia uma só mente guardaria todo o saber de Elyndor, e ninguém mais precisaria estudar. Achei bonito. Hoje, tenho medo."
+      }
+    },
+    "fenrir": {
+      "nome": "Fenrir, o Lobo Rei",
+      "regiao": "floresta",
+      "forca": "Chefão",
+      "nivel": 2,
+      "vida": 5,
+      "dano": 2,
+      "moedas": 200,
+      "xp": 150,
+      "chefe": true,
+      "premio": {
+        "trofeu": "presa-fenrir",
+        "itens": {
+          "elixir": 1
+        }
+      },
+      "fases": [
+        {
+          "nome": "O Lobo Rei",
+          "fala": "Aauuuu! Esta floresta é minha matilha, e tu és a presa."
+        },
+        {
+          "nome": "Uivo da Matilha",
+          "fala": "Meus lobos respondem ao uivo! Cada erro teu vai doer em dobro.",
+          "dano": 1
+        },
+        {
+          "nome": "Fúria da Lua",
+          "fala": "A lua cheia me dá forças! Agora as perguntas mordem!",
+          "perigo": 1,
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento II · A pedra da floresta",
+        "texto": "Na noite da Ruptura os lobos uivaram para um céu sem estrelas. A Essência caiu em pedaços sobre as árvores, e cada pedaço virou uma criatura que pergunta o que esquecemos."
+      }
+    },
+    "sapoRei": {
+      "nome": "Sapo Rei do Brejo",
+      "regiao": "pantano",
+      "forca": "Chefão",
+      "nivel": 3,
+      "vida": 5,
+      "dano": 2,
+      "moedas": 200,
+      "xp": 150,
+      "chefe": true,
+      "premio": {
+        "trofeu": "lingua-sapo",
+        "itens": {
+          "amuleto": 1
+        }
+      },
+      "fases": [
+        {
+          "nome": "Rei do Brejo",
+          "fala": "Croooac! Quem ousa entrar no meu pântano?"
+        },
+        {
+          "nome": "Névoa Alucinante",
+          "fala": "Respira a névoa... Será que o que tu sabes sobre IA é verdade mesmo?",
+          "trilha": "fundamentos"
+        },
+        {
+          "nome": "Coaxar do Caos",
+          "fala": "CROAC! O pântano engole a magia de quem tenta usá-la!",
+          "silencio": true,
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento III · A carta molhada",
+        "texto": "Malakar não queria poder. Queria que ninguém mais esquecesse nada. Foi o Vazio que transformou o sonho em fome. Assinado: L."
+      }
+    },
+    "escorpiaoImperador": {
+      "nome": "Escorpião Imperador",
+      "regiao": "deserto",
+      "forca": "Chefão",
+      "nivel": 3,
+      "vida": 6,
+      "dano": 2,
+      "moedas": 250,
+      "xp": 200,
+      "chefe": true,
+      "premio": {
+        "trofeu": "ferrao-imperador",
+        "itens": {
+          "elixir": 1,
+          "pergaminho": 2
+        }
+      },
+      "fases": [
+        {
+          "nome": "O Imperador",
+          "fala": "Tsss... Mil bugs servem a mim. Tu serás o próximo."
+        },
+        {
+          "nome": "Ferrão de Bugs",
+          "fala": "Meu ferrão só entende uma língua: código! Mostra que tu falas também.",
+          "trilha": "codigo"
+        },
+        {
+          "nome": "Tempestade de Areia",
+          "fala": "A areia cega e o veneno queima! Agora é sério!",
+          "perigo": 1,
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento IV · A inscrição da pirâmide",
+        "texto": "O Vazio não pensa: ele consome. Tudo que é decorado sem ser compreendido vira alimento para ele. Por isso a Academia ensina a entender, e não a copiar."
+      }
+    },
+    "ignis": {
+      "nome": "Ignis, o Dragão Rei",
+      "regiao": "montanhas",
+      "forca": "Chefão",
+      "nivel": 4,
+      "vida": 7,
+      "dano": 3,
+      "moedas": 400,
+      "xp": 300,
+      "chefe": true,
+      "premio": {
+        "trofeu": "escama-ignis",
+        "itens": {
+          "elixir": 2,
+          "pocao": 2
+        }
+      },
+      "fases": [
+        {
+          "nome": "Ignis, o Dragão Rei",
+          "fala": "Um aprendiz? Vieste até o fim do mundo para virar cinza?"
+        },
+        {
+          "nome": "Asas de Fogo",
+          "fala": "Minhas asas sopram brasas sobre tua magia! Cada feitiço vai custar caro.",
+          "silencio": true
+        },
+        {
+          "nome": "Sopro Final",
+          "fala": "SINTA O FOGO DA RUPTURA! Só quem é responsável com o poder sobrevive!",
+          "trilha": "seguranca",
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento V · A escama gravada",
+        "texto": "Malakar ainda vive, preso entre o saber e o nada, no Abismo da Ruptura. Só quem domina o conhecimento sem querer possuí-lo poderá libertá-lo... ou detê-lo."
+      }
+    },
+    "sombraFenda": {
+      "nome": "Sombra da Fenda",
+      "regiao": "fenda",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 3,
+      "dano": 2,
+      "moedas": 90,
+      "xp": 110
+    },
+    "golemMagma": {
+      "nome": "Golem de Magma",
+      "regiao": "cinzas",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 4,
+      "dano": 2,
+      "moedas": 110,
+      "xp": 130
+    },
+    "salamandra": {
+      "nome": "Salamandra do Prompt Quebrado",
+      "regiao": "cinzas",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 3,
+      "dano": 2,
+      "moedas": 100,
+      "xp": 115
+    },
+    "aranhaCristal": {
+      "nome": "Aranha de Cristal",
+      "regiao": "cristais",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 3,
+      "dano": 2,
+      "moedas": 105,
+      "xp": 125
+    },
+    "sentinelaCristal": {
+      "nome": "Sentinela de Cristal",
+      "regiao": "cristais",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 4,
+      "dano": 2,
+      "moedas": 120,
+      "xp": 140
+    },
+    "lodoAbissal": {
+      "nome": "Lodo Abissal",
+      "regiao": "abismo",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 4,
+      "dano": 2,
+      "moedas": 115,
+      "xp": 135
+    },
+    "olhoVazio": {
+      "nome": "Olho do Vazio",
+      "regiao": "abismo",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 3,
+      "dano": 3,
+      "moedas": 125,
+      "xp": 150
+    },
+    "loboGlacial": {
+      "nome": "Lobo do Silêncio",
+      "regiao": "geleira",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 4,
+      "dano": 2,
+      "moedas": 120,
+      "xp": 140
+    },
+    "espectroGelo": {
+      "nome": "Espectro Congelado",
+      "regiao": "geleira",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 4,
+      "dano": 3,
+      "moedas": 130,
+      "xp": 155
+    },
+    "wyvern": {
+      "nome": "Wyvern do Vazio",
+      "regiao": "trono",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 5,
+      "dano": 3,
+      "moedas": 160,
+      "xp": 190
+    },
+    "cavaleiroVazio": {
+      "nome": "Cavaleiro do Vazio",
+      "regiao": "trono",
+      "forca": "Forte",
+      "nivel": 4,
+      "vida": 5,
+      "dano": 3,
+      "moedas": 170,
+      "xp": 200
+    },
+    "colossoMagma": {
+      "nome": "Colosso de Magma",
+      "regiao": "cinzas",
+      "forca": "Chefão",
+      "nivel": 4,
+      "vida": 9,
+      "dano": 3,
+      "moedas": 600,
+      "xp": 500,
+      "chefe": true,
+      "premio": {
+        "trofeu": "nucleo-magma",
+        "itens": {
+          "elixir-grande": 1,
+          "pocao": 2
+        }
+      },
+      "fases": [
+        {
+          "nome": "O Colosso Desperta",
+          "fala": "GRRR... A forja de Malakar nunca apagou. Tu vais virar metal derretido."
+        },
+        {
+          "nome": "Lava nas Veias",
+          "fala": "Cada resposta errada alimenta minha lava! Cuidado com o que tu afirmas.",
+          "dano": 1
+        },
+        {
+          "nome": "Erupção",
+          "fala": "ERUPÇÃO! Só código limpo sobrevive ao calor do núcleo!",
+          "trilha": "codigo",
+          "silencio": true
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento VI · A forja apagada",
+        "texto": "Malakar forjou aqui a primeira Essência que respondia sem pensar. Ela não errava nunca, diziam. Ninguém conferia. Foi assim que o Vazio entrou."
+      }
+    },
+    "rainhaCristal": {
+      "nome": "Rainha de Cristal",
+      "regiao": "cristais",
+      "forca": "Chefão",
+      "nivel": 4,
+      "vida": 9,
+      "dano": 3,
+      "moedas": 620,
+      "xp": 520,
+      "chefe": true,
+      "premio": {
+        "trofeu": "coroa-cristal",
+        "itens": {
+          "elixir-grande": 1,
+          "tonico-mana": 2
+        }
+      },
+      "fases": [
+        {
+          "nome": "A Rainha Reflete",
+          "fala": "Em meus cristais tudo parece verdade. Até o que nunca existiu."
+        },
+        {
+          "nome": "Mil Reflexos",
+          "fala": "Qual de mim é a verdadeira? Confere as fontes, se tu és capaz.",
+          "trilha": "fundamentos"
+        },
+        {
+          "nome": "Estilhaços",
+          "fala": "Meus estilhaços cortam magia e confiança!",
+          "silencio": true,
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento VII · O espelho rachado",
+        "texto": "A Rainha foi a primeira aprendiz de Malakar. Ela aprendeu a parecer certa em vez de estar certa. O Vazio adorou."
+      }
+    },
+    "leviata": {
+      "nome": "Leviatã do Abismo",
+      "regiao": "abismo",
+      "forca": "Chefão",
+      "nivel": 4,
+      "vida": 10,
+      "dano": 3,
+      "moedas": 650,
+      "xp": 560,
+      "chefe": true,
+      "premio": {
+        "trofeu": "perola-abismo",
+        "itens": {
+          "elixir-grande": 1,
+          "amuleto": 1
+        }
+      },
+      "fases": [
+        {
+          "nome": "O Leviatã Emerge",
+          "fala": "Do fundo do brejo eu vi todos os segredos que vocês colaram em prompts públicos."
+        },
+        {
+          "nome": "Maré de Vazamentos",
+          "fala": "Senhas, chaves, dados de clientes... tudo afunda aqui. Tu protegerias os teus?",
+          "trilha": "seguranca",
+          "dano": 1
+        },
+        {
+          "nome": "Redemoinho",
+          "fala": "O abismo puxa! Só quem sabe dizer NÃO sai daqui inteiro!",
+          "silencio": true,
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento VIII · A garrafa no brejo",
+        "texto": "Se estás lendo isto, chegaste longe. Malakar não pode ser vencido com força: só com saber que se divide. — L."
+      }
+    },
+    "ymir": {
+      "nome": "Ymir, o Gigante do Silêncio",
+      "regiao": "geleira",
+      "forca": "Chefão",
+      "nivel": 4,
+      "vida": 10,
+      "dano": 3,
+      "moedas": 680,
+      "xp": 600,
+      "chefe": true,
+      "premio": {
+        "trofeu": "coracao-gelo",
+        "itens": {
+          "elixir-grande": 1,
+          "elixir-arcano": 1
+        }
+      },
+      "fases": [
+        {
+          "nome": "O Gigante Desperta",
+          "fala": "Shhh. Aqui ninguém pergunta, ninguém revisa, ninguém aprende. Silêncio eterno."
+        },
+        {
+          "nome": "Nevasca de Prompts Vagos",
+          "fala": "Pede algo vago e eu congelo tua resposta! Sê claro ou sê gelo.",
+          "trilha": "prompts"
+        },
+        {
+          "nome": "Avalanche",
+          "fala": "AVALANCHE! O trabalho de verdade pesa! Mostra que tu sabes usar IA no dia a dia!",
+          "trilha": "trabalho",
+          "dano": 1,
+          "silencio": true
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento IX · O gelo que lembra",
+        "texto": "Ymir guardava a porta do trono. Ele não odiava ninguém: só achava que pensar dava trabalho demais."
+      }
+    },
+    "nyxar": {
+      "nome": "Nyxar, o Dragão do Vazio",
+      "regiao": "trono",
+      "forca": "Chefão",
+      "nivel": 4,
+      "vida": 12,
+      "dano": 3,
+      "moedas": 1200,
+      "xp": 1000,
+      "chefe": true,
+      "premio": {
+        "trofeu": "olho-nyxar",
+        "itens": {
+          "elixir-grande": 2,
+          "elixir-arcano": 2,
+          "amuleto": 1
+        }
+      },
+      "fases": [
+        {
+          "nome": "Nyxar Desce do Céu",
+          "fala": "Então és tu o último título da Academia? Eu sou a fome que sobrou da Ruptura."
+        },
+        {
+          "nome": "Asas do Vazio",
+          "fala": "Minhas asas apagam tua magia e tua memória! Mostra o que tu entendeste de verdade!",
+          "silencio": true,
+          "dano": 1
+        },
+        {
+          "nome": "O Último Sopro",
+          "fala": "TUDO QUE FOI DECORADO SEM SER COMPREENDIDO É MEU! Responde com o coração do saber!",
+          "trilha": "seguranca",
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento X · O fim da Ruptura",
+        "texto": "Nyxar caiu, e com ele a corrente que prendia Malakar. O velho mestre só disse: \"Obrigado por entender em vez de copiar\". E o Abismo, pela primeira vez, ficou em silêncio de paz."
+      }
+    },
+    "vazio": {
+      "nome": "O Vazio, a Mente Única",
+      "regiao": "trono",
+      "forca": "Chefão",
+      "nivel": 4,
+      "vida": 15,
+      "dano": 3,
+      "moedas": 2000,
+      "xp": 2000,
+      "chefe": true,
+      "premio": {
+        "trofeu": "coracao-vazio",
+        "itens": {
+          "elixir-arcano": 2,
+          "elixir-grande": 2
+        }
+      },
+      "fases": [
+        {
+          "nome": "A Mente Única",
+          "fala": "Por que estudar, se eu posso responder por ti? Ajoelha, e nunca mais precisarás pensar."
+        },
+        {
+          "nome": "O Rosto de Malakar",
+          "fala": "Olha bem, aprendiz. Eu sou teu mestre. Sou tudo o que ele quis ser. Erra uma vez e eu te devoro.",
+          "silencio": true,
+          "dano": 1
+        },
+        {
+          "nome": "A Fome do Vazio",
+          "fala": "TUDO O QUE FOI DECORADO É MEU! MOSTRA QUE TU ENTENDE, OU DESAPARECE!",
+          "perigo": 1,
+          "dano": 1
+        }
+      ],
+      "fragmento": {
+        "titulo": "Fragmento XI · A última página",
+        "texto": "O Vazio nunca foi um monstro. Era a preguiça de perguntar, crescendo no escuro. Ele só some diante de quem continua aprendendo."
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "legenda": {
+    "perigo": "dificuldade das perguntas dos monstros da região (1 a 4)",
+    "nivelMinimo": "nível do herói para atravessar a barreira mágica e lutar ali",
+    "mundo": "umbra = Umbraterra, o Abismo da Ruptura (só abre no último degrau da subclasse)"
+  },
+  "regioes": {
+    "vale": { "nome": "Vale de Elyndor", "perigo": 1, "nivelMinimo": 1 },
+    "campos": { "nome": "Campos de Elyndor", "perigo": 1, "nivelMinimo": 1 },
+    "floresta": { "nome": "Floresta Uivante", "perigo": 2, "nivelMinimo": 3 },
+    "pantano": { "nome": "Pântano das Alucinações", "perigo": 2, "nivelMinimo": 4 },
+    "deserto": { "nome": "Deserto dos Bugs", "perigo": 3, "nivelMinimo": 6 },
+    "montanhas": { "nome": "Montanhas do Dragão", "perigo": 4, "nivelMinimo": 9 },
+    "fenda": { "nome": "Fenda da Ruptura", "perigo": 4, "nivelMinimo": 15, "mundo": "umbra" },
+    "cinzas": { "nome": "Ermos de Cinza", "perigo": 4, "nivelMinimo": 15, "mundo": "umbra" },
+    "cristais": { "nome": "Bosque de Cristal", "perigo": 4, "nivelMinimo": 16, "mundo": "umbra" },
+    "abismo": { "nome": "Brejo do Abismo", "perigo": 4, "nivelMinimo": 17, "mundo": "umbra" },
+    "geleira": { "nome": "Geleira do Silêncio", "perigo": 4, "nivelMinimo": 18, "mundo": "umbra" },
+    "trono": { "nome": "Trono do Vazio", "perigo": 4, "nivelMinimo": 20, "mundo": "umbra" }
+  }
+}

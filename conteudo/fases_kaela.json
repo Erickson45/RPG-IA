@@ -1,0 +1,419 @@
+{
+  "professor": "kaela",
+  "fases": [
+    {
+      "id": 7,
+      "trilha": "codigo",
+      "titulo": "Scripts que não quebram",
+      "local": "Oficina das Engrenagens",
+      "subtitulo": "Erros tratados, logs, segredos guardados e scripts que podem rodar duas vezes",
+      "icone": "⚙️",
+      "xp": 200,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Então tu é {nome}, o aprendiz que passou pelo Zetsu com louvor? Eu sou a **Mestra Kaela**, e aqui na Oficina a gente transforma script que *funciona na minha máquina* em script que **funciona sempre**.",
+              "cena": { "tipo": "destaque", "icone": "⚙️", "titulo": "A Oficina das Engrenagens", "texto": "Script de verdade roda sozinho, às 3 da manhã, sem ninguém olhando.", "efeito": "CLANK!" }
+            },
+            {
+              "texto": "Um script de automação vai encontrar o mundo real: arquivo que não existe, rede que cai, API que demora. Ele precisa saber **o que fazer quando dá errado**.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "As quatro engrenagens de um script robusto",
+                "itens": [
+                  { "icone": "🛡️", "titulo": "Tratar erros", "texto": "try/except no que pode falhar" },
+                  { "icone": "📜", "titulo": "Registrar", "texto": "log com data e hora" },
+                  { "icone": "🔐", "titulo": "Guardar segredos", "texto": "variável de ambiente, nunca no código" },
+                  { "icone": "🔁", "titulo": "Ser idempotente", "texto": "rodar 2 vezes não estraga nada" }
+                ]
+              }
+            },
+            {
+              "texto": "**Idempotente** é uma palavra chique para uma ideia simples: se o script rodar duas vezes sem querer, o resultado tem que ser o mesmo. Nada de mandar o e-mail duplicado ou apagar o que não devia.",
+              "cena": {
+                "tipo": "comparacao",
+                "titulo": "Rodou duas vezes...",
+                "ruim": { "rotulo": "Script frágil", "texto": "Cria a pasta e quebra porque ela já existe." },
+                "bom": { "rotulo": "Script idempotente", "texto": "Cria a pasta só se ela ainda não existir." }
+              }
+            },
+            {
+              "texto": "E log não é enfeite. Quando algo falhar de madrugada, é o log que vai te contar **o que** aconteceu, **quando** e **com qual dado**.",
+              "cena": {
+                "tipo": "codigo",
+                "titulo": "Um feitiço de proteção",
+                "codigo": "import logging, os\nlogging.basicConfig(filename='robo.log', level=logging.INFO,\n                    format='%(asctime)s %(levelname)s %(message)s')\n\ntoken = os.environ['TOKEN_API']\ntry:\n    enviar_relatorio(token)\n    logging.info('Relatório enviado')\nexcept Exception as erro:\n    logging.error('Falhou: %s', erro)"
+              }
+            },
+            "Vamos ver se tu pegou o espírito da coisa."
+          ]
+        },
+        {
+          "tipo": "quiz",
+          "perguntas": [
+            {
+              "pergunta": "Onde deve ficar o token de acesso a uma API usado pelo teu script?",
+              "opcoes": ["Escrito direto no código, para facilitar", "Numa variável de ambiente ou cofre de segredos", "No nome do arquivo do script", "No README do projeto"],
+              "correta": 1,
+              "explicacao": "Isso! Segredo fora do código: assim ele não vaza no Git nem em print de tela."
+            },
+            {
+              "pergunta": "O que significa um script ser idempotente?",
+              "opcoes": ["Ele roda mais rápido a cada vez", "Rodar de novo dá o mesmo resultado, sem estragar nada", "Ele só funciona uma vez", "Ele não precisa de Python instalado"],
+              "correta": 1,
+              "explicacao": "Exato. Rodou duas vezes sem querer? Nada duplicado, nada quebrado."
+            },
+            {
+              "pergunta": "Teu script lê um arquivo que às vezes ainda não chegou. O que é melhor?",
+              "opcoes": ["Deixar quebrar com erro vermelho", "Verificar se o arquivo existe e registrar no log quando faltar", "Apagar a pasta inteira e recomeçar", "Rodar o script 50 vezes seguidas"],
+              "correta": 1,
+              "explicacao": "Erro esperado se trata com calma: verifica, registra e segue (ou avisa alguém)."
+            },
+            {
+              "pergunta": "Qual destas linhas de log é a mais útil?",
+              "opcoes": ["deu erro", "ERRO", "2026-10-31 03:12 ERROR Falha ao baixar vendas.csv: timeout após 30s", "aaaaaaa"],
+              "correta": 2,
+              "explicacao": "Data, nível, o que falhou e o motivo. Com isso tu resolve em minutos, não em horas."
+            }
+          ]
+        },
+        {
+          "tipo": "ordenar",
+          "enunciado": "Coloque na ordem certa o que um bom robô de relatório faz a cada execução.",
+          "itens": [
+            "Ler as configurações e o token das variáveis de ambiente",
+            "Registrar no log que a execução começou",
+            "Baixar os dados da API, com timeout",
+            "Conferir se os dados vieram completos",
+            "Gerar o relatório só se ele ainda não existir hoje",
+            "Enviar o relatório e registrar o sucesso no log"
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Engrenagens no lugar! Agora teus scripts aguentam o mundo real.",
+              "cena": { "tipo": "destaque", "icone": "🏅", "titulo": "Primeira engrenagem", "texto": "Erros tratados, logs claros e segredos guardados.", "efeito": "TCHAN!" }
+            },
+            "Na próxima lição a gente vai escolher a **ferramenta certa** para cada trabalho: Python, PowerShell ou Apps Script."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "trilha": "trabalho",
+      "titulo": "A ferramenta certa",
+      "local": "Salão dos Pergaminhos",
+      "subtitulo": "Python, PowerShell ou Apps Script: quando usar cada um",
+      "icone": "🧰",
+      "xp": 200,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Um bom artesão não usa martelo para tudo, {nome}. Na automação é igual: cada ferramenta brilha num lugar.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Três ferramentas, três especialidades",
+                "itens": [
+                  { "icone": "🐍", "titulo": "Python", "texto": "dados, APIs, planilhas, IA" },
+                  { "icone": "💠", "titulo": "PowerShell", "texto": "Windows, servidores, Active Directory" },
+                  { "icone": "📜", "titulo": "Apps Script", "texto": "Planilhas, Gmail, Drive e Agenda do Google" }
+                ]
+              }
+            },
+            {
+              "texto": "O **PowerShell** fala a língua do Windows: serviços, processos, disco, usuários. E os comandos devolvem **objetos**, então dá para filtrar sem recortar texto.",
+              "cena": {
+                "tipo": "codigo",
+                "titulo": "PowerShell: serviços parados",
+                "codigo": "Get-Service |\n    Where-Object Status -eq 'Stopped' |\n    Select-Object Name, DisplayName"
+              }
+            },
+            {
+              "texto": "O **Apps Script** mora dentro do Google: não precisa instalar nada nem manter servidor. Perfeito para planilha que manda e-mail sozinha.",
+              "cena": {
+                "tipo": "codigo",
+                "titulo": "Apps Script: avisar por e-mail",
+                "codigo": "function avisar() {\n  const aba = SpreadsheetApp.getActiveSheet();\n  const total = aba.getRange('B2').getValue();\n  MailApp.sendEmail('time@empresa.com', 'Total do dia', `Hoje: ${total}`);\n}"
+              }
+            },
+            {
+              "texto": "E o **Python** é o canivete suíço: quando tem dado, API, planilha grande ou IA no meio, ele costuma ser a melhor escolha.",
+              "cena": { "tipo": "destaque", "icone": "🧭", "titulo": "A regra da Kaela", "texto": "Escolha a ferramenta que **já mora onde o problema está**.", "efeito": "PLIM!" }
+            },
+            "Agora é contigo: qual ferramenta para cada trabalho?"
+          ]
+        },
+        {
+          "tipo": "classificar",
+          "enunciado": "Para cada tarefa, escolha a ferramenta que combina melhor.",
+          "partes": ["python", "powershell", "appsscript"],
+          "rotulos": { "python": "🐍 Python", "powershell": "💠 PowerShell", "appsscript": "📜 Apps Script" },
+          "trechos": [
+            { "texto": "Reiniciar um serviço travado em 20 servidores Windows.", "parte": "powershell", "explicacao": "Serviços e servidores Windows são a casa do PowerShell." },
+            { "texto": "Toda segunda, mandar um e-mail com o resumo de uma Planilha Google.", "parte": "appsscript", "explicacao": "Planilha e Gmail moram no Google: o Apps Script já está lá dentro." },
+            { "texto": "Juntar 40 arquivos CSV, limpar os dados e gerar um gráfico.", "parte": "python", "explicacao": "Dados e gráficos: Python com pandas resolve rapidinho." },
+            { "texto": "Listar os usuários do Active Directory que não fazem login há 90 dias.", "parte": "powershell", "explicacao": "Active Directory tem comandos prontos no PowerShell." },
+            { "texto": "Criar um menu personalizado dentro de uma Planilha Google.", "parte": "appsscript", "explicacao": "Menu na planilha é com onOpen no Apps Script." },
+            { "texto": "Chamar a API de uma IA para classificar 500 chamados.", "parte": "python", "explicacao": "APIs e IA: as bibliotecas do Python fazem isso com poucas linhas." },
+            { "texto": "Apagar logs com mais de 30 dias numa pasta do Windows Server.", "parte": "powershell", "explicacao": "Get-ChildItem + Remove-Item (com -WhatIf antes!)." },
+            { "texto": "Quando alguém responder um Formulário Google, criar um evento na Agenda.", "parte": "appsscript", "explicacao": "Gatilho de formulário + CalendarApp, tudo no Apps Script." }
+          ]
+        },
+        {
+          "tipo": "quiz",
+          "perguntas": [
+            {
+              "pergunta": "No PowerShell, qual comando filtra os itens que passam pelo pipeline?",
+              "opcoes": ["Select-Object", "Where-Object", "Sort-Object", "Write-Host"],
+              "correta": 1,
+              "explicacao": "Where-Object filtra; Select-Object escolhe colunas; Sort-Object ordena."
+            },
+            {
+              "pergunta": "Qual parâmetro do PowerShell mostra o que seria feito, sem fazer de verdade?",
+              "opcoes": ["-Force", "-Verbose", "-WhatIf", "-Recurse"],
+              "correta": 2,
+              "explicacao": "-WhatIf é o melhor amigo de quem vai apagar ou mover muita coisa."
+            },
+            {
+              "pergunta": "No Apps Script, como fazer uma função rodar todo dia às 8h sozinha?",
+              "opcoes": ["Deixar o navegador aberto", "Criar um gatilho (acionador) por tempo", "Chamar a função dentro dela mesma", "Não dá para fazer isso"],
+              "correta": 1,
+              "explicacao": "Acionadores por tempo rodam nos servidores do Google, mesmo com teu computador desligado."
+            },
+            {
+              "pergunta": "Por que ler e escrever na planilha em bloco (getValues/setValues) no Apps Script?",
+              "opcoes": ["Porque célula por célula é proibido", "Porque é muito mais rápido", "Porque deixa a planilha colorida", "Porque não precisa de autorização"],
+              "correta": 1,
+              "explicacao": "Cada chamada à planilha custa tempo. Em bloco, são poucas chamadas em vez de milhares."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            "Agora tu sabe escolher o martelo certo para cada prego. Isso economiza horas de sofrimento!",
+            {
+              "texto": "Na próxima lição vamos atravessar a **Ponte dos Mensageiros**: APIs, do jeito que se faz no trabalho de verdade.",
+              "cena": { "tipo": "destaque", "icone": "🕊️", "titulo": "Próxima parada", "texto": "A Ponte dos Mensageiros: HTTP, JSON e autenticação.", "efeito": "VUSH!" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "trilha": "codigo",
+      "titulo": "APIs sem medo",
+      "local": "Ponte dos Mensageiros",
+      "subtitulo": "Métodos, códigos de status, JSON, autenticação e paginação",
+      "icone": "🕊️",
+      "xp": 250,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Toda automação séria, cedo ou tarde, conversa com uma **API**. É a porta que um sistema deixa aberta para outros programas.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "Uma conversa pela API",
+                "itens": [
+                  { "icone": "🧑‍💻", "texto": "Teu script manda um **pedido** (método + URL + token)" },
+                  { "icone": "🏰", "texto": "O sistema confere quem é você" },
+                  { "icone": "📦", "texto": "Responde com um **código de status** e dados em **JSON**" },
+                  { "icone": "⚙️", "texto": "Teu script lê o JSON e segue o trabalho" }
+                ]
+              }
+            },
+            {
+              "texto": "O **código de status** diz como foi. Começa com 2? Deu certo. Com 4? O problema é no teu pedido. Com 5? É do lado de lá.",
+              "cena": {
+                "tipo": "grade",
+                "titulo": "Os códigos mais comuns",
+                "itens": [
+                  { "icone": "✅", "titulo": "200 / 201", "texto": "deu certo / criado" },
+                  { "icone": "🔑", "titulo": "401 / 403", "texto": "sem login / sem permissão" },
+                  { "icone": "❓", "titulo": "404", "texto": "não existe" },
+                  { "icone": "⏳", "titulo": "429", "texto": "calma, muitas chamadas" },
+                  { "icone": "🔥", "titulo": "500 / 503", "texto": "erro ou fora do ar lá" }
+                ]
+              }
+            },
+            {
+              "texto": "Muitas APIs entregam os dados em **páginas**: 100 itens por vez. Se tu ler só a primeira página, vai achar que tem 100 chamados quando tem 3 mil!",
+              "cena": {
+                "tipo": "codigo",
+                "titulo": "Lendo todas as páginas",
+                "codigo": "pagina, todos = 1, []\nwhile True:\n    r = requests.get(URL, params={'page': pagina}, headers=CABECALHO, timeout=10)\n    r.raise_for_status()\n    itens = r.json()['itens']\n    if not itens:\n        break\n    todos += itens\n    pagina += 1"
+              }
+            },
+            "Bora ver se tu fala a língua dos mensageiros."
+          ]
+        },
+        {
+          "tipo": "classificar",
+          "enunciado": "A API respondeu com cada um destes códigos. De quem é o problema?",
+          "partes": ["sucesso", "cliente", "servidor"],
+          "rotulos": { "sucesso": "✅ Deu certo", "cliente": "🧑‍💻 Problema no meu pedido", "servidor": "🔥 Problema do lado de lá" },
+          "trechos": [
+            { "texto": "200 OK", "parte": "sucesso", "explicacao": "2xx é sucesso." },
+            { "texto": "401 Unauthorized", "parte": "cliente", "explicacao": "Faltou o token ou ele está errado: o pedido é que está incompleto." },
+            { "texto": "503 Service Unavailable", "parte": "servidor", "explicacao": "O serviço está fora do ar ou sobrecarregado. Espera e tenta de novo." },
+            { "texto": "404 Not Found", "parte": "cliente", "explicacao": "A URL pede algo que não existe. Confere o endereço." },
+            { "texto": "201 Created", "parte": "sucesso", "explicacao": "Criado com sucesso, típico de um POST." },
+            { "texto": "429 Too Many Requests", "parte": "cliente", "explicacao": "Tu passou do limite de chamadas. Diminui o ritmo e respeita o rate limit." },
+            { "texto": "500 Internal Server Error", "parte": "servidor", "explicacao": "Algo quebrou no servidor. Registra no log e avisa quem cuida da API." }
+          ]
+        },
+        {
+          "tipo": "quiz",
+          "perguntas": [
+            {
+              "pergunta": "Qual método HTTP se usa, normalmente, para criar um registro novo?",
+              "opcoes": ["GET", "POST", "DELETE", "HEAD"],
+              "correta": 1,
+              "explicacao": "POST cria. GET busca, PUT/PATCH atualiza, DELETE apaga."
+            },
+            {
+              "pergunta": "A API devolveu 429. O que o teu script deve fazer?",
+              "opcoes": ["Chamar de novo imediatamente, mil vezes", "Esperar um pouco e tentar de novo, respeitando o limite", "Apagar o token", "Ignorar e seguir sem os dados"],
+              "correta": 1,
+              "explicacao": "429 é a API pedindo calma. Espera (às vezes ela até diz quanto tempo) e tenta de novo."
+            },
+            {
+              "pergunta": "Por que colocar timeout em toda chamada de API?",
+              "opcoes": ["Para a chamada ficar mais bonita", "Para o script não ficar travado para sempre se a API não responder", "Porque a API exige", "Para gastar menos internet"],
+              "correta": 1,
+              "explicacao": "Sem timeout, uma API muda pode deixar teu robô parado a noite inteira."
+            },
+            {
+              "pergunta": "A API devolve 100 itens por página e tu precisa de todos. O que fazer?",
+              "opcoes": ["Usar só a primeira página", "Percorrer as páginas até a resposta vir vazia", "Pedir para a API mandar tudo num e-mail", "Copiar e colar à mão"],
+              "correta": 1,
+              "explicacao": "Paginação: um laço que vai pedindo a próxima página até acabar."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Ponte atravessada! Os mensageiros agora trabalham para ti.",
+              "cena": { "tipo": "destaque", "icone": "🕊️", "titulo": "Mensageiro mestre", "texto": "Status, JSON, autenticação e paginação dominados.", "efeito": "FLAP!" }
+            },
+            "Falta uma coisa para tu trabalhar em equipe como gente grande: guardar o histórico do teu código. Te espero no **Arquivo das Crônicas**."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "trilha": "codigo",
+      "titulo": "Git e trabalho em equipe",
+      "local": "Arquivo das Crônicas",
+      "subtitulo": "Commits, branches, Pull Requests e o que nunca vai para o repositório",
+      "icone": "🌿",
+      "xp": 250,
+      "etapas": [
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Teus scripts já são valiosos demais para viver num pendrive, {nome}. No Arquivo das Crônicas, cada mudança fica registrada com o **Git**.",
+              "cena": { "tipo": "destaque", "icone": "🌿", "titulo": "O Arquivo das Crônicas", "texto": "Cada commit é uma foto do projeto. Errou? Volta para a foto anterior.", "efeito": "CLIC!" }
+            },
+            {
+              "texto": "O ciclo do dia a dia é curto: ver o que mudou, escolher o que vai, tirar a foto e enviar.",
+              "cena": {
+                "tipo": "fluxo",
+                "titulo": "O ciclo do Git",
+                "itens": [
+                  { "icone": "🔍", "texto": "`git status`: o que mudou?" },
+                  { "icone": "➕", "texto": "`git add`: escolhe o que vai" },
+                  { "icone": "📸", "texto": "`git commit -m`: tira a foto" },
+                  { "icone": "☁️", "texto": "`git push`: envia para o servidor" }
+                ]
+              }
+            },
+            {
+              "texto": "Em equipe, ninguém mexe direto na `main`. Cada mudança nasce numa **branch**, vira um **Pull Request** e alguém revisa antes de juntar.",
+              "cena": {
+                "tipo": "comparacao",
+                "titulo": "Mensagens de commit",
+                "ruim": { "rotulo": "Ninguém entende", "texto": "ajustes" },
+                "bom": { "rotulo": "Conta a história", "texto": "Corrige cálculo de desconto para clientes antigos" }
+              }
+            },
+            {
+              "texto": "E a regra de ouro: **segredo não entra no Git**. Se entrou, troca o segredo. Apagar o arquivo depois não adianta, ele fica no histórico.",
+              "cena": {
+                "tipo": "codigo",
+                "titulo": "Um .gitignore de respeito",
+                "codigo": ".env\n*.log\n*.xlsx\n__pycache__/\n.venv/"
+              }
+            }
+          ]
+        },
+        {
+          "tipo": "ordenar",
+          "enunciado": "Coloque na ordem o caminho de uma melhoria, do começo até ela estar na main.",
+          "itens": [
+            "Atualizar a main com git pull",
+            "Criar uma branch nova para a melhoria",
+            "Fazer as mudanças e testar",
+            "Fazer commits com mensagens claras",
+            "Enviar a branch com git push",
+            "Abrir um Pull Request e pedir revisão",
+            "Ajustar o que a revisão pediu e fazer o merge"
+          ]
+        },
+        {
+          "tipo": "quiz",
+          "perguntas": [
+            {
+              "pergunta": "Tu commitou sem querer um arquivo .env com a senha do banco. O que fazer?",
+              "opcoes": ["Apagar o arquivo num commit novo e pronto", "Trocar a senha e depois limpar o arquivo do repositório", "Não fazer nada, ninguém vai ver", "Renomear o arquivo"],
+              "correta": 1,
+              "explicacao": "A senha já está no histórico. O primeiro passo é trocá-la; limpar o repositório vem depois."
+            },
+            {
+              "pergunta": "Para que serve uma branch?",
+              "opcoes": ["Para apagar o histórico", "Para trabalhar numa mudança sem mexer na versão principal", "Para deixar o repositório mais leve", "Para trocar a senha do GitHub"],
+              "correta": 1,
+              "explicacao": "A main fica sempre funcionando enquanto a mudança amadurece na branch."
+            },
+            {
+              "pergunta": "Qual comando mostra o que mudou desde o último commit?",
+              "opcoes": ["git push", "git status", "git clone", "git init"],
+              "correta": 1,
+              "explicacao": "git status (e git diff para ver linha por linha)."
+            },
+            {
+              "pergunta": "Qual é o principal objetivo de um Pull Request?",
+              "opcoes": ["Baixar o código mais rápido", "Pedir que alguém revise a mudança antes de juntar na main", "Apagar uma branch", "Criar um backup no pendrive"],
+              "correta": 1,
+              "explicacao": "Revisão pega erro cedo e espalha conhecimento pelo time."
+            }
+          ]
+        },
+        {
+          "tipo": "dialogo",
+          "falas": [
+            {
+              "texto": "Tu completou a Oficina, {nome}! Scripts robustos, a ferramenta certa, APIs e Git. Isso é nível de profissional.",
+              "cena": { "tipo": "destaque", "icone": "🏆", "titulo": "Engenheiro de Automação", "texto": "A trilha intermediária está completa.", "efeito": "UHUL!" }
+            },
+            "Se tu fechar minhas lições com **pelo menos 70% das estrelas**, a porta do **Arquimago Orion** se abre. Ele ensina a magia mais avançada da Academia."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[Unit]
+Description=Ensaio da renovação do certificado HTTPS do RPG IA
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/rpgia-ensaio-certificado

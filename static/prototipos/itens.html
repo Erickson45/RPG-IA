@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Ícones dos itens</title>
+<style>
+  body { margin: 0; padding: 16px; background: #1b1533; color: #e9e1c8; font: 14px sans-serif; }
+  .grade { display: flex; flex-wrap: wrap; gap: 10px; }
+  figure { margin: 0; width: 96px; text-align: center; }
+  img { width: 72px; height: 72px; image-rendering: pixelated; background: radial-gradient(circle at 50% 35%, #3d2f74, #160f30); border: 2px solid #8a6d12; }
+  figcaption { font-size: 11px; }
+</style>
+</head>
+<body>
+<div class="grade" id="grade"></div>
+<script src="../js/pixel.js"></script>
+<script src="../js/bestiario.js"></script>
+<script src="../js/itens_arte.js"></script>
+<script>
+  const erros = [];
+  for (const id of Object.keys(ARTE_DOS_ITENS)) {
+    try {
+      document.getElementById("grade").insertAdjacentHTML("beforeend", `<figure><img src="${arteDoItem(id)}"><figcaption>${id}</figcaption></figure>`);
+    } catch (e) { erros.push(id + ": " + e.message); }
+  }
+  window.ERROS = erros;
+</script>
+</body>
+</html>
