@@ -1,4 +1,68 @@
-# RPG IA 🧙‍♂️🐉
+<div align="center">
+
+<img src="docs/banner.png" alt="RPG IA · Academia Arcana de Elyndor: guerreiro, mago e arqueira em pixel art diante de um castelo" width="100%">
+
+# RPG IA · Academia Arcana de Elyndor
+
+**Aprenda Inteligência Artificial jogando.** Um RPG em pixel art no navegador onde cada monstro é uma pergunta sobre IA.
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3-000000?logo=flask&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-WAL-003B57?logo=sqlite&logoColor=white)
+![WebSockets](https://img.shields.io/badge/WebSockets-multijogador-22D3EE)
+![Canvas](https://img.shields.io/badge/Canvas-pixel_art_por_código-8B5CF6)
+![Nginx](https://img.shields.io/badge/Nginx-Gunicorn-009639?logo=nginx&logoColor=white)
+
+</div>
+
+| ⚔️ Batalha: cada golpe é uma resposta | 🏰 O Reino de Elyndor |
+| --- | --- |
+| <img src="docs/batalha.jpg" alt="Batalha contra o Slime do Bug com uma pergunta sobre a estrutura de um prompt" width="100%"> | <img src="docs/reino.jpg" alt="Heroína no Reino de Elyndor diante do Portal da Academia, com minimapa e ciclo de dia e noite" width="100%"> |
+
+## Em números
+
+- **1.014 perguntas** em 3 classes e 15 subclasses, com prova de 10 questões para subir de grau
+- **42 monstros**, chefões em fases, 6 dungeons, 26 livros e dois mapas com ciclo de dia e noite
+- **Grimório de Erros** com repetição espaçada: o que tu errou volta em 10 minutos, 6 horas e 2 dias
+- **Multijogador em tempo real**: salão com chat, duelos, chefões em grupo, guildas e ranking semanal
+- **Toda a arte é desenhada por código** em `<canvas>`, pixel a pixel. Nenhuma imagem ou áudio externo
+
+## Arquitetura
+
+- **Servidor autoritativo** (Flask): XP, moedas e acertos são decididos no servidor; o navegador só exibe.
+- **Banco** SQLite em modo WAL, conexão reaproveitada por thread e trava entre processos.
+- **Salão multijogador**: processo assíncrono à parte com `websockets`, atrás do `/salao` do Nginx.
+- **Produção** (pasta [`deploy/`](deploy/)): Gunicorn com vários workers atrás do Nginx, HTTPS com Let's Encrypt, serviços e timers do systemd, backup diário do banco, fail2ban, ufw e atualização por script com backup antes de trocar o código.
+
+> O servidor público foi desligado. Para jogar, rode localmente (abaixo) ou suba numa VM seguindo [`PUBLICAR_VM.md`](PUBLICAR_VM.md).
+
+## Rodar localmente
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate    ·    Linux/macOS: source .venv/bin/activate
+pip install -r requirements.txt
+python app.py          # http://localhost:5050
+```
+
+Sem `ANTHROPIC_API_KEY` no `.env`, o mestre Zetsu funciona no modo roteirizado, de graça e offline (veja [`.env.example`](.env.example)).
+
+## Testes
+
+Cada teste cria um herói próprio e apaga no fim. Rode da raiz do projeto:
+
+```bash
+python testes/testar_curriculo.py .     # perguntas por classe e Grimório de Erros
+python testes/testar_prova.py .         # Prova do Degrau nas 18 classes
+python testes/jogar_historia.py .       # joga a história inteira (31 quests, 4 provas)
+python testes/testar_dungeons.py .      # as 6 dungeons
+python testes/testar_duelos.py .        # salão multijogador por WebSocket
+python testes/teste_carga.py . 50 6     # carga: 50 jogadores, 2 processos no mesmo banco
+```
+
+---
+
+# Documentação do jogo 🧙‍♂️🐉
 
 **RPG IA** é um RPG em pixel art para aprender Inteligência Artificial de verdade. A aventura se passa
 na **Academia Arcana de Elyndor**, onde o arquimago Zetsu ensina a nova magia do reino: a IA.
