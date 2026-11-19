@@ -38,6 +38,10 @@
 
 ## Rodar localmente
 
+**No Windows, em um clique:** dê dois cliques em `instalar.bat` (instala o Python 3.12 se faltar e as bibliotecas) e depois em `iniciar.bat`. O passo a passo completo, inclusive como ligar a IA de verdade e publicar na internet, está no [`GUIA.md`](GUIA.md).
+
+Ou, manualmente (qualquer sistema):
+
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate    ·    Linux/macOS: source .venv/bin/activate
@@ -1392,3 +1396,7 @@ Todo prompt avaliado em `construir_prompt` passa por um detector de dados sensí
 telefone, senhas e tokens). Se achar algo, a nota trava em 30 e o aluno não passa.
 
 Para liberar uma fase marcada como "em breve", remova `"em_breve": true` e adicione as `etapas`.
+
+## Licença
+
+Código aberto sob a [licença MIT](LICENSE).
